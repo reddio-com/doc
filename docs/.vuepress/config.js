@@ -1,6 +1,5 @@
 module.exports = {
   theme: "craftdocs",
-  base: "/docs/",
   plugins: [
     // ["@vuepress/google-analytics", { ga: "UA-39036834-9" }],
     [
