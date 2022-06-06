@@ -1,5 +1,6 @@
 {
   "private": true,
+  "name": "docs",
   "devDependencies": {
     "@babel/core": "^7.17.2",
     "@playwright/test": "^1.20.1",
