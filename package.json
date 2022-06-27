@@ -1,7 +1,6 @@
 {
   "name": "doc",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "git@github.com:reddio-com/doc.git",
   "author": "KieSun <zx59781309@gmail.com>",
   "license": "MIT",
