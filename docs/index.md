@@ -1,20 +1,18 @@
 ---
 layout: home
 
-title: VitePress
-titleTemplate: Vite & Vue Powered Static Site Generator
+title: Reddio
+titleTemplate: The NFT APIs Designed for Developers by Developers
+
 
 hero:
-  name: VitePress
-  text: Vite & Vue Powered Static Site Generator
-  tagline: Simple, powerful, and performant. Meet the modern SSG framework you've always wanted.
+  name: Reddio
+  text: The NFT APIs
+  tagline: Use Reddio’s the world first easy-to-use composable APIs with affordable gas fee, to integrate NFT into your application and beyond.
   actions:
     - theme: brand
       text: Get Started
-      link: /guide/getting-started
-    - theme: alt
-      text: View on GitHub
-      link: https://github.com/vuejs/vitepress
+      link: /sdk/getting-started
 
 features:
   - title: "Vite: The DX that can't be beat"

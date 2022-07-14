@@ -1,6 +1,6 @@
 export default {
     lang: 'en-US',
-    title: 'VitePress',
+    title: 'Reddio',
     description: 'Just playing around.',
 
     lastUpdated: true,
@@ -9,7 +9,8 @@ export default {
         nav: nav(),
 
         sidebar: {
-            '/guide/': sidebarGuide(),
+            '/sdk/': sidebarGuide(),
+            '/service': sidebarService(),
         },
 
         // editLink: {
@@ -36,7 +37,8 @@ export default {
 
 function nav() {
     return [
-        { text: 'Guide', link: '/guide/getting-started', activeMatch: '/guide/' },
+        { text: 'SDK', link: '/sdk/getting-started', activeMatch: '/sdk/' },
+        { text: 'Service', link: '/service/getting-started', activeMatch: '/service/' },
     ]
 }
 
@@ -46,7 +48,19 @@ function sidebarGuide() {
             text: 'Introduction',
             collapsible: true,
             items: [
-                { text: 'getting-started', link: '/guide/getting-started' },
+                { text: 'getting-started', link: '/sdk/getting-started' },
+            ]
+        }
+    ]
+}
+
+function sidebarService() {
+    return [
+        {
+            text: 'Introduction',
+            collapsible: true,
+            items: [
+                { text: 'getting-started', link: '/service/getting-started' },
             ]
         }
     ]
