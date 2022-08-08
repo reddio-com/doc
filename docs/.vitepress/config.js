@@ -60,6 +60,7 @@ function sidebarService() {
             text: 'Introduction',
             collapsible: true,
             items: [
+                { text: 'overview', link: '/service/overview' },
                 { text: 'getting-started', link: '/service/getting-started' },
             ]
         }
