@@ -8,6 +8,10 @@
 - 根目录执行 `npm install` 用以安装依赖
 - 根目录执行 `npm run docs:dev` 启动服务
 
+## 引入图片
+
+把图片添加到 `docs/public` 中，接下来可以通过 `![](/xxx.png)` 在 Markdown 文件中使用。
+
 ## 如何修改配置
 
 进入 `docs/.vitepress` 目录兵找到 `config.js` 文件，拉到底部可以找到 `sidebarService` 函数。
