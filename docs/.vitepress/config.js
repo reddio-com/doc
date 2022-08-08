@@ -27,11 +27,11 @@ export default {
         //     copyright: 'Copyright © 2019-present Evan You'
         // },
 
-        // algolia: {
-        //     appId: '8J64VVRP8K',
-        //     apiKey: 'a18e2f4cc5665f6602c5631fd868adfd',
-        //     indexName: 'vitepress'
-        // }
+        algolia: {
+            appId: '7A2B60ZRYU',
+            apiKey: 'b2ad15f65554f29ad97ab2c7ccadeb25',
+            indexName: 'blog'
+        }
     }
 }
 
@@ -48,7 +48,7 @@ function sidebarGuide() {
             text: 'Introduction',
             collapsible: true,
             items: [
-                { text: 'getting-started', link: '/sdk/getting-started' },
+                { text: 'Getting Started', link: '/sdk/getting-started' },
             ]
         }
     ]

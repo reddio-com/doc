@@ -48,7 +48,7 @@ Layer 2 is a collective term to describe a specific set of layer 1 scaling solut
 
 Layer 2 solutions are needed, both to immediately improve the congestion on the current layer 1 network, and to set the stage for mass adoption in the post-ETH 2.0 era for ETH and other layer 1 networks.
 
-![Overview](images/overview.png)
+![Overview](/overview.png)
 
 Reddio uses a zero-knowledge rollup on layer 2 to take thousands of off-chain transactions in a batch, generate a proof to make sure all the transactions are valid, then publish the proof on layer 1, then verify the proof by a smart contract.
 
