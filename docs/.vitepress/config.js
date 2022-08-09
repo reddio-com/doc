@@ -1,8 +1,10 @@
+import { headerPlugin } from './headerMdPlugin'
+
 export default {
     lang: 'en-US',
     title: 'Reddio',
     description: 'Just playing around.',
-
+    scrollOffset: 'header',
     lastUpdated: true,
 
     themeConfig: {
@@ -22,16 +24,25 @@ export default {
         //     { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
         // ],
 
-        // footer: {
-        //     message: 'Released under the MIT License.',
-        //     copyright: 'Copyright © 2019-present Evan You'
-        // },
+        footer: {
+            license: {
+                text: 'MIT License',
+                link: 'https://opensource.org/licenses/MIT'
+            },
+            copyright: `Copyright © 2022-${new Date().getFullYear()} Reddio`
+        },
 
         algolia: {
             appId: '7A2B60ZRYU',
             apiKey: 'b2ad15f65554f29ad97ab2c7ccadeb25',
             indexName: 'blog'
-        }
+        },
+
+        markdown: {
+            config(md) {
+                md.use(headerPlugin)
+            }
+        },
     }
 }
 
@@ -49,6 +60,13 @@ function sidebarGuide() {
             collapsible: true,
             items: [
                 { text: 'Getting Started', link: '/sdk/getting-started' },
+            ]
+        },
+        {
+            text: 'Global API',
+            collapsible: true,
+            items: [
+                { text: 'Init SDK', link: '/sdk/init' },
             ]
         }
     ]
