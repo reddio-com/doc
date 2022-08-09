@@ -82,6 +82,13 @@ function sidebarService() {
             ]
         },
         {
+            text: 'Components',
+            collapsible: false,
+            items: [
+                { text: 'Reddio Components', link: '/service/components' },
+            ]
+        },
+        {
             text: 'API Reference',
             collapsible: false,
             items: [
