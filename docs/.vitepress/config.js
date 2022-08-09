@@ -63,7 +63,7 @@ function sidebarGuide() {
             ]
         },
         {
-            text: 'Global API',
+            text: 'API Reference',
             collapsible: true,
             items: [
                 { text: 'Init SDK', link: '/sdk/init' },
