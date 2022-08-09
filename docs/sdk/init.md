@@ -2,8 +2,6 @@
 
 ## new Reddio()
 
-Init SDK.
-
 - **Type**
 
 ```tsx
