@@ -1,5 +1,3 @@
-# Overview
-
 ## Introduction
 
 Reddio is a technology company that builds infrastructure for the blockchain, to help developers adopt blockchain technologies with the world's first easy-to-use layer 2 Agnostic APIs. 

@@ -38,7 +38,7 @@ export default {
 function nav() {
     return [
         { text: 'SDK', link: '/sdk/getting-started', activeMatch: '/sdk/' },
-        { text: 'Service', link: '/service/getting-started', activeMatch: '/service/' },
+        { text: 'Service', link: '/service/overview', activeMatch: '/overview/' },
     ]
 }
 
@@ -58,10 +58,16 @@ function sidebarService() {
     return [
         {
             text: 'Introduction',
-            collapsible: true,
+            collapsible: false,
             items: [
-                { text: 'overview', link: '/service/overview' },
-                { text: 'getting-started', link: '/service/getting-started' },
+                { text: 'Overview', link: '/service/overview' },
+            ]
+        },
+        {
+            text: 'API Reference',
+            collapsible: false,
+            items: [
+                { text: 'Layer 2 APIs', link: '/service/layer2-apis' },
             ]
         }
     ]
