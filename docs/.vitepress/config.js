@@ -67,6 +67,10 @@ function sidebarGuide() {
             collapsible: true,
             items: [
                 { text: 'Init SDK', link: '/sdk/init' },
+                { text: 'KeyPair', link: '/sdk/keypair' },
+                { text: 'Request', link: '/sdk/request' },
+                { text: 'Utils', link: '/sdk/utils' },
+                { text: 'Contract', link: '/sdk/contract' },
             ]
         }
     ]
