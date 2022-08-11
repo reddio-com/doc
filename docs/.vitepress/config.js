@@ -98,6 +98,13 @@ function sidebarService() {
             items: [
                 { text: 'Layer 2 APIs', link: '/service/layer2-apis' },
             ]
+        },
+        {
+            text: 'Terminology',
+            collapsible: false,
+            items: [
+                { text: 'Terminology', link: '/service/terminology' },
+            ]
         }
     ]
 }
