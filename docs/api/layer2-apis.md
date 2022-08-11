@@ -20,7 +20,7 @@ Reddio uses conventional HTTP response codes to indicate the success or failure 
 
 Some **`4xx`** errors that could be handled programmatically (e.g., a card is **[declined](https://stripe.com/docs/declines)**) include an **[error code](https://stripe.com/docs/error-codes)** that briefly explains the error reported.
 
-### The following APIs are in Private Preview
+## The following APIs are in Private Preview
 
 **1. Deposit/Transfer/Withdraw ETH between L1 and L2**
 
@@ -67,7 +67,7 @@ Content-Type: application/json
 x-api-key: rk-xxxxxx-4326-4b58-ae69-xxxxxxxx
 ```
 
-### Retrieve Project
+## Retrieve Project
 
 This endpoint can retrieve projects and the related UUIDs of each projects for further usage
 
@@ -112,7 +112,7 @@ RESPONSE
 }
 ```
 
-### Register Token
+## Register Token
 
 Register token on layer 2 contracts to your project generated from dashboard
 
@@ -157,7 +157,7 @@ RESPONSE
 }
 ```
 
-### Retrieve the ****vault****
+## Retrieve the ****vault****
 
 Retrieve the vault id 
 
@@ -190,7 +190,7 @@ RESPONSE
 }
 ```
 
-### Withdrawal
+## Withdrawal
 
 Withdraw assets from layer 2 to layer 1
 
@@ -232,7 +232,7 @@ RESPONSE
 
 ```
 
-### ****Get nonce by stark_key****
+## ****Get nonce by stark_key****
 
 Retrieve the unique nonce by stark_key
 
@@ -261,7 +261,7 @@ RESPONSE
 }
 ```
 
-### ****Mint a ERC721 token****
+## ****Mint a ERC721 token****
 
 Mint ERC721 token on layer 2
 
@@ -298,7 +298,7 @@ RESPONSE
 }
 ```
 
-### ****Transfer****
+## ****Transfer****
 
 Transfer assets from sender to receiver on layer 2
 
@@ -359,7 +359,7 @@ RESPONSE
 }
 ```
 
-### ****WithdrawalTo****
+## ****WithdrawalTo****
 
 Withdrawal to another Ethereum address for ERC-20/ETH and ERC-721
 
@@ -430,7 +430,7 @@ RESPONSE
 
 ```
 
-### ****Get Asset ID****
+## ****Get Asset ID****
 
 Retrieve asset id based on contract address
 

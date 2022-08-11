@@ -48,7 +48,8 @@ export default {
 
 function nav() {
     return [
-        //{ text: 'SDK', link: '/sdk/getting-started', activeMatch: '/sdk/' },
+        { text: 'SDK', link: '/sdk/overview', activeMatch: '/sdk/' },
+        { text: 'APIs', link: '/api/layer2-apis', activeMatch: '/api/' },
         { text: 'Docs', link: '/service/overview', activeMatch: '/overview/' },
     ]
 }
@@ -59,11 +60,11 @@ function sidebarGuide() {
             text: 'Introduction',
             collapsible: true,
             items: [
-                { text: 'Getting Started', link: '/sdk/getting-started' },
+                { text: 'Overview', link: '/sdk/overview' },
             ]
         },
         {
-            text: 'API Reference',
+            text: 'SDK Reference',
             collapsible: true,
             items: [
                 { text: 'Init SDK', link: '/sdk/init' },
@@ -94,13 +95,8 @@ function sidebarService() {
                 { text: 'User Onboarding', link: '/service/user-onboarding' },
                 { text: 'NFT Backend Integration', link: '/service/nft-backend' },
                 { text: 'NFT Javascript Integration', link: '/service/nft-jssdk' },
-            ]
-        },
-        {
-            text: 'API Reference',
-            collapsible: false,
-            items: [
-                { text: 'Layer 2 APIs', link: '/service/layer2-apis' },
+                { text: 'ERC20 Javascript Integration', link: '/service/erc20-jssdk' },
+                { text: 'ETH Javascript Integration', link: '/service/eth-jssdk' },
             ]
         },
         {

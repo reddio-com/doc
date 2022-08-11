@@ -1,4 +1,4 @@
-# Quickstart - ERC721/NFT on layer 2 -  Backend Integration - Private Preview
+# NFT on layer 2 -  Backend Integration
 
 ```
 Note: To make sure the sample code works, please install Metamask with Goerli network chosen, you can visit https://faucet.paradigm.xyz/ to get more credit to test.
