@@ -10,7 +10,7 @@ The Reddio API uses **API keys** to authenticate requests. You can view and ma
 
 Your API keys carry many privileges, so be sure to keep them secure! Do not share your secret API keys in publicly accessible areas such as GitHub, client-side code, and so forth.
 
-Authentication to the API is performed via bearer auth, use -H "x-api-key: rk-181872fb-4326-4b58-ae69-afb66cc487bc".
+Authentication to the API is performed via bearer auth, use `-H "x-api-key: rk-181872fb-4326-4b58-ae69-afb66cc487bc"`.
 
 All API requests must be made over **[HTTPS](http://en.wikipedia.org/wiki/HTTP_Secure)**. Calls made over plain HTTP will fail. API requests without authentication will also fail.
 
@@ -20,7 +20,7 @@ Reddio uses conventional HTTP response codes to indicate the success or failure 
 
 Some **`4xx`** errors that could be handled programmatically (e.g., a card is **[declined](https://stripe.com/docs/declines)**) include an **[error code](https://stripe.com/docs/error-codes)** that briefly explains the error reported.
 
-## The following APIs are in Private Preview
+### The following APIs are in Private Preview
 
 **1. Deposit/Transfer/Withdraw ETH between L1 and L2**
 
@@ -67,7 +67,7 @@ Content-Type: application/json
 x-api-key: rk-xxxxxx-4326-4b58-ae69-xxxxxxxx
 ```
 
-## Retrieve Project
+### Retrieve Project
 
 This endpoint can retrieve projects and the related UUIDs of each projects for further usage
 
@@ -112,7 +112,7 @@ RESPONSE
 }
 ```
 
-## Register Token
+### Register Token
 
 Register token on layer 2 contracts to your project generated from dashboard
 
@@ -157,7 +157,7 @@ RESPONSE
 }
 ```
 
-## Retrieve the ****vault****
+### Retrieve the vault
 
 Retrieve the vault id 
 
@@ -190,7 +190,7 @@ RESPONSE
 }
 ```
 
-## Withdrawal
+### Withdrawal
 
 Withdraw assets from layer 2 to layer 1
 
@@ -232,7 +232,7 @@ RESPONSE
 
 ```
 
-## ****Get nonce by stark_key****
+### Get nonce by stark_key
 
 Retrieve the unique nonce by stark_key
 
@@ -261,7 +261,7 @@ RESPONSE
 }
 ```
 
-## ****Mint a ERC721 token****
+### Mint a ERC721 token
 
 Mint ERC721 token on layer 2
 
@@ -298,7 +298,7 @@ RESPONSE
 }
 ```
 
-## ****Transfer****
+### Transfer
 
 Transfer assets from sender to receiver on layer 2
 
@@ -359,7 +359,7 @@ RESPONSE
 }
 ```
 
-## ****WithdrawalTo****
+### WithdrawalTo
 
 Withdrawal to another Ethereum address for ERC-20/ETH and ERC-721
 
@@ -430,7 +430,7 @@ RESPONSE
 
 ```
 
-## ****Get Asset ID****
+### Get Asset ID
 
 Retrieve asset id based on contract address
 
@@ -457,7 +457,7 @@ GET /v1/assetid
 ```
 
 ```jsx
-curl -v  https://api-dev.reddio.com/v1/assetid  -H 'content-type: application/json'  -d '{ "type":"ERC20", "contract_address":"0x4240e8b8c0b6e6464a13f555f6395bbfe1c4bdf1", "token_id":"1"}'
+curl -v  https://api-dev.reddio.com/v1/assetid?type=ERC20&contract_address=0x4240e8b8c0b6e6464a13f555f6395bbfe1c4bdf1&token_id=1 -H 'content-type: application/json'
 ```
 
 ```jsx
@@ -486,7 +486,7 @@ GET /v1/balances
 ```
 
 ```jsx
-curl -v  https://api-dev.reddio.com/v1/balances  -H 'content-type: application/json'  -d '{ "stark_key":"0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c"'
+curl -v  https://api-dev.reddio.com/v1/balances?stark_key=0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c  -H 'content-type: application/json'
 ```
 
 ```jsx
@@ -528,7 +528,7 @@ GET /v1/balance
 ```
 
 ```jsx
-curl -v  https://api-dev.reddio.com/v1/balance  -H 'content-type: application/json' -d '{ "stark_key":"0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c", "asset_id":"0x1142460171646987f20c714eda4b92812b22b811f56f27130937c267e29bd9e"}'
+curl -v  https://api-dev.reddio.com/v1/balance?stark_key=0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c&asset_id=0x1142460171646987f20c714eda4b92812b22b811f56f27130937c267e29bd9e -H 'content-type: application/json'
 ```
 
 ```jsx
@@ -564,7 +564,7 @@ GET /v1/records
 ```
 
 ```jsx
-curl -v  https://api-dev.reddio.com/v1/records  -H 'content-type: application/json'  -d '{ "stark_key":"0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c"}'
+curl -v  https://api-dev.reddio.com/v1/records?stark_key=0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c  -H 'content-type: application/json'
 ```
 
 ```jsx
@@ -632,12 +632,11 @@ A unique key that identifies the user in the off-chain state
 ?
 
 ```jsx
-GET /v1/record
+POST /v1/record
 ```
 
 ```jsx
-curl -v  https://api-dev.reddio.com/v1/record  -H 'content-type: application/json'  -d '{ "stark_key":"0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c", "sequence_id":"2"}'
-
+curl -v  https://api-dev.reddio.com/v1/record?stark_key=0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c&sequence_id=2  -H 'content-type: application/json'
 ```
 
 ```jsx
