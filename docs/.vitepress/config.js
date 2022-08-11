@@ -2,8 +2,8 @@ import { headerPlugin } from './headerMdPlugin'
 
 export default {
     lang: 'en-US',
-    title: 'Reddio',
-    description: 'Just playing around.',
+    title: 'Docs',
+    description: 'Reddio Developer Documentations',
     scrollOffset: 'header',
     lastUpdated: true,
 
