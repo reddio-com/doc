@@ -1,4 +1,6 @@
 import { headerPlugin } from './headerMdPlugin'
+import fs from 'fs'
+import path from 'path'
 
 export default {
     lang: 'en-US',
@@ -6,6 +8,24 @@ export default {
     description: 'Reddio Developer Documentations',
     scrollOffset: 'header',
     lastUpdated: true,
+
+    head: [
+        [
+            'script',
+            {
+                src: 'https://www.googletagmanager.com/gtag/js?id=G-DZPN2FT3DF',
+                async: ''
+            }
+        ],
+        [
+            'script',
+            {},
+            fs.readFileSync(
+                path.resolve(__dirname, './inlined-scripts/google.js'),
+                'utf-8'
+            )
+        ]
+    ],
 
     themeConfig: {
         nav: nav(),

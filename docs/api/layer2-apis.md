@@ -524,12 +524,11 @@ A unique key that identifies the user in the off-chain state
 The identity of the token as represented on-chain (external ERC-20/ERC-721/ERC-1155 for deposit/withdraw goes through, correct quantization, etc)
 
 ```jsx
-POST /v1/balance
+GET /v1/balance
 ```
 
 ```jsx
-curl -v  https://api-dev.reddio.com/v1/balance  -H 'content-type: application/json'  -d '{ "stark_key":"0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c", "asset_id":"0x1142460171646987f20c714eda4b92812b22b811f56f27130937c267e29bd9e"}'
-
+curl -v  https://api-dev.reddio.com/v1/balance  -H 'content-type: application/json' -d '{ "stark_key":"0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c", "asset_id":"0x1142460171646987f20c714eda4b92812b22b811f56f27130937c267e29bd9e"}'
 ```
 
 ```jsx
@@ -561,7 +560,7 @@ Retrieve records based on start_key
 A unique key that identifies the user in the off-chain state
 
 ```jsx
-POST /v1/records
+GET /v1/records
 ```
 
 ```jsx
@@ -633,7 +632,7 @@ A unique key that identifies the user in the off-chain state
 ?
 
 ```jsx
-POST /v1/record
+GET /v1/record
 ```
 
 ```jsx
