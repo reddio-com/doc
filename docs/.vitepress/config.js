@@ -48,8 +48,8 @@ export default {
 
 function nav() {
     return [
-        { text: 'SDK', link: '/sdk/getting-started', activeMatch: '/sdk/' },
-        { text: 'Service', link: '/service/overview', activeMatch: '/overview/' },
+        //{ text: 'SDK', link: '/sdk/getting-started', activeMatch: '/sdk/' },
+        { text: 'Docs', link: '/service/overview', activeMatch: '/overview/' },
     ]
 }
 
@@ -83,13 +83,17 @@ function sidebarService() {
             collapsible: false,
             items: [
                 { text: 'Overview', link: '/service/overview' },
+                { text: 'Components', link: '/service/components' },
+                { text: 'Layer 2 Introduction', link: '/service/layer2introduction' },
             ]
         },
         {
-            text: 'Components',
+            text: 'Get Started',
             collapsible: false,
             items: [
-                { text: 'Reddio Components', link: '/service/components' },
+                { text: 'User Onboarding', link: '/service/user-onboarding' },
+                { text: 'NFT Backend Integration', link: '/service/nft-backend' },
+                { text: 'NFT Javascript Integration', link: '/service/nft-jssdk' },
             ]
         },
         {
@@ -100,7 +104,7 @@ function sidebarService() {
             ]
         },
         {
-            text: 'Terminology',
+            text: 'Reference',
             collapsible: false,
             items: [
                 { text: 'Terminology', link: '/service/terminology' },
