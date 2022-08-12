@@ -4,7 +4,7 @@ import path from 'path'
 
 export default {
     lang: 'en-US',
-    title: 'Docs',
+    title: 'Reddio',
     description: 'Reddio Developer Documentations',
     scrollOffset: 'header',
     lastUpdated: true,
