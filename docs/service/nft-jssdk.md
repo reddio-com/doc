@@ -25,19 +25,11 @@ const initReddio = () => {
 };
 ```
 
-### Quickstart - Mint on layer 2
-
 <p align="center">
   <img src="/layer2-nft-jsminting.png" alt="layer2 NFT minting" width="300"/>
 </p>
 
-1. Create ERC721 smart contract on layer 1 
-
-Create ERC721 token smart contract on layer 1. Once created, please keep the smart contract address, we will use it as tokenAddress.
-
-1. Mint ERC721 token contract on layer 2 in backend
-
-### Quickstart - **Deposit the ERC721 token to starkex**
+## Quickstart - Deposit the ERC721 token to starkex
 
 1. Connect wallet & Generate starkKey
 
@@ -52,7 +44,7 @@ const generateKey = async () => {
 };
 ```
 
-1. Approve token get Permissions
+2. Approve token get Permissions
 
 ```tsx
 const approve = async () => {
@@ -63,7 +55,7 @@ const approve = async () => {
 };
 ```
 
-1. Get the Asset ID
+3. Get the Asset ID
 
 ```jsx
 const { assetId } = await reddio.utils.getAssetTypeAndId({
@@ -73,7 +65,7 @@ const { assetId } = await reddio.utils.getAssetTypeAndId({
 });
 ```
 
-1. Get the Vault ID
+4. Get the Vault ID
 
 ```jsx
 const { data } = await reddio.apis.getVaultID({
@@ -83,7 +75,7 @@ const { data } = await reddio.apis.getVaultID({
 });
 ```
 
-1. Deposit NFT 
+5. Deposit NFT 
 
 ```tsx
 await reddio.apis.depositERC721({
@@ -94,7 +86,7 @@ await reddio.apis.depositERC721({
 });
 ```
 
-1. Get balance
+6. Get balance
 
 ```tsx
 const { data } = await reddio.apis.getBalances({
@@ -102,7 +94,7 @@ const { data } = await reddio.apis.getBalances({
 });
 ```
 
-### Quickstart - Transfer NFTs between two layer 2 accounts
+## Quickstart - Transfer NFTs between two layer 2 accounts
 
 To transfer NFTs between two layer 2 accounts, there are few parameters needed, here’s the quick start on how to retrieve them and doing the transfer
 
@@ -116,7 +108,7 @@ const { assetId } = await reddio.utils.getAssetTypeAndId({
 });
 ```
 
-1. Get the Vault ID
+2. Get the Vault ID
 
 ```jsx
 const { data } = await reddio.apis.getVaultID({
@@ -126,7 +118,7 @@ const { data } = await reddio.apis.getVaultID({
 });
 ```
 
-1. Transfer NFT from one layer 2 account to another
+3. Transfer NFT from one layer 2 account to another
 
 ```jsx
 const { data: res } = await reddio.apis.transfer({
@@ -144,7 +136,7 @@ const { data: res } = await reddio.apis.transfer({
 });
 ```
 
-### Quickstart - Withdraw NFTs from layer 2 to layer 1
+## Quickstart - Withdraw NFTs from layer 2 to layer 1
 
 To withdraw NFTs from layer 2 to layer 1, there are few parameters needed, here’s the quick start on how to retrieve them and doing the transfer
 
@@ -158,7 +150,7 @@ const { assetId } = await reddio.utils.getAssetTypeAndId({
 });
 ```
 
-1. Get the Vault ID
+2. Get the Vault ID
 
 ```jsx
 const { data } = await reddio.apis.getVaultID({
@@ -168,7 +160,7 @@ const { data } = await reddio.apis.getVaultID({
 });
 ```
 
-1. Funds Move to the Withdrawal Area
+3. Funds Move to the Withdrawal Area
 
 ```jsx
 const { data: res } = await reddio.apis.withdrawalFromL2({
@@ -185,7 +177,7 @@ const { data: res } = await reddio.apis.withdrawalFromL2({
 });
 ```
 
-1. On-Chain Withdrawal Transaction
+4. On-Chain Withdrawal Transaction
 
 ```tsx
 await reddio.apis.withdrawalFromL1({
