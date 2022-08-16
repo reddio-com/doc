@@ -24,10 +24,46 @@ const initReddio = () => {
   });
 };
 ```
+Note: 
+
+*Get the API key from dashboard page, to get access the dashboard, please let us know, we will send you the invitation link*
+
+![Dashboard](/dashboard-quickstart.png)
+
+## Quickstart - Mint on layer 2
 
 <p align="center">
   <img src="/layer2-nft-jsminting.png" alt="layer2 NFT minting" width="300"/>
 </p>
+
+1. Create ERC721 smart contract on layer 1 
+
+Create ERC721 smart contract on layer 1 with Reddio's API. Once created, please keep the smart contract address, we will use it as tokenAddress.
+
+```
+curl -v https://api-dev.reddio.com/v1/token/deploy -H 'content-type: application/json' -H 'X-API-Key:rk-d3b3c4cb-e721-4a8d-be47-3d231b32260f5' -d '{"name":"REDDIO","Symbol":"REDDIO721", "type":"ERC721M", "base_uri":"https://us-central1-bayc-metadata.cloudfunctions.net/api/tokens"}'
+```
+
+2. Create a project on dashbaord and register the smart contract with the project
+
+3. Connect wallet & generate starkKey
+
+```jsx
+const connect = async () => {
+  const provider = new ethers.providers.Web3Provider(window.ethereum);
+  await provider.send('eth_requestAccounts', [])
+}
+
+const generateKey = async () => {
+  return await reddio.keypair.generateFromEthSignature('Sign');
+};
+```
+
+4. Mint ERC721 token contract on layer 2 in backend
+
+```
+curl -v  https://api-dev.reddio.com/v1/mints  -H 'content-type: application/json' -H 'X-API-Key: rk-d3b3c4cb-e721-4a8d-be47-3d231b32260f5'  -d '{ "contract_address":"0x113536494406bc039586c1ad9b8f51af664d6ef8", "stark_key":"0x7334761a2653784492249ebd08c85d7c5784d35c039124a36bda8bb59952983", "amount":"10"}'
+```
 
 ## Quickstart - Deposit the ERC721 token to starkex
 
