@@ -8,7 +8,7 @@ With layer 2, there are quite a few benefits,
 
 - Lower gas fees
     - By combining multiple off-chain transactions into a single layer 1 transaction, transaction fees are massively reduced
-- Maintain security
+- Mainnet security
     - Layer 2 blockchains settle their transactions on Mainnet, allowing users to benefit from the security of the layer 1 network.
 - Expand use cases
     - With higher transactions per second, lower fees, and new technology, projects will expand into new applications with improved user experience.
