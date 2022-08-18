@@ -45,7 +45,7 @@ Note:
 Create ERC721 smart contract on layer 1 with Reddio's API. Once created, please keep the smart contract address, we will use it as tokenAddress. It's needed, so that you will have the choice to depoist to layer 2 and withdraw back to layer 1.
 
 ```
-curl -v https://api-dev.reddio.com/v1/token/deploy -H 'content-type: application/json' -H 'X-API-Key:rk-8f85a6e5-2c55-45c0-92b2-efea0c4aa0d2' -d '{"name":"REDDIO","Symbol":"REDDIO721", "type":"ERC721M", "base_uri":"https://us-central1-bayc-metadata.cloudfunctions.net/api/tokens"}'
+curl -v https://api-dev.reddio.com/v1/token/deploy -H 'content-type: application/json' -H 'X-API-Key:{your_api_key}}' -d '{"name":"REDDIO","Symbol":"REDDIO721", "type":"ERC721M", "base_uri":"https://us-central1-bayc-metadata.cloudfunctions.net/api/tokens"}'
 
 ```
 You shall be able to view your smart contract on layer 1 with the following API,
@@ -72,7 +72,7 @@ const generateKey = async () => {
 4. Mint ERC721 token contract on layer 2 in backend
 
 ```
-curl -v  https://api-dev.reddio.com/v1/mints  -H 'content-type: application/json' -H 'X-API-Key: rk-d3b3c4cb-e721-4a8d-be47-3d231b32260f5'  -d '{ "contract_address":"0x113536494406bc039586c1ad9b8f51af664d6ef8", "stark_key":"0x7334761a2653784492249ebd08c85d7c5784d35c039124a36bda8bb59952983", "amount":"10"}'
+curl -v  https://api-dev.reddio.com/v1/mints  -H 'content-type: application/json' -H 'X-API-Key: {your_api_key}'  -d '{ "contract_address":"0x113536494406bc039586c1ad9b8f51af664d6ef8", "stark_key":"0x7334761a2653784492249ebd08c85d7c5784d35c039124a36bda8bb59952983", "amount":"10"}'
 ```
 You can query the balance with the following API,
 ```
