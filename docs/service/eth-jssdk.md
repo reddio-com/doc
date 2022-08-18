@@ -3,7 +3,9 @@
 ```jsx
 Notes: To make sure the sample code works, please install Metamask with Goerli network chosen, you can visit https://faucet.paradigm.xyz/ to get more credit to test
 ```
-
+```jsx
+Notes: You can access our sample code of JS SDK integration here, https://github.com/reddio-com/red-js-sdk
+```
 ### Install
 
 ```bash

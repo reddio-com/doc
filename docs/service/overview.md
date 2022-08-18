@@ -10,9 +10,9 @@ By partnering with leading layer 2 providers like Starkware, zkSync, Scroll, Red
 
 With Reddio’s APIs, your integration to Web3.0 can be done in minutes.
 
-### Highly scalable and reliable
+### Highly scalable, reliable and fast response time
 
-On layer 2 transactions, 10k TPS are supported. 99.9% APIs availability is guaranteed.
+On layer 2 transactions, 10k TPS are supported. 99.9% APIs availability is guaranteed. Meanwhile your asset trading confirmation is on second level only.
 
 ### Secure and asset safety
 
