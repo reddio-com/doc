@@ -22,7 +22,7 @@ const initReddio = () => {
   return new Reddio({
     provider,
 		// get from dashboard
-		apiKey: 'xxxxxxxxx'
+		apiKey: '{your_api_key}'
     // The development environment uses `test`, the production environment uses `main`
     env: 'test',
   });
@@ -72,7 +72,7 @@ const generateKey = async () => {
 4. Mint ERC721 token contract on layer 2 in backend
 
 ```
-curl -v  https://api-dev.reddio.com/v1/mints  -H 'content-type: application/json' -H 'X-API-Key: {your_api_key}'  -d '{ "contract_address":"0x113536494406bc039586c1ad9b8f51af664d6ef8", "stark_key":"0x7334761a2653784492249ebd08c85d7c5784d35c039124a36bda8bb59952983", "amount":"10"}'
+curl -v  https://api-dev.reddio.com/v1/mints  -H 'content-type: application/json' -H 'X-API-Key: {your_api_key}'  -d '{ "contract_address":"{smart_contract_address}}", "stark_key":"{your_starkkey}}", "amount":"10"}'
 ```
 You can query the balance with the following API,
 ```
@@ -80,7 +80,7 @@ https://api-dev.reddio.com/v1/balances?stark_key={your_starkkey}}&page=1&limit=1
 ```
 and query collections with this API,
 ```
-https://api-dev.reddio.com/v1/contracts/{your_smart_contract_address}}/tokens
+https://api-dev.reddio.com/v1/contracts/{smart_contract_address}}/tokens
 ```
 
 ## Quickstart - Transfer NFTs between two layer 2 accounts
