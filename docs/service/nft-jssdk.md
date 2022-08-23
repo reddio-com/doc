@@ -1,7 +1,11 @@
-# NFT on layer 2 - JS SDK Integration
+# NFT on layer 2 - Javascript SDK Integration
 
 ```jsx
 Notes: To make sure the sample code works, please install Metamask with Goerli network chosen, you can visit https://faucet.paradigm.xyz/ to get more credit to test
+```
+
+```jsx
+Notes: You can access our sample code of JS SDK integration here, https://github.com/reddio-com/red-js-sdk
 ```
 
 ### Install
@@ -18,28 +22,41 @@ const initReddio = () => {
   return new Reddio({
     provider,
 		// get from dashboard
-		apiKey: 'xxxxxxxxx'
+		apiKey: '{your_api_key}'
     // The development environment uses `test`, the production environment uses `main`
     env: 'test',
   });
 };
 ```
+```jsx
+Notes: Get the API key from dashboard page; To get access the dashboard, please leave your email by joining the waitlist at www.reddio.com, we will send you the invitation link
+```
 
-### Quickstart - Mint on layer 2
+![Dashboard](/dashboard-quickstart.png)
+
+## Quickstart - Mint on layer 2
 
 <p align="center">
-  <img src="/layer2-nft-jsminting.png" alt="layer2 NFT minting" width="300"/>
+  <img src="/layer2-nft-jsminting.png" alt="layer2 NFT minting" width="400"/>
 </p>
 
 1. Create ERC721 smart contract on layer 1 
 
-Create ERC721 token smart contract on layer 1. Once created, please keep the smart contract address, we will use it as tokenAddress.
+Create ERC721 smart contract on layer 1 with Reddio's API. Once created, please keep the smart contract address, we will use it as tokenAddress. It's needed, so that you will have the choice to depoist to layer 2 and withdraw back to layer 1.
 
-1. Mint ERC721 token contract on layer 2 in backend
+```
+curl -v https://api-dev.reddio.com/v1/token/deploy -H 'content-type: application/json' -H 'X-API-Key:{your_api_key}}' -d '{"name":"REDDIO","Symbol":"REDDIO721", "type":"ERC721M", "base_uri":"https://us-central1-bayc-metadata.cloudfunctions.net/api/tokens"}'
 
-### Quickstart - **Deposit the ERC721 token to starkex**
+```
+You shall be able to view your smart contract on layer 1 with the following API,
+```
+view at https://goerli.etherscan.io/address/{your_smart_contract_address}}
+```
 
-1. Connect wallet & Generate starkKey
+2. Edit the project on dashbaord, add in your smart contract address returned from step 1 to register the smart contract with the project
+![Dashboard](/contract-registration.png)
+
+3. Connect wallet & generate starkKey
 
 ```jsx
 const connect = async () => {
@@ -52,16 +69,23 @@ const generateKey = async () => {
 };
 ```
 
-1. Approve token get Permissions
+4. Mint ERC721 token contract on layer 2 in backend
 
-```tsx
-const approve = async () => {
-  await reddio.erc721.approve({
-    tokenAddress: "your layer 1 tokenAddress",
-	  tokenId: "The NFT token id owned by the user",
-  });
-};
 ```
+curl -v  https://api-dev.reddio.com/v1/mints  -H 'content-type: application/json' -H 'X-API-Key: {your_api_key}'  -d '{ "contract_address":"{smart_contract_address}}", "stark_key":"{your_starkkey}}", "amount":"10"}'
+```
+You can query the balance with the following API,
+```
+https://api-dev.reddio.com/v1/balances?stark_key={your_starkkey}}&page=1&limit=100
+```
+and query collections with this API,
+```
+https://api-dev.reddio.com/v1/contracts/{smart_contract_address}}/tokens
+```
+
+## Quickstart - Transfer NFTs between two layer 2 accounts
+
+To transfer NFTs between two layer 2 accounts, there are few parameters needed, here’s the quick start on how to retrieve them and do the transfer.
 
 1. Get the Asset ID
 
@@ -73,7 +97,7 @@ const { assetId } = await reddio.utils.getAssetTypeAndId({
 });
 ```
 
-1. Get the Vault ID
+2. Get the Vault ID
 
 ```jsx
 const { data } = await reddio.apis.getVaultID({
@@ -83,50 +107,7 @@ const { data } = await reddio.apis.getVaultID({
 });
 ```
 
-1. Deposit NFT 
-
-```tsx
-await reddio.apis.depositERC721({
-  starkKey,
-  assetType,
-  vaultId: data.data.vault_ids[0],
-  tokenId,
-});
-```
-
-1. Get balance
-
-```tsx
-const { data } = await reddio.apis.getBalances({
-  starkKey,
-});
-```
-
-### Quickstart - Transfer NFTs between two layer 2 accounts
-
-To transfer NFTs between two layer 2 accounts, there are few parameters needed, here’s the quick start on how to retrieve them and doing the transfer
-
-1. Get the Asset ID
-
-```jsx
-const { assetId } = await reddio.utils.getAssetTypeAndId({
-  type: 'ERC721',
-  tokenAddress: "your layer 1 tokenAddress",
-  tokenId: "The NFT token id owned by the user",
-});
-```
-
-1. Get the Vault ID
-
-```jsx
-const { data } = await reddio.apis.getVaultID({
-  // Originator and recipient starkKey
-  starkKeys: [starkKey, transferAddress],
-  assetId,
-});
-```
-
-1. Transfer NFT from one layer 2 account to another
+3. Transfer NFT from one layer 2 account to another
 
 ```jsx
 const { data: res } = await reddio.apis.transfer({
@@ -144,7 +125,7 @@ const { data: res } = await reddio.apis.transfer({
 });
 ```
 
-### Quickstart - Withdraw NFTs from layer 2 to layer 1
+## Quickstart - Withdraw NFTs from layer 2 to layer 1
 
 To withdraw NFTs from layer 2 to layer 1, there are few parameters needed, here’s the quick start on how to retrieve them and doing the transfer
 
@@ -158,7 +139,7 @@ const { assetId } = await reddio.utils.getAssetTypeAndId({
 });
 ```
 
-1. Get the Vault ID
+2. Get the Vault ID
 
 ```jsx
 const { data } = await reddio.apis.getVaultID({
@@ -168,7 +149,7 @@ const { data } = await reddio.apis.getVaultID({
 });
 ```
 
-1. Funds Move to the Withdrawal Area
+3. Funds Move to the Withdrawal Area
 
 ```jsx
 const { data: res } = await reddio.apis.withdrawalFromL2({
@@ -185,7 +166,7 @@ const { data: res } = await reddio.apis.withdrawalFromL2({
 });
 ```
 
-1. On-Chain Withdrawal Transaction
+4. On-Chain Withdrawal Transaction
 
 ```tsx
 await reddio.apis.withdrawalFromL1({
@@ -194,4 +175,69 @@ await reddio.apis.withdrawalFromL1({
   type: 'ERC721'
   tokenId
 })
+```
+
+## Quickstart - Deposit the ERC721 token to layer 2/Starkex
+
+1. Connect wallet & Generate starkKey
+
+```jsx
+const connect = async () => {
+  const provider = new ethers.providers.Web3Provider(window.ethereum);
+  await provider.send('eth_requestAccounts', [])
+}
+
+const generateKey = async () => {
+  return await reddio.keypair.generateFromEthSignature('Sign');
+};
+```
+
+2. Approve token get Permissions
+
+```tsx
+const approve = async () => {
+  await reddio.erc721.approve({
+    tokenAddress: "your layer 1 tokenAddress",
+	  tokenId: "The NFT token id owned by the user",
+  });
+};
+```
+
+3. Get the Asset ID
+
+```jsx
+const { assetId } = await reddio.utils.getAssetTypeAndId({
+  type: 'ERC721',
+  tokenAddress: "your layer 1 tokenAddress",
+  tokenId: "The NFT token id owned by the user",
+});
+```
+
+4. Get the Vault ID
+
+```jsx
+const { data } = await reddio.apis.getVaultID({
+  // Originator and recipient starkKey
+  starkKeys: [starkKey, transferAddress],
+  assetId,
+});
+```
+
+5. Deposit NFT 
+
+```tsx
+await reddio.apis.depositERC721({
+  starkKey,
+  assetType,
+  vaultId: data.data.vault_ids[0],
+  tokenId,
+});
+```
+
+6. Get balance
+
+```tsx
+const { data } = await reddio.apis.getBalances({
+  starkKey,
+});
 ```

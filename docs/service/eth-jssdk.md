@@ -3,7 +3,9 @@
 ```jsx
 Notes: To make sure the sample code works, please install Metamask with Goerli network chosen, you can visit https://faucet.paradigm.xyz/ to get more credit to test
 ```
-
+```jsx
+Notes: You can access our sample code of JS SDK integration here, https://github.com/reddio-com/red-js-sdk
+```
 ### Install
 
 ```bash
@@ -24,6 +26,10 @@ const initReddio = () => {
   });
 };
 ```
+```jsx
+Notes: Get the API key from dashboard page; To get access the dashboard, please leave your email by joining the waitlist at www.reddio.com, we will send you the invitation link
+```
+![Dashboard](/dashboard-quickstart.png)
 
 ## Deposit the ETH to starkex
 
