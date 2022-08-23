@@ -2,6 +2,11 @@ import { headerPlugin } from './headerMdPlugin'
 import fs from 'fs'
 import path from 'path'
 import { generateSitemap as sitemap } from 'sitemap-ts'
+import { defineConfig } from "vitepress/dist/node";
+
+defineConfig({
+    base: ""
+})
 
 export default {
     lang: 'en-US',
@@ -31,6 +36,13 @@ export default {
             {
                 rel: 'canonical',
                 href: 'https://docs.reddio.com/',
+            },
+        ],
+        [
+            'link',
+            {
+                rel: 'shortcut icon',
+                href: '/logoicon.ico',
             },
         ]
     ],
@@ -86,7 +98,7 @@ function nav() {
     return [
         { text: 'SDK', link: '/sdk/overview', activeMatch: '/sdk/' },
         { text: 'APIs', link: '/api/layer2-apis', activeMatch: '/api/' },
-        { text: 'Docs', link: '/service/overview', activeMatch: '/overview/' },
+        { text: 'Docs', link: '/service/overview', activeMatch: '/service/' },
     ]
 }
 
