@@ -26,6 +26,10 @@ const initReddio = () => {
   });
 };
 ```
+```jsx
+Notes: Get the API key from dashboard page; To get access the dashboard, please leave your email by joining the waitlist at www.reddio.com, we will send you the invitation link
+```
+![Dashboard](/dashboard-quickstart.png)
 
 ## Deposit the ETH to starkex
 

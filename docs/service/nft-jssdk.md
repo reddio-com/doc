@@ -1,4 +1,4 @@
-# NFT on layer 2 - JS SDK Integration
+# NFT on layer 2 - Javascript SDK Integration
 
 ```jsx
 Notes: To make sure the sample code works, please install Metamask with Goerli network chosen, you can visit https://faucet.paradigm.xyz/ to get more credit to test
@@ -28,9 +28,9 @@ const initReddio = () => {
   });
 };
 ```
-Note: 
-
-*Get the API key from dashboard page, to get access the dashboard, please let us know, we will send you the invitation link*
+```jsx
+Notes: Get the API key from dashboard page; To get access the dashboard, please leave your email by joining the waitlist at www.reddio.com, we will send you the invitation link
+```
 
 ![Dashboard](/dashboard-quickstart.png)
 
