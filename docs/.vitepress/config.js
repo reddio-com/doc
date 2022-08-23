@@ -37,7 +37,7 @@ export default {
             'link',
             {
                 rel: 'shortcut icon',
-                href: 'logoicon.ico',
+                href: '/logoicon.ico',
             },
         ]
     ],
