@@ -2,11 +2,6 @@ import { headerPlugin } from './headerMdPlugin'
 import fs from 'fs'
 import path from 'path'
 import { generateSitemap as sitemap } from 'sitemap-ts'
-import { defineConfig } from "vitepress/dist/node";
-
-defineConfig({
-    base: ""
-})
 
 export default {
     lang: 'en-US',
@@ -42,7 +37,7 @@ export default {
             'link',
             {
                 rel: 'shortcut icon',
-                href: '/logoicon.ico',
+                href: 'logoicon.ico',
             },
         ]
     ],
