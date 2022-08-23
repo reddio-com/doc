@@ -1,6 +1,7 @@
 import { headerPlugin } from './headerMdPlugin'
 import fs from 'fs'
 import path from 'path'
+import { generateSitemap as sitemap } from 'sitemap-ts'
 
 export default {
     lang: 'en-US',
@@ -24,8 +25,29 @@ export default {
                 path.resolve(__dirname, './inlined-scripts/google.js'),
                 'utf-8'
             )
+        ],
+        [
+            'link',
+            {
+                rel: 'canonical',
+                href: 'https://docs.reddio.com/',
+            },
         ]
     ],
+
+    buildEnd: () => {
+        let dynamicRoutes = [];
+        ['../api', '../sdk', '../service'].forEach(dirPath => {
+            const files = fs.readdirSync(path.resolve(__dirname, dirPath))
+            dynamicRoutes = dynamicRoutes.concat(files.map(file => `/${dirPath.split('../')[1]}/${file.split('.md')[0]}`))
+        })
+        sitemap({
+            hostname: "https://docs.reddio.com",
+            outDir: '/docs/.vitepress/dist',
+            extentions: ["html"],
+            dynamicRoutes
+        })
+    },
 
     themeConfig: {
         nav: nav(),
@@ -50,12 +72,6 @@ export default {
                 link: 'https://opensource.org/licenses/MIT'
             },
             copyright: `Copyright © 2022-${new Date().getFullYear()} Reddio`
-        },
-
-        algolia: {
-            appId: '7A2B60ZRYU',
-            apiKey: 'b2ad15f65554f29ad97ab2c7ccadeb25',
-            indexName: 'blog'
         },
 
         markdown: {

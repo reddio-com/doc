@@ -5,7 +5,8 @@
   "author": "KieSun <zx59781309@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "vitepress": "^1.0.0-alpha.4",
+    "sitemap-ts": "^0.2.7",
+    "vitepress": "^1.0.0-alpha.10",
     "vue": "^3.2.37"
   },
   "scripts": {
