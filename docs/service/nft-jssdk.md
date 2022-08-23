@@ -37,7 +37,7 @@ Note:
 ## Quickstart - Mint on layer 2
 
 <p align="center">
-  <img src="/layer2-nft-jsminting.png" alt="layer2 NFT minting" width="300"/>
+  <img src="/layer2-nft-jsminting.png" alt="layer2 NFT minting" width="400"/>
 </p>
 
 1. Create ERC721 smart contract on layer 1 
