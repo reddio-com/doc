@@ -11,6 +11,7 @@ export default {
     lastUpdated: true,
 
     head: [
+        ['meta', { name: 'keywords', content: 'reddio,reddio doc,starkex'}],
         [
             'script',
             {
