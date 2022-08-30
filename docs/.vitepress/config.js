@@ -61,7 +61,7 @@ export default {
         nav: nav(),
 
         sidebar: {
-            '/sdk/': sidebarGuide(),
+            '/sdk': sidebarGuide(),
             '/service': sidebarService(),
         },
 

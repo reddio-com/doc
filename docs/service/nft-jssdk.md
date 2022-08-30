@@ -1,20 +1,20 @@
 # NFT on layer 2 - Javascript SDK Integration
 
-```jsx
-Notes: To make sure the sample code works, please install Metamask with Goerli network chosen, you can visit https://faucet.paradigm.xyz/ to get more credit to test
-```
+::: tip
+To make sure the sample code works, please install Metamask with Goerli network chosen, you can visit https://faucet.paradigm.xyz/ to get more credit to test
+:::
 
-```jsx
-Notes: You can access our sample code of JS SDK integration here, https://github.com/reddio-com/red-js-sdk
-```
+::: tip
+You can access our sample code of JS SDK integration here, https://github.com/reddio-com/red-js-sdk
+:::
 
-### Install
+## Install
 
-```bash
+```sh
 $ yarn add @reddio.com/js
 ```
 
-### Init SDK
+## Init SDK
 
 ```tsx
 const initReddio = () => {
@@ -28,9 +28,9 @@ const initReddio = () => {
   });
 };
 ```
-```jsx
-Notes: Get the API key from dashboard page; To get access the dashboard, please leave your email by joining the waitlist at www.reddio.com, we will send you the invitation link
-```
+::: tip
+Get the API key from dashboard page; To get access the dashboard, please leave your email by joining the waitlist at www.reddio.com, we will send you the invitation link
+:::
 
 ![Dashboard](/dashboard-quickstart.png)
 
@@ -44,14 +44,11 @@ Notes: Get the API key from dashboard page; To get access the dashboard, please 
 
 Create ERC721 smart contract on layer 1 with Reddio's API. Once created, please keep the smart contract address, we will use it as tokenAddress. It's needed, so that you will have the choice to depoist to layer 2 and withdraw back to layer 1.
 
-```
-curl -v https://api-dev.reddio.com/v1/token/deploy -H 'content-type: application/json' -H 'X-API-Key:{your_api_key}}' -d '{"name":"REDDIO","Symbol":"REDDIO721", "type":"ERC721M", "base_uri":"https://us-central1-bayc-metadata.cloudfunctions.net/api/tokens"}'
-
+```sh
+$ curl -v https://api-dev.reddio.com/v1/token/deploy -H 'content-type: application/json' -H 'X-API-Key:{your_api_key}}' -d '{"name":"REDDIO","Symbol":"REDDIO721", "type":"ERC721M", "base_uri":"https://us-central1-bayc-metadata.cloudfunctions.net/api/tokens"}'
 ```
 You shall be able to view your smart contract on layer 1 with the following API,
-```
-view at https://goerli.etherscan.io/address/{your_smart_contract_address}}
-```
+view at `https://goerli.etherscan.io/address/{your_smart_contract_address}`.
 
 2. Edit the project on dashbaord, add in your smart contract address returned from step 1 to register the smart contract with the project
 ![Dashboard](/contract-registration.png)
@@ -71,17 +68,13 @@ const generateKey = async () => {
 
 4. Mint ERC721 token contract on layer 2 in backend
 
-```
-curl -v  https://api-dev.reddio.com/v1/mints  -H 'content-type: application/json' -H 'X-API-Key: {your_api_key}'  -d '{ "contract_address":"{smart_contract_address}}", "stark_key":"{your_starkkey}}", "amount":"10"}'
+```sh
+$ curl -v  https://api-dev.reddio.com/v1/mints  -H 'content-type: application/json' -H 'X-API-Key: {your_api_key}'  -d '{ "contract_address":"{smart_contract_address}}", "stark_key":"{your_starkkey}}", "amount":"10"}'
 ```
 You can query the balance with the following API,
-```
-https://api-dev.reddio.com/v1/balances?stark_key={your_starkkey}}&page=1&limit=100
-```
-and query collections with this API,
-```
-https://api-dev.reddio.com/v1/contracts/{smart_contract_address}}/tokens
-```
+view at `https://api-dev.reddio.com/v1/balances?stark_key={your_starkkey}}&page=1&limit=100`.
+
+And query collections with this API, view at `https://api-dev.reddio.com/v1/contracts/{smart_contract_address}}/tokens`.
 
 ## Quickstart - Transfer NFTs between two layer 2 accounts
 
