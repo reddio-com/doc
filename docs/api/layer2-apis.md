@@ -700,19 +700,15 @@ For seller it's the currency used for selling the token.
 
 **vault_id_buy** REQUIRED
 
-The amount you wish to buy/sell.
+For buyers, it’s the vault ID used to pay.
 
 **vault_id_sell** REQUIRED
 
-The amount you wish to buy/sell.
+For sellers, it’s the vault ID used to sell.
 
-**vault_id_sell** REQUIRED
+**expiration_timestamp** REQUIRED
 
-The amount you wish to buy/sell.
-
-**expireation_timestamp** REQUIRED
-
-The amount you wish to buy/sell.
+Expiration timestamp.
 
 **nonce** REQUIRED
 
@@ -722,7 +718,7 @@ The nonce for account_id.
 
 The signature for the transaction, can be calculated by [https://github.com/reddio-com/red-py-sdk](https://github.com/reddio-com/red-py-sdk).
 
-**accound_id** REQUIRED
+**account_id** REQUIRED
 
 The account_id.
 
