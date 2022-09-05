@@ -34,7 +34,7 @@ Get the API key from dashboard page; To get access the dashboard, please leave y
 
 ![Dashboard](/dashboard-quickstart.png)
 
-## Quickstart - Mint on layer 2
+## Mint on layer 2
 
 <p align="center">
   <img src="/layer2-nft-jsminting.png" alt="layer2 NFT minting" width="400"/>
@@ -76,7 +76,7 @@ view at `https://api-dev.reddio.com/v1/balances?stark_key={your_starkkey}}&page=
 
 And query collections with this API, view at `https://api-dev.reddio.com/v1/contracts/{smart_contract_address}}/tokens`.
 
-## Quickstart - Transfer NFTs between two layer 2 accounts
+## Transfer NFTs between two layer 2 accounts
 
 To transfer NFTs between two layer 2 accounts, there are few parameters needed, here’s the quick start on how to retrieve them and do the transfer.
 
@@ -118,7 +118,7 @@ const { data: res } = await reddio.apis.transfer({
 });
 ```
 
-## Quickstart - Withdraw NFTs from layer 2 to layer 1
+## Withdraw NFTs from layer 2 to layer 1
 
 To withdraw NFTs from layer 2 to layer 1, there are few parameters needed, here’s the quick start on how to retrieve them and doing the transfer
 
@@ -170,7 +170,7 @@ await reddio.apis.withdrawalFromL1({
 })
 ```
 
-## Quickstart - Deposit the ERC721 token to layer 2/Starkex
+## Deposit the ERC721 token to layer 2/Starkex
 
 1. Connect wallet & Generate starkKey
 
