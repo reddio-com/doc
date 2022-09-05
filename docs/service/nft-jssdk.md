@@ -234,3 +234,55 @@ const { data } = await reddio.apis.getBalances({
   starkKey,
 });
 ```
+## Orderbook on layer 2
+
+1. Place a sell order on layer 2
+
+```jsx
+ const sell = async () => {
+    if (starkTokenId === -1) {
+      alert('choose starkex tokenId');
+      return;
+    }
+    const params = await reddio.utils.getOrderParams({
+      keypair: {
+        privateKey,
+        publicKey: starkKey,
+      },
+      amount: '1',
+      tokenAddress: contractAddress,
+      tokenId: starkTokenId,
+      orderType: 'sell',
+      tokenType: 'ERC721',
+      price: sellPrice,
+    });
+    const { data } = await reddio.apis.order(params);
+    setSellSequenceId(data.data.sequence_id);
+  };
+  ```
+2. Place a buy order on layer 2
+```jsx
+const buy = async () => {
+    if (starkTokenId === -1) {
+      alert('choose starkex tokenId');
+      return;
+    }
+    const params = await reddio.utils.getOrderParams({
+      keypair: {
+        privateKey:
+          '{Your_privatekey}',
+        publicKey:
+          '{Your_publicKey}}',
+      },
+      amount: '1',
+      tokenAddress: contractAddress,
+      tokenId: starkTokenId,
+      orderType: 'buy',
+      tokenType: 'ERC721',
+      price: sellPrice,
+    });
+    const { data } = await reddio.apis.order(params);
+    setSellSequenceId(data.data.sequence_id);
+  };
+  ```
+
