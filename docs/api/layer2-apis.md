@@ -330,7 +330,7 @@ The wallet address of the receiver
 
 **receiver_vault_id** REQUIRED
 
-The receiver’s vault id
+The receiver's vault id
 
 **expiration_timestamp**
 
@@ -399,7 +399,7 @@ The wallet address of the receiver
 
 **receiver_vault_id** REQUIRED
 
-The receiver’s vault id
+The receiver's vault id
 
 **expiration_timestamp**
 
@@ -680,23 +680,23 @@ The amount you wish to buy/sell.
 
 **amount_buy** REQUIRED
 
-The amount you wish to buy/sell, for buyer it’s the token you wish to buy, for seller it’s the price you want to sell.
+The amount you wish to buy/sell, for buyer it's the token you wish to buy, for seller it's the price you want to sell.
 
 **amount_sell** REQUIRED
 
-The amount you wish to buy/sell, for buyer it’s the currency you wish to give for the token.
+The amount you wish to buy/sell, for buyer it's the currency you wish to give for the token.
 
 **token_buy** REQUIRED
 
-For buyer, it’s token you wish to buy, for seller it’s the amount currency you wish to sell.
+For buyer, it's token you wish to buy, for seller it's the amount currency you wish to sell.
 
 **token_sell** REQUIRED
 
-For seller, it’s token you wish to sell, for buyer it’s the amount currency you wish to give for the token.
+For seller, it's token you wish to sell, for buyer it's the amount currency you wish to give for the token.
 
 **base_token** REQUIRED
 
-For seller it’s the currency used for selling the token.
+For seller it's the currency used for selling the token.
 
 **vault_id_buy** REQUIRED
 
