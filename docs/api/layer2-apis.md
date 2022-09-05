@@ -672,6 +672,25 @@ RESPONSE
 
 Place an order on Reddio.
 
+
+For ASK.
+
+| StarkEx | Reddio |
+| --- | --- |
+| Token_sell | quote_token |
+| Token_buy | base_token |
+| Amount_sell | amount |
+| Amount_buy | price * amount_sell |
+
+For BID
+
+| StarkEx | Reddio |
+| --- | --- |
+| Token_sell | base_token |
+| Token_buy | quote_token |
+| Amount_buy | amount |
+| Amount_sell | price * amount_buy |
+
 **Parameters**
 
 **amount** REQUIRED
