@@ -722,12 +722,6 @@ The nonce for account_id.
 
 The signature for the transaction, can be calculated by [https://github.com/reddio-com/red-py-sdk](https://github.com/reddio-com/red-py-sdk).
 
-Example Usage:
-
-```jsx
-
-```
-
 **accound_id** REQUIRED
 
 The account_id.
