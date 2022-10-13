@@ -130,6 +130,30 @@ Count of contract token
 
 The UUID of project for this contract to be created.
 
+**metadata_url** OPTIONAL
+
+The metadata URL for Tokens.
+
+**name** OPTIONAL
+
+The name for Tokens.
+
+**description** OPTIONAL
+
+The description for Tokens.
+
+**image_url** OPTIONAL
+
+The image URL for Tokens.
+
+**external_link** OPTIONAL
+
+The external URL for Tokens.
+
+**banner_image** OPTIONAL
+
+The banner image URL for Tokens.
+
 **type** REQUIRED
 
 *Type of token*
