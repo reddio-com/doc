@@ -31,7 +31,7 @@ const gen = async () => {
 
 Once created, please keep the smart contract address.
 
-3. Mint ERC721 token contract on layer 2
+3. Mint ERC721 token on layer 2
 
 contract_address is smart contract address you created on layer 1; You can pass the starkkey from JS SDK to your backend via your own API call.
 
