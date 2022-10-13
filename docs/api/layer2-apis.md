@@ -134,23 +134,23 @@ The UUID of project for this contract to be created.
 
 The metadata URL for Tokens.
 
-**contract_name** OPTIONAL
+**name** OPTIONAL
 
 The name for Tokens.
 
-**contract_description** OPTIONAL
+**description** OPTIONAL
 
 The description for Tokens.
 
-**contract_image_url** OPTIONAL
+**image_url** OPTIONAL
 
 The image URL for Tokens.
 
-**contract_external_link** OPTIONAL
+**external_link** OPTIONAL
 
 The external URL for Tokens.
 
-**contract_banner_image** OPTIONAL
+**banner_image** OPTIONAL
 
 The banner image URL for Tokens.
 
