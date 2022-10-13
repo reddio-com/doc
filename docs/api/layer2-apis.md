@@ -882,8 +882,6 @@ it returns like
 
 By default, there is no eth_address, we will provide user register on client(now we can use python script to register and not verify on eth_address(will using EIP-712 to sign it after holiday)
 
-**Note: Since there are many nfts are already exists before the nft api development complete, so there are some tokens not exists when query the api. but from now on, any new minted and deposited token, should in the result when query api.**
-
 ### For Collection APIs
 
 we will add description/image_url/external_link/banner_image_url in dashboard, now can set we 
