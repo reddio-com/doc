@@ -393,7 +393,7 @@ Withdrawal to another Ethereum address for ERC-20/ETH and ERC-721
 
 Contract address of token (ERC20 or ERC721)
 
-asset**_id** REQUIRED
+**asset_id** REQUIRED
 
 Asset id
 
@@ -405,13 +405,11 @@ A unique key that identifies the user in the off-chain state
 
 Amount of tokens to be transferred
 
-token**_id** REQUIRED
+**token_id** REQUIRED
 
 Token id
 
-**nounce** REQUIRED
-
-?
+**nonce** REQUIRED
 
 **vault_id** REQUIRED
 
@@ -431,7 +429,6 @@ The period to expire for the transfer, unit is seconds
 
 **signature** REQUIRED
 
-?
 
 ```jsx
 POST /v1/withdrawalto
