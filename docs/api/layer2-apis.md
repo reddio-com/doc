@@ -206,11 +206,14 @@ curl -v 'https://api-dev.reddio.com/v1/vaults?asset_id=0x4240e8b8c0b6E6464a13F55
 ```jsx
 RESPONSE
 {
-	"status": "OK",
-	"error": "",
-	"data": {
-		"vault_id": 14
-	}
+  "status": "OK",
+  "error": "",
+  "error_code": 0,
+  "data": {
+    "vault_ids": [
+      "23400429"
+    ]
+  }
 }
 ```
 
@@ -328,7 +331,7 @@ Transfer assets from sender to receiver on layer 2
 
 **Parameters**
 
-**token_id** REQUIRED
+**asset_id** REQUIRED
 
 Asset/token id
 
