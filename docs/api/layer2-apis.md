@@ -206,11 +206,14 @@ curl -v 'https://api-dev.reddio.com/v1/vaults?asset_id=0x4240e8b8c0b6E6464a13F55
 ```jsx
 RESPONSE
 {
-	"status": "OK",
-	"error": "",
-	"data": {
-		"vault_id": 14
-	}
+  "status": "OK",
+  "error": "",
+  "error_code": 0,
+  "data": {
+    "vault_ids": [
+      "23400429"
+    ]
+  }
 }
 ```
 
@@ -322,13 +325,13 @@ RESPONSE
 }
 ```
 
-## Transfer
+## Transfers
 
 Transfer assets from sender to receiver on layer 2
 
 **Parameters**
 
-**token_id** REQUIRED
+**asset_id** REQUIRED
 
 Asset/token id
 
@@ -365,11 +368,11 @@ The period to expire for the transfer, unit is seconds
 The signature to make sure the transaction is triggered by you.
 
 ```jsx
-POST /v1/transfer
+POST /v1/transfers
 ```
 
 ```jsx
-curl -v  https://api-dev.reddio.com/v1/transfer  -H 'content-type: application/json'  -d '{ "asset_id":"0x284698644e92ad774d6e601d9f0cefa137872d0eeadc92ea3fe1fb973d32594", "stark_key":"0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda", "amount":10, "nonce":100, "vault_id":1000, "receiver": "0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda", "receiver_vault_id":10,"expiration_timestamp":4194303, "signature":{"r":"0xab","s":"0xbb"}}'
+curl -v  https://api-dev.reddio.com/v1/transfers  -H 'content-type: application/json'  -d '{ "asset_id":"0x284698644e92ad774d6e601d9f0cefa137872d0eeadc92ea3fe1fb973d32594", "stark_key":"0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda", "amount":10, "nonce":100, "vault_id":1000, "receiver": "0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda", "receiver_vault_id":10,"expiration_timestamp":4194303, "signature":{"r":"0xab","s":"0xbb"}}'
 ```
 
 ```jsx
