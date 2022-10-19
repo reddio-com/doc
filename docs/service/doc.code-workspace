@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../red-js-sdk"
+		}
+	],
+	"settings": {}
+}
