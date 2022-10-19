@@ -8,7 +8,7 @@ hero:
     actions:
         - theme: brand
           text: Get Started
-          link: /sdk/overview
+          link: /guide/introduction/overview
         - theme: alt
           text: View on GitHub
           link: https://github.com/reddio-com/red-js-sdk
