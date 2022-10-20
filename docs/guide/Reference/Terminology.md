@@ -14,7 +14,7 @@ StarkEx can also support tokens on other EVM-compatible blockchains.
 
 StarkEx is a mature platform that has been deployed on Ethereum Mainnet since June 2020. Before its Mainnet deployment, over 50M StarkEx transactions were settled on both public and private Ethereum testnets.
 
-## Stark Key
+## Stark key
 
 For our integration with StarkEx, users are identified within Reddio by their Stark Key which is a public key defined over a Stark-friendly elliptic curve that is different from the standard Ethereum elliptic curve. In order to associate your users with Ethereum account addresses, a user must first request to sign the linkage of an Ethereum key to a Stark Key and then register the Stark Key on your smart contract registered via Reddio platform before any other user operation can take place.
 

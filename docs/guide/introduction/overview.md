@@ -12,13 +12,13 @@ Reddio platform consists of SDKs, APIs and Dashboard
 
 ![components](/components.png)
 
-## [SDKs](/new_doc/Javascript_SDK_Reference/Initiate_SDK.html)
+## [SDKs](/guide/jssdk_reference/initiate_sdk)
 
 Javascript, iOS, Android and Unity SDK is provided for your front end cross platform integration, for the security reason, we highly recommend you integrate from front end to generate private key and allow your users signing from your UI.
 
 So far, only Javascript SDK provides all the functions, iOS, Android and Unity SDK is only covering the private key generation and signature.
 
-## [APIs](/new_doc/Restful_API_Reference/API_Reference.html)
+## [APIs](/guide/restful_api_reference/api_reference)
 
 Backend APIs are also provided, if you are using iOS, Android and Unity SDK, you will need to do the backend integration.
 

@@ -58,7 +58,7 @@ export default {
     },
 
     themeConfig: {
-        nav: [],
+        nav: nav(),
 
         sidebar: {
             '/guide': sidebarService(),
@@ -91,8 +91,9 @@ export default {
 
 function nav() {
     return [
-        { text: 'SDK', link: '/guide/Javascript_SDK_Reference/Initiate_SDK.html', activeMatch: '/guide/Javascript_SDK_Reference/Initiate_SDK.html' },
-        { text: 'APIs', link: '/guide/Restful_API_Reference/API_Reference.html', activeMatch: '/guide/Restful_API_Reference/API_Reference.html' },
+        { text: 'Dashboard', link: 'https://dashboard.reddio.com/login' },
+       // { text: 'SDK', link: '/guide/jssdk-reference/initiate-sdk.html', activeMatch: '/guide/jssdk-reference/initiate-sdk.html' },
+       // { text: 'APIs', link: '/guide/api-reference/API_Reference.html', activeMatch: '/guide/api-reference/API_Reference.html' },
     ]
 }
 
@@ -106,7 +107,7 @@ function sidebarGuide() {
             ]
         },
         {
-            text: 'SDK Reference',
+            text: 'SDK reference',
             collapsible: true,
             items: [
                 { text: 'Init SDK', link: '/sdk/init' },
@@ -126,59 +127,61 @@ function sidebarService() {
             collapsible: true,
             items: [
                 { text: 'Overview', link: '/guide/introduction/overview' },
-                { text: 'Feature', link: '/guide/introduction/features'  }
+                { text: 'Feature', link: '/guide/introduction/feature'  }
             ]
         },
         {
             text: 'Getting Started',
             collapsible: true,
             items: [
-                { text: 'Check Marketplace Demo', link: '/guide/getting-started/market-place-demo' },
-                { text: 'Mint NFT on Layer 2', link: '/guide/getting-started/mint-nft-on-layer-2'  },
-                { text: 'Place Order on Layer 2', link: '/guide/getting-started/place-order-on-layer-2' },
-                { text: 'Transfer NFT Between Layer 2', link: '/guide/getting-started/transfer-nft-between-layer-2'  },
-                { text: 'Transfer ETH Between Layer 2', link: '/guide/getting-started/transfer-eth-between-layer-2' },
-                { text: 'Transfer ERC20 Between Layer 2', link: '/guide/getting-started/transfer-erc20-between-layer-2' },
+                { text: 'Marketplace Demo', link: '/guide/getting-started/marketplace-demo' },
+                { text: 'Mint NFTs On Layer 2', link: '/guide/getting-started/mint-nfts-on-layer-2'  },
+                { text: 'Place Orders On Layer 2', link: '/guide/getting-started/place-orders-on-layer-2' },
+                { text: 'Move NFTs Between Layers', link: '/guide/getting-started/move-nfts-between-layers'  },
+                { text: 'Move ETHs Between Layers', link: '/guide/getting-started/move-eths-between-layers' },
+                { text: 'Move ERC20s Between Layers', link: '/guide/getting-started/move-erc20s-between-layers' },
                 
             ]
         },
         {
-            text: 'Restful API Reference',
+            text: 'JS SDK',
             collapsed: true,
             collapsible: true,
             items: [
-                { text: 'API Reference', link: '/guide/Restful_API_Reference/API_Reference' },
-                { text: 'Authentication', link: '/guide/Restful_API_Reference/Authentication' },
-                { text: 'Endpoint', link: '/guide/Restful_API_Reference/Endpoint' },
-                { text: 'Errors', link: '/guide/Restful_API_Reference/Errors' },
-                { text: 'Public Function', link: '/guide/Restful_API_Reference/Public_Function' },
-                { text: 'Project', link: '/guide/Restful_API_Reference/Project' },
-                { text: 'Withdraw', link: '/guide/Restful_API_Reference/Withdraw' },
-                { text: 'Transfer', link: '/guide/Restful_API_Reference/Transfer' },
-                { text: 'Balance', link: '/guide/Restful_API_Reference/Balance' },
-                { text: 'Record', link: '/guide/Restful_API_Reference/Record' },
-                { text: 'Vault', link: '/guide/Restful_API_Reference/Vault' },
-                { text: 'Contract', link: '/guide/Restful_API_Reference/Contract' },
-                { text: 'Order', link: '/guide/Restful_API_Reference/Order' },
-                { text: 'Marketplace', link: '/guide/Restful_API_Reference/Marketplace' },
-                { text: 'Asset', link: '/guide/Restful_API_Reference/Asset' },
+                { text: 'Initiate SDK', link: '/guide/jssdk-reference/initiate-sdk' },
+                { text: 'Public Function', link: '/guide/jssdk-reference/public-function' },
+                { text: 'Deposit', link: '/guide/jssdk-reference/deposit' },
+                { text: 'Withdraw', link: '/guide/jssdk-reference/withdraw' },
+                { text: 'Transfer', link: '/guide/jssdk-reference/transfer' },
+                { text: 'Balance', link: '/guide/jssdk-reference/balance' },
+                { text: 'Record', link: '/guide/jssdk-reference/record' },
+                { text: 'Vault', link: '/guide/jssdk-reference/vault' },
+                { text: 'Contract', link: '/guide/jssdk-reference/contract' },
+                { text: 'Order', link: '/guide/jssdk-reference/order' },
             ]
         },
         {
-            text: 'Javascript SDK Reference',
+            text: 'API Reference',
             collapsed: true,
             collapsible: true,
             items: [
-                { text: 'Initiate SDK', link: '/guide/Javascript_SDK_Reference/Initiate_SDK' },
-                { text: 'Public Function', link: '/guide/Javascript_SDK_Reference/Public_Function' },
-                { text: 'Deposit', link: '/guide/Javascript_SDK_Reference/Deposit' },
-                { text: 'Withdraw', link: '/guide/Javascript_SDK_Reference/Withdraw' },
-                { text: 'Transfer', link: '/guide/Javascript_SDK_Reference/Transfer' },
-                { text: 'Balance', link: '/guide/Javascript_SDK_Reference/Balance' },
-                { text: 'Record', link: '/guide/Javascript_SDK_Reference/Record' },
-                { text: 'Vault', link: '/guide/Javascript_SDK_Reference/Vault' },
-                { text: 'Contract', link: '/guide/Javascript_SDK_Reference/contract' },
-                { text: 'Orders', link: '/guide/Javascript_SDK_Reference/orders' },
+                { text: 'API Reference', link: '/guide/api-reference/api-reference' },
+                { text: 'Authentication', link: '/guide/api-reference/authentication' },
+                { text: 'Endpoint', link: '/guide/api-reference/endpoint' },
+                { text: 'Error', link: '/guide/api-reference/error' },
+                { text: 'Public Function', link: '/guide/api-reference/public-function' },
+                { text: 'Project', link: '/guide/api-reference/project' },
+                { text: 'Withdraw', link: '/guide/api-reference/withdraw' },
+                { text: 'Transfer', link: '/guide/api-reference/transfer' },
+                { text: 'Balance', link: '/guide/api-reference/balance' },
+                { text: 'Record', link: '/guide/api-reference/record' },
+                { text: 'Vault', link: '/guide/api-reference/vault' },
+                { text: 'Contract', link: '/guide/api-reference/contract' },
+                { text: 'Order', link: '/guide/api-reference/order' },
+                { text: 'Marketplace', link: '/guide/api-reference/marketplace' },
+                { text: 'Asset', link: '/guide/api-reference/asset' },
+
+
             ]
         },
         {
@@ -186,10 +189,10 @@ function sidebarService() {
             collapsed: true,
             collapsible: true,
             items: [
-                { text: 'Layer 2 Introduction', link: '/guide/Reference/Layer_2_Introduction' },
-                { text: 'How does Layer 2 works？', link: '/guide/Reference/How_does_Layer_2_works' },
-                { text: 'How does Reddio works？', link: '/guide/Reference/How_does_Reddio_works' },
-                { text: 'Terminology', link: '/guide/Reference/Terminology' },
+                { text: 'Layer 2 Introduction', link: '/guide/reference/layer-2-introduction' },
+                { text: 'How Does Layer 2 Works', link: '/guide/reference/how-does-layer-2-works' },
+                { text: 'How Does Reddio Works', link: '/guide/reference/how-does-reddio-works' },
+                { text: 'Terminology', link: '/guide/reference/terminology' },
             ]
         }
     ]
