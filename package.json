@@ -11,7 +11,7 @@
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "docs:build": "vitepress build docs && ls ./docs/.vitepress/dist/guide && ls ./docs/.vitepress/dist/guide/reference",
     "docs:serve": "vitepress serve docs"
   },
   "dependencies": {
