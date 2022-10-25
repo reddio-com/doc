@@ -1,6 +1,6 @@
 # Place Orders On Layer 2
 ::: tip
-To make sure the sample code works, please install Metamask with Goerli network chosen, you can visit https://faucet.paradigm.xyz/ to get more credit to test
+To make sure the sample code works, please install Metamask with Goerli network chosen, you can visit https://goerlifaucet.com/ to get more credit to test
 :::
 
 ::: tip
