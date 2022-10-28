@@ -5,7 +5,7 @@ import { generateSitemap as sitemap } from 'sitemap-ts'
 
 export default {
     lang: 'en-US',
-    title: 'Reddio',
+    title: 'Docs',
     description: 'Reddio Developer Documentations',
     scrollOffset: 'header',
     lastUpdated: true,
