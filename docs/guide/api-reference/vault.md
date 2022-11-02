@@ -6,11 +6,15 @@ Retrieve the vault id
 
 **Parameters**
 
-**asset_id** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**asset_id** <strong style='color:#8792a2'>string</strong>
 
 The identity of the token as represented on-chain (external ERC-20/ERC-721/ERC-1155 for deposit/withdraw goes through, correct quantization, etc)
 
-**stark_keys** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**stark_keys** <strong style='color:#8792a2'>string</strong>
 
 A unique key that identifies the user in the off-chain state
 

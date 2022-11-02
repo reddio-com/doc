@@ -1,93 +1,64 @@
 
 # Withdraw
 
-## Withdrawal
-
-Withdraw assets from layer 2 to layer 1
-
-**Parameters**
-
-**contract_address** REQUIRED
-
-Contract address of token (ERC20 or ERC721)
-
-**token_id** REQUIRED
-
-Asset/token id
-
-**stark_key** REQUIRED
-
-A unique key that identifies the user in the off-chain state
-
-**amount** REQUIRED
-
-Amount of tokens to be withdrawn to layer 1 from layer 2
-
-```jsx
-POST /v1/withdrawal
-```
-
-```jsx
-curl -v  https://api-dev.reddio.com/v1/withdrawal  -H 'content-type: application/json'  -d '{ "contract_address":"0x4240e8b8c0b6e6464a13f555f6395bbfe1c4bdf1", "token_id":"1", "stark_key":"0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda", "amount":10}'
-```
-
-```jsx
-RESPONSE
-{
-	"status": "OK",
-	"error": "",
-	"data": {
-		"sequence_id": 10
-	}
-}
-
-```
-
 ## Withdrawal to
 
 Withdrawal to another Ethereum address for ERC-20/ETH and ERC-721
 
 **Parameters**
 
-**contract_address** REQUIRED
 
-Contract address of token (ERC20 or ERC721)
+---
 
-**asset_id** REQUIRED
+<strong style='color:red'>*</strong>**asset_id** <strong style='color:#8792a2'>string</strong>
 
 Asset id
 
-**stark_key** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**stark_key** <strong style='color:#8792a2'>string</strong>
 
 A unique key that identifies the user in the off-chain state
 
-**amount** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**amount** <strong style='color:#8792a2'>string</strong>
 
 Amount of tokens to be transferred
 
-**token_id** REQUIRED
 
-Token id
+---
 
-**nonce** REQUIRED
+<strong style='color:red'>*</strong>**nonce** <strong style='color:#8792a2'>int</strong>
 
-**vault_id** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**vault_id** <strong style='color:#8792a2'>string</strong>
 
 The vault id from the sender
 
-**receiver** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**receiver** <strong style='color:#8792a2'>string</strong>
 
 The wallet address of the receiver
 
-**receiver_vault_id** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**receiver_vault_id** <strong style='color:#8792a2'>string</strong>
 
 The receiver's vault id
 
-**expiration_timestamp**
+---
+
+**expiration_timestamp** <strong style='color:#8792a2'>int</strong>
+
 
 The period to expire for the transfer, unit is seconds
 
-**signature** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**signature** <strong style='color:#8792a2'>dict</strong>
 
 
 ```jsx

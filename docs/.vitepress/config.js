@@ -5,7 +5,7 @@ import { generateSitemap as sitemap } from 'sitemap-ts'
 
 export default {
     lang: 'en-US',
-    title: 'Docs',
+    title: 'Reddio',
     description: 'Reddio Developer Documentations',
     scrollOffset: 'header',
     lastUpdated: true,
@@ -91,7 +91,7 @@ export default {
 
 function nav() {
     return [
-        { text: 'Dashboard', link: 'https://dashboard.reddio.com/login' },
+        { text: 'Dashboard', link: 'https://dashboard.reddio.com/' },
        // { text: 'SDK', link: '/guide/jssdk-reference/initiate-sdk.html', activeMatch: '/guide/jssdk-reference/initiate-sdk.html' },
        // { text: 'APIs', link: '/guide/api-reference/API_Reference.html', activeMatch: '/guide/api-reference/API_Reference.html' },
     ]
@@ -137,9 +137,9 @@ function sidebarService() {
                 { text: 'Marketplace Demo', link: '/guide/getting-started/marketplace-demo' },
                 { text: 'Mint NFTs On Layer 2', link: '/guide/getting-started/mint-nfts-on-layer-2'  },
                 { text: 'Place Orders On Layer 2', link: '/guide/getting-started/place-orders-on-layer-2' },
-                { text: 'Move NFTs Between Layers', link: '/guide/getting-started/move-nfts-between-layers'  },
-                { text: 'Move ETHs Between Layers', link: '/guide/getting-started/move-eths-between-layers' },
-                { text: 'Move ERC20s Between Layers', link: '/guide/getting-started/move-erc20s-between-layers' },
+                { text: 'Transfer NFTs Between Layers', link: '/guide/getting-started/transfer-nfts-between-layers'  },
+                { text: 'Transfer ETHs Between Layers', link: '/guide/getting-started/transfer-eths-between-layers' },
+                { text: 'Transfer ERC20s Between Layers', link: '/guide/getting-started/transfer-erc20s-between-layers' },
                 
             ]
         },
@@ -149,7 +149,7 @@ function sidebarService() {
             collapsible: true,
             items: [
                 { text: 'Initiate SDK', link: '/guide/jssdk-reference/initiate-sdk' },
-                { text: 'Public Function', link: '/guide/jssdk-reference/public-function' },
+                { text: 'Utils', link: '/guide/jssdk-reference/utils' },
                 { text: 'Deposit', link: '/guide/jssdk-reference/deposit' },
                 { text: 'Withdraw', link: '/guide/jssdk-reference/withdraw' },
                 { text: 'Transfer', link: '/guide/jssdk-reference/transfer' },
@@ -169,7 +169,7 @@ function sidebarService() {
                 { text: 'Authentication', link: '/guide/api-reference/authentication' },
                 { text: 'Endpoint', link: '/guide/api-reference/endpoint' },
                 { text: 'Error', link: '/guide/api-reference/error' },
-                { text: 'Public Function', link: '/guide/api-reference/public-function' },
+                { text: 'Utils', link: '/guide/api-reference/utils' },
                 { text: 'Project', link: '/guide/api-reference/project' },
                 { text: 'Withdraw', link: '/guide/api-reference/withdraw' },
                 { text: 'Transfer', link: '/guide/api-reference/transfer' },

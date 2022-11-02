@@ -7,7 +7,9 @@ Retrieve records based on start_key
 
 **Parameters**
 
-**stark_key** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**stark_key** <strong style='color:#8792a2'>string</strong>
 
 A unique key that identifies the user in the off-chain state
 
@@ -75,11 +77,15 @@ Retrieve record based on start_key and sequence id
 
 **Parameters**
 
-**stark_key** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**stark_key** <strong style='color:#8792a2'>string</strong>
 
 A unique key that identifies the user in the off-chain state
 
-**sequence_id** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**sequence_id** <strong style='color:#8792a2'>uint</strong>
 
 Auto-increment ID for every transaction command.
 

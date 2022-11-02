@@ -1,64 +1,77 @@
 # Order
+## Place an order on Reddio.
 
-## Place an order
-
-Place an order on Reddio.
 
 **Parameters**
 
-**amount** REQUIRED
+---
+<strong style='color:red'>*</strong>**amount** <strong style='color:#8792a2'>string</strong>
 
 The amount you wish to buy/sell.
 
-**amount_buy** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**amount_buy**  <strong style='color:#8792a2'>string</strong>
 
 The amount you wish to buy/sell, for buyer it's the token you wish to buy, for seller it's the price you want to sell.
 
-**amount_sell** REQUIRED
+---
+<strong style='color:red'>*</strong>**amount_sell** <strong style='color:#8792a2'>string</strong>
 
 The amount you wish to buy/sell, for buyer it's the currency you wish to give for the token.
 
-**token_buy** REQUIRED
+---
+<strong style='color:red'>*</strong>**token_buy** <strong style='color:#8792a2'>string</strong>
 
 For buyer, it's token you wish to buy, for seller it's the amount currency you wish to sell.
 
-**token_sell** REQUIRED
+---
+<strong style='color:red'>*</strong>**token_sell** <strong style='color:#8792a2'>string</strong>
 
 For seller, it's token you wish to sell, for buyer it's the amount currency you wish to give for the token.
 
-**base_token** REQUIRED
+---
+<strong style='color:red'>*</strong>**base_token** <strong style='color:#8792a2'>string</strong>
 
 For seller it's the currency used for selling the token.
 
-**vault_id_buy** REQUIRED
+---
+<strong style='color:red'>*</strong>**vault_id_buy** <strong style='color:#8792a2'>string</strong>
 
 For buyers, it’s the vault ID used to pay.
 
-**vault_id_sell** REQUIRED
+---
+<strong style='color:red'>*</strong>**vault_id_sell** <strong style='color:#8792a2'>string</strong>
 
 For sellers, it’s the vault ID used to sell.
 
-**expiration_timestamp** REQUIRED
+---
+<strong style='color:red'>*</strong>**expiration_timestamp** <strong style='color:#8792a2'>int64</strong>
 
 Expiration timestamp.
 
-**nonce** REQUIRED
+---
+<strong style='color:red'>*</strong>**nonce** <strong style='color:#8792a2'>int64</strong>
 
 The nonce for account_id.
 
-**signature** REQUIRED
+---
+<strong style='color:red'>*</strong>**signature** <strong style='color:#8792a2'>struct</strong>
 
 The signature for the transaction, can be calculated by [https://github.com/reddio-com/red-py-sdk](https://github.com/reddio-com/red-py-sdk).
 
-**account_id** REQUIRED
+---
+<strong style='color:red'>*</strong>**account_id** <strong style='color:#8792a2'>string</strong>
 
 The account_id.
 
-**direction** REQUIRED
+---
+<strong style='color:red'>*</strong>**direction** <strong style='color:#8792a2'>int</strong>
 
 The direction for transaction, 0 is for ASK, 1 is for BID.
 
-**fee_info** REQUIRED
+---
+<strong style='color:red'>*</strong>**fee_info** <strong style='color:#8792a2'>struct</strong>
 
 The currency used for order.
 

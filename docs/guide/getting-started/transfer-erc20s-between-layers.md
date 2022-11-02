@@ -1,37 +1,16 @@
-# ETH on layer 2 - JS SDK Integration
+# Transfer ERC20s Between Layers
 
 ::: tip
-To make sure the sample code works, please install Metamask with Goerli network chosen, you can visit https://faucet.paradigm.xyz/ to get more credit to test
+To make sure the sample code works, please install Metamask with Goerli network chosen, you can visit https://goerlifaucet.com/ to get more credit to test
 :::
 ::: tip
 You can access our sample code of JS SDK integration here, https://github.com/reddio-com/red-js-sdk
 :::
-### Install
+## Init SDK
 
-```sh
-$ yarn add @reddio.com/js
-```
+[Click here](/guide/jssdk-reference/initiate-sdk) to check how to initiate the SDK.
 
-### Init SDK
-
-```tsx
-const initReddio = () => {
-  const provider = new ethers.providers.Web3Provider(window.ethereum);
-  return new Reddio({
-      provider, 
-      // get from dashboard
-      apiKey: 'xxxxxxxxx',
-      // The development environment uses `test`, the production environment uses `main`
-      env: 'test',
-  });
-};
-```
-::: tip
-Get the API key from dashboard page; To get access the dashboard, please leave your email by joining the waitlist at www.reddio.com, we will send you the invitation link
-:::
-![Dashboard](/dashboard-quickstart.png)
-
-## Deposit the ETH to starkex
+## From layer 1 to layer 2 (deposit)
 
 1. Connect wallet & Generate starkKey
 
@@ -46,15 +25,27 @@ const generateKey = async () => {
 };
 ```
 
-2. Get the Asset ID
+2. Approve token get Permissions
+
+```tsx
+const approve = async () => {
+  await reddio.erc20.approve({
+    tokenAddress: "your layer 1 tokenAddress",
+	  amount: "approve amount",
+  });
+};
+```
+
+3. Get the Asset ID
 
 ```jsx
 const { assetId } = await reddio.utils.getAssetTypeAndId({
-  type: 'ETH',
+  type: 'ERC20',
+  tokenAddress: "your layer 1 tokenAddress",
 });
 ```
 
-3. Get the Vault ID
+4. Get the Vault ID
 
 ```jsx
 const { data } = await reddio.apis.getVaultID({
@@ -64,10 +55,10 @@ const { data } = await reddio.apis.getVaultID({
 });
 ```
 
-4. Deposit ETH 
+5. Deposit ERC20 
 
 ```tsx
-await reddio.apis.depositETH({
+await reddio.apis.depositERC20({
   starkKey,
   assetType,
   vaultId: data.data.vault_ids[0],
@@ -75,7 +66,7 @@ await reddio.apis.depositETH({
 });
 ```
 
-5. Get balance
+6. Get balance
 
 ```tsx
 const { data } = await reddio.apis.getBalances({
@@ -83,15 +74,16 @@ const { data } = await reddio.apis.getBalances({
 });
 ```
 
-## Transfer ETH between two layer 2 accounts
+## From layer 2 to layer 2 (transfer)
 
-To transfer ETH between two layer 2 accounts, there are few parameters needed, here’s the quick start on how to retrieve them and doing the transfer.
+To transfer ERC20 between two layer 2 accounts, there are few parameters needed, here’s the quick start on how to retrieve them and doing the transfer.
 
 1. Get the Asset ID
 
 ```jsx
 const { assetId } = await reddio.utils.getAssetTypeAndId({
-  type: 'ETH',
+  type: 'ERC20',
+  tokenAddress: "your layer 1 tokenAddress",
 });
 ```
 
@@ -124,15 +116,16 @@ const { data: res } = await reddio.apis.transfer({
 });
 ```
 
-## Withdraw ETH from layer 2 to layer 1
+## From layer 2 to layer 1 (withdraw)
 
-To withdraw ETH from layer 2 to layer 1, there are few parameters needed, here’s the quick start on how to retrieve them and doing the transfer.
+To withdraw ERC20 from layer 2 to layer 1, there are few parameters needed, here’s the quick start on how to retrieve them and doing the transfer.
 
 1. Get the Asset ID
 
 ```jsx
 const { assetId } = await reddio.utils.getAssetTypeAndId({
-  type: 'ETH',
+  type: 'ERC20',
+  tokenAddress: "your layer 1 tokenAddress",
 });
 ```
 
@@ -169,6 +162,6 @@ const { data: res } = await reddio.apis.withdrawalFromL2({
 await reddio.apis.withdrawalFromL1({
   starkKey,
   assetType,
-  type: 'ETH'
+  type: 'ERC20'
 })
 ```

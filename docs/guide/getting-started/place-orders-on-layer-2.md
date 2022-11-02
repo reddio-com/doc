@@ -6,32 +6,9 @@ To make sure the sample code works, please install Metamask with Goerli network 
 ::: tip
 You can access our sample code of JS SDK integration here, https://github.com/reddio-com/red-js-sdk
 :::
-
-## Install
-
-```sh
-$ yarn add @reddio.com/js
-```
-
 ## Init SDK
 
-```tsx
-const initReddio = () => {
-  const provider = new ethers.providers.Web3Provider(window.ethereum);
-  return new Reddio({
-    provider,
-		// get from dashboard
-		apiKey: '{your_api_key}'
-    // The development environment uses `test`, the production environment uses `main`
-    env: 'test',
-  });
-};
-```
-::: tip
-Get the API key from dashboard page; To get access the dashboard, please leave your email by joining the waitlist at www.reddio.com, we will send you the invitation link
-:::
-
-![Dashboard](/dashboard-quickstart.png)
+[Click here](/guide/jssdk-reference/initiate-sdk) to check how to initiate the SDK.
 
 ## Place buy orders
 ```jsx

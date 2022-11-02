@@ -1,37 +1,15 @@
-# ETH on layer 2 - JS SDK Integration
-
+# Transfer ETHs Between Layers
 ::: tip
-To make sure the sample code works, please install Metamask with Goerli network chosen, you can visit https://faucet.paradigm.xyz/ to get more credit to test
+To make sure the sample code works, please install Metamask with Goerli network chosen, you can visit https://goerlifaucet.com/ to get more credit to test
 :::
 ::: tip
 You can access our sample code of JS SDK integration here, https://github.com/reddio-com/red-js-sdk
 :::
-### Install
+## Init SDK
 
-```sh
-$ yarn add @reddio.com/js
-```
+[Click here](/guide/jssdk-reference/initiate-sdk) to check how to initiate the SDK.
 
-### Init SDK
-
-```tsx
-const initReddio = () => {
-  const provider = new ethers.providers.Web3Provider(window.ethereum);
-  return new Reddio({
-      provider, 
-      // get from dashboard
-      apiKey: 'xxxxxxxxx',
-      // The development environment uses `test`, the production environment uses `main`
-      env: 'test',
-  });
-};
-```
-::: tip
-Get the API key from dashboard page; To get access the dashboard, please leave your email by joining the waitlist at www.reddio.com, we will send you the invitation link
-:::
-![Dashboard](/dashboard-quickstart.png)
-
-## Deposit the ETH to starkex
+## From layer 1 to layer 2 (deposit)
 
 1. Connect wallet & Generate starkKey
 
@@ -83,7 +61,7 @@ const { data } = await reddio.apis.getBalances({
 });
 ```
 
-## Transfer ETH between two layer 2 accounts
+## From layer 2 to layer 2 (transfer)
 
 To transfer ETH between two layer 2 accounts, there are few parameters needed, here’s the quick start on how to retrieve them and doing the transfer.
 
@@ -124,7 +102,7 @@ const { data: res } = await reddio.apis.transfer({
 });
 ```
 
-## Withdraw ETH from layer 2 to layer 1
+## From layer 2 to layer 1 (withdraw)
 
 To withdraw ETH from layer 2 to layer 1, there are few parameters needed, here’s the quick start on how to retrieve them and doing the transfer.
 

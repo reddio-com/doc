@@ -6,39 +6,51 @@ Transfer assets from sender to receiver on layer 2
 
 **Parameters**
 
-**token_id** REQUIRED
+---
 
-Asset/token id
-
-**stark_key** REQUIRED
+<strong style='color:red'>*</strong>**stark_key** <strong style='color:#8792a2'>string</strong>
 
 A unique key that identifies the user in the off-chain state
 
-**amount** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**amount** <strong style='color:#8792a2'>string</strong>
 
 Amount of tokens to be transferred
 
-**nonce** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**nonce** <strong style='color:#8792a2'>int</strong>
 
 a one-time code selected in a random or pseudo-random manner that is used to securely transmit a main password, preventing replay attacks. In layer 2, every transaction has a nonce. The nonce is the number of transactions sent from a given address.
 
-**vault_id** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**vault_id** <strong style='color:#8792a2'>string</strong>
 
 The vault id from the sender
 
-**receiver** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**receiver** <strong style='color:#8792a2'>string</strong>
 
 The wallet address of the receiver
 
-**receiver_vault_id** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**receiver_vault_id** <strong style='color:#8792a2'>string</strong>
 
 The receiver's vault id
 
-**expiration_timestamp**
+---
+
+**expiration_timestamp** <strong style='color:#8792a2'>int</strong>
 
 The period to expire for the transfer, unit is seconds
 
-**signature** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**signature** <strong style='color:#8792a2'>dict</strong>
 
 The signature to make sure the transaction is triggered by you.
 

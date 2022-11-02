@@ -6,7 +6,9 @@ Retrieve account balances in batch based on the stark_key
 
 **Parameters**
 
-**stark_key** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**stark_key** <strong style='color:#8792a2'>string</strong>
 
 A unique key that identifies the user in the off-chain state
 
@@ -44,11 +46,15 @@ Retrieve account balance based on the stark_key and asset_id
 
 **Parameters**
 
-**stark_key** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**stark_key** <strong style='color:#8792a2'>string</strong>
 
 A unique key that identifies the user in the off-chain state
 
-**asset_id** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**asset_id** <strong style='color:#8792a2'>string</strong>
 
 The identity of the token as represented on-chain (external ERC-20/ERC-721/ERC-1155 for deposit/withdraw goes through, correct quantization, etc)
 
