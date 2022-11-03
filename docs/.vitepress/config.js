@@ -137,9 +137,9 @@ function sidebarService() {
                 { text: 'Marketplace Demo', link: '/guide/getting-started/marketplace-demo' },
                 { text: 'Mint NFTs On Layer 2', link: '/guide/getting-started/mint-nfts-on-layer-2'  },
                 { text: 'Place Orders On Layer 2', link: '/guide/getting-started/place-orders-on-layer-2' },
-                { text: 'Transfer NFTs Between Layers', link: '/guide/getting-started/transfer-nfts-between-layers'  },
-                { text: 'Transfer ETHs Between Layers', link: '/guide/getting-started/transfer-eths-between-layers' },
-                { text: 'Transfer ERC20s Between Layers', link: '/guide/getting-started/transfer-erc20s-between-layers' },
+                { text: 'Transfer NFTs Between Layer 1 and Layer 2', link: '/guide/getting-started/transfer-nfts-between-layer-1-and-layer-2'  },
+                { text: 'Transfer ETHs Between Layer 1 and Layer 2', link: '/guide/getting-started/transfer-eths-between-layer-1-and-layer-2' },
+                { text: 'Transfer ERC20s Between Layer 1 and Layer 2', link: '/guide/getting-started/transfer-erc20s-between-layer-1-and-layer-2' },
                 
             ]
         },
