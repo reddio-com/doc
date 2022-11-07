@@ -5,19 +5,36 @@
 **[Click here to open the demo](https://demos.reddio.com/)**
 
 ## Connect to your wallet
-![wallet](/connectWallet.gif)
+ <video controls>
+  <source src="/connect-wallet.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video> 
+
 
 ## Get ETH test asset
-![getTestAsset](/getTestETH.gif)
+ <video controls>
+  <source src="/getting-test-asset.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video> 
 
 ## Deposit NFTs/ETH/ERC20 to layer 2
-![deposit](/deposit.gif)
+ <video controls>
+  <source src="/deposit-to-layer-2.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video> 
 
 ## Transfer NFTs/ETH/ERC20 between layer 1 and layer 2
-![transfer](/transfer.gif)
+ <video controls>
+  <source src="/transfer-nft.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video> 
 
-## Withdraw NFTs/ETH/ERC20 from layer 2
-![withdral](/withdral.gif)
+
+## Buy NFTs/ETH/ERC20 from layer 2 and withdraw to layer 1
+ <video controls>
+  <source src="/buy-token-and-withdraw.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video> 
 
 
 ## Github repository
