@@ -5,7 +5,11 @@
 **[Click here to open the demo](https://demos.reddio.com/)**
 
 ## Connect to your wallet
-![wallet](/connectWallet.gif)
+ <video controls>
+  <source src="/connect-wallet.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video> 
+
 
 ## Get ETH test asset
  <video controls>
