@@ -24,7 +24,11 @@
 </video> 
 
 ## Transfer NFTs/ETH/ERC20 between layer 1 and layer 2
-![transfer](/transfer.gif)
+ <video controls>
+  <source src="/transfer-nft.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video> 
+
 
 ## Buy NFTs/ETH/ERC20 from layer 2 and withdraw to layer 1
  <video controls>
