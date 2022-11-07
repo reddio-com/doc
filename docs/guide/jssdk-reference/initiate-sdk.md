@@ -1,4 +1,12 @@
 # Initiate SDK
+
+## Install
+
+```sh
+$ yarn add @reddio.com/js
+```
+
+
 ## new Reddio()
 
 - **Type**
@@ -24,3 +32,9 @@ const reddio = new Reddio({
   apiKey: 'xxx'
 });
 ```
+
+::: tip
+You can get the API key from dashboard page https://dashboard.reddio.com/login
+:::
+
+![Dashboard](/dashboard-quickstart.png)

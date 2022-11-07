@@ -1,5 +1,11 @@
 # Feature
 
+## What are the benefits of Reddio?
+* Zero gas fee
+* Very easy to create an in-game marketplace
+* Simple integration with API’s and SDK’s
+* Access all your favourite L1 Dapps on Ethereum
+
 ## Time to market
 
 With Reddio’s APIs, your integration to Web3.0 can be done in minutes.

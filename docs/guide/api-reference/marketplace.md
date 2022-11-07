@@ -2,10 +2,10 @@
 
 ## For marketplace fee, there are some APIs and flow need to be taken care
 
-1. Create a marketplace object with marketplace fee payee address, and fee rate using API(Javascript SDK will be supported soon)
-    1. marketplace_fee (the fee rate paid for marketplace, it can be 0.015(that means 1.5% on the seller’s side. we do not charge buyer’s side)
-    2. marketplace_pay_address: the stark key of marketplace’s fee receiver
-    3. X-API-Key: get from dashboard 
+Create a marketplace object with marketplace fee payee address, and fee rate using API(Javascript SDK will be supported soon)
+    * marketplace_fee (the fee rate paid for marketplace, it can be 0.015(that means 1.5% on the seller’s side. we do not charge buyer’s side)
+    * marketplace_pay_address: the stark key of marketplace’s fee receiver
+    * X-API-Key: get from dashboard 
 
 ```jsx
 curl -X POST "https://api-dev.reddio.com/v1/marketplace" -d '{"marketplace_name":"Reddio2",
@@ -21,11 +21,12 @@ It will return marketplace uuid
 {"status":"OK","data":{"message":"Marketplace created.","marketplace_uuid":"f11e414d-0b32-44d0-a36a-964f6e25b6c4"},"error":""}
 ```
 
-1. Add marketplace uuid in buy order & sell order
+## Add marketplace uuid in buy order & sell order
 
 [https://github.com/reddio-com/red-js-sdk/blob/main/src/utils/orderParams.ts#L20](https://github.com/reddio-com/red-js-sdk/blob/main/src/utils/orderParams.ts#L20)
 
-1. After order deal. reddio will charge 0.5% fee, and marketplace will auto receive 1.5%(when set marketplace_fee to 0.015) immediately
+## After order deal
+After order deal, reddio will charge 0.5% fee, and marketplace will auto receive 1.5%(when set marketplace_fee to 0.015) immediately
 
 ## For cancel order.  the request need sign
 

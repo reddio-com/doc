@@ -5,11 +5,15 @@ Retrieve asset id based on contract address
 
 **Parameters**
 
-**contract_address** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**contract_address** <strong style='color:#8792a2'>string</strong>
 
 Contract address of token (ERC20 or ERC721)
 
-**type** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**type** <strong style='color:#8792a2'>string</strong>
 
 *Type of token*
 
@@ -17,9 +21,14 @@ Possible enum values
 
 ETH, ERC20, ERC20M, ERC721, ERC721M
 
-**token_id** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**token_id** <strong style='color:#8792a2'>string</strong>
 
 Asset/token id
+
+---
+
 
 ```jsx
 GET /v1/assetid
