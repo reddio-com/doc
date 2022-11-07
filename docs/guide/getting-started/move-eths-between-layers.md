@@ -41,7 +41,7 @@ const connect = async () => {
 }
 
 const generateKey = async () => {
-  return await reddio.keypair.generateFromEthSignature('Sign');
+  return await reddio.keypair.generateFromEthSignature();
 };
 ```
 

@@ -6,7 +6,7 @@
 
 ```tsx
 // If you want to use object types, please refer to EIP-712
-declare const generateFromEthSignature: (content: string | Record<string, any>) => Promise<{
+declare const generateFromEthSignature: () => Promise<{
     privateKey: string;
     publicKey: string;
 }>;
@@ -15,5 +15,5 @@ declare const generateFromEthSignature: (content: string | Record<string, any>) 
 - **Example**
 
 ```tsx
-await reddio.keypair.generateFromEthSignature('Sign');
+await reddio.keypair.generateFromEthSignature();
 ```

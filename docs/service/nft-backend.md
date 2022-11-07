@@ -20,7 +20,7 @@ We currently only provide JS SDK for your integration, and plan to roll out Andr
 ```jsx
 // Generate starkKey
 const gen = async () => {
-  const res = await reddio.keypair.generateFromEthSignature('Sign');
+  const res = await reddio.keypair.generateFromEthSignature();
   window.publicKey = res.publicKey;
   window.privateKey = res.privateKey;
   return res;
