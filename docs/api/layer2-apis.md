@@ -214,47 +214,6 @@ RESPONSE
 }
 ```
 
-## Withdrawal
-
-Withdraw assets from layer 2 to layer 1
-
-**Parameters**
-
-**contract_address** REQUIRED
-
-Contract address of token (ERC20 or ERC721)
-
-**token_id** REQUIRED
-
-Asset/token id
-
-**stark_key** REQUIRED
-
-A unique key that identifies the user in the off-chain state
-
-**amount** REQUIRED
-
-Amount of tokens to be withdrawn to layer 1 from layer 2
-
-```jsx
-POST /v1/withdrawal
-```
-
-```jsx
-curl -v  https://api-dev.reddio.com/v1/withdrawal  -H 'content-type: application/json'  -d '{ "contract_address":"0x4240e8b8c0b6e6464a13f555f6395bbfe1c4bdf1", "token_id":"1", "stark_key":"0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda", "amount":10}'
-```
-
-```jsx
-RESPONSE
-{
-	"status": "OK",
-	"error": "",
-	"data": {
-		"sequence_id": 10
-	}
-}
-
-```
 
 ## Get nonce by stark_key
 
