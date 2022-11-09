@@ -23,10 +23,11 @@ curl -v  'https://api-dev.reddio.com/v1/nonce?stark_key=0x761f1709a72a7e1d9a503f
 ```jsx
 RESPONSE
 {
-    "status": "OK",
-    "error": "",
-    "data": {
-        "nonce": 0
-    }
+	"status": "OK",
+	"error": "",
+	"error_code": 0,
+	"data": {
+		"nonce": 0
+	}
 }
 ```

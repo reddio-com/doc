@@ -31,8 +31,11 @@ RESPONSE
 {
 	"status": "OK",
 	"error": "",
+	"error_code": 0,
 	"data": {
-		"vault_id": 14
+		"vault_ids": [
+			"23400429"
+		]
 	}
 }
 ```
