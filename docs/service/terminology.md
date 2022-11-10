@@ -16,7 +16,9 @@ StarkEx is a mature platform that has been deployed on Ethereum Mainnet since Ju
 
 ## Stark Key
 
-For our integration with StarkEx, users are identified within Reddio by their Stark Key which is a public key defined over a Stark-friendly elliptic curve that is different from the standard Ethereum elliptic curve. In order to associate your users with Ethereum account addresses, a user must first request to sign the linkage of an Ethereum key to a Stark Key and then register the Stark Key on your smart contract registered via Reddio platform before any other user operation can take place.
+For our integration with StarkEx, users are identified within Reddio by their Stark Key which is a public key defined over a **[Stark-friendly elliptic curve](https://docs.starkware.co/starkex/stark-curve.html)** that is different from the standard Ethereum elliptic curve. 
+
+In order to associate your users with Ethereum account addresses, a user must first request to sign the linkage of an Ethereum key to a Stark Key and then register the Stark Key on your smart contract registered via Reddio platform before any other user operation can take place.
 
 ### ERC721/NFT
 
