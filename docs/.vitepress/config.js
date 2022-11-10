@@ -166,9 +166,6 @@ function sidebarService() {
             collapsible: true,
             items: [
                 { text: 'API Reference', link: '/guide/api-reference/api-reference' },
-                { text: 'Authentication', link: '/guide/api-reference/authentication' },
-                { text: 'Endpoint', link: '/guide/api-reference/endpoint' },
-                { text: 'Error', link: '/guide/api-reference/error' },
                 { text: 'Utils', link: '/guide/api-reference/utils' },
                 { text: 'Project', link: '/guide/api-reference/project' },
                 { text: 'Withdraw', link: '/guide/api-reference/withdraw' },
