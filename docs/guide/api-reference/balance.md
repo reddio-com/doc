@@ -25,18 +25,40 @@ RESPONSE
 {
 	"status": "OK",
 	"error": "",
-	"data": [
-		{
-			"asset_id": "0x1142460171646987f20c714eda4b92812b22b811f56f27130937c267e29bd9e",
-			"contract_address": "eth",
-			"balance_available": 400000000002400,
-			"type": "ETH",
-			"decimals": 18,
-			"symbol": "",
-			"quantum": 1,
-			"display_value": "0.0004000000000024"
-		}
-	]
+	"error_code": 0,
+	"data": {
+		"list": [
+			{
+				"asset_id": "0x275e2efd2e4940ab9a8592588334f05986ccac4a3f70108f0515c06ca94246",
+				"contract_address": "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
+				"balance_available": 1,
+				"balance_frozen": 0,
+				"type": "ERC721",
+				"decimals": 0,
+				"symbol": "REDDIO721",
+				"quantum": 1,
+				"display_value": "1",
+				"display_frozen": "0",
+				"token_id": "610",
+				"base_uri": ""
+			},
+			{
+				"asset_id": "0x135caafee332f20a186073b49e12439d2e27ddfb2150d58110b1fd839c6cf78",
+				"contract_address": "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
+				"balance_available": 0,
+				"balance_frozen": 0,
+				"type": "ERC721",
+				"decimals": 0,
+				"symbol": "REDDIO721",
+				"quantum": 1,
+				"display_value": "0",
+				"display_frozen": "0",
+				"token_id": "671",
+				"base_uri": ""
+			}
+		],
+		"total": 2
+	}
 }
 ```
 
@@ -63,7 +85,7 @@ GET /v1/balance
 ```
 
 ```jsx
-curl -v  https://api-dev.reddio.com/v1/balance?stark_key=0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c&asset_id=0x1142460171646987f20c714eda4b92812b22b811f56f27130937c267e29bd9e -H 'content-type: application/json'
+curl -v https://api-dev.reddio.com/v1/balance?stark_key=0x6ecaebbe5b9486472d964217e5470380782823bb0d865240ba916d01636310a&asset_id=0x385f3bf3fb3db6b4f152c84dd7a508d4b609caa97535725fe2828e8fe351b9d -H 'content-type: application/json'
 ```
 
 ```jsx
@@ -71,15 +93,20 @@ RESPONSE
 {
 	"status": "OK",
 	"error": "",
+	"error_code": 0,
 	"data": {
-		"asset_id": "0x1142460171646987f20c714eda4b92812b22b811f56f27130937c267e29bd9e",
-		"contract_address": "eth",
-		"balance_available": 400000000002400,
-		"type": "ETH",
-		"decimals": 18,
-		"symbol": "",
+		"asset_id": "0x385f3bf3fb3db6b4f152c84dd7a508d4b609caa97535725fe2828e8fe351b9d",
+		"contract_address": "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
+		"balance_available": 0,
+		"balance_frozen": 0,
+		"type": "ERC721",
+		"decimals": 0,
+		"symbol": "REDDIO721",
 		"quantum": 1,
-		"display_value": "0.0004000000000024"
+		"display_value": "0",
+		"display_frozen": "0",
+		"token_id": "674",
+		"base_uri": ""
 	}
 }
 ```

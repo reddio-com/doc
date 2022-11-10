@@ -455,13 +455,15 @@ RESPONSE
 }
 ```
 
-## Get Balances
+## Get balances
 
 Retrieve account balances in batch based on the stark_key
 
 **Parameters**
 
-**stark_key** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**stark_key** <strong style='color:#8792a2'>string</strong>
 
 A unique key that identifies the user in the off-chain state
 
@@ -478,32 +480,58 @@ RESPONSE
 {
 	"status": "OK",
 	"error": "",
-	"data": [
-		{
-			"asset_id": "0x1142460171646987f20c714eda4b92812b22b811f56f27130937c267e29bd9e",
-			"contract_address": "eth",
-			"balance_available": 400000000002400,
-			"type": "ETH",
-			"decimals": 18,
-			"symbol": "",
-			"quantum": 1,
-			"display_value": "0.0004000000000024"
-		}
-	]
+	"error_code": 0,
+	"data": {
+		"list": [
+			{
+				"asset_id": "0x275e2efd2e4940ab9a8592588334f05986ccac4a3f70108f0515c06ca94246",
+				"contract_address": "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
+				"balance_available": 1,
+				"balance_frozen": 0,
+				"type": "ERC721",
+				"decimals": 0,
+				"symbol": "REDDIO721",
+				"quantum": 1,
+				"display_value": "1",
+				"display_frozen": "0",
+				"token_id": "610",
+				"base_uri": ""
+			},
+			{
+				"asset_id": "0x135caafee332f20a186073b49e12439d2e27ddfb2150d58110b1fd839c6cf78",
+				"contract_address": "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
+				"balance_available": 0,
+				"balance_frozen": 0,
+				"type": "ERC721",
+				"decimals": 0,
+				"symbol": "REDDIO721",
+				"quantum": 1,
+				"display_value": "0",
+				"display_frozen": "0",
+				"token_id": "671",
+				"base_uri": ""
+			}
+		],
+		"total": 2
+	}
 }
 ```
 
-## Get Balance
+## Get balance
 
 Retrieve account balance based on the stark_key and asset_id
 
 **Parameters**
 
-**stark_key** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**stark_key** <strong style='color:#8792a2'>string</strong>
 
 A unique key that identifies the user in the off-chain state
 
-**asset_id** REQUIRED
+---
+
+<strong style='color:red'>*</strong>**asset_id** <strong style='color:#8792a2'>string</strong>
 
 The identity of the token as represented on-chain (external ERC-20/ERC-721/ERC-1155 for deposit/withdraw goes through, correct quantization, etc)
 
@@ -512,7 +540,7 @@ GET /v1/balance
 ```
 
 ```jsx
-curl -v  https://api-dev.reddio.com/v1/balance?stark_key=0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c&asset_id=0x1142460171646987f20c714eda4b92812b22b811f56f27130937c267e29bd9e -H 'content-type: application/json'
+curl -v https://api-dev.reddio.com/v1/balance?stark_key=0x6ecaebbe5b9486472d964217e5470380782823bb0d865240ba916d01636310a&asset_id=0x385f3bf3fb3db6b4f152c84dd7a508d4b609caa97535725fe2828e8fe351b9d -H 'content-type: application/json'
 ```
 
 ```jsx
@@ -520,15 +548,20 @@ RESPONSE
 {
 	"status": "OK",
 	"error": "",
+	"error_code": 0,
 	"data": {
-		"asset_id": "0x1142460171646987f20c714eda4b92812b22b811f56f27130937c267e29bd9e",
-		"contract_address": "eth",
-		"balance_available": 400000000002400,
-		"type": "ETH",
-		"decimals": 18,
-		"symbol": "",
+		"asset_id": "0x385f3bf3fb3db6b4f152c84dd7a508d4b609caa97535725fe2828e8fe351b9d",
+		"contract_address": "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
+		"balance_available": 0,
+		"balance_frozen": 0,
+		"type": "ERC721",
+		"decimals": 0,
+		"symbol": "REDDIO721",
 		"quantum": 1,
-		"display_value": "0.0004000000000024"
+		"display_value": "0",
+		"display_frozen": "0",
+		"token_id": "674",
+		"base_uri": ""
 	}
 }
 ```
@@ -658,6 +691,11 @@ Place an order on Reddio.
 
 **Parameters**
 
+
+**stark_key** REQUIRED
+
+A unique key that identifies the user in the off-chain state
+
 **amount** REQUIRED
 
 The amount you wish to buy/sell.
@@ -726,6 +764,7 @@ curl https://api-dev.reddio.com/v1/order -H 'content-type: application/json' -d 
    "amount":"1",
    "amount_buy":"1000",
    "amount_sell":"1",
+   "stark_key":"0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c",
    "token_buy":"0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
    "price":"1000",
    "token_sell":"0x400fcfa0889b788c49ecdbe90b494b4dc692532467466b88c1179779096a163",
@@ -742,11 +781,23 @@ curl https://api-dev.reddio.com/v1/order -H 'content-type: application/json' -d 
    "account_id":"0x13b314ccfe334151abc7e1ab50c4c5d77f8941777d1616cb381d9d9b2273bdb",
    "direction":0,
    "fee_info":{
-        "fee_limit":5,
-        "token_id":"0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
-        "source_vault_id":21535787
-        }
+      "fee_limit":5,
+      "token_id":"0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
+      "source_vault_id":21535787
+   }
 }'
+```
+
+```jsx
+RESPONSE
+{
+	"status": "OK",
+	"error": "",
+	"error_code": 0,
+	"data": {
+		"sequence_id": 302120
+	}
+}
 ```
 
 Buyer example
@@ -757,6 +808,7 @@ curl https://api-dev.reddio.com/v1/order -H 'content-type: application/json' -d 
    "amount":"1",
    "amount_buy":"1",
    "amount_sell":"1000",
+   "stark_key":"0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c",
    "token_buy":"0x400fcfa0889b788c49ecdbe90b494b4dc692532467466b88c1179779096a163",
    "price":"1000",
    "token_sell":"0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
@@ -773,11 +825,23 @@ curl https://api-dev.reddio.com/v1/order -H 'content-type: application/json' -d 
    "account_id":"0x3d2161b60487fb223760e586efaf70004ddc018b53b8cdb39cb75ef4b4e25f7",
    "direction":1,
    "fee_info":{
-	"fee_limit":5,
-	"token_id":"0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
-	"source_vault_id":21433994
+      "fee_limit":5,
+      "token_id":"0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
+      "source_vault_id":21433994
 	}
 }'
+```
+
+```jsx
+RESPONSE
+{
+	"status": "OK",
+	"error": "",
+	"error_code": 0,
+	"data": {
+		"sequence_id": 302124
+	}
+}
 ```
 
 ## Marketplace

@@ -8,6 +8,12 @@ Place an order on Reddio.
 
 ---
 
+<strong style='color:red'>*</strong>**stark_key** <strong style='color:#8792a2'>string</strong>
+
+A unique key that identifies the user in the off-chain state
+
+---
+
 <strong style='color:red'>*</strong>**amount** <strong style='color:#8792a2'>string</strong>
 
 The amount you wish to buy/sell.
@@ -102,6 +108,7 @@ curl https://api-dev.reddio.com/v1/order -H 'content-type: application/json' -d 
    "amount":"1",
    "amount_buy":"1000",
    "amount_sell":"1",
+   "stark_key":"0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c",
    "token_buy":"0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
    "price":"1000",
    "token_sell":"0x400fcfa0889b788c49ecdbe90b494b4dc692532467466b88c1179779096a163",
@@ -118,11 +125,23 @@ curl https://api-dev.reddio.com/v1/order -H 'content-type: application/json' -d 
    "account_id":"0x13b314ccfe334151abc7e1ab50c4c5d77f8941777d1616cb381d9d9b2273bdb",
    "direction":0,
    "fee_info":{
-        "fee_limit":5,
-        "token_id":"0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
-        "source_vault_id":21535787
-        }
+      "fee_limit":5,
+      "token_id":"0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
+      "source_vault_id":21535787
+   }
 }'
+```
+
+```jsx
+RESPONSE
+{
+	"status": "OK",
+	"error": "",
+	"error_code": 0,
+	"data": {
+		"sequence_id": 302120
+	}
+}
 ```
 
 Buyer example
@@ -133,6 +152,7 @@ curl https://api-dev.reddio.com/v1/order -H 'content-type: application/json' -d 
    "amount":"1",
    "amount_buy":"1",
    "amount_sell":"1000",
+   "stark_key":"0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c",
    "token_buy":"0x400fcfa0889b788c49ecdbe90b494b4dc692532467466b88c1179779096a163",
    "price":"1000",
    "token_sell":"0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
@@ -149,9 +169,21 @@ curl https://api-dev.reddio.com/v1/order -H 'content-type: application/json' -d 
    "account_id":"0x3d2161b60487fb223760e586efaf70004ddc018b53b8cdb39cb75ef4b4e25f7",
    "direction":1,
    "fee_info":{
-	"fee_limit":5,
-	"token_id":"0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
-	"source_vault_id":21433994
+      "fee_limit":5,
+      "token_id":"0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
+      "source_vault_id":21433994
 	}
 }'
+```
+
+```jsx
+RESPONSE
+{
+	"status": "OK",
+	"error": "",
+	"error_code": 0,
+	"data": {
+		"sequence_id": 302124
+	}
+}
 ```
