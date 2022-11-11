@@ -22,7 +22,7 @@ You can access our sample code of JS SDK integration here, https://github.com/re
 Create ERC721 smart contract on layer 1 with Reddio's API. Once created, please keep the smart contract address, we will use it as tokenAddress. It's needed, so that you will have the choice to depoist to layer 2 and withdraw back to layer 1.
 
 ```sh
-$ curl -v https://api-dev.reddio.com/v1/token/deploy -H 'content-type: application/json' -H 'X-API-Key:{your_api_key}}' -d '{"name":"REDDIO","Symbol":"REDDIO721", "type":"ERC721M", "base_uri":"https://us-central1-bayc-metadata.cloudfunctions.net/api/tokens"}'
+$ curl -v https://api-dev.reddio.com/v1/token/deploy -H 'content-type: application/json' -H 'X-API-Key: {your_api_key}' -d '{"name":"REDDIO","Symbol":"REDDIO721", "type":"ERC721M", "base_uri":"https://us-central1-bayc-metadata.cloudfunctions.net/api/tokens"}'
 ```
 You shall be able to view your smart contract on layer 1 with the following API,
 view at `https://goerli.etherscan.io/address/{your_smart_contract_address}`.
