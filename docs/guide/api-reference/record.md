@@ -31,11 +31,6 @@ Page for records.
 
 Contract address of token (ERC20 or ERC721).
 
----
-
-<strong style='color:red'>*</strong>**record_type** <strong style='color:#8792a2'>string</strong>
-
-Record Type, available options are: `ASKOrderRecordType`, `BIDOrderRecordType`, `DepositRecordType`, `MintRecordType`, `TransferFromRecordType`, `WithDrawRecordType`, `FullWithDrawRecordType`
 
 ```jsx
 GET /v1/records
@@ -110,6 +105,26 @@ RESPONSE
 	}
 }
 ```
+
+**Response Parameters**
+
+---
+
+**record_type** <strong style='color:#8792a2'>string</strong>
+
+Record Type, available options are shown as below.
+
+|Record Type| ID |
+|---|---|
+|`DepositRecordType`| 1 |
+|`MintRecordType`| 2 |
+|`TransferFromRecordType`| 3 |
+|`WithDrawRecordType`| 4 |
+|`FullWithDrawRecordType`| 5 |
+|`ASKOrderRecordType`| 7 |
+|`BIDOrderRecordType`| 8 |
+
+
 
 ## Get record
 
