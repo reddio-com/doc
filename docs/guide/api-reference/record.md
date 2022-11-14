@@ -13,12 +13,36 @@ Retrieve records based on start_key
 
 A unique key that identifies the user in the off-chain state
 
+---
+
+<strong style='color:red'>*</strong>**limit** <strong style='color:#8792a2'>string</strong>
+
+Limit entries for query records.
+
+---
+
+<strong style='color:red'>*</strong>**page** <strong style='color:#8792a2'>string</strong>
+
+Page for records.
+
+---
+
+<strong style='color:red'>*</strong>**contract_address** <strong style='color:#8792a2'>string</strong>
+
+Contract address of token (ERC20 or ERC721).
+
+---
+
+<strong style='color:red'>*</strong>**record_type** <strong style='color:#8792a2'>string</strong>
+
+Record Type, available options are: `ASKOrderRecordType`, `BIDOrderRecordType`, `DepositRecordType`, `MintRecordType`, `TransferFromRecordType`, `WithDrawRecordType`, `FullWithDrawRecordType`
+
 ```jsx
 GET /v1/records
 ```
 
 ```jsx
-curl -v  https://api-dev.reddio.com/v1/records?stark_key=0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c  -H 'content-type: application/json'
+curl -v  https://api-dev.reddio.com/v1/records?stark_key=0x6736f7449da3bf44bf0f7bdd6463818e1ef272641d43021e8bca17b32ec2df0&limit=3&page=2  -H 'content-type: application/json'
 ```
 
 ```jsx
@@ -26,48 +50,64 @@ RESPONSE
 {
 	"status": "OK",
 	"error": "",
-	"data": [
-		{
-			"stark_key": "0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c",
-			"sequence_id": 1,
-			"reason": "",
-			"status": 1,
-			"command": {
-					"amount": "1",
-					"asset_id": "0x5c60f3aabcf75f1c9a23c3fadd93668b17db9a1ebfdf8581e62712eb01bcff",
-					"expiration_timestamp": 4194303,
-					"nonce": 1,
-					"receiver": "0x92ae986e4c77117113d94266f9787a4d46c63305",
-					"receiver_vault_id": 50159,
-					"signature": {
-							"r": "0x4aa896c67e6456779d290a7d009980e85bad9f8b2aa74f6c72b5d59ff4f13d6",
-							"s": "0x181ee5bd39464cb3cfcdee258ee0e6f3f1dec7bed39c6a7ceb432b16b77caab"
-					},
-					"stark_key": "0xb137d0df14306f2dc643132ef5b4991a40f14224fdfaac4dbbc137430e732b",
-					"vault_id": 50158
-				}
-		},
-		{
-			"stark_key": "0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c",
-			"sequence_id": 2,
-			"reason": "",
-			"status": 1,
-			"command": {
-					"amount": "1",
-					"asset_id": "0x5c60f3aabcf75f1c9a23c3fadd93668b17db9a1ebfdf8581e62712eb01bcff",
-					"expiration_timestamp": 4194303,
-					"nonce": 2,
-					"receiver": "0x92ae986e4c77117113d94266f9787a4d46c63305",
-					"receiver_vault_id": 50159,
-					"signature": {
-							"r": "0x64a9bcb219a05892fc8a067fc07f314fdbcd38346f7909c9055e90dbb2a4a15",
-							"s": "0x8ef245f09466a9c64bc74dc102b79f7b2ee2f5367ee9c5e136ec879656a95f"
-					},
-					"stark_key": "0xb137d0df14306f2dc643132ef5b4991a40f14224fdfaac4dbbc137430e732b",
-					"vault_id": 50158
-			}		
-		}
-	]
+	"error_code": 0,
+	"data": {
+		"list": [
+			{
+				"amount": "1",
+				"order": {
+					"base_asset_id": "0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
+					"base_asset_name": "ETH",
+					"base_contract_address": "eth",
+					"direction": 0,
+					"display_price": "0.001",
+					"fee_asset_name": "ETH",
+					"fee_taken": "20",
+					"fee_token_asset": "0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
+					"filled": "1",
+					"price": "1000",
+					"quote_asset_id": "0xcd7426893d55aeb8aebb3e8cd4942d62f7566879ca013291c93fb2ed8b1fc1",
+					"quote_asset_name": "REDDIO721",
+					"quote_asset_type": "ERC721",
+					"quote_contract_address": "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
+					"token_id": "499",
+					"volume": "1000"
+				},
+				"record_type": 7,
+				"sequence_id": 300517,
+				"stark_key": "0x6736f7449da3bf44bf0f7bdd6463818e1ef272641d43021e8bca17b32ec2df0",
+				"status": 1,
+				"time": 1667786575
+			},
+			{
+				"amount": "1",
+				"order": {
+					"base_asset_id": "0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
+					"base_asset_name": "ETH",
+					"base_contract_address": "eth",
+					"direction": 0,
+					"display_price": "0.001",
+					"fee_asset_name": "ETH",
+					"fee_taken": "20",
+					"fee_token_asset": "0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
+					"filled": "1",
+					"price": "1000",
+					"quote_asset_id": "0x212cc1ee0a97b49c5a308864e7aaea701fac36e5028b247f195a0a25631b162",
+					"quote_asset_name": "REDDIO721",
+					"quote_asset_type": "ERC721",
+					"quote_contract_address": "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
+					"token_id": "496",
+					"volume": "1000"
+				},
+				"record_type": 7,
+				"sequence_id": 300505,
+				"stark_key": "0x6736f7449da3bf44bf0f7bdd6463818e1ef272641d43021e8bca17b32ec2df0",
+				"status": 1,
+				"time": 1667802086
+			}
+		],
+		"total": 76
+	}
 }
 ```
 
@@ -94,7 +134,7 @@ POST /v1/record
 ```
 
 ```jsx
-curl -v  https://api-dev.reddio.com/v1/record?stark_key=0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c&sequence_id=2  -H 'content-type: application/json'
+curl -v https://api-dev.reddio.com/v1/record?stark_key=0x6736f7449da3bf44bf0f7bdd6463818e1ef272641d43021e8bca17b32ec2df0&sequence_id=300517 -H 'content-type: application/json'
 ```
 
 ```jsx
@@ -102,25 +142,32 @@ RESPONSE
 {
 	"status": "OK",
 	"error": "",
-	"data": {
-		"stark_key": "0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c",
-		"sequence_id": 2,
-		"reason": "",
-		"status": 1,
-		"command": {
-				"amount": "1",
-				"asset_id": "0x5c60f3aabcf75f1c9a23c3fadd93668b17db9a1ebfdf8581e62712eb01bcff",
-				"expiration_timestamp": 4194303,
-				"nonce": 2,
-				"receiver": "0x92ae986e4c77117113d94266f9787a4d46c63305",
-				"receiver_vault_id": 50159,
-				"signature": {
-						"r": "0x64a9bcb219a05892fc8a067fc07f314fdbcd38346f7909c9055e90dbb2a4a15",
-						"s": "0x8ef245f09466a9c64bc74dc102b79f7b2ee2f5367ee9c5e136ec879656a95f"
-				},
-				"stark_key": "0xb137d0df14306f2dc643132ef5b4991a40f14224fdfaac4dbbc137430e732b",
-				"vault_id": 50158
+	"error_code": 0,
+	"data": [
+		{
+			"amount": "1",
+			"order.base_asset_id": "0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
+			"order.base_asset_name": "ETH",
+			"order.base_contract_address": "eth",
+			"order.direction": 0,
+			"order.display_price": "0.001",
+			"order.fee_asset_name": "ETH",
+			"order.fee_taken": "20",
+			"order.fee_token_asset": "0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
+			"order.filled": "1",
+			"order.price": "1000",
+			"order.quote_asset_id": "0xcd7426893d55aeb8aebb3e8cd4942d62f7566879ca013291c93fb2ed8b1fc1",
+			"order.quote_asset_name": "REDDIO721",
+			"order.quote_asset_type": "ERC721",
+			"order.quote_contract_address": "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
+			"order.volume": "1000",
+			"record_type": 7,
+			"sequence_id": 300517,
+			"stark_key": "0x6736f7449da3bf44bf0f7bdd6463818e1ef272641d43021e8bca17b32ec2df0",
+			"status": 1,
+			"time": 1667786575,
+			"token_id": "499"
 		}
-	}
+	]
 }
 ```
