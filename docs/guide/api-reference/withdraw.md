@@ -7,7 +7,6 @@ Withdrawal to another Ethereum address for ERC-20/ETH and ERC-721
 
 **Parameters**
 
-
 ---
 
 <strong style='color:red'>*</strong>**asset_id** <strong style='color:#8792a2'>string</strong>
@@ -70,7 +69,6 @@ curl -v  https://api-dev.reddio.com/v1/withdrawalto  -H 'content-type: applicati
 ```
 
 ```jsx
-
 RESPONSE
 {
 	"status": "OK",
@@ -80,4 +78,70 @@ RESPONSE
 	}
 }
 
+```
+
+## Withdrawal Status
+
+Check if your asset is ready to withdraw to L1.
+
+**Parameters**
+
+---
+
+<strong style='color:red'>*</strong>**stage** <strong style='color:#8792a2'>string</strong>
+
+Withdraw stage, currently we only support `withdrawarea`.
+
+---
+
+<strong style='color:red'>*</strong>**ethaddress** <strong style='color:#8792a2'>string</strong>
+
+ETH address.
+
+```jsx
+GET /v1/withdrawal/status
+```
+
+```jsx
+curl -v  https://api-dev.reddio.com/v1/withdrawal/status?ethaddress=0x067ceABFb722CA0034f39b88EE4004dAbc8ef33b&stage=withdrawarea -H 'content-type: application/json'
+```
+
+```jsx
+RESPONSE
+{
+  "status": "OK",
+  "data": [
+    {
+      "contract_address": "eth",
+      "asset_id": "0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
+      "token_id": "",
+      "type": "ETH",
+      "asset_type": "0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
+      "display_value": "0.011",
+      "symbol": "ETH",
+      "amount": 11000
+    },
+    {
+      "contract_address": "0x57f3560b6793dcc2cb274c39e8b8eba1dd18a086",
+      "asset_id": "0x348d9f01e42582dee55ba5db85b0ab036671786ca9e140642d7b7a010abb159",
+      "token_id": "",
+      "type": "ERC20",
+      "asset_type": "0x348d9f01e42582dee55ba5db85b0ab036671786ca9e140642d7b7a010abb159",
+      "display_value": "100",
+      "symbol": "RDD20",
+      "amount": 100000000
+    },
+    {
+      "contract_address": "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
+      "asset_id": "0x36943f9a5f1e83ff2ed74e9d2c94088c3648c1cff7184f1b565a1890f2b640f",
+      "token_id": "255",
+      "type": "ERC721",
+      "asset_type": "0x2b405eba724b638f4cf82ccadcd2741a120d2dbc69cb89a5fc315a9c443d592",
+      "display_value": "1",
+      "symbol": "REDDIO721",
+      "amount": 1
+    }
+  ],
+  "error": ""
+}
 ```
