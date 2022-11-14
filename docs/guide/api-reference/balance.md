@@ -12,12 +12,30 @@ Retrieve account balances in batch based on the stark_key
 
 A unique key that identifies the user in the off-chain state
 
+---
+
+**limit** <strong style='color:#8792a2'>string</strong>
+
+Limit entries for query records.
+
+---
+
+**page** <strong style='color:#8792a2'>string</strong>
+
+Page for records.
+
+---
+
+**contract_address** <strong style='color:#8792a2'>string</strong>
+
+Contract address of token (ERC20 or ERC721).
+
 ```jsx
 GET /v1/balances
 ```
 
 ```jsx
-curl -v  https://api-dev.reddio.com/v1/balances?stark_key=0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c  -H 'content-type: application/json'
+curl -v https://api-dev.reddio.com/v1/balances?stark_key=0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c  -H 'content-type: application/json'
 ```
 
 ```jsx
@@ -64,7 +82,7 @@ RESPONSE
 
 ## Get balances V2
 
-Retrieve account balances in batch based on the stark_key
+Retrieve account balances in batch based on the stark_key, this API aggregates tokens by `contract_address`.
 
 **Parameters**
 
@@ -73,6 +91,24 @@ Retrieve account balances in batch based on the stark_key
 <strong style='color:red'>*</strong>**stark_key** <strong style='color:#8792a2'>string</strong>
 
 A unique key that identifies the user in the off-chain state
+
+---
+
+**limit** <strong style='color:#8792a2'>string</strong>
+
+Limit entries for query records.
+
+---
+
+**page** <strong style='color:#8792a2'>string</strong>
+
+Page for records.
+
+---
+
+**contract_address** <strong style='color:#8792a2'>string</strong>
+
+Contract address of token (ERC20 or ERC721).
 
 ```jsx
 GET /v2/balances
