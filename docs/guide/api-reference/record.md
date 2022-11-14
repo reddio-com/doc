@@ -119,11 +119,9 @@ Record Type, available options are shown as below.
 |`DepositRecordType`| 1 |
 |`MintRecordType`| 2 |
 |`TransferFromRecordType`| 3 |
-|`WithDrawRecordType`| 4 |
-|`FullWithDrawRecordType`| 5 |
+|`WithdrawRecordType`| 4 |
 |`ASKOrderRecordType`| 7 |
 |`BIDOrderRecordType`| 8 |
-
 
 
 ## Get record
