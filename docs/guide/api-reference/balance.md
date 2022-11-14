@@ -1,6 +1,6 @@
 # Balance
 
-## Get balances
+## Get balances V1
 
 Retrieve account balances in batch based on the stark_key
 
@@ -59,6 +59,97 @@ RESPONSE
 		],
 		"total": 2
 	}
+}
+```
+
+## Get balances V2
+
+Retrieve account balances in batch based on the stark_key
+
+**Parameters**
+
+---
+
+<strong style='color:red'>*</strong>**stark_key** <strong style='color:#8792a2'>string</strong>
+
+A unique key that identifies the user in the off-chain state
+
+```jsx
+GET /v2/balances
+```
+
+```jsx
+curl -v https://api-dev.reddio.com/v2/balances?stark_key=0x1c9d32ba737263bbdc274c474488179ce4bc09173339b7f4f495caf0040337c  -H 'content-type: application/json'
+```
+
+```jsx
+RESPONSE
+{
+	"status": "OK",
+	"error": "",
+	"error_code": 0,
+	"data": [
+		{
+			"asset_id": "0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
+			"contract_address": "eth",
+			"balance_available": 291702,
+			"balance_frozen": 2498,
+			"type": "ETH",
+			"decimals": 18,
+			"symbol": "ETH",
+			"quantum": 1000000000000,
+			"display_value": "0.291702",
+			"display_frozen": "0.002498"
+		},
+		{
+			"contract_address": "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
+			"balance_available": 21,
+			"balance_frozen": 0,
+			"type": "ERC721",
+			"decimals": 0,
+			"symbol": "REDDIO721",
+			"quantum": 1,
+			"display_value": "21",
+			"display_frozen": "0",
+			"available_token_ids": [
+				"38",
+				"73",
+				"202",
+				"203",
+				"210",
+				"211",
+				"212",
+				"213",
+				"215",
+				"216",
+				"219",
+				"220",
+				"252",
+				"312",
+				"314",
+				"318",
+				"319",
+				"320",
+				"341",
+				"349",
+				"350"
+			]
+		},
+		{
+			"contract_address": "0xe4db0ced9cbe4a346fd3097bddf7ce1a8d079169",
+			"balance_available": 1,
+			"balance_frozen": 0,
+			"type": "ERC721M",
+			"decimals": 0,
+			"symbol": "REDDIO",
+			"quantum": 1,
+			"display_value": "1",
+			"display_frozen": "0",
+			"available_token_ids": [
+				"21000"
+			]
+		}
+	]
 }
 ```
 
