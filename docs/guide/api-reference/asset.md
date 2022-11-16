@@ -1,4 +1,5 @@
 # Asset
+
 ## Get asset ID
 
 Retrieve asset id based on contract address
@@ -34,12 +35,13 @@ Asset/token id
 GET /v1/assetid
 ```
 
-```jsx
-curl -v  https://api-dev.reddio.com/v1/assetid?type=ERC20&contract_address=0x4240e8b8c0b6e6464a13f555f6395bbfe1c4bdf1&token_id=1 -H 'content-type: application/json'
+**`cURL` Example**
+```sh
+curl -v https://api-dev.reddio.com/v1/assetid?type=ERC20&contract_address=0x4240e8b8c0b6e6464a13f555f6395bbfe1c4bdf1&token_id=1 -H 'content-type: application/json'
 ```
 
-```jsx
-RESPONSE
+**Example response**
+```json
 {
     "status": "OK",
     "error": "",

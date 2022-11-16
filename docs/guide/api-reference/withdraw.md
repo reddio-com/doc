@@ -64,12 +64,33 @@ The period to expire for the transfer, unit is seconds
 POST /v1/withdrawalto
 ```
 
-```jsx
+**`cURL` Example**
+```sh
 curl -v  https://api-dev.reddio.com/v1/withdrawalto  -H 'content-type: application/json'  -d '{ "contract_address":"0x4240e8b8c0b6e6464a13f555f6395bbfe1c4bdf1", "asset_id":"0x284698644e92ad774d6e601d9f0cefa137872d0eeadc92ea3fe1fb973d32594", "stark_key":"0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda", "amount":10, "token_id":"1" ,"nonce":100, "vault_id":1000, "receiver": "0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda", "receiver_vault_id":10,"expiration_timestamp":4194303, "signature":{"r":"0xab","s":"0xbb"}}'
 ```
 
-```jsx
-RESPONSE
+**Example payload**
+```json
+{
+	"contract_address": "0x4240e8b8c0b6e6464a13f555f6395bbfe1c4bdf1",
+	"asset_id": "0x284698644e92ad774d6e601d9f0cefa137872d0eeadc92ea3fe1fb973d32594",
+	"stark_key": "0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda",
+	"amount": 10,
+	"token_id": "1",
+	"nonce": 100,
+	"vault_id": 1000,
+	"receiver": "0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda",
+	"receiver_vault_id": 10,
+	"expiration_timestamp": 4194303,
+	"signature": {
+		"r": "0xab",
+		"s": "0xbb"
+	}
+}
+```
+
+**Example response**
+```json
 {
 	"status": "OK",
 	"error": "",
@@ -77,7 +98,6 @@ RESPONSE
 		"sequence_id": 13
 	}
 }
-
 ```
 
 ## Withdrawal Status
@@ -102,12 +122,13 @@ ETH address.
 GET /v1/withdrawal/status
 ```
 
-```jsx
+**`cURL` Example**
+```sh
 curl -v  https://api-dev.reddio.com/v1/withdrawal/status?ethaddress=0x067ceABFb722CA0034f39b88EE4004dAbc8ef33b&stage=withdrawarea -H 'content-type: application/json'
 ```
 
-```jsx
-RESPONSE
+**Example response**
+```json
 {
   "status": "OK",
   "data": [

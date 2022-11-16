@@ -36,12 +36,13 @@ Contract address of token (ERC20 or ERC721).
 GET /v1/records
 ```
 
-```jsx
+**`cURL` Example**
+```sh
 curl -v  https://api-dev.reddio.com/v1/records?stark_key=0x6736f7449da3bf44bf0f7bdd6463818e1ef272641d43021e8bca17b32ec2df0&limit=3&page=2  -H 'content-type: application/json'
 ```
 
-```jsx
-RESPONSE
+**Example response**
+```json
 {
 	"status": "OK",
 	"error": "",
@@ -143,15 +144,16 @@ A unique key that identifies the user in the off-chain state
 Auto-increment ID for every transaction command.
 
 ```jsx
-POST /v1/record
+GET /v1/record
 ```
 
-```jsx
+**`cURL` Example**
+```sh
 curl -v https://api-dev.reddio.com/v1/record?stark_key=0x6736f7449da3bf44bf0f7bdd6463818e1ef272641d43021e8bca17b32ec2df0&sequence_id=300517 -H 'content-type: application/json'
 ```
 
-```jsx
-RESPONSE
+**Example response**
+```json
 {
 	"status": "OK",
 	"error": "",

@@ -34,12 +34,13 @@ Contract address of token (ERC20 or ERC721).
 GET /v1/balances
 ```
 
-```jsx
+**`cURL` Example**
+```sh
 curl -v https://api-dev.reddio.com/v1/balances?stark_key=0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c  -H 'content-type: application/json'
 ```
 
-```jsx
-RESPONSE
+**Example response**
+```json
 {
 	"status": "OK",
 	"error": "",
@@ -114,12 +115,13 @@ Contract address of token (ERC20 or ERC721).
 GET /v2/balances
 ```
 
-```jsx
+**`cURL` Example**
+```sh
 curl -v https://api-dev.reddio.com/v2/balances?stark_key=0x1c9d32ba737263bbdc274c474488179ce4bc09173339b7f4f495caf0040337c  -H 'content-type: application/json'
 ```
 
-```jsx
-RESPONSE
+**Example response**
+```json
 {
 	"status": "OK",
 	"error": "",
@@ -211,12 +213,13 @@ The identity of the token as represented on-chain (external ERC-20/ERC-721/ERC-1
 GET /v1/balance
 ```
 
-```jsx
+**`cURL` Example**
+```sh
 curl -v https://api-dev.reddio.com/v1/balance?stark_key=0x6ecaebbe5b9486472d964217e5470380782823bb0d865240ba916d01636310a&asset_id=0x385f3bf3fb3db6b4f152c84dd7a508d4b609caa97535725fe2828e8fe351b9d -H 'content-type: application/json'
 ```
 
-```jsx
-RESPONSE
+**Example response**
+```json
 {
 	"status": "OK",
 	"error": "",

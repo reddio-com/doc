@@ -7,7 +7,8 @@ Create a marketplace object with marketplace fee payee address, and fee rate usi
     * marketplace_pay_address: the stark key of marketplace’s fee receiver
     * X-API-Key: get from dashboard 
 
-```jsx
+**`cURL` Example**
+```sh
 curl -X POST "https://api-dev.reddio.com/v1/marketplace" -d '{"marketplace_name":"Reddio2",
 "marketplace_payee_address":"0x553d1d249b381e92649a6b8216ea91aad3b786a412536b82aa39f02177f897d",
 "marketplace_fee":"0.015"}' \
@@ -17,8 +18,15 @@ curl -X POST "https://api-dev.reddio.com/v1/marketplace" -d '{"marketplace_name"
 
 It will return marketplace uuid
 
-```jsx
-{"status":"OK","data":{"message":"Marketplace created.","marketplace_uuid":"f11e414d-0b32-44d0-a36a-964f6e25b6c4"},"error":""}
+```json
+{
+	"status": "OK",
+	"data": {
+		"message": "Marketplace created.",
+		"marketplace_uuid": "f11e414d-0b32-44d0-a36a-964f6e25b6c4"
+	},
+	"error": ""
+}
 ```
 
 ## Add marketplace uuid in buy order & sell order
@@ -38,7 +46,7 @@ The endpoint like [https://api-dev.reddio.com/v1/nfts/0x941661bd1134dc7cc3d107bf
 
 it returns like
 
-```jsx
+```json
 {
 	"status": "OK",
 	"error": "",
@@ -90,8 +98,8 @@ By default, there is no eth_address, we will provide user register on client(now
 we will add description/image_url/external_link/banner_image_url in dashboard, now can set we 
 
  
-
-```jsx
+**`cURL` Example**
+```sh
 curl -X POST "https://api-dev.reddio.com/v1/project/contract" -d '{
   "contract_address":"0x35b346a2bc5f90855340b50325f727083691063e",
   "contract_type":"ERC721",
@@ -113,7 +121,7 @@ Then we can query the collections like
 
 It display like
 
-```jsx
+```json
 {
 	"status": "OK",
 	"data": {
