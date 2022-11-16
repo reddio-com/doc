@@ -95,18 +95,6 @@ A unique key that identifies the user in the off-chain state
 
 ---
 
-**limit** <strong style='color:#8792a2'>string</strong>
-
-Limit entries for query records.
-
----
-
-**page** <strong style='color:#8792a2'>string</strong>
-
-Page for records.
-
----
-
 **contract_address** <strong style='color:#8792a2'>string</strong>
 
 Contract address of token (ERC20 or ERC721).
