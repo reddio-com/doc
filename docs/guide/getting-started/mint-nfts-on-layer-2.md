@@ -51,9 +51,9 @@ const generateKey = async () => {
 Mint ERC721 token contract on layer 2 in backend
 
 ```sh
-$ curl -v  https://api-dev.reddio.com/v1/mints  -H 'content-type: application/json' -H 'X-API-Key: {your_api_key}'  -d '{ "contract_address":"{smart_contract_address}}", "stark_key":"{your_starkkey}}", "amount":"10"}'
+$ curl -v  https://api-dev.reddio.com/v1/mints  -H 'content-type: application/json' -H 'X-API-Key: {your_api_key}'  -d '{ "contract_address":"{smart_contract_address}", "stark_key":"{your_starkkey}", "amount":"10"}'
 ```
 You can query the balance with the following API,
-view at `https://api-dev.reddio.com/v1/balances?stark_key={your_starkkey}}&page=1&limit=100`.
+view at `https://api-dev.reddio.com/v1/balances?stark_key={your_starkkey}&page=1&limit=100`.
 
-And query collections with this API, view at `https://api-dev.reddio.com/v1/contracts/{smart_contract_address}}/tokens`.
+And query collections with this API, view at `https://api-dev.reddio.com/v1/contracts/{smart_contract_address}/tokens`.
