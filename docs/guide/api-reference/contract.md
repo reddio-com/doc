@@ -24,7 +24,7 @@ The contract address of your contract.
 
 The type of your contract, currently we support `ERC721`, `ERC20` and `ERC721M`.
 
-For the type of `ERC721M`, our system will create two contracts internally.
+For the type of `ERC721M`, this means it can be minted on L2, our system will create two contracts internally.
 
 ---
 
