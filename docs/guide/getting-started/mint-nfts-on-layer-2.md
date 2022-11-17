@@ -22,11 +22,11 @@ You can access our sample code of JS SDK integration here, https://github.com/re
 You can create ERC721 smart contract on layer 1 with Reddio's API at [https://deploy-contract.reddio.com/](https://deploy-contract.reddio.com/). Once the contract was created, please keep the smart contract address, we will use it as tokenAddress.
 
  <video controls>
-  <source src="/deploy-contract.mp4" type="video/mp4">
+  <source src="/deploy-erc721m.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
 
-You shall be able to view your smart contract on layer 1 with the following API, view at `https://goerli.etherscan.io/address/{your_smart_contract_address}`.
+You shall be able to view your smart contract on layer 1 with the following API, if you are deploying to Görli Network, you can view your contract at `https://goerli.etherscan.io/address/{your_smart_contract_address}` , if you are deploying to mainnet, you can view your contract at `https://etherscan.io/address/{your_smart_contract_address}`
 
 ## Edit the project on dashbaord
 
