@@ -177,7 +177,8 @@ function sidebarService() {
                 { text: 'Order', link: '/guide/api-reference/order' },
                 { text: 'Marketplace', link: '/guide/api-reference/marketplace' },
                 { text: 'Asset', link: '/guide/api-reference/asset' },
-
+                { text: 'Mints', link: '/guide/api-reference/mints' },
+                { text: 'Sign', link: '/guide/api-reference/sign' },
 
             ]
         },

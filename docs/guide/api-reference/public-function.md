@@ -15,12 +15,13 @@ A unique key that identifies the user in the off-chain state
 GET /v1/nonce
 ```
 
-```jsx
-curl -v  'https://api-dev.reddio.com/v1/nonce?stark_key=0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda'
+**`cURL` Example**
+```sh
+curl -v 'https://api-dev.reddio.com/v1/nonce?stark_key=0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda'
 ```
 
-```jsx
-RESPONSE
+**Example response**
+```json
 {
     "status": "OK",
     "error": "",

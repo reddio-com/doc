@@ -102,7 +102,8 @@ POST /v1/order
 
 Seller example
 
-```jsx
+**`cURL` Example**
+```sh
 curl https://api-dev.reddio.com/v1/order -H 'content-type: application/json' -d \
 '{
    "amount":"1",
@@ -132,8 +133,8 @@ curl https://api-dev.reddio.com/v1/order -H 'content-type: application/json' -d 
 }'
 ```
 
-```jsx
-RESPONSE
+**Example response**
+```json
 {
 	"status": "OK",
 	"error": "",
@@ -146,6 +147,7 @@ RESPONSE
 
 Buyer example
 
+**`cURL` Example**
 ```jsx
 curl https://api-dev.reddio.com/v1/order -H 'content-type: application/json' -d \
 '{
@@ -176,8 +178,8 @@ curl https://api-dev.reddio.com/v1/order -H 'content-type: application/json' -d 
 }'
 ```
 
-```jsx
-RESPONSE
+**Example response**
+```json
 {
 	"status": "OK",
 	"error": "",

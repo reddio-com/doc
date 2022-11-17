@@ -2,7 +2,7 @@
 
 ## Transfer to
 
-Transfer assets from sender to receiver on layer 2
+Transfer assets from sender to receiver on layer 2.
 
 **Parameters**
 
@@ -54,16 +54,37 @@ The period to expire for the transfer, unit is seconds
 
 The signature to make sure the transaction is triggered by you.
 
-```jsx
-POST /v1/transfer
-```
+For more information on how this `signature` is created, please visit: [Sign](sign)
 
 ```jsx
-curl -v  https://api-dev.reddio.com/v1/transfer  -H 'content-type: application/json'  -d '{ "asset_id":"0x284698644e92ad774d6e601d9f0cefa137872d0eeadc92ea3fe1fb973d32594", "stark_key":"0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda", "amount":10, "nonce":100, "vault_id":1000, "receiver": "0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda", "receiver_vault_id":10,"expiration_timestamp":4194303, "signature":{"r":"0xab","s":"0xbb"}}'
+POST /v1/transfers
 ```
 
-```jsx
-RESPONSE
+**`cURL` Example**
+```sh
+curl -v  https://api-dev.reddio.com/v1/transfers  -H 'content-type: application/json'  -d '{ "asset_id":"0x284698644e92ad774d6e601d9f0cefa137872d0eeadc92ea3fe1fb973d32594", "stark_key":"0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda", "amount":10, "nonce":100, "vault_id":1000, "receiver": "0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda", "receiver_vault_id":10,"expiration_timestamp":4194303, "signature":{"r":"0xab","s":"0xbb"}}'
+```
+
+**Example payload**
+```json
+{
+	"asset_id": "0x284698644e92ad774d6e601d9f0cefa137872d0eeadc92ea3fe1fb973d32594",
+	"stark_key": "0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda",
+	"amount": 10,
+	"nonce": 100,
+	"vault_id": 1000,
+	"receiver": "0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda",
+	"receiver_vault_id": 10,
+	"expiration_timestamp": 4194303,
+	"signature": {
+		"r": "0xab",
+		"s": "0xbb"
+	}
+}
+```
+
+**Example response**
+```json
 {
 	"status": "OK",
 	"error": "",
