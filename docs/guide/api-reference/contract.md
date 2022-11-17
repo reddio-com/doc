@@ -42,25 +42,25 @@ Name of your contract.
 
 **description** <strong style='color:#8792a2'>string</strong>
 
-Description of your contract.
+Description of your contract, can be used on marketplace.
 
 ---
 
 **image_url** <strong style='color:#8792a2'>string</strong>
 
-Image URL of your contract.
+Image URL of your contract, can be used on marketplace.
 
 ---
 
 **external_link** <strong style='color:#8792a2'>string</strong>
 
-External link of your contract.
+External link of your contract, can be used on marketplace.
 
 ---
 
 **banner_image_url** <strong style='color:#8792a2'>string</strong>
 
-Banner image url of your contract.
+Banner image url of your contract, can be used on marketplace.
 
 
 **Example payload**

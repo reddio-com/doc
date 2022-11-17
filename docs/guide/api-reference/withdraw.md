@@ -11,7 +11,9 @@ Withdrawal to another Ethereum address for ERC-20/ETH and ERC-721
 
 <strong style='color:red'>*</strong>**asset_id** <strong style='color:#8792a2'>string</strong>
 
-Asset id
+Asset id.
+
+Asset ID or known as `asset_id`, is calculated based on contract address and Token ID(if token is ERC721), used as an unique identifier for specific asset. 
 
 ---
 

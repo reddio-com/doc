@@ -1,6 +1,6 @@
 # Mint an ERC721 token
 
-Mint ERC721 token on layer 2
+Mint ERC721 token on layer 2.
 
 **Parameters**
 

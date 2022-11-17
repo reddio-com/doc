@@ -12,6 +12,8 @@ Retrieve the vault id
 
 The identity of the token as represented on-chain (external ERC-20/ERC-721/ERC-1155 for deposit/withdraw goes through, correct quantization, etc)
 
+Asset ID or known as `asset_id`, is calculated based on contract address and Token ID(if token is ERC721), used as an unique identifier for specific asset. 
+
 ---
 
 <strong style='color:red'>*</strong>**stark_keys** <strong style='color:#8792a2'>string</strong>

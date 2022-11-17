@@ -2,7 +2,9 @@
 
 ## Get asset ID
 
-Retrieve asset id based on contract address
+Retrieve asset id based on contract address.
+
+Asset ID or known as `asset_id`, is calculated based on contract address and Token ID(if token is ERC721), used as an unique identifier for specific asset. 
 
 **Parameters**
 

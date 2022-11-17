@@ -54,6 +54,8 @@ The period to expire for the transfer, unit is seconds
 
 The signature to make sure the transaction is triggered by you.
 
+For more information on how this `signature` is created, please visit: [Sign](sign)
+
 ```jsx
 POST /v1/transfers
 ```
