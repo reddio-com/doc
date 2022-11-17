@@ -35,7 +35,7 @@ curl -v 'https://api-dev.reddio.com/v1/nonce?stark_key=0x761f1709a72a7e1d9a503fa
 
 ## Get stark Wallets
 
-Create pairs of stark wallets.
+Create pairs of stark wallets, this is for testing only, normally thoses key pairs are generated in SDK or on our frontend framework, done offline only on your devices.
 
 **Parameters**
 
