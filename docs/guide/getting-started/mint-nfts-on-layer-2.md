@@ -28,7 +28,7 @@ You can create ERC721 smart contract on layer 1 with Reddio's API at [https://de
 
 You shall be able to view your smart contract on layer 1 with the following API, if you are deploying to Görli Network, you can view your contract at `https://goerli.etherscan.io/address/{your_smart_contract_address}` , if you are deploying to mainnet, you can view your contract at `https://etherscan.io/address/{your_smart_contract_address}`
 
-## Edit the project on dashbaord
+## Edit the project on dashboard
 
 Add in your smart contract address returned from step 1 to register the smart contract with the project
 
