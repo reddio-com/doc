@@ -47,6 +47,8 @@ const generateKey = async () => {
 };
 ```
 
+If you'd like to quickly generate a stark key-pair for testing without using SDK, we also have an API for this, please consult to [Get stark Wallets](https://docs.reddio.com/guide/api-reference/utils.html#get-stark-wallets), or, in short, take a look at this: [https://api.reddio.com/v1/wallets](https://api.reddio.com/v1/wallets).
+
 ## Mint ERC721 token on layer 2 
 
 Mint ERC721 token contract on layer 2 in backend
