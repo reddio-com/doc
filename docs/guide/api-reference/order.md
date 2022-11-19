@@ -189,3 +189,143 @@ curl https://api-dev.reddio.com/v1/order -H 'content-type: application/json' -d 
 	}
 }
 ```
+
+## List orders
+
+List orders.
+
+**Parameters**
+
+---
+
+**limit** <strong style='color:#8792a2'>string</strong>
+
+Limit entries for query records.
+
+---
+
+**page** <strong style='color:#8792a2'>string</strong>
+
+Page for records.
+
+---
+
+**contract_address** <strong style='color:#8792a2'>string</strong>
+
+Contract address.
+
+---
+
+**direction** <strong style='color:#8792a2'>int</strong>
+
+The direction for transaction, 0 is for ASK, 1 is for BID.
+
+```jsx
+GET /v1/orders
+```
+
+**`cURL` Example**
+```sh
+curl -v https://api-dev.reddio.com/v1/orders?contract_address=0x941661bd1134dc7cc3d107bf006b8631f6e65ad5 -H 'content-type: application/json'
+```
+
+**Example response**
+```json
+{
+  "status": "OK",
+  "error": "",
+  "error_code": 0,
+  "data": {
+    "list": [
+      {
+        "order_id": 302440,
+        "stark_key": "0x5452d29c1306e386356936a20f12563fbce25a9e8547f51cb9f7e9f6849a31c",
+        "price": "8000",
+        "direction": 0,
+        "amount": "1",
+        "un_filled": "1",
+        "symbol": {
+          "base_token_asset_id": "0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
+          "quote_token_asset_id": "0x1b3d132e815d83b0fd62cd8eaf6e607c09201b428c73d8d7edb2b6744e70706",
+          "base_token_contract_addr": "eth",
+          "quote_token_contract_addr": "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
+          "base_token_name": "ETH",
+          "quote_token_name": "REDDIO721"
+        },
+        "fee_rate": "200",
+        "token_type": "ERC721",
+        "token_id": "155",
+        "display_price": "0.008"
+      },
+      {
+        "order_id": 302246,
+        "stark_key": "0x74ee2029ebbb9051e165d6628a4389f8f4f46c76352b47b45336ea3c760c841",
+        "price": "1000",
+        "direction": 0,
+        "amount": "1",
+        "un_filled": "1",
+        "symbol": {
+          "base_token_asset_id": "0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
+          "quote_token_asset_id": "0x35306eb23be3c2d2fc3059a5fe4cf7bdba94230a1517e8645d121ea1891013a",
+          "base_token_contract_addr": "eth",
+          "quote_token_contract_addr": "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
+          "base_token_name": "ETH",
+          "quote_token_name": "REDDIO721"
+        },
+        "fee_rate": "200",
+        "token_type": "ERC721",
+        "token_id": "11",
+        "display_price": "0.001"
+      },
+    ],
+    "total": 2
+  }
+}
+```
+
+
+## Cancel an order
+
+Cancel an existing order.
+
+**Parameters**
+
+---
+
+<strong style='color:red'>*</strong>**stark_key** <strong style='color:#8792a2'>string</strong>
+
+A unique key that identifies the user in the off-chain state
+
+---
+
+<strong style='color:red'>*</strong>**signature** <strong style='color:#8792a2'>string</strong>
+
+The signature for the transaction, can be calculated by [https://github.com/reddio-com/red-py-sdk](https://github.com/reddio-com/red-py-sdk).
+
+
+```jsx
+POST /v1/orders/:orderID/cancel
+```
+
+**Example payload**
+```json
+{
+    "stark_key": "0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c",
+    "signature":{
+      "r":"0x4d308e89375fb3d6eaea836aa6615f6e52a4842da3b2d2de73b53996da7e082",
+      "s":"0x2d532e42c43756a179496245c124acf082418081f0b3f94522e9bc5fc0f914"
+   },
+}
+```
+
+**Example response**
+```json
+{
+	"status": "OK",
+	"error": "",
+	"error_code": 0,
+	"data": {
+		"sequence_id": 302124
+	}
+}
+```
