@@ -36,9 +36,6 @@ It will return marketplace uuid
 ## After order deal
 After order deal, reddio will charge 0.5% fee, and marketplace will auto receive 1.5%(when set marketplace_fee to 0.015) immediately.
 
-## Cancelling order
-If you need to cancel your order, you can refer to [Order](order#Cancel an order) API.
-
 ## For NFT APIs
 
 The endpoint like [https://api-dev.reddio.com/v1/nfts/0x941661bd1134dc7cc3d107bf006b8631f6e65ad5](https://api-dev.reddio.com/v1/nfts/0x941661bd1134dc7cc3d107bf006b8631f6e65ad5) will get nfts and related orders
