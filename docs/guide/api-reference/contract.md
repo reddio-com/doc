@@ -62,6 +62,12 @@ External link of your contract, can be used on marketplace.
 
 Banner image url of your contract, can be used on marketplace.
 
+---
+
+**metadata_url** <strong style='color:#8792a2'>string</strong>
+
+Metadata URL of your contract, can be used on marketplace.
+
 
 **Example payload**
 ```json
@@ -74,7 +80,8 @@ Banner image url of your contract, can be used on marketplace.
   "description": "Some desc",
   "image_url": "https://example.com/image_url",
   "external_link": "https://example.com/image_url",
-  "banner_image_url": "https://example.com/image_url"
+  "banner_image_url": "https://example.com/image_url",
+  "metadata_url": "https://metadata.example.com/"
 }
 ```
 

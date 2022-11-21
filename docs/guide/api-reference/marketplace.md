@@ -31,14 +31,10 @@ It will return marketplace uuid
 
 ## Add marketplace uuid in buy order & sell order
 
-[https://github.com/reddio-com/red-js-sdk/blob/main/src/utils/orderParams.ts#L20](https://github.com/reddio-com/red-js-sdk/blob/main/src/utils/orderParams.ts#L20)
+[https://github.com/reddio-com/red-js-sdk/blob/main/src/utils/orderParams.ts#L20](https://github.com/reddio-com/red-js-sdk/blob/main/src/utils/orderParams.ts#L20).
 
 ## After order deal
-After order deal, reddio will charge 0.5% fee, and marketplace will auto receive 1.5%(when set marketplace_fee to 0.015) immediately
-
-## For cancel order.  the request need sign
-
-the API is here, it need sign by stark_private_key [https://github.com/reddio-com/red-js-sdk/blob/main/src/api/order.ts#L47](https://github.com/reddio-com/red-js-sdk/blob/main/src/api/order.ts#L47)
+After order deal, reddio will charge 0.5% fee, and marketplace will auto receive 1.5%(when set marketplace_fee to 0.015) immediately.
 
 ## For NFT APIs
 
@@ -95,8 +91,7 @@ By default, there is no eth_address, we will provide user register on client(now
 
 ## For collection APIs
 
-we will add description/image_url/external_link/banner_image_url in dashboard, now can set we 
-
+We will add description/image_url/external_link/banner_image_url in dashboard, now it can be set by.
  
 **`cURL` Example**
 ```sh
@@ -109,17 +104,20 @@ curl -X POST "https://api-dev.reddio.com/v1/project/contract" -d '{
   "description": "Some desc",
   "image_url": "https://example.com/image_url",
   "external_link": "https://example.com/image_url",
-  "banner_image_url": "https://example.com/image_url"
+  "banner_image_url": "https://example.com/image_url",
+  "metadata_url": "https://metadata.example.com/"
 }' \
 -H 'X-API-Key:rk-1236d5fc-f4c1-4a19-a2ff-9c29e3a70e37' \
 -H 'content-type: application/json'
 ```
 
+For more detailed API reference on creating contracts, please refer to [Contract](contract) page.
+
 Then we can query the collections like
 
 [https://api-dev.reddio.com/v1/collection/0x35b346a2bc5f90855340b50325f727083691063e](https://api-dev.reddio.com/v1/collection/0x35b346a2bc5f90855340b50325f727083691063e)
 
-It display like
+It displays like
 
 ```json
 {
@@ -135,7 +133,7 @@ It display like
 		"total_supply": "",
 		"asset_type": "0x2d6e7b6a8e809f94ed4bef245e06437c18e033044a5787e15eda57be47929f",
 		"asset_info": "0x0257179200000000000000000000000035b346a2bc5f90855340b50325f727083691063e",
-		"metadata_url": null,
+		"metadata_url": "https://metadata.example.com/",
 		"name": "Some name",
 		"description": "Some desc",
 		"image_url": "https://example.com/image_url",
