@@ -104,7 +104,8 @@ curl -X POST "https://api-dev.reddio.com/v1/project/contract" -d '{
   "description": "Some desc",
   "image_url": "https://example.com/image_url",
   "external_link": "https://example.com/image_url",
-  "banner_image_url": "https://example.com/image_url"
+  "banner_image_url": "https://example.com/image_url",
+  "metadata_url": "https://metadata.example.com/"
 }' \
 -H 'X-API-Key:rk-1236d5fc-f4c1-4a19-a2ff-9c29e3a70e37' \
 -H 'content-type: application/json'
@@ -132,7 +133,7 @@ It displays like
 		"total_supply": "",
 		"asset_type": "0x2d6e7b6a8e809f94ed4bef245e06437c18e033044a5787e15eda57be47929f",
 		"asset_info": "0x0257179200000000000000000000000035b346a2bc5f90855340b50325f727083691063e",
-		"metadata_url": null,
+		"metadata_url": "https://metadata.example.com/",
 		"name": "Some name",
 		"description": "Some desc",
 		"image_url": "https://example.com/image_url",
