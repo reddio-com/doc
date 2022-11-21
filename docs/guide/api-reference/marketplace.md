@@ -31,14 +31,13 @@ It will return marketplace uuid
 
 ## Add marketplace uuid in buy order & sell order
 
-[https://github.com/reddio-com/red-js-sdk/blob/main/src/utils/orderParams.ts#L20](https://github.com/reddio-com/red-js-sdk/blob/main/src/utils/orderParams.ts#L20)
+[https://github.com/reddio-com/red-js-sdk/blob/main/src/utils/orderParams.ts#L20](https://github.com/reddio-com/red-js-sdk/blob/main/src/utils/orderParams.ts#L20).
 
 ## After order deal
-After order deal, reddio will charge 0.5% fee, and marketplace will auto receive 1.5%(when set marketplace_fee to 0.015) immediately
+After order deal, reddio will charge 0.5% fee, and marketplace will auto receive 1.5%(when set marketplace_fee to 0.015) immediately.
 
-## For cancel order.  the request need sign
-
-the API is here, it need sign by stark_private_key [https://github.com/reddio-com/red-js-sdk/blob/main/src/api/order.ts#L47](https://github.com/reddio-com/red-js-sdk/blob/main/src/api/order.ts#L47)
+## Cancelling order
+If you need to cancel your order, you can refer to [Order](order#Cancel an order) API.
 
 ## For NFT APIs
 
@@ -95,8 +94,7 @@ By default, there is no eth_address, we will provide user register on client(now
 
 ## For collection APIs
 
-we will add description/image_url/external_link/banner_image_url in dashboard, now can set we 
-
+We will add description/image_url/external_link/banner_image_url in dashboard, now it can be set by.
  
 **`cURL` Example**
 ```sh
@@ -115,11 +113,13 @@ curl -X POST "https://api-dev.reddio.com/v1/project/contract" -d '{
 -H 'content-type: application/json'
 ```
 
+For more detailed API reference on creating contracts, please refer to [Contract](contract) page.
+
 Then we can query the collections like
 
 [https://api-dev.reddio.com/v1/collection/0x35b346a2bc5f90855340b50325f727083691063e](https://api-dev.reddio.com/v1/collection/0x35b346a2bc5f90855340b50325f727083691063e)
 
-It display like
+It displays like
 
 ```json
 {
