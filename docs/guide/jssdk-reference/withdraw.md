@@ -5,22 +5,15 @@
 - **Type**
 
 ```tsx
-interface SignParams {
+interface SignTransferParams {
   starkKey: string;
   privateKey: string;
-  assetId: string;
-  // use with ETH and ERC20
   amount?: number | string;
-  vaultId: string;
-  receiver: string;
-  receiverVaultId: string;
-  expirationTimestamp?: number;
-}
-interface WithdrawalParams extends SignParams {
-  // use with ERC20 and ERC721
   contractAddress?: string;
-  // use with ERC721
-  tokenId?: string;
+  tokenId?: string | number;
+  type: `${Types}`;
+  receiver: string;
+  expirationTimestamp?: number;
 }
 interface Response<T> {
   data: T;
@@ -30,7 +23,7 @@ interface Response<T> {
 interface WithdrawalResponse {
   sequence_id: number;
 }
-declare const withdrawalFromL2: (data: WithdrawalParams) => Promise<AxiosResponse<Response<WithdrawalResponse>>>
+declare const withdrawalFromL2: (data: SignTransferParams) => Promise<AxiosResponse<Response<WithdrawalResponse>>>
 ```
 
 - **Example**
@@ -40,15 +33,9 @@ const { data: res } = await reddio.apis.withdrawalFromL2({
   // small with transfer
   starkKey,
   privateKey,
-  assetId,
-  vaultId: data.data.vault_ids[0],
-  receiver: transferAddress,
-  receiverVaultId: data.data.vault_ids[1],
-  // your layer 1 tokenAddress
-  contractAddress,
-  tokenId: "The NFT token id owned by the user",
+  ...
 });
-```
+``` 
 
 ## withdrawalFromL1()
 
@@ -59,6 +46,7 @@ enum Types {
   ETH = 'ETH',
   ERC20 = 'ERC20',
   ERC721 = 'ERC721',
+  ERC721M = 'ERC721M',
 }
 interface WithdrawalFromL1Params {
   starkKey: string;
