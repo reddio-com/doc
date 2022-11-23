@@ -58,11 +58,11 @@ interface RequestCommonParams {
     starkKey: string;
 }
 type StarkKeyParams = Pick<RequestCommonParams, 'starkKey'>;
-interface PageParams {
-  page: number;
-  limit: number;
+interface BalancesV2Params extends StarkKeyParams {
+  type?: string;
+  baseUri?: string;
+  contractAddress?: string;
 }
-type BalancesParams = StarkKeyParams & Partial<PageParams>;
 interface Response<T> {
   data: T;
   status: string;
@@ -100,7 +100,7 @@ type BalanceV2ERC20Type = {
 type BalancesV2Response = (BalanceV2EthType | BalanceV2ERC721Type | BalanceV2ERC20Type) & BalanceV2CommonType;
 
 
-declare function getBalancesV2(params: BalancesParams): Promise<AxiosResponse<Response<BalancesV2Response[]>>>
+declare function getBalancesV2(params: BalancesV2Params): Promise<AxiosResponse<Response<BalancesV2Response[]>>>
 
 ```
 
