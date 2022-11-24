@@ -4,6 +4,11 @@
 
 You can create ERC721M smart contract on layer 1 in two ways. First, you can use Reddio's contract deployment tool at https://deploy-contract.reddio.com/ to create smart contract with single click. Second, if you want to deploy smart contract yourself, you can check our ERC721M contract through [github repo](https://github.com/reddio-com/contract_demo/blob/main/src/contracts/ERC721MintFor.sol).
 
+ <video controls>
+  <source src="/deploy-erc721m.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video> 
+
 To make sure the sample code works, please install Metamask with Goerli network. Deploying ERC721M smart contract will need some credits as gas fee. If you want to deploy it on the Görli Network (testnet), you can get some test credit through https://goerlifaucet.com/.
 
 ::: warning
