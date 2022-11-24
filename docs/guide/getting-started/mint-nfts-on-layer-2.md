@@ -51,12 +51,15 @@ If you'd like to quickly generate a stark key-pair for testing without using SDK
 
 ## Mint ERC721 token on layer 2 
 
-Mint ERC721 token contract on layer 2 in backend
+Mint ERC721 token contract on layer 2 in backend, related API is [Mint](/guide/api-reference/mints), in short, you can use `cURL` to send request.
+
+Suppose your `contract_address` is `0x4240e8xxxxxxxxxxxxxxxxx1` and your `stark_key` is `0x761f170xxxxxxxxxxxxxxxxxxxxxxxxxxxfbd39accda`, you can use the following `cURL` command to send a mint request to our backend.
 
 ```sh
-$ curl -v  https://api-dev.reddio.com/v1/mints  -H 'content-type: application/json' -H 'X-API-Key: {your_api_key}'  -d '{ "contract_address":"{smart_contract_address}", "stark_key":"{your_starkkey}", "amount":"10"}'
+curl -v  https://api-dev.reddio.com/v1/mints -H 'content-type: application/json' -d '{ "contract_address":"0x4240e8xxxxxxxxxxxxxxxxx1", "stark_key":"0x761f170xxxxxxxxxxxxxxxxxxxxxxxxxxxfbd39accda", "amount":"10"}' -H 'x-api-key: rk-xxxxxx-4326-4b58-ae69-xxxxxxxx'
 ```
-You can query the balance with the following API,
-view at `https://api-dev.reddio.com/v1/balances?stark_key={your_starkkey}&page=1&limit=100`.
 
-And query collections with this API, view at `https://api-dev.reddio.com/v1/contracts/{smart_contract_address}/tokens`.
+Then you can query the balance with the following API,
+view at `https://api-dev.reddio.com/v1/balances?stark_key=0x761f170xxxxxxxxxxxxxxxxxxxxxxxxxxxfbd39accda&page=1&limit=100`.
+
+And query collections with this API, view at `https://api-dev.reddio.com/v1/contracts/0x4240e8xxxxxxxxxxxxxxxxx1/tokens`.
