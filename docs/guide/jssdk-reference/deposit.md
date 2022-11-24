@@ -5,11 +5,10 @@
 - **Type**
 
 ```tsx
-interface DepositParams {
+interface DepositERC20Params {
   starkKey: string;
-  assetType: string;
-  vaultId: string;
   quantizedAmount: number | string;
+  tokenAddress: string;
 }
 interface LogDeposit {
   depositorEthKey: string;
@@ -18,10 +17,9 @@ interface LogDeposit {
   assetType: BigNumber;
   nonQuantizedAmount: BigNumber;
   quantizedAmount: BigNumber;
-  // Blockchain specific contextual infos
   raw: Record<string, any>;
 }
-declare const depositERC20: (params: DepositParams) => Promise<LogDeposit>;
+declare const depositERC20: (params: DepositERC20Params) => Promise<LogDeposit>;
 ```
 
 - **Example**
@@ -29,8 +27,7 @@ declare const depositERC20: (params: DepositParams) => Promise<LogDeposit>;
 ```tsx
 await reddio.apis.depositETH({
   starkKey,
-  assetType,
-  vaultId: data.data.vault_ids[0],
+  tokenAddress,
   quantizedAmount: "deposit amount",
 });
 ```
@@ -40,11 +37,10 @@ await reddio.apis.depositETH({
 - **Type**
 
 ```tsx
-interface DepositParams {
+interface DepositERC20Params {
   starkKey: string;
-  assetType: string;
-  vaultId: string;
   quantizedAmount: number | string;
+  tokenAddress: string;
 }
 interface LogDeposit {
   depositorEthKey: string;
@@ -53,10 +49,9 @@ interface LogDeposit {
   assetType: BigNumber;
   nonQuantizedAmount: BigNumber;
   quantizedAmount: BigNumber;
-  // Blockchain specific contextual infos
   raw: Record<string, any>;
 }
-declare const depositERC20: (params: DepositParams) => Promise<LogDeposit>;
+declare const depositERC20: (params: DepositERC20Params) => Promise<LogDeposit>;
 ```
 
 - **Example**
@@ -64,8 +59,7 @@ declare const depositERC20: (params: DepositParams) => Promise<LogDeposit>;
 ```tsx
 await reddio.apis.depositERC20({
   starkKey,
-  assetType,
-  vaultId: data.data.vault_ids[0],
+  tokenAddress,
   quantizedAmount: "deposit amount",
 });
 ```
@@ -77,9 +71,8 @@ await reddio.apis.depositERC20({
 ```tsx
 interface Deposit721Params {
   starkKey: string;
-  assetType: string;
-  vaultId: string;
   tokenId: number;
+  tokenAddress: string;
 }
 interface LogDeposit {
   depositorEthKey: string;
@@ -88,7 +81,6 @@ interface LogDeposit {
   assetType: BigNumber;
   nonQuantizedAmount: BigNumber;
   quantizedAmount: BigNumber;
-  // Blockchain specific contextual infos
   raw: Record<string, any>;
 }
 declare const depositERC721: (params: Deposit721Params) => Promise<LogDeposit>;
@@ -99,8 +91,7 @@ declare const depositERC721: (params: Deposit721Params) => Promise<LogDeposit>;
 ```tsx
 await reddio.apis.depositERC721({
   starkKey,
-  assetType,
-  vaultId: data.data.vault_ids[0],
+  tokenAddress,
   tokenId,
 });
 ```

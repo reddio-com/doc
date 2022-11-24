@@ -5,15 +5,20 @@
 - **Type**
 
 ```tsx
-interface SignParams {
+enum Types {
+  ETH = 'ETH',
+  ERC20 = 'ERC20',
+  ERC721 = 'ERC721',
+  ERC721M = 'ERC721M',
+}
+interface SignTransferParams {
   starkKey: string;
   privateKey: string;
-  assetId: string;
-  // use with ETH and ERC20
   amount?: number | string;
-  vaultId: string;
+  contractAddress?: string;
+  tokenId?: string | number;
+  type: `${Types}`;
   receiver: string;
-  receiverVaultId: string;
   expirationTimestamp?: number;
 }
 interface Response<T> {
@@ -24,7 +29,7 @@ interface Response<T> {
 interface TransferResponse {
   sequence_id: number;
 }
-declare const transfer: (data: SignParams) => Promise<AxiosResponse<Response<TransferResponse>>>
+declare const transfer: (data: SignTransferParams) => Promise<AxiosResponse<Response<TransferResponse>>>
 ```
 
 - **Example**
@@ -34,9 +39,11 @@ const { data } = await reddio.apis.transfer({
   // Originator's starkKey and privateKey
   starkKey,
   privateKey,
-  assetId,
-  vaultId: data.data.vault_ids[0],
+  contractAddress,
+  amount,
+  tokenId,
+  type,
   receiver: transferAddress,
-  receiverVaultId: data.data.vault_ids[1],
+  expirationTimestamp,
 });
 ```
