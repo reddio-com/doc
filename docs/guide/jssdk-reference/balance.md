@@ -68,7 +68,8 @@ interface Response<T> {
   status: string;
   error: string;
 }
-type BalanceV2CommonType = {
+
+interface BalancesV2Response {
   contract_address: string;
   balance_available: number;
   balance_frozen: number;
@@ -77,27 +78,11 @@ type BalanceV2CommonType = {
   quantum: number;
   display_value: string;
   display_frozen: string;
+  type: `${Types}`;
+  asset_id?: string;
+  available_token_ids?: number[];
+  base_uri?: string;
 }
-
-type BalanceV2EthType = {
-  asset_id: string;
-  type: 'ETH';
-}
-
-type BalanceV2ERC721Type = {
-  type: 'ERC721' | 'ERC721M',
-  available_token_ids: number[];
-}
-
-type BalanceV2ERC20Type = {
-  asset_id: string;
-  type:"ERC20";
-  available_token_ids: number[];
-  frozen_token_ids: number[];
-  base_uri: string;
-}
-
-type BalancesV2Response = (BalanceV2EthType | BalanceV2ERC721Type | BalanceV2ERC20Type) & BalanceV2CommonType;
 
 
 declare function getBalancesV2(params: BalancesV2Params): Promise<AxiosResponse<Response<BalancesV2Response[]>>>
