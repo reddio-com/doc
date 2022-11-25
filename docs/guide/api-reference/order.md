@@ -220,13 +220,19 @@ Contract address.
 
 The direction for transaction, 0 is for ASK, 1 is for BID.
 
+---
+
+**token_ids** <strong style='color:#8792a2'>string</strong>
+
+Comma seperated ids, e,g: `165,152`.
+
 ```jsx
 GET /v1/orders
 ```
 
 **`cURL` Example**
 ```sh
-curl -v https://api-dev.reddio.com/v1/orders?contract_address=0x941661bd1134dc7cc3d107bf006b8631f6e65ad5 -H 'content-type: application/json'
+curl -v https://api-dev.reddio.com/v1/orders?contract_address=0x941661bd1134dc7cc3d107bf006b8631f6e65ad5&token_ids=165,152 -H 'content-type: application/json'
 ```
 
 **Example response**
@@ -238,27 +244,7 @@ curl -v https://api-dev.reddio.com/v1/orders?contract_address=0x941661bd1134dc7c
   "data": {
     "list": [
       {
-        "order_id": 302440,
-        "stark_key": "0x5452d29c1306e386356936a20f12563fbce25a9e8547f51cb9f7e9f6849a31c",
-        "price": "8000",
-        "direction": 0,
-        "amount": "1",
-        "un_filled": "1",
-        "symbol": {
-          "base_token_asset_id": "0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
-          "quote_token_asset_id": "0x1b3d132e815d83b0fd62cd8eaf6e607c09201b428c73d8d7edb2b6744e70706",
-          "base_token_contract_addr": "eth",
-          "quote_token_contract_addr": "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
-          "base_token_name": "ETH",
-          "quote_token_name": "REDDIO721"
-        },
-        "fee_rate": "200",
-        "token_type": "ERC721",
-        "token_id": "155",
-        "display_price": "0.008"
-      },
-      {
-        "order_id": 302246,
+        "order_id": 302539,
         "stark_key": "0x74ee2029ebbb9051e165d6628a4389f8f4f46c76352b47b45336ea3c760c841",
         "price": "1000",
         "direction": 0,
@@ -266,7 +252,7 @@ curl -v https://api-dev.reddio.com/v1/orders?contract_address=0x941661bd1134dc7c
         "un_filled": "1",
         "symbol": {
           "base_token_asset_id": "0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
-          "quote_token_asset_id": "0x35306eb23be3c2d2fc3059a5fe4cf7bdba94230a1517e8645d121ea1891013a",
+          "quote_token_asset_id": "0xfad619eb58897729c9817e1cc05e824b6b501ab29f2e937ef06b8ac5e98cb2",
           "base_token_contract_addr": "eth",
           "quote_token_contract_addr": "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
           "base_token_name": "ETH",
@@ -274,11 +260,11 @@ curl -v https://api-dev.reddio.com/v1/orders?contract_address=0x941661bd1134dc7c
         },
         "fee_rate": "200",
         "token_type": "ERC721",
-        "token_id": "11",
+        "token_id": "152",
         "display_price": "0.001"
-      },
+      }
     ],
-    "total": 2
+    "total": 1
   }
 }
 ```
