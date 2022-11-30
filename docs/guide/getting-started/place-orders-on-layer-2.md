@@ -1,6 +1,6 @@
 # Place Orders On Layer 2
 
-### Seek Available NFTs To Place Orders
+## Seek Available NFTs To Place Orders
 
 After you finished the mintintg process described in “[Mint NFTs On Layer 2](https://docs.reddio.com/guide/getting-started/mint-nfts-on-layer-2.html)”, you will see ERC721M balance under your wallet. However, you can only place orders on the NFTs that are not “frozen”.For example, if you use [balance v2 API](https://docs.reddio.com/guide/api-reference/balance.html#get-balances-v2) to check the balance with your own stark_key, you will use the following URL and see the json response like this:
 
@@ -43,7 +43,7 @@ You can only place orders on tokens that are under “available_token_ids”. Be
 
 In this case, we can use token with token ID “1” to place our orders.
 
-### Place A Sell Order
+## Place A Sell Order
 
 We recommend you to use our [SDKs](https://docs.reddio.com/guide/jssdk-reference/initiate-sdk.html) to place sell orders due to encryption calculation reason. In this tutorial, we will [Python SDK](https://github.com/reddio-com/red-py-sdk) to demonstrate for you. After you have installed the Python SDK, you can import the module and initiate the objects in your IDEs like this:
 
@@ -124,7 +124,7 @@ https://api-dev.reddio.com/v2/balances?stark_key=0x1baf1b9991271727e8ebabf242cb5
 }
 ```
 
-### Place A Buy Order
+## Place A Buy Order
 
 To place a buy order, you need to have another MetaMask account and different pairs of StarkKey. That is because we forbid trading through the same account. If you have question getting StarkKey pairs, you can [click here](https://docs.reddio.com/guide/getting-started/mint-nfts-on-layer-2.html#connect-wallet-and-get-public-key-on-layer-2).
 
@@ -144,7 +144,7 @@ The buy order is valid only when  1.the price on the buy order is larger than th
 
 to deposit your test ETH to layer 2. Or you can consult with [this page](https://docs.reddio.com/guide/getting-started/transfer-eths-between-layer-1-and-layer-2.html#from-layer-1-to-layer-2-deposit) to deposit your test ETH into layer 2.
 
-### Check your NFTs on layer 2
+## Check your NFTs on layer 2
 
 After you have submitted the buy order for specific NFT, you will have your sequence ID. If the buy order is valid, you can check the record through [record API](https://docs.reddio.com/guide/api-reference/record.html) by your stark_key and sequence ID. Here is an example for a query URL and a valid response for buy order:
 
