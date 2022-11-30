@@ -191,6 +191,7 @@ function sidebarService() {
                 { text: 'How Does Layer 2 Works', link: '/guide/reference/how-does-layer-2-works' },
                 { text: 'How Does Reddio Works', link: '/guide/reference/how-does-reddio-works' },
                 { text: 'Terminology', link: '/guide/reference/terminology' },
+                { text: 'FAQ', link: '/guide/reference/faq' },
             ]
         }
     ]
