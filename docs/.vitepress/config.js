@@ -179,6 +179,7 @@ function sidebarService() {
                 { text: 'Asset', link: '/guide/api-reference/asset' },
                 { text: 'Mints', link: '/guide/api-reference/mints' },
                 { text: 'Sign', link: '/guide/api-reference/sign' },
+                { text: 'Storage', link: '/guide/api-reference/storage' },
 
             ]
         },
