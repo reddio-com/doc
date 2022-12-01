@@ -46,7 +46,7 @@ curl -v  https://api-dev.reddio.com/v1/mints -H 'content-type: application/json'
 	"status": "OK",
 	"error": "",
 	"data": {
-		"sequence_ids": [11,303]
+		"sequence_ids": [11,12]
 	}
 }
 ```

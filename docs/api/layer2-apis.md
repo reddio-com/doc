@@ -280,7 +280,7 @@ RESPONSE
 	"status": "OK",
 	"error": "",
 	"data": {
-		"sequence_ids": [11,303]
+		"sequence_ids": [11,12]
 	}
 }
 ```
