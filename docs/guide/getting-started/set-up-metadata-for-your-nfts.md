@@ -1,4 +1,4 @@
-# Set Up Metadata For Your NFTs 2022-12-1
+# Set Up Metadata For Your NFTs
 
 ## Set Up BaseURI For Your Contract
 
