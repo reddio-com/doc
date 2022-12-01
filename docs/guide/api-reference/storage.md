@@ -2,7 +2,7 @@
 
 As reddio user you are able to upload metadata, files are under user's scope.
 
-Note: This function is still in Alpha and we do not guarantee any SLA.
+Note: This function is still in Alpha and we do not guarantee any SLA, upload file size limit is 100MiB.
 
 ## Upload file(s)
 
@@ -16,6 +16,7 @@ ipfs-car --pack /path/to/your/directory_name
 ```
 
 Then a `directory_name.car` will be created, you can now just upload this file.
+
 
 **Parameters**
 
