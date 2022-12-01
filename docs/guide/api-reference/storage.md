@@ -1,4 +1,4 @@
-# Record
+# Storage
 
 As reddio user you are able to upload metadata, files are under user's scope.
 
