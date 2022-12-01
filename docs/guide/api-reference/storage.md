@@ -39,7 +39,10 @@ curl -v -X POST -H 'x-api-key: rk-xxxxxx-4326-4b58-ae69-xxxxxxxx' -F "file=@dire
 {
     "status": "OK",
     "data": {
-        "cid": "bafybeibs4sfygak2sfxxxxpytsuccmhjilcrwsmjus57ntxvyxxxxlpddq"
+        "cid": "bafybeibs4sfygak2sfxxxxpytsuccmhjilcrwsmjus57ntxvyxxxxlpddq",
+        "endpoints": [
+            "https://bafybeibs4sfygak2sfxxxxpytsuccmhjilcrwsmjus57ntxvyxxxxlpddq.ipfs.nftstorage.link/"
+        ]
     },
     "error": ""
 }
@@ -67,12 +70,18 @@ curl -v -H 'x-api-key: rk-xxxxxx-4326-4b58-ae69-xxxxxxxx' https://api-dev.reddio
             {
                 "cid": "bafybeibs4sfygak2sfxxxxpytsuccmhjilcrwsmjus57ntxvyxxxxlpddq",
                 "filename": "cartest1.car",
-                "created_at": "2022-12-01T06:37:45.000000Z"
+                "created_at": "2022-12-01T06:37:45.000000Z",
+                "endpoints": [
+                    "https://bafybeibs4sfygak2sfxxxxpytsuccmhjilcrwsmjus57ntxvyxxxxlpddq.ipfs.nftstorage.link/"
+                ]
             },
             {
-                "cid": "bafybeibs4sfygak2sfxxxxpytsuccmhjilcrwsmjus57ntxvyxxxxlxxxx",
+                "cid": "bafybeibs4sfygak2sfxxxxpytsuccmhjilcrwsmjus57ntxvyxxxxlpddq",
                 "filename": "cartest2.car",
-                "created_at": "2022-12-01T06:41:36.000000Z"
+                "created_at": "2022-12-01T06:41:36.000000Z",
+                "endpoints": [
+                    "https://bafybeibs4sfygak2sfxxxxpytsuccmhjilcrwsmjus57ntxvyxxxxlpddq.ipfs.nftstorage.link/"
+                ]
             }
         ]
     },
