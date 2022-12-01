@@ -29,6 +29,11 @@ The file you with to upload.
 POST /v1/user/storage
 ```
 
+**`cURL` Example**
+```sh
+curl -v -X POST -H 'x-api-key: rk-xxxxxx-4326-4b58-ae69-xxxxxxxx' -F "file=@directory_name.car" https://api-dev.reddio.com/v1/user/storage
+```
+
 **Example response**
 ```json
 {
@@ -46,6 +51,11 @@ List all the uploaded files under you account.
 
 ```jsx
 GET /v1/user/storage
+```
+
+**`cURL` Example**
+```sh
+curl -v -H 'x-api-key: rk-xxxxxx-4326-4b58-ae69-xxxxxxxx' https://api-dev.reddio.com/v1/user/storage
 ```
 
 **Example response**
