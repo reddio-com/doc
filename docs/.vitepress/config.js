@@ -136,6 +136,7 @@ function sidebarService() {
             items: [
                 { text: 'Marketplace Demo', link: '/guide/getting-started/marketplace-demo' },
                 { text: 'Mint NFTs On Layer 2', link: '/guide/getting-started/mint-nfts-on-layer-2'  },
+                { text: 'Set Up Metadata For Your NFTs',link:'/guide/getting-started/set-up-metadata-for-your-nfts'},
                 { text: 'Place Orders On Layer 2', link: '/guide/getting-started/place-orders-on-layer-2' },
                 { text: 'Transfer NFTs Between Layer 1 and Layer 2', link: '/guide/getting-started/transfer-nfts-between-layer-1-and-layer-2'  },
                 { text: 'Transfer ETHs Between Layer 1 and Layer 2', link: '/guide/getting-started/transfer-eths-between-layer-1-and-layer-2' },
