@@ -892,43 +892,19 @@ it returns like
 			{
 					"token_id": "213",
 					"contract_address": "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
-					"stark_key": "0x4c2d19ac0a343218cebcea5ab124440a0650744c081247b8e4146877d2a5cad",
-					"symbol": "REDDIO721",
-					"eth_address": "0x067ceABFb722CA0034f39b88EE4004dAbc8ef33b",
-					"order": null
+					"owner": "0x4c2d19ac0a343218cebcea5ab124440a0650744c081247b8e4146877d2a5cad",
+					"symbol": "REDDIO721"
 			},
 			{
 					"token_id": "214",
 					"contract_address": "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
-					"stark_key": "0x4c2d19ac0a343218cebcea5ab124440a0650744c081247b8e4146877d2a5cad",
-					"symbol": "REDDIO721",
-					"eth_address": "0x067ceABFb722CA0034f39b88EE4004dAbc8ef33b",
-					"order": {
-							"order_id": 300137,
-							"stark_key": "0x4c2d19ac0a343218cebcea5ab124440a0650744c081247b8e4146877d2a5cad",
-							"price": "200",
-							"direction": 0,
-							"amount": "1",
-							"un_filled": "1",
-							"symbol": {
-									"base_token_asset_id": "0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
-									"quote_token_asset_id": "0x245a4ba263774b82d45baa8b52b26e681ca161ac6aeef48597ddad160419736",
-									"base_token_contract_addr": "eth",
-									"quote_token_contract_addr": "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
-									"base_token_name": "ETH",
-									"quote_token_name": "REDDIO721"
-							},
-							"fee_rate": "200",
-							"token_type": "ERC721",
-							"token_id": "214",
-							"display_price": "0.0002"
-					}
+					"owner": "0x4c2d19ac0a343218cebcea5ab124440a0650744c081247b8e4146877d2a5cad",
+					"symbol": "REDDIO721"
 			}
 	]
 }
 ```
 
-By default, there is no eth_address, we will provide user register on client(now we can use python script to register and not verify on eth_address(will using EIP-712 to sign it after holiday)
 
 ### For Collection APIs
 
