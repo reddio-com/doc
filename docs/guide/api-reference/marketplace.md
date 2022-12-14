@@ -76,8 +76,6 @@ it returns like
 }
 ```
 
-By default, there is no eth_address, we will provide user register on client(now we can use python script to register and not verify on eth_address(will using EIP-712 to sign it after holiday)
-
 ## For collection APIs
 
 We will add description/image_url/external_link/banner_image_url in dashboard, now it can be set by.
