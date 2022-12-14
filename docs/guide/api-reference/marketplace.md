@@ -12,7 +12,7 @@ Create a marketplace object with marketplace fee payee address, and fee rate usi
 curl -X POST "https://api-dev.reddio.com/v1/marketplace" -d '{"marketplace_name":"Reddio2",
 "marketplace_payee_address":"0x553d1d249b381e92649a6b8216ea91aad3b786a412536b82aa39f02177f897d",
 "marketplace_fee":"0.015"}' \
--H 'X-API-Key:rk-1236d5fc-f4c1-4a19-a2ff-9c29e3a70e37' \
+-H 'X-API-Key:rk-xxxxxx-4326-4b58-ae69-xxxxxxxx' \
 -H 'content-type: application/json'
 ```
 
@@ -44,46 +44,35 @@ it returns like
 
 ```json
 {
-	"status": "OK",
-	"error": "",
-	"error_code": 0,
-	"data": [
-			{
-					"token_id": "213",
-					"contract_address": "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
-					"stark_key": "0x4c2d19ac0a343218cebcea5ab124440a0650744c081247b8e4146877d2a5cad",
-					"symbol": "REDDIO721",
-					"eth_address": "0x067ceABFb722CA0034f39b88EE4004dAbc8ef33b",
-					"order": null
-			},
-			{
-					"token_id": "214",
-					"contract_address": "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
-					"stark_key": "0x4c2d19ac0a343218cebcea5ab124440a0650744c081247b8e4146877d2a5cad",
-					"symbol": "REDDIO721",
-					"eth_address": "0x067ceABFb722CA0034f39b88EE4004dAbc8ef33b",
-					"order": {
-							"order_id": 300137,
-							"stark_key": "0x4c2d19ac0a343218cebcea5ab124440a0650744c081247b8e4146877d2a5cad",
-							"price": "200",
-							"direction": 0,
-							"amount": "1",
-							"un_filled": "1",
-							"symbol": {
-									"base_token_asset_id": "0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
-									"quote_token_asset_id": "0x245a4ba263774b82d45baa8b52b26e681ca161ac6aeef48597ddad160419736",
-									"base_token_contract_addr": "eth",
-									"quote_token_contract_addr": "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
-									"base_token_name": "ETH",
-									"quote_token_name": "REDDIO721"
-							},
-							"fee_rate": "200",
-							"token_type": "ERC721",
-							"token_id": "214",
-							"display_price": "0.0002"
-					}
-			}
-	]
+  "status": "OK",
+  "error": "",
+  "error_code": 0,
+  "data": {
+    "list": [
+      {
+        "token_id": "1",
+        "contract_address": "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
+        "owner": "0x1ccc27877014bc1a81919fc855ebbd1b874603283c9ea93397d970b0704e581",
+        "symbol": "REDDIO721",
+        "asset_id": "0x26c914ae2db0f02306e8699e3bb3cfe27cc9f86f3f196835e428bf7a5106fa2"
+      },
+      {
+        "token_id": "2",
+        "contract_address": "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
+        "owner": "0x74ee2029ebbb9051e165d6628a4389f8f4f46c76352b47b45336ea3c760c841",
+        "symbol": "REDDIO721",
+        "asset_id": "0x1c2873bae9cd0c38a658c710393911df193eb58dd65b20dd3b6b016b77b19e0"
+      },
+      {
+        "token_id": "3",
+        "contract_address": "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
+        "owner": "0x1ccc27877014bc1a81919fc855ebbd1b874603283c9ea93397d970b0704e581",
+        "symbol": "REDDIO721",
+        "asset_id": "0x30795524239792b76df89a90744d539a69728b4467e946e295d0a8216607338"
+      },
+    ],
+    "total": 3
+  }
 }
 ```
 
@@ -107,7 +96,7 @@ curl -X POST "https://api-dev.reddio.com/v1/project/contract" -d '{
   "banner_image_url": "https://example.com/image_url",
   "metadata_url": "https://metadata.example.com/"
 }' \
--H 'X-API-Key:rk-1236d5fc-f4c1-4a19-a2ff-9c29e3a70e37' \
+-H 'X-API-Key:rk-xxxxxx-4326-4b58-ae69-xxxxxxxx' \
 -H 'content-type: application/json'
 ```
 
