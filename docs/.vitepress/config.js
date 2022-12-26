@@ -127,7 +127,8 @@ function sidebarService() {
             collapsible: true,
             items: [
                 { text: 'Overview', link: '/guide/introduction/overview' },
-                { text: 'Feature', link: '/guide/introduction/feature'  }
+                { text: 'Feature', link: '/guide/introduction/feature'  },
+                { text: 'Changelog', link: '/guide/introduction/changelog'}
             ]
         },
         {
