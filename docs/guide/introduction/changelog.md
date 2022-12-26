@@ -3,7 +3,7 @@
 ## December 26, 2022
 
 1. Support IOC order (Now Reddio Support both GTC & IOC order)
-2. Support Utility Token for Reconciliation
+2. Support Utility Token for Reconcile
 3. Support callback for orders
 4. Add sequence_ids field to withdraw status
 
