@@ -1,4 +1,8 @@
-# Change Log 2022-12-26
+# Change Log
+
+## December 30, 2022
+1. Add /v1/txns API to get all transactions related to contract_address
+2. Add /v1/collections API to get all collections
 
 ## December 26, 2022
 
