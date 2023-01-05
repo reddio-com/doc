@@ -11,7 +11,8 @@ Create a marketplace object with marketplace fee payee address, and fee rate usi
 ```sh
 curl -X POST "https://api-dev.reddio.com/v1/marketplace" -d '{"marketplace_name":"Reddio2",
 "marketplace_payee_address":"0x553d1d249b381e92649a6b8216ea91aad3b786a412536b82aa39f02177f897d",
-"marketplace_fee":"0.015"}' \
+"marketplace_fee":"0.015",
+"project_uuid":"8e179868-c7ca-49bc-afd7-c178b7b8cf15"}' \
 -H 'X-API-Key:rk-xxxxxx-4326-4b58-ae69-xxxxxxxx' \
 -H 'content-type: application/json'
 ```
