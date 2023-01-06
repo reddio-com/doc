@@ -1,6 +1,6 @@
 # Storage
 
-As reddio user you are able to upload metadata, files are under user's scope.
+As reddio user you are able to upload metadata, files are under project's scope.
 
 Note: This function is still in Alpha and we do not guarantee any SLA, upload file size limit is 100MiB.
 
@@ -26,12 +26,12 @@ Then a `directory_name.car` will be created, you can now just upload this file.
 The file you with to upload.
 
 ```jsx
-POST /v1/user/storage
+POST /v1/project/<project_uuid>/storage
 ```
 
 **`cURL` Example**
 ```sh
-curl -v -X POST -H 'x-api-key: rk-xxxxxx-4326-4b58-ae69-xxxxxxxx' -F "file=@directory_name.car" https://api-dev.reddio.com/v1/user/storage
+curl -v -X POST -H 'x-api-key: rk-xxxxxx-4326-4b58-ae69-xxxxxxxx' -F "file=@directory_name.car" https://api-dev.reddio.com/v1/project/8e179868-c7ca-49bc-afd7-c178b7b8cf15/storage
 ```
 
 **Example response**
@@ -50,15 +50,15 @@ curl -v -X POST -H 'x-api-key: rk-xxxxxx-4326-4b58-ae69-xxxxxxxx' -F "file=@dire
 
 ## Get uploaded files
 
-List all the uploaded files under you account.
+List all the uploaded files under related project.
 
 ```jsx
-GET /v1/user/storage
+GET /v1/project/<project_uuid>/storage
 ```
 
 **`cURL` Example**
 ```sh
-curl -v -H 'x-api-key: rk-xxxxxx-4326-4b58-ae69-xxxxxxxx' https://api-dev.reddio.com/v1/user/storage
+curl -v -H 'x-api-key: rk-xxxxxx-4326-4b58-ae69-xxxxxxxx' https://api-dev.reddio.com/v1/project/8e179868-c7ca-49bc-afd7-c178b7b8cf15/storage
 ```
 
 **Example response**
@@ -69,16 +69,9 @@ curl -v -H 'x-api-key: rk-xxxxxx-4326-4b58-ae69-xxxxxxxx' https://api-dev.reddio
         "storages": [
             {
                 "cid": "bafybeibs4sfygak2sfxxxxpytsuccmhjilcrwsmjus57ntxvyxxxxlpddq",
-                "filename": "cartest1.car",
-                "created_at": "2022-12-01T06:37:45.000000Z",
-                "endpoints": [
-                    "https://bafybeibs4sfygak2sfxxxxpytsuccmhjilcrwsmjus57ntxvyxxxxlpddq.ipfs.nftstorage.link/"
-                ]
-            },
-            {
-                "cid": "bafybeibs4sfygak2sfxxxxpytsuccmhjilcrwsmjus57ntxvyxxxxlpddq",
-                "filename": "cartest2.car",
-                "created_at": "2022-12-01T06:41:36.000000Z",
+                "filename": "generate.jpg",
+                "filesize": "173604",
+                "created_at": "2022-12-26T03:17:35.000000Z",
                 "endpoints": [
                     "https://bafybeibs4sfygak2sfxxxxpytsuccmhjilcrwsmjus57ntxvyxxxxlpddq.ipfs.nftstorage.link/"
                 ]
