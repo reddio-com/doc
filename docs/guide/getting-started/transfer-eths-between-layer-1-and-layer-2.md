@@ -4,7 +4,7 @@
 
 This tutorial will guide you through the process of using the Reddio API to deposit, transfer, and withdraw ETH between the Ethereum layer 1 and layer 2 blockchains using typescript.
 
-You can get the [Transfer ETHs Between Layer 1 and Layer 2 project from github](https://github.com/reddio-com/Tutorial-Examples/tree/master/ETH-transfer-tutorial-example). After you cloned the project in your device, you can use following prompts to install all the dependencies.
+You can get the [Transfer ETHs Between Layer 1 and Layer 2 project from github](https://github.com/reddio-com/Tutorial-Examples/blob/master/ETH-transfer-tutorial-example/src/pages/index.tsx). After you cloned the project in your device, you can use following prompts to install all the dependencies.
 
 ```bash
 yarn install
