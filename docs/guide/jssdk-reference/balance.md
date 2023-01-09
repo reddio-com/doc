@@ -10,7 +10,7 @@ Retrieve account balances in batch based on the `stark_key`.
 
 <strong style='color:red'>*</strong>**starkKey** <strong style='color:#8792a2'>string</strong>
 
-A unique key that identifies the user in the off-chain state
+A unique key that identifies the user in the off-chain state.
 
 ---
 
