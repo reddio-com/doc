@@ -97,29 +97,6 @@ function nav() {
     ]
 }
 
-function sidebarGuide() {
-    return [
-        {
-            text: 'Introduction',
-            collapsible: true,
-            items: [
-                { text: 'Overview', link: '/guide/introduction/overview' },
-            ]
-        },
-        {
-            text: 'SDK reference',
-            collapsible: true,
-            items: [
-                { text: 'Init SDK', link: '/sdk/init' },
-                { text: 'KeyPair', link: '/sdk/keypair' },
-                { text: 'Request', link: '/sdk/request' },
-                { text: 'Utils', link: '/sdk/utils' },
-                { text: 'Contract', link: '/sdk/contract' },
-            ]
-        }
-    ]
-}
-
 function sidebarService() {
     return [
         {
