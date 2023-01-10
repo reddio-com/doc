@@ -134,7 +134,6 @@ function sidebarService() {
                 { text: 'Transfer', link: '/guide/jssdk-reference/transfer' },
                 { text: 'Balance', link: '/guide/jssdk-reference/balance' },
                 { text: 'Record', link: '/guide/jssdk-reference/record' },
-                { text: 'Vault', link: '/guide/jssdk-reference/vault' },
                 { text: 'Contract', link: '/guide/jssdk-reference/contract' },
                 { text: 'Order', link: '/guide/jssdk-reference/order' },
             ]
