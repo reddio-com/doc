@@ -67,3 +67,14 @@ const { data } = await reddio.apis.transfer({
   expirationTimestamp: 4194303,
 });
 ```
+
+### Example return
+```json
+{
+	"status": "OK",
+	"error": "",
+	"data": {
+		"sequence_id": 12
+	}
+}
+```
