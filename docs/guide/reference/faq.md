@@ -75,4 +75,31 @@ The expirationTimeStamp parameter represents the timeout for deposit/transfer/wi
 ## What should I put in the base URI?
 Base URI is used for you to fill in the metadata of your NFT collection. The metadata will contain information such as pictures and attributes corresponding to the NFTs. See the [Set Up Metadata For Your NFTs](https://docs.reddio.com/guide/getting-started/set-up-metadata-for-your-nfts.html) documentation for more details.
 
+## What is the mechanism behind transfering tokens between layer 2 and layer1?
+The current Reddio service is based on StarkEx, we can explain it from the two operations：deposit and withdraw. For Deposit, when you deposit assets  (including ERC20/ETH/ERC721) from layer1 to a certain stark_key, Reddio will change the asset status of this stark_key on layer2, and will synchronize the asset status to StarkEx. StarkEx will verify the ownership of the asset later (by comparing the asset status on layer 1 and Reddio’s synchronize status). For Withdraw, the user needs to initiate a withdraw request on layer2. When reddio processes the request, it will update the asset status and synchronize the withdraw request to starkex. After StarkEx verifies, the asset will be released after 8-16 hours. The hash of the asset statis is uploaded to the chain. At the same time, StarkEx will change the withdrawal balance of the user on the chain. After the change you can claim your assets on layer1. See [this] (https://docs.starkware.co/starkex/overview.html) for more details
+
+## How does Reddio charge? 
+Currently, Reddio only charges after the user places an order and completes the transaction. The fee rate is 0.5% of the total price of the pending order. And  this fee is only charged to the seller (maker).
+
+## Can the royalty of NFT be customized in Reddio?
+It is not possible on our system currently.
+
+## Is there any fee for withdrawing assets from layer 2?
+The withdrawal process can be divided into two steps. The first step is to withdraw on layer2, and the user does not need to pay any fees for this step. After completing the previous step, the second step of withdrawal occurs on layer 1. The user who performs the withdraw operation  on layer 1 needs to pay the gas fee to the relevant blockchain network. Reddio will not charge any fee during the whole process.
+
+## How to make ERC721 contract support minting on layer 2？
+You need to make sure you include the MintFor function in your ERC721 contract. You can check [this](https://github.com/reddio-com/contract_demo/blob/main/src/contracts/ERC721MintFor.sol#L82) for implementing MintFor function. Only in this way can mint NFTs on layer 2 be guaranteed.
+
+## Will completed orders still be in the order API? Where can I find it?
+Completed orders will no longer appear in the order API. Because the orders in the order API are rders that have not yet been filled. If you want to query the orders that have been filled, you can query through the [record API](https://docs.reddio.com/guide/api-reference/record.html).
+
+## How to know which wallet bought specific NFT?
+You can query the the NFT collection API to figure out who bought specific NFT. Here is an [query example](https://api.reddio.com/v1/contracts/0x8fc67b0fcc9283551bdcd4d2d0b7c886f0756e64/tokens).
+
+## What are the possible reasons that pending orders are not filled?
+One possible reason is that the seller and buyer of the pending order are the same . In order to prevent order fraud, the pending order will only be filled if the buyer and the seller are not the same. Otherwise, user's assets will be frozen. You can cancel the old orders by cancel_order API.
+
+## What does 'frozen_token_ids' mean in balance APIs?
+Frozen_token_ids represents the assets of the NFT collection have been frozen for some reason. If the asset is in pending order, the system will automatically freeze the asset to which the token_id belongs.
+
 
