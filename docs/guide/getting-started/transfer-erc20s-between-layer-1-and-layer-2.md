@@ -31,7 +31,7 @@ During your application implementation. There shall be a form asks for ERC20 con
 If you want to deposit, transfer, and withdraw tokens between the Ethereum layer 1 and layer 2 blockchains, you need to connect to your wallet first. We will use Metamask as an example to show you how to connect to the wallet and create Stark keypairs based on it. There’s one thing to note that one Metamask wallet address will generate the same Stark keypair. 
 
 ```tsx
-async function connectToWallet() {
+  async function connectToWallet() {
     if (typeof window !== 'undefined') {
       //First, get the web3 provider if window is not undefined
       const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -61,7 +61,7 @@ async function connectToWallet() {
           //Store them into array
           const { privateKey, publicKey } = await reddio.keypair.generateFromEthSignature();
 
-          //We will set ethAddress/starkKey/privateStarkKey on our array
+          //We will set ethAddress/starkKey/privateKey on our array
           setEventValue({ ...eventValue, ethAddress, starkKey: publicKey, privateKey })
         } catch (error) {
           console.error(error);
@@ -89,31 +89,31 @@ If you want to trade on layer 2, you need to have assets on layer 2. So you need
 Now, we will show you how to implement the deposit function in your application.
 
 ```tsx
-async function depositERC20()
-   {
-     //Authorize the ERC20 contract address to approve the transaction
-     if(reddio !== null){
-       const transaction = await reddio?.erc20.approve({
+  async function depositERC20() {
+    //Authorize the ERC20 contract address to approve the transaction
+    if (reddio !== null) {
+      const { starkKey, tokenAmount, contractAddress } = eventValue
+      const transaction = await reddio.erc20.approve({
         //Amounts that you want to approve 
-        amount: Number(eventArray["tokenAmountInput"]),
-         //ERC20's contract address 
-         tokenAddress: eventArray["tokenContractAddressInput"], 
-       })
- 
-       //Waiting for approval
-       await transaction?.wait()
- 
-       //Deposit ERC20
-       await reddio?.apis.depositERC20({
-         //Your starkKey (public key on layer 2)
-         starkKey:eventArray["starkKeyInput"],
-         //Amounts you want to deposit
-         quantizedAmount:Number(eventArray["tokenAmountInput"]),
-         //ERC20's contract address 
-         tokenAddress:eventArray["tokenContractAddressInput"],
-       });
-     }
+        amount: tokenAmount,
+        //ERC20's contract address 
+        tokenAddress: contractAddress,
+      })
+
+      //Waiting for approval
+      await transaction?.wait()
+
+      //Deposit ERC20
+      await reddio.apis.depositERC20({
+        //Your starkKey (public key on layer 2)
+        starkKey,
+        //Amounts you want to deposit
+        quantizedAmount: tokenAmount,
+        //ERC20's contract address 
+        tokenAddress: contractAddress,
+      });
     }
+  }
 ```
 
 After you write down the proper information on the forms and click on the deposit button, your MetaMask will ask you to confirm all the transactions. After that, you can [check your balance.](https://docs.reddio.com/guide/getting-started/check-your-eth-erc20-nft-balance.html)
@@ -122,32 +122,24 @@ After you write down the proper information on the forms and click on the deposi
 
 After deposit, you have your own RDD20 tokens on layer 2. Now you want to send the RDD20 tokens to others on layer 2. 
 
-Now, we will show you how to implement the transfer function in your application. Remember, RDD20’s assetId on layer 2 has an one-on-one mapping relathionship with ERC20’s contract address on layer 1. 
+Now, we will show you how to implement the transfer function in your application.
 
 ```tsx
-async function transferERC20(){
-  if(reddio !== null){
-    //getting RDD20 token's assetId if reddio object is defined 
-    const { assetId } = await reddio.utils.getAssetTypeAndId({
-      type:"ERC20",
-      tokenAddress:eventArray["tokenContractAddressInput"],
-    });
-
-    //transfer the amount to another starkKey
-    const { data: res } = await reddio.apis.transfer({
-      starkKey: eventArray["starkKeyInput"],
-      privateKey:eventArray["privateKeyInput"],
-      contractAddress:eventArray["tokenContractAddressInput"],
-      amount: Number(eventArray["tokenAmountInput"]),
-      tokenId: assetId,
-      type:'ERC20',
-      receiver: eventArray["toStarkKeyInput"],
-    });
-    console.log(res);
-
+  async function transferERC20() {
+    if (reddio !== null) {
+      const { starkKey, privateKey, tokenAmount, contractAddress, receiver } = eventValue
+      //transfer the amount to another starkKey
+      const { data: res } = await reddio.apis.transfer({
+        starkKey,
+        privateKey,
+        contractAddress,
+        amount: tokenAmount,
+        type: 'ERC20',
+        receiver,
+      });
+      console.log(res);
+    }
   }
-
-}
 ```
 
 After you write down the proper information on the forms and click on the transfer button. You can check a response from your console likes the picture down below:
@@ -165,54 +157,25 @@ You already have a lot of ERC20 tokens on layer 2. You want these tokens back to
 
 Now, we will show you how to implement the withdraw function in your application. Typically, withdraw methods are composed by two steps: withdraw from layer 2 to withdraw area and then withdraw th from layer 1.
 
-The first step usually takes about 4 hour. You can [check withdraw status here](https://docs.reddio.com/guide/api-reference/withdraw.html#withdrawal-status). After that, you can use withdrawTokensFromL1 to withdraw assets to layer 1.
+The first step at least takes about 4 hour. You can [check withdraw status here](https://docs.reddio.com/guide/api-reference/withdraw.html#withdrawal-status). 
 
 ```tsx
-async function withdrawERC20FromL2(){
-    if(reddio !== null){
-      //getting reddio's assetId and assetType for the ERC20 token
-      const { assetId,assetType } = await reddio.utils.getAssetTypeAndId({
-        type:"ERC20",
-        tokenAddress:eventArray["tokenContractAddressInput"],
-      });
-
+  async function withdrawERC20FromL2() {
+    if (reddio !== null) {
+      const { starkKey, privateKey, tokenAmount, contractAddress, receiver } = eventValue
       //Step 1: withdraw tokens from layer 2 (usually takes 4 hour)
-      const { data: res } = await reddio.apis.withdrawalFromL2({
-        starkKey:eventArray["starkKeyInput"],
-        privateKey:eventArray["privateKeyInput"],
-        amount:Number(eventArray["tokenAmountInput"]),
-        contractAddress:eventArray["tokenContractAddressInput"],
-        tokenId:assetId,
-        type:"ERC20",
-        receiver:eventArray["starkKeyInput"],
-      });
-  }
-}
-
-  async function withdrawERC20FromL1(){
-    if(reddio !== null){
-      //getting reddio's assetId and assetType for the ERC20 token
-      const { assetId,assetType } = await reddio.utils.getAssetTypeAndId({
-        type:"ERC20",
-        tokenAddress:eventArray["tokenContractAddressInput"],
+      const { data } = await reddio.apis.withdrawalFromL2({
+        starkKey,
+        privateKey,
+        amount: tokenAmount,
+        contractAddress,
+        type: "ERC20",
+        receiver,
       });
 
-      //Step 2: withdraw tokens from layer 1
-      await reddio.apis.withdrawalFromL1({
-        ethAddress: eventArray["ethAddressInput"],
-        assetType: assetType,
-        type: 'ERC20'
-      })
-  }
-    
+      console.log(data);
+    }
   }
 ```
 
-After you write down the proper information on the forms and click on the withdraw button. MetaMask will show up and ask you to approve the withdraw action. You will see the activity on your MetaMask like the picture down below:
-
-<p align="center">
-  <img src="/transfer-eth-4.png" alt="transfer-eth-4"/>
-</p>
-
-
-You can [check your balance](https://docs.reddio.com/guide/getting-started/check-your-eth-erc20-nft-balance.html) afterward.
+The second step is to withdraw the assets from layer 1. You can refer to guide [here](https://docs.reddio.com/guide/jssdk-reference/withdraw.html#withdrawalfroml1)

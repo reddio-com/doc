@@ -23,7 +23,7 @@ Now we will go over important components of our project.
 If you want to deposit, transfer, and withdraw tokens between the Ethereum layer 1 and layer 2 blockchains, you need to connect to your wallet first. We will use Metamask as an example to show you how to connect to the wallet and create Stark keypairs based on it. There’s one thing to note that one Metamask wallet address will generate the same Stark keypair. 
 
 ```tsx
-async function connectToWallet() {
+  async function connectToWallet() {
     if (typeof window !== 'undefined') {
       //First, get the web3 provider if window is not undefined
       const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -53,7 +53,7 @@ async function connectToWallet() {
           //Store them into array
           const { privateKey, publicKey } = await reddio.keypair.generateFromEthSignature();
 
-          //We will set ethAddress/starkKey/privateStarkKey on our array
+          //We will set ethAddress/starkKey/privateKey on our array
           setEventValue({ ...eventValue, ethAddress, starkKey: publicKey, privateKey })
         } catch (error) {
           console.error(error);
@@ -80,7 +80,7 @@ If you want to trade on layer 2, you need to have assets on layer 2. So you need
 Now, we will show you how to implement the deposit function in your application. The only things you need to care about is your starkKey and the amount of ETH you want to deposit:
 
 ```tsx
-async function depositETH() {
+  async function depositETH() {
     if (reddio !== null) {
       //Deposit ETH to layer 2 if reddio object is defined
       const { starkKey, tokenAmount } = eventValue
@@ -88,7 +88,7 @@ async function depositETH() {
         //Your starkKey (public key on layer 2)
         starkKey,
         //Amounts you want to deposit
-        quantizedAmount: Number(tokenAmount),
+        quantizedAmount: tokenAmount,
       });
     }
   }
@@ -104,30 +104,22 @@ After you write down the proper information on the forms and click on the deposi
 
 After deposit, you have your own Goerli ETH on layer 2. Now you want to send the Goerli ETH to others on layer 2. 
 
-Now, we will show you how to implement the transfer function in your application. Remember, ETH’s assetId on layer 2 has an one-on-one mapping relathionship with ETH on layer 1. You need to have the assetID on layer 2 before you can transfer the assets to others.
+Now, we will show you how to implement the transfer function in your application.
 
 ```tsx
 async function transferETH() {
     if (reddio !== null) {
-      //getting RDD20 token's assetId if reddio object is defined 
-      const { assetId } = await reddio.utils.getAssetTypeAndId({
-        type: "ETH",
-      });
-
       const { starkKey, privateKey, tokenAmount, receiver } = eventValue
       //transfer the amount to another starkKey
-      const { data: res } = await reddio.apis.transfer({
+      const { data } = await reddio.apis.transfer({
         starkKey,
         privateKey,
         amount: tokenAmount,
-        tokenId: assetId,
         type: 'ETH',
         receiver,
       });
-      console.log(res);
-
+      console.log(data);
     }
-
   }
 ```
 
@@ -146,55 +138,24 @@ You already have a lot of ETH on layer 2. You want these tokens back to your lay
 
 Now, we will show you how to implement the withdraw function in your application. Typically, withdraw methods are composed by two steps: withdraw from layer 2 to withdraw area and then withdraw from layer 1.
 
-The first step usually takes about 4 hour. You can [check withdraw status here](https://docs.reddio.com/guide/api-reference/withdraw.html#withdrawal-status). After that, you can use withdrawTokensFromL1 to withdraw assets to layer 1.
+The first step takes at least 4 hour. You can [check withdraw status here](https://docs.reddio.com/guide/api-reference/withdraw.html#withdrawal-status).
 
 ```tsx
-async function withdrawTokensFromL2() {
+  async function withdrawTokensFromL2() {
     if (reddio !== null) {
-      //Getting reddio's assetId and assetType for the ERC20 token
-      const { assetId } = await reddio.utils.getAssetTypeAndId({
-        type: "ETH",
-      });
-
       const { starkKey, privateKey, tokenAmount, receiver } = eventValue
       //Withdraw tokens from layer 2
       //It will usually take 4 hour to withdraw from layer 2 to withdraw area
-      const { data: res } = await reddio.apis.withdrawalFromL2({
+      const { data } = await reddio.apis.withdrawalFromL2({
         starkKey,
         privateKey,
         amount: tokenAmount,
-        tokenId: assetId,
         type: "ETH",
         receiver,
       });
 
-      console.log(res);
-
-    }
-  }
-  async function withdrawTokensFromL1() {
-    if (reddio !== null) {
-      //Getting reddio's assetId and assetType for the ETH token
-      const { assetType } = await reddio.utils.getAssetTypeAndId({
-        type: "ETH",
-      });
-
-      //Withdraw tokens from withdraw area on layer 1
-      const res = await reddio.apis.withdrawalFromL1({
-        ethAddress: eventValue.receiver,
-        assetType: assetType,
-        type: 'ETH'
-      })
-      console.log(res);
+      console.log(data);
     }
   }
 ```
-
-After you write down the proper information on the forms and click on the withdraw button. MetaMask will show up and ask you to approve the withdraw action. You will see the activity on your MetaMask like the picture down below:
-
-<p align="center">
-  <img src="/transfer-eth-4.png" alt="transfer-eth-4"/>
-</p>
-
-
-You can check your balance [here](/guide/getting-started/check-your-eth-erc20-nft-balance).
+The second step is to withdraw the assets from layer 1. You can refer to guide [here](https://docs.reddio.com/guide/jssdk-reference/withdraw.html#withdrawalfroml1)
