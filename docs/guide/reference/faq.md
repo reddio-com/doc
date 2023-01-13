@@ -7,21 +7,18 @@ Currently, we do not have any limit of orders that you can place.
 That means the order price needs to bigger than 0.001 token. 
 
 ## Which rollup mechanism is currently used for interaction between layer2 and layer1? What is the timeliness?
-Reddio supports two sidechain schemes: validium rollup and zkRollup. Validium rollup stores data on offchain, and zkRollup stores data on the chain. The default is validium rollup.
-The timeliness of the two methods is about the same.
-The execution time for operations on layer 2 is about 300ms.
-And it generally takes more than 8 hours to submit the confirmation proof on layer 2 to layer 1.
-For more information about zkRollup, please refer to the official document: [how does layer 2 works](https://docs.reddio.com/guide/reference/how-does-layer-2-works.html).
+Reddio supports two sidechain schemes to validium(the default option) and zkRollup for interaction between layer 2 and layer 1. The major difference between a validium and a zk-rollup is data availability: validium stores data off-chain, while ZkRollup stores data on-chain.
+The timeliness of the two schemes is roughly the same. 
+- The execution time for operations on layer 2 is around 300ms.
+- Submitting confirmation proof from layer 2 to layer 1 generally takes more than 8 hours.
+For more information about zkRollup, see [how does layer 2 works](https://docs.reddio.com/guide/reference/how-does-layer-2-works.html).
 
-## What is the time required for deposit on layer2? How to check whether the operation was successful?
+## How long does it take to make a deposit on layer 2? How can to if the operation is successful?
+The time required for a deposit on layer 2 can vary depending on the implementation and network conditions. In general, to prevent [chain reorganisation (or “reorg”)](https://learnmeabitcoin.com/technical/chain-reorganisation), most exchanges set a confirmation requirement of 12 to 30 blocks. Currently, Reddio sets a confirmation requirement of 15 blocks. The time required is approximately 150-200 seconds.
+To check if a deposit on layer 2 has been successfully processed, you can check the operation status by querying the [balance API](https://docs.reddio.com/guide/api-reference/balance.html) or [record API](https://docs.reddio.com/guide/api-reference/record.html).
 
-In order to prevent the block from having reorg. General exchanges set 12 to 30 blocks for confirmation.
-Currently Reddio is set to 15 block confirmations. It takes about 150-200s.
-We can obtain notifications of operation results by querying the [balance](https://docs.reddio.com/guide/api-reference/balance.html) API or [record](https://docs.reddio.com/guide/api-reference/record.html) API.
-
-## How long does it take for a layer 2 operation’s proof to be published on the blockchain?
-It takes 8-16 hours for the status proof of all layer 2 operations to be publish on the blockchain.
-However, users don’t need to care much about when the proof to layer 1 because the status of layer2 operations is returned in real time.  They only need to care about the proof to be published on layer 1 when they try to withdraw funds from layer 2 to layer 1.
+## How long does it take for the proof of a layer 2 operation to be published on the blockchain?
+It typically takes 8-16 hours for the proof of every layer 2 operation to be recorded on the main blockchain (layer 1). This is because the proof must be carefully verified and processed by the nodes on the main blockchain to ensure the security and integrity of the data, and this process can take a significant amount of time, depending on the number of transactions and the complexity of the proof. However, users only need to be concerned with this time frame when initiating a withdraw on layer 1 because the status of layer 2 operations is returned in real-time.
 
 ## How does Reddio achieve recharge funds from layer1 to layer2?
 When the user recharges, the users’ assets are recharged to the starkex contract on layer 1.
@@ -75,8 +72,14 @@ The expirationTimeStamp parameter represents the timeout for deposit/transfer/wi
 ## What should I put in the base URI?
 Base URI is used for you to fill in the metadata of your NFT collection. The metadata will contain information such as pictures and attributes corresponding to the NFTs. See the [Set Up Metadata For Your NFTs](https://docs.reddio.com/guide/getting-started/set-up-metadata-for-your-nfts.html) documentation for more details.
 
-## What is the mechanism behind transfering tokens between layer 2 and layer1?
-The current Reddio service is based on StarkEx, we can explain it from the two operations：deposit and withdraw. For Deposit, when you deposit assets  (including ERC20/ETH/ERC721) from layer1 to a certain stark_key, Reddio will change the asset status of this stark_key on layer2, and will synchronize the asset status to StarkEx. StarkEx will verify the ownership of the asset later (by comparing the asset status on layer 1 and Reddio’s synchronize status). For Withdraw, the user needs to initiate a withdraw request on layer2. When reddio processes the request, it will update the asset status and synchronize the withdraw request to starkex. After StarkEx verifies, the asset will be released after 8-16 hours. The hash of the asset statis is uploaded to the chain. At the same time, StarkEx will change the withdrawal balance of the user on the chain. After the change you can claim your assets on layer1. See [this](https://docs.starkware.co/starkex/overview.html) for more details
+## What is the principle of transferring assets between layer 2 and layer1?
+- Transferring assets between layer 2 and layer 1, also known as "cross-layer" transfer, involves moving assets from a side-chain or a rollup construction (layer 2) to the main blockchain (layer 1). The specifics of how cross-layer transfer works vary depending on the side-chain or rollup construction being used.
+
+Currently, Reddio's service is based on StarkEx. To explain the principle of asset transferring between layer 2 and layer 1, we can break it down into deposit and withdraw actions.
+- For deposit: When you deposit ERC20/ETH/ERC721 assets from layer 1 to a specific stark_key, Reddio will update the asset status of this stark_key on layer2 and synchronize the asset status to StarkEx. StarkEx will later verify the ownership of the asset later by comparing the asset status on layer 1 with the information synchronized by Reddio.
+- For withdraw:  Users needs to initiate a withdraw request on layer 2. When Reddio processes the request, it will update the asset status and synchronize the withdraw request to StarkEx. After StarkEx verifies it, the asset will be released after 8-16 hours. The hash of the asset status is uploaded to the chain and the withdrawal balance of the user on the chain is updated. After that, the user can claim their assets on layer 1.
+    
+For more detailed information, see [this document](https://docs.starkware.co/starkex/overview.html) for more details.
 
 ## How does Reddio charge? 
 Currently, Reddio only charges after the user places an order and completes the transaction. The fee rate is 0.5% of the total price of the pending order. And  this fee is only charged to the seller (maker).
@@ -99,7 +102,27 @@ You can query the the NFT collection API to figure out who bought specific NFT. 
 ## What are the possible reasons that pending orders are not filled?
 One possible reason is that the seller and buyer of the pending order are the same . In order to prevent order fraud, the pending order will only be filled if the buyer and the seller are not the same. Otherwise, user's assets will be frozen. You can cancel the old orders by cancel_order API.
 
+## Does Reddio/Starkware know the keypair I generate?
+Reddio/Starkware does not have access to the the public and private keypair generated by the SDK. The key generation function provided by the SDK is a purely algorithm-based local key generation, and does not require an Internet connection to use. Therefore, it is not possible for Reddio/Starkware to know the private key associated with your public stark key.
+
+## Why doesn't Metamask pop up on the contract deployment page/demo page?
+First, you need to make sure the "Connect Wallet" button is clicked. Second, you need to make sure your metamask plugin is not blocked. If your Metamask is blocked on Chrome, you can check the [chrome help documentation](https://support.google.com/chrome/a/answer/6177431?hl=en) to unlock the Metamask plugin.
+
 ## What does 'frozen_token_ids' mean in balance APIs?
 Frozen_token_ids represents the assets of the NFT collection have been frozen for some reason. If the asset is in pending order, the system will automatically freeze the asset to which the token_id belongs.
 
+## What are the features of the token ID in the NFT collection?
+The tokenId in the NFT collection is generated by Reddio. Reddio also maintains its uniqueness。  The value of the tokenId in layer 1 and layer 2 is exactly the same. Currently, the tokenID of each contract is monotonically increasing from 1. In the future, we will add the tokenID specified minting functions.
+
+## Can I customize the message that Metamask pops up when calling the generateFromEthSignature function?
+You can customize the message that pops up, but we do not recommend that you modify this message. Because this will cause the generated stark_key to be different and cannot be used universally in all Reddio-based web3 applications.
+
+## What is the on-chain logic of the withdrawal NFTs operation on Layer 1? Will baseURI be set?
+If you want to mint NFT on Layer2. You need to have a contract on layer 1 with [mintFor function](https://github.com/reddio-com/contract_demo/blob/main/src/contracts/ERC721MintFor.sol#L82) in the contract. When you withdraw the NFT on layer1 to the Ethereum wallet, you actually call this Mintfor function. This function mints the NFT of the corresponding tokenID. The baseURI is set when the contract is created, and cannot be set when withdrawing.
+
+## What is the cost for withdrawing NFT from layer 2 to layer 1? Will it be cheaper than directly minting on layer 1?
+The cost is similar for normal transactions. For example, [this transaction](https://goerli.etherscan.io/tx/0x944867b79a7afd131e043a7ea6b1a1c2e680b4c46fcd4380cbef9399faf00377). It will not be cheaper than directly minting on layer 1, but layer 2 has great advantages for buying NFT. Layer 2 can completely avoid gas war. You can mint without any cost on layer2, and then choose a withdrawal to layer1 when the gas fee is low. That will save several to dozens times gas fee for you.
+
+## Can I deploy smart contracts on layer 2?
+Currently Reddio does not support deploying smart contracts on layer 2.
 
