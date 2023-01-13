@@ -1,5 +1,14 @@
 # Change Log
 
+## January 13, 2023
+1. Launch a alpha scan website https://dev.scan.reddio.com/
+2. Add page for /v1/txns & /v1/balances & /v1/collections API
+3. Release Java SDK 0.0.21 https://central.sonatype.dev/artifact/com.reddio/reddio-java/0.0.21
+    - Support listen deposit event
+    - Support generate stark_key pair by eth private key
+    - Support IOC order
+4. Refine record(txn) status, you can see the status at https://docs.reddio.com/guide/api-reference/record.html 
+
 ## December 30, 2022
 1. Add /v1/txns API to get all transactions related to contract_address
 2. Add /v1/collections API to get all collections
