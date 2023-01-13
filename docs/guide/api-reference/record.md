@@ -130,7 +130,7 @@ Record Type, available options are shown as below.
 
 status, available options are shown as below.
 
-|Status| ID |
+|Status| Value |
 |---|---|
 |`SubmittedToReddio`| 0 |
 |`AcceptedByReddio`| 1 |
