@@ -79,7 +79,7 @@ Currently, Reddio's service is based on StarkEx. To explain the principle of ass
 - For deposit: When you deposit ERC20/ETH/ERC721 assets from layer 1 to a specific stark_key, Reddio will update the asset status of this stark_key on layer2 and synchronize the asset status to StarkEx. StarkEx will later verify the ownership of the asset later by comparing the asset status on layer 1 with the information synchronized by Reddio.
 - For withdraw:  Users needs to initiate a withdraw request on layer 2. When Reddio processes the request, it will update the asset status and synchronize the withdraw request to StarkEx. After StarkEx verifies it, the asset will be released after 8-16 hours. The hash of the asset status is uploaded to the chain and the withdrawal balance of the user on the chain is updated. After that, the user can claim their assets on layer 1.
     
-For more detailed information ,see [this document](https://docs.starkware.co/starkex/overview.html) for more details.
+For more detailed information, see [this document](https://docs.starkware.co/starkex/overview.html) for more details.
 
 ## How does Reddio charge? 
 Currently, Reddio only charges after the user places an order and completes the transaction. The fee rate is 0.5% of the total price of the pending order. And  this fee is only charged to the seller (maker).

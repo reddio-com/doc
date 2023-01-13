@@ -1,97 +1,90 @@
 # Deposit
 
-## depositETH()
+## depositETH
 
-- **Type**
+**Parameters**
 
-```tsx
-interface DepositERC20Params {
-  starkKey: string;
-  quantizedAmount: number | string;
-  tokenAddress: string;
-}
-interface LogDeposit {
-  depositorEthKey: string;
-  starkKey: BigNumber;
-  vaultId: BigNumber;
-  assetType: BigNumber;
-  nonQuantizedAmount: BigNumber;
-  quantizedAmount: BigNumber;
-  raw: Record<string, any>;
-}
-declare const depositERC20: (params: DepositERC20Params) => Promise<LogDeposit>;
-```
+---
 
-- **Example**
+<strong style='color:red'>*</strong>**starkKey** <strong style='color:#8792a2'>string</strong>
+
+A unique key that identifies the user in the off-chain state.
+
+---
+
+<strong style='color:red'>*</strong>**quantizedAmount** <strong style='color:#8792a2'>string | number</strong>
+
+Amount of ETH.
+
+### Example
 
 ```tsx
 await reddio.apis.depositETH({
-  starkKey,
-  tokenAddress,
-  quantizedAmount: "deposit amount",
+  starkKey: "0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c",
+  quantizedAmount: "0.01",
 });
 ```
 
-## depositERC20()
+## depositERC20
 
-- **Type**
+**Parameters**
 
-```tsx
-interface DepositERC20Params {
-  starkKey: string;
-  quantizedAmount: number | string;
-  tokenAddress: string;
-}
-interface LogDeposit {
-  depositorEthKey: string;
-  starkKey: BigNumber;
-  vaultId: BigNumber;
-  assetType: BigNumber;
-  nonQuantizedAmount: BigNumber;
-  quantizedAmount: BigNumber;
-  raw: Record<string, any>;
-}
-declare const depositERC20: (params: DepositERC20Params) => Promise<LogDeposit>;
-```
+---
 
-- **Example**
+<strong style='color:red'>*</strong>**starkKey** <strong style='color:#8792a2'>string</strong>
+
+A unique key that identifies the user in the off-chain state.
+
+---
+
+<strong style='color:red'>*</strong>**quantizedAmount** <strong style='color:#8792a2'>string | number</strong>
+
+Amount of ERC20.
+
+---
+
+<strong style='color:red'>*</strong>**tokenAddress** <strong style='color:#8792a2'>string</strong>
+
+Contract address of ERC20.
+
+### Example
 
 ```tsx
 await reddio.apis.depositERC20({
-  starkKey,
-  tokenAddress,
-  quantizedAmount: "deposit amount",
+  starkKey: "0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c",
+  tokenAddress: "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
+  quantizedAmount: "1",
 });
 ```
 
-## depositERC721()
+## depositERC721
 
-- **Type**
+**Parameters**
 
-```tsx
-interface Deposit721Params {
-  starkKey: string;
-  tokenId: number;
-  tokenAddress: string;
-}
-interface LogDeposit {
-  depositorEthKey: string;
-  starkKey: BigNumber;
-  vaultId: BigNumber;
-  assetType: BigNumber;
-  nonQuantizedAmount: BigNumber;
-  quantizedAmount: BigNumber;
-  raw: Record<string, any>;
-}
-declare const depositERC721: (params: Deposit721Params) => Promise<LogDeposit>;
-```
+---
 
-- **Example**
+<strong style='color:red'>*</strong>**starkKey** <strong style='color:#8792a2'>string</strong>
+
+A unique key that identifies the user in the off-chain state.
+
+---
+
+<strong style='color:red'>*</strong>**tokenId** <strong style='color:#8792a2'>number</strong>
+
+tokenId of ERC721.
+
+---
+
+<strong style='color:red'>*</strong>**tokenAddress** <strong style='color:#8792a2'>string</strong>
+
+Contract address of ERC721.
+
+### Example
 
 ```tsx
 await reddio.apis.depositERC721({
-  starkKey,
-  tokenAddress,
-  tokenId,
+  starkKey: "0x38cae143fe6d2b8bdb7051f211744017d98f7e6a67e45a5dfc08759c119cf3c",
+  tokenAddress: "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
+  tokenId: 1,
 });
 ```

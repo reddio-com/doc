@@ -97,29 +97,6 @@ function nav() {
     ]
 }
 
-function sidebarGuide() {
-    return [
-        {
-            text: 'Introduction',
-            collapsible: true,
-            items: [
-                { text: 'Overview', link: '/guide/introduction/overview' },
-            ]
-        },
-        {
-            text: 'SDK reference',
-            collapsible: true,
-            items: [
-                { text: 'Init SDK', link: '/sdk/init' },
-                { text: 'KeyPair', link: '/sdk/keypair' },
-                { text: 'Request', link: '/sdk/request' },
-                { text: 'Utils', link: '/sdk/utils' },
-                { text: 'Contract', link: '/sdk/contract' },
-            ]
-        }
-    ]
-}
-
 function sidebarService() {
     return [
         {
@@ -157,7 +134,6 @@ function sidebarService() {
                 { text: 'Transfer', link: '/guide/jssdk-reference/transfer' },
                 { text: 'Balance', link: '/guide/jssdk-reference/balance' },
                 { text: 'Record', link: '/guide/jssdk-reference/record' },
-                { text: 'Vault', link: '/guide/jssdk-reference/vault' },
                 { text: 'Contract', link: '/guide/jssdk-reference/contract' },
                 { text: 'Order', link: '/guide/jssdk-reference/order' },
             ]
