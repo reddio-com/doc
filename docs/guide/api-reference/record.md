@@ -124,6 +124,21 @@ Record Type, available options are shown as below.
 |`ASKOrderRecordType`| 7 |
 |`BIDOrderRecordType`| 8 |
 
+---
+
+**status** <strong style='color:#8792a2'>int</strong>
+
+status, available options are shown as below.
+
+|Status| ID |
+|---|---|
+|`SubmittedToReddio`| 0 |
+|`AcceptedByReddio`| 1 |
+|`FailedOnReddio`| 2 |
+|`AcceptedOnL2`| 3 |
+|`RejectedOnL2`| 4 |
+|`Rolled`| 5 |
+|`AcceptedOnL1`| 6 |
 
 ## Get record
 
