@@ -1,13 +1,13 @@
 # Change Log
 
 ## January 13, 2023
-1. Launch alpha scan website https://dev.scan.reddio.com/
+1. Launch alpha scan website dev.scan.reddio.com/
 2. Add pagination for /v1/txns & /v1/balances & /v1/collections API
-3. Release Java SDK 0.0.21 https://central.sonatype.dev/artifact/com.reddio/reddio-java/0.0.21
+3. Release Java SDK 0.0.21 central.sonatype.dev/artifact/com.reddio/reddio-java/0.0.21
     - Support listen deposit event
     - Support generate stark_key pair by eth private key
     - Support IOC order
-4. Refine record(txn) status, you can see the status at https://docs.reddio.com/guide/api-reference/record.html 
+4. Refine record(txn) status, you can see the status at docs.reddio.com/guide/api-reference/record.html 
 
 ## December 30, 2022
 1. Add /v1/txns API to get all transactions related to contract_address
@@ -22,7 +22,7 @@
 4. Add sequence_ids field to withdraw status
 
 ## December 16, 2022
-1. Support IPFS upload V1
+1. Support IPFS upload v1
 2. Add balance v2 api
 3. Listen to onchain events for deposit
 
@@ -34,17 +34,17 @@
 
 ## November 18, 2022
 1. Add Golang SDK
-2. Add admin register contracts interface to L2
+2. Add admin register contracts interface to layer 2
 3. Add JS SDK
 4. Add Python SDK
 
 ## Novemeber 4, 2022
 1. Add Java SDK
-2. Support Mints ERC721 on Reddio L2
-3. Support Deposit & Withdraw ETH/ERC20/ERC721 on Reddio L2
+2. Support Mints ERC721 on Reddio layer 2
+3. Support Deposit & Withdraw ETH/ERC20/ERC721 on Reddio layer 2
 
 ## October 21, 2022
-1. Support Transfer tokens on Reddio L2
+1. Support Transfer tokens on Reddio layer 2
 2. Support Token owners of NFT collection
 
 ## September 30, 2022
@@ -65,4 +65,4 @@
 ## July 22, 2022
 1. Launch www.reddio.com v1
 2. Launch demos.reddio.com V1
-3. Launch Dashboard v1
+3. Launch dashboard v1
