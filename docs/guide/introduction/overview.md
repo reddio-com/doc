@@ -4,6 +4,12 @@
 
 Reddio is a technology company that builds infrastructure for the blockchain, to help developers adopt blockchain technologies with the world's first easy-to-use layer 2 Agnostic APIs. 
 
+For developers who want to deploy on Ethereum for its security but need scale (up to 10k TPS) and 0 gas fees,you can  benefit from Reddio’s services and enjoy Ethereum’s security and stability. Any developer can use Reddio to:
+
+- Quickly build an in-app and in-game NFT marketplace on zkRollup
+- Scale your App and gaming assets trading without worry about downtime and security
+- Mint NFTs with Javascript SDK and Unity SDK with 0 gas fee
+- Build decentralised trading platform with scalability up to 10k TPS and minimum trading fee
 
 ## Components
 
