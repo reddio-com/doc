@@ -13,7 +13,6 @@
 1. Add /v1/txns API to get all transactions related to contract_address
 2. Add /v1/collections API to get all collections
 
-
 ## December 26, 2022
 
 1. Support IOC order (Now Reddio supports both GTC & IOC order)
