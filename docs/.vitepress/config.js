@@ -119,6 +119,7 @@ function sidebarService() {
                 { text: 'Transfer ETHs Between Layer 1 and Layer 2', link: '/guide/getting-started/transfer-eths-between-layer-1-and-layer-2' },
                 { text: 'Transfer ERC20s Between Layer 1 and Layer 2', link: '/guide/getting-started/transfer-erc20s-between-layer-1-and-layer-2' },
                 { text: 'Check Your ETHs/ERC20s/NFTs Balance', link: '/guide/getting-started/check-your-eth-erc20-nft-balance' },
+                { text: 'In-app Marketplace Demo', link: '/guide/getting-started/marketplace-demo' },
             ]
         },
         {
@@ -170,7 +171,6 @@ function sidebarService() {
                 { text: 'How Does Reddio Works', link: '/guide/reference/how-does-reddio-works' },
                 { text: 'Terminology', link: '/guide/reference/terminology' },
                 { text: 'FAQ', link: '/guide/reference/faq' },
-                { text: 'In-app Marketplace Demo', link: '/guide/getting-started/marketplace-demo' },
             ]
         }
     ]
