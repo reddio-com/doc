@@ -1,10 +1,6 @@
 # Features
 
 ## What are the benefits of using Reddio services?
-* Zero gas fee
-* Very easy to create an in-app and in-game marketplace
-* Simple integration with API’s and SDK’s
-* Access all your favourite L1 dApps on Ethereum
 
 ## Time to market
 
