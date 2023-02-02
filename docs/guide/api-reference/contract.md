@@ -151,24 +151,25 @@ Contract address of contract.
 **Example response**
 ```json
 {
-	"status": "OK",
-	"data": {
-		"contract_address": "0x03c555c770bb94bbffdeb94178b7a655d9963019",
-		"type": "ERC721M",
-		"count": 20000000,
-		"name": null,
-		"decimals": 0,
-		"symbol": "REDDIO",
-		"quantum": "1",
-		"total_supply": "890268",
-		"asset_type": "0x23aeb3f174da7bb0fbb60bab99959ef152e0ba39532579ca202c352f5698188",
-		"asset_info": "0xb8b8667200000000000000000000000003c555c770bb94bbffdeb94178b7a655d9963019",
-		"metadata_url": null,
-		"description": null,
-		"image_url": null,
-		"external_link": null,
-		"banner_image_url": null
-	},
-	"error": ""
+    "status": "OK",
+    "data": {
+        "contract_uuid": "c858d140-b42b-4309-aad5-dc2ca3d1aee2",
+        "contract_address": "0x03c555c770bb94bbffdeb94178b7a655d9963019",
+        "type": "ERC721M",
+        "count": 20000000,
+        "name": null,
+        "decimals": 0,
+        "symbol": "REDDIO",
+        "quantum": "1",
+        "total_supply": "890268",
+        "asset_type": "0x23aeb3f174da7bb0fbb60bab99959ef152e0ba39532579ca202c352f5698188",
+        "asset_info": "0xb8b8667200000000000000000000000003c555c770bb94bbffdeb94178b7a655d9963019",
+        "metadata_url": null,
+        "description": null,
+        "image_url": null,
+        "external_link": null,
+        "banner_image_url": null
+    },
+    "error": ""
 }
 ```
