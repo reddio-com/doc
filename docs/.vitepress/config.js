@@ -127,6 +127,9 @@ function sidebarService() {
             collapsed: true,
             collapsible: true,
             items: [
+                { text: 'Initiate SDK', link: '/guide/jssdk-reference/java-introduction' },
+                { text: 'Initiate SDK', link: '/guide/jssdk-reference/java-getting-started-tutorial' },
+                { text: 'Initiate SDK', link: '/guide/jssdk-reference/java-watch-eth-events' },
                 { text: 'Initiate SDK', link: '/guide/jssdk-reference/initiate-sdk' },
                 { text: 'Utils', link: '/guide/jssdk-reference/utils' },
                 { text: 'Deposit', link: '/guide/jssdk-reference/deposit' },
