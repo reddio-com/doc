@@ -29,29 +29,26 @@ To use the Reddio Java SDK, you need to install [Oracle Java 8](https://www.orac
 ### Step 1: Create a new Maven project
 
 Use the following command to create the `reddio-java-sdk-tutorial` project:
+```bash
+mvn archetype:generate -DgroupId=com.example.app \
+  -DartifactId=reddio-java-sdk-tutorial \
+  -DarchetypeGroupId=com.github.ngeor \
+  -DarchetypeArtifactId=archetype-quickstart-jdk8 \
+  -DinteractiveMode=false \
+  -DarchetypeVersion=2.8.1
+```
 
-    ```bash
-
-        mvn archetype:generate -DgroupId=com.example.app \
-            -DartifactId=reddio-java-sdk-tutorial \
-            -DarchetypeGroupId=com.github.ngeor \
-            -DarchetypeArtifactId=archetype-quickstart-jdk8 \
-            -DinteractiveMode=false \
-            -DarchetypeVersion=2.8.1
-
-    ```
 ### Step 2. Add the Reddio Java SDK dependency
 
 You can find the latest version of Reddio Java SDK on [Maven Central Repository](https://central.sonatype.com/). This tutorial uses the `0.0.30` version of Reddio Java SDK.
+```xml
+<dependency>
+    <groupId>com.reddio</groupId>
+    <artifactId>reddio-api</artifactId>
+    <version>0.0.30</version>
+</dependency>
+```
 
-    ```xml
-    <dependency>
-        <groupId>com.reddio</groupId>
-        <artifactId>reddio-api</artifactId>
-        <version>0.0.30</version>
-    </dependency>
-
-    ```
 > **Note:** The Reddio SDK use the following dependencies: 
 > - `web3j` 4.9.4
 > - `okhtttp` 4.9.0
@@ -80,9 +77,8 @@ This demo will show you how to deposit an NFT (token ID 2710 in this demo) to La
 
     ```
 2. Deposit NFT by `EthereumInteraction`. To deposit NFT to layer 2, the private key is required to integrate with the Ethereum network. To export the private key from a wallet like Metamask, see [How to export an account's private key](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key).
-
     ```java
-    public static final String REDDIO_TEST_ASSET_ERC721_CONTRACT_ADDRESS = "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5";
+        public static final String REDDIO_TEST_ASSET_ERC721_CONTRACT_ADDRESS = "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5";
 
         public static void main(String[] args) throws ExecutionException, InterruptedException {
             EthereumInteraction ethInteraction = DefaultEthereumInteraction.build(DefaultReddioRestClient.testnet(),
@@ -216,7 +212,7 @@ This demo will show you how to sell NFTs.
 2. Get the NFT list:
     - On the default page of the [Reddio Demo Marketplace](https://demos.reddio.com/), you can see the list with all the NFTs. 
     - You can also list the NFTs for sale using the Reddio Java SDK:
-        ```jav
+        ```java
         public class ListNftBalances {
 
             public static final String REDDIO_TEST_ASSET_ERC721_CONTRACT_ADDRESS = "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5";
@@ -245,9 +241,9 @@ This demo will show you how to sell NFTs.
 
 3. Sell NFT with `ReddioClient`:
     ```java
-     public static final String REDDIO_TEST_ASSET_ERC721_CONTRACT_ADDRESS = "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5";
+        public static final String REDDIO_TEST_ASSET_ERC721_CONTRACT_ADDRESS = "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5";
 
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         ReddioClient reddioClient = DefaultReddioClient.testnet();
         StarkKeys starkKeys = DefaultEthereumInteraction.getStarkKeys("<your-eth-private-key>", DefaultEthereumInteraction.GOERIL_ID);
 
@@ -275,9 +271,9 @@ This demo will show you how to withdraw an NFT from layer 2 to ETH. The withdraw
 
 1. Withdraw NFT 2728 from layer 2 with `ReddioClient`:
     ```java
-    ReddioClient reddioClient = DefaultReddioClient.testnet();
-    StarkKeys starkKeys = DefaultEthereumInteraction.getStarkKeys("<your-eth-private-key>", DefaultEthereumInteraction.GOERIL_ID);
-    reddioClient.withStarkExSigner(starkKeys.getStarkPrivateKey()).withdrawal(
+        ReddioClient reddioClient = DefaultReddioClient.testnet();
+        StarkKeys starkKeys = DefaultEthereumInteraction.getStarkKeys("<your-eth-private-key>", DefaultEthereumInteraction.GOERIL_ID);
+        reddioClient.withStarkExSigner(starkKeys.getStarkPrivateKey()).withdrawal(
         starkKeys.getStarkKey(),
         "1",
         REDDIO_TEST_ASSET_ERC721_CONTRACT_ADDRESS,
@@ -285,7 +281,7 @@ This demo will show you how to withdraw an NFT from layer 2 to ETH. The withdraw
         "ERC721",
         "<your-eth-address>",
         4194303L
-    ).get();
+        ).get();
 
     ```
     Run the application and you can find NFT 2728 has been removed from your L2 balance. Click the **Record** tab on [Reddio Demo Marketplace](https://demos.reddio.com/), you can find the following record:
