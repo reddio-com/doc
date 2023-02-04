@@ -1,7 +1,13 @@
 # Change Log
 
+## Febuaray 4, 2023
+1. Launch new dashboard https://dashboard.reddio.com/project
+2. IPFS upload service in production(alpha)
+3. Add volume/trade/unique member statistic API
+4. Add java sdk tutorial https://github.com/reddio-com/reddio-sdk/wiki
+
 ## January 13, 2023
-1. Launch a alpha scan website https://dev.scan.reddio.com/
+1. Launch an alpha scan website https://dev.scan.reddio.com/
 2. Add page for /v1/txns & /v1/balances & /v1/collections API
 3. Release Java SDK 0.0.21 https://central.sonatype.dev/artifact/com.reddio/reddio-java/0.0.21
     - Support listen deposit event
