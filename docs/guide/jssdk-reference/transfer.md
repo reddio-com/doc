@@ -1,49 +1,80 @@
 # Transfer
 
-## transfer()
+## transfer
 
-- **Type**
+Transfer assets from sender to receiver on layer 2.
 
-```tsx
-enum Types {
-  ETH = 'ETH',
-  ERC20 = 'ERC20',
-  ERC721 = 'ERC721',
-  ERC721M = 'ERC721M',
-}
-interface SignTransferParams {
-  starkKey: string;
-  privateKey: string;
-  amount?: number | string;
-  contractAddress?: string;
-  tokenId?: string | number;
-  type: `${Types}`;
-  receiver: string;
-  expirationTimestamp?: number;
-}
-interface Response<T> {
-  data: T;
-  status: string;
-  error: string;
-}
-interface TransferResponse {
-  sequence_id: number;
-}
-declare const transfer: (data: SignTransferParams) => Promise<AxiosResponse<Response<TransferResponse>>>
-```
+**Parameters**
 
-- **Example**
+---
+
+<strong style='color:red'>*</strong>**starkKey** <strong style='color:#8792a2'>string</strong>
+
+A unique key that identifies the user in the off-chain state.
+
+---
+
+<strong style='color:red'>*</strong>**privateKey** <strong style='color:#8792a2'>string</strong>
+
+Generating a signature requires.
+
+---
+
+<strong style='color:red'>*</strong>**type** <strong style='color:#8792a2'>'ETH' | 'ERC20' | 'ERC721' | 'ERC721M'</strong>
+
+The token type.
+
+---
+
+<strong style='color:red'>*</strong>**receiver** <strong style='color:#8792a2'>string</strong>
+
+The wallet address of the receiver.
+
+---
+
+**amount** <strong style='color:#8792a2'>string | number</strong>
+
+Amount of tokens to be transferred.
+
+---
+
+**contractAddress** <strong style='color:#8792a2'>string</strong>
+
+Contract address.
+
+---
+
+**tokenId** <strong style='color:#8792a2'>string | number</strong>
+
+tokenId of token.
+
+---
+
+**expirationTimestamp** <strong style='color:#8792a2'>number</strong>
+
+The period to expire for the transfer, unit is seconds.
+
+### Example
 
 ```tsx
 const { data } = await reddio.apis.transfer({
-  // Originator's starkKey and privateKey
-  starkKey,
-  privateKey,
-  contractAddress,
-  amount,
-  tokenId,
-  type,
-  receiver: transferAddress,
-  expirationTimestamp,
+  starkKey: '0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda',
+  privateKey: '',
+  contractAddress: '0x941661bd1134dc7cc3d107bf006b8631f6e65ad5',
+  tokenId: 1,
+  type: 'ERC721',
+  receiver: '0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda',
+  expirationTimestamp: 4194303,
 });
+```
+
+### Example return
+```json
+{
+	"status": "OK",
+	"error": "",
+	"data": {
+		"sequence_id": 12
+	}
+}
 ```

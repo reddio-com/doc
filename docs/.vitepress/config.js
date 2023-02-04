@@ -97,29 +97,6 @@ function nav() {
     ]
 }
 
-function sidebarGuide() {
-    return [
-        {
-            text: 'Introduction',
-            collapsible: true,
-            items: [
-                { text: 'Overview', link: '/guide/introduction/overview' },
-            ]
-        },
-        {
-            text: 'SDK reference',
-            collapsible: true,
-            items: [
-                { text: 'Init SDK', link: '/sdk/init' },
-                { text: 'KeyPair', link: '/sdk/keypair' },
-                { text: 'Request', link: '/sdk/request' },
-                { text: 'Utils', link: '/sdk/utils' },
-                { text: 'Contract', link: '/sdk/contract' },
-            ]
-        }
-    ]
-}
-
 function sidebarService() {
     return [
         {
@@ -127,21 +104,22 @@ function sidebarService() {
             collapsible: true,
             items: [
                 { text: 'Overview', link: '/guide/introduction/overview' },
-                { text: 'Feature', link: '/guide/introduction/feature'  }
+                { text: 'Features', link: '/guide/introduction/feature'  },
+                { text: 'Changelog', link: '/guide/introduction/changelog'}
             ]
         },
         {
             text: 'Getting Started',
             collapsible: true,
             items: [
-                { text: 'Marketplace Demo', link: '/guide/getting-started/marketplace-demo' },
                 { text: 'Mint NFTs On Layer 2', link: '/guide/getting-started/mint-nfts-on-layer-2'  },
                 { text: 'Set Up Metadata For Your NFTs',link:'/guide/getting-started/set-up-metadata-for-your-nfts'},
                 { text: 'Place Orders On Layer 2', link: '/guide/getting-started/place-orders-on-layer-2' },
                 { text: 'Transfer NFTs Between Layer 1 and Layer 2', link: '/guide/getting-started/transfer-nfts-between-layer-1-and-layer-2'  },
                 { text: 'Transfer ETHs Between Layer 1 and Layer 2', link: '/guide/getting-started/transfer-eths-between-layer-1-and-layer-2' },
                 { text: 'Transfer ERC20s Between Layer 1 and Layer 2', link: '/guide/getting-started/transfer-erc20s-between-layer-1-and-layer-2' },
-                
+                { text: 'Check Your ETHs/ERC20s/NFTs Balance', link: '/guide/getting-started/check-your-eth-erc20-nft-balance' },
+                { text: 'In-app Marketplace Demo', link: '/guide/getting-started/marketplace-demo' },
             ]
         },
         {
@@ -156,7 +134,6 @@ function sidebarService() {
                 { text: 'Transfer', link: '/guide/jssdk-reference/transfer' },
                 { text: 'Balance', link: '/guide/jssdk-reference/balance' },
                 { text: 'Record', link: '/guide/jssdk-reference/record' },
-                { text: 'Vault', link: '/guide/jssdk-reference/vault' },
                 { text: 'Contract', link: '/guide/jssdk-reference/contract' },
                 { text: 'Order', link: '/guide/jssdk-reference/order' },
             ]
