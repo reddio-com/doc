@@ -23,7 +23,7 @@
   Your browser does not support the video tag.
 </video> 
 
-## Transfer NFTs/ETH/ERC20 between layer 1 and layer 2
+## Transfer NFTs/ETH/ERC20 between layer 2 accounts
  <video controls>
   <source src="/transfer-nft.mp4" type="video/mp4">
   Your browser does not support the video tag.
