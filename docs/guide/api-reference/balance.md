@@ -76,7 +76,10 @@ curl -v https://api-dev.reddio.com/v1/balances?stark_key=0x38cae143fe6d2b8bdb705
 				"base_uri": ""
 			}
 		],
-		"total": 2
+		"total": 1,
+		"current_page": 1,
+		"page_size": 100,
+		"total_page": 1
 	}
 }
 ```
