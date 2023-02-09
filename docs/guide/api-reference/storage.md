@@ -81,3 +81,35 @@ curl -v -H 'x-api-key: rk-xxxxxx-4326-4b58-ae69-xxxxxxxx' https://api-dev.reddio
     "error": ""
 }
 ```
+
+## Remove uploaded files
+
+Remove uploaded files by CID.
+
+```jsx
+POST /v1/project/<project_uuid>/storage/remove
+```
+
+**Parameters**
+
+---
+
+<strong style='color:red'>*</strong>**cid** <strong style='color:#8792a2'>string</strong>
+
+CID of the file
+
+**Example payload**
+```json
+{
+    "cid":"bafybeihfwm7c5n7ool3lhmsz52j5bbdmef4evin5zohkw7t6zy5gy6tk8u"
+}
+```
+
+**Example response**
+```json
+{
+    "status": "OK",
+    "data": "File removed.",
+    "error": ""
+}
+```
