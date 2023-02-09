@@ -50,11 +50,25 @@ curl -v -X POST -H 'x-api-key: rk-xxxxxx-4326-4b58-ae69-xxxxxxxx' -F "file=@dire
 
 ## Get uploaded files
 
-List all the uploaded files under related project.
+List uploaded files under related project.
 
 ```jsx
 GET /v1/project/<project_uuid>/storage
 ```
+**Parameters**
+
+
+**limit** <strong style='color:#8792a2'>string</strong>
+
+Limit entries for query records.
+
+---
+
+**page** <strong style='color:#8792a2'>string</strong>
+
+Page for records.
+
+---
 
 **`cURL` Example**
 ```sh
