@@ -77,20 +77,35 @@ curl -v -H 'x-api-key: rk-xxxxxx-4326-4b58-ae69-xxxxxxxx' https://api-dev.reddio
 
 **Example response**
 ```json
-{
+{{
     "status": "OK",
     "data": {
-        "storages": [
-            {
-                "cid": "bafybeibs4sfygak2sfxxxxpytsuccmhjilcrwsmjus57ntxvyxxxxlpddq",
-                "filename": "generate.jpg",
-                "filesize": "173604",
-                "created_at": "2022-12-26T03:17:35.000000Z",
-                "endpoints": [
-                    "https://bafybeibs4sfygak2sfxxxxpytsuccmhjilcrwsmjus57ntxvyxxxxlpddq.ipfs.nftstorage.link/"
-                ]
-            }
-        ]
+        "storages": {
+            "list": [
+                {
+                    "cid": "bafybeig7d7rshk2u7fch325hogssne3rs26o4qspli7ylrq7myzfc3i46u",
+                    "filename": "c.jpg",
+                    "filesize": "173604",
+                    "created_at": "2023-02-09T03:36:48.000000Z",
+                    "endpoints": [
+                        "https://bafybeig7d7rshk2u7fch325hogssne3rs26o4qspli7ylrq7myzfc3i46u.ipfs.nftstorage.link/"
+                    ]
+                },
+                {
+                    "cid": "bafybeie43tseoyu6q35fb2gp4lugqsclxcyy357ghoajh5ojckhyie63ji",
+                    "filename": "d.jpg",
+                    "filesize": "173604",
+                    "created_at": "2023-02-09T03:36:54.000000Z",
+                    "endpoints": [
+                        "https://bafybeie43tseoyu6q35fb2gp4lugqsclxcyy357ghoajh5ojckhyie63ji.ipfs.nftstorage.link/"
+                    ]
+                }
+            ],
+            "total": 5,
+            "current_page": 2,
+            "page_size": "2",
+            "total_page": 3
+        }
     },
     "error": ""
 }
