@@ -58,7 +58,7 @@ Here are the steps to bind the smart contract with the Reddio platform:
     
 - Contract Type: the type of your smart contract. For this guide, please select ERC721M.
 - Contract Address: the smart contract address you get via deployment.
-- Base Uri: the URL of the metadata. This field is displayed if you choose ERC721 or ERC721M.
+- Base Uri: the URL of the metadata. This field is displayed if you choose ERC721 or ERC721M. For example, suppose you want to show your #1 NFT’s metadata on [https://metadata.reddio.com/api/tokens/1](https://metadata.reddio.com/api/tokens/1) and your #8 NFT’s metadata on [https://metadata.reddio.com/api/tokens/8](https://metadata.reddio.com/api/tokens/8). You need to set up your Base Uri as [https://metadata.reddio.com/api/tokens/](https://metadata.reddio.com/api/tokens/).
 
 By now, you have binded your smart contract with a project on Reddio.
 
