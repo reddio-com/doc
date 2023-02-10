@@ -136,6 +136,6 @@ curl -v  https://api-dev.reddio.com/v1/mints -H 'content-type: application/json
 
 Congratulations! You have successfully minted NFTs on layer 2!
 
-## **Check your ERC721M balance and collection on layer 2.**
+## **Check your ERC721M balance and collection on layer 2**
 
 You can now check NFTs balance on layer 2 via dashboard under Contracts page or via [API call](https://docs.reddio.com/guide/getting-started/check-your-eth-erc20-nft-balance.html#view-erc721-erc721m-balance-on-layer-2).
