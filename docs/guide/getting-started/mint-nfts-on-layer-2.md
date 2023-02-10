@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this tutorial, let’s mint NFT on Layer 2.  This tutorial contains the following steps:
+In this guide, let’s mint NFT on Layer 2.  This guide contains the following steps:
 
 1. Deploy an ERC721M smart contract on layer 1
 2. Bind the smart contract with Reddio
@@ -15,7 +15,7 @@ In this tutorial, let’s mint NFT on Layer 2.  This tutorial contains the foll
 Prerequisites:
 
 1. Install [MetaMask](https://metamask.io/) and create a [MetaMask](https://metamask.io/) wallet.
-2. On your Metamask wallet, choose the Goerli test network because we are using the test network for this tutorial:
+2. On your Metamask wallet, choose the Goerli test network as we are using the test network for this guide:
     
 <p align="center">
   <img src="/meta-mask-testnet.png"/>
@@ -25,7 +25,7 @@ Prerequisites:
 
 4. The baseURI of your NFT metadata. See [How to Set Up Metadata For Your NFTs](https://docs.reddio.com/guide/getting-started/set-up-metadata-for-your-nfts.html).
 
-**Note:** You can get Goerli ETH on [Goerli Faucet](https://goerlifaucet.com/) where you can request 0.2 Goerli ETH every 24 hours with a [free Alchemy account](https://alchemy.com/?a=goerli_faucet).
+**Note:** You can get Goerli ETH on [Reddio Demo](https://demos.reddio.com/account) where you can request 0.1 Goerli ETH by clicking [Get test assets](https://demos.reddio.com/account).
 
 You can deploy an ERC721M smart contract on layer 1 using one of the following two ways:
 
@@ -36,11 +36,11 @@ You can deploy an ERC721M smart contract on layer 1 using one of the following t
   Your browser does not support the video tag.
 </video> 
 
-- Deploy a smart contract using other tools such as [Remix](https://remix-project.org/), [Hardhat](https://hardhat.org/), you can check the ERC721M contract through the [Reddio Contract Demo repo on GitHub](https://github.com/reddio-com/contract_demo/blob/main/src/contracts/ERC721MintFor.sol). If you are using ERC721, implement the [`mintFor`](https://github.com/reddio-com/contract_demo/blob/main/src/contracts/ERC721MintFor.sol) function in this repo.
+- Reuse the ERC721M contract located at [Contract Sample repo](https://github.com/reddio-com/contract_demo/blob/main/src/contracts/ERC721MintFor.sol) to deploy a smart contract using other tools such as [Hardhat](https://hardhat.org/) or [Remix](https://remix-project.org/). If you are using ERC721, please implement the [`mintFor`](https://github.com/reddio-com/contract_demo/blob/main/src/contracts/ERC721MintFor.sol) function in this repo.
 
 After the deployment, you will get the smart contract address. Please keep the smart contract address. 
 
-You can check the smart contract detail on Etherscan by following this [tutorial](https://docs.reddio.com/guide/getting-started/check-your-eth-erc20-nft-balance.html#view-smart-contract-details-on-layer-1).
+You can check the smart contract detail on Etherscan by following this [guide](https://docs.reddio.com/guide/getting-started/check-your-eth-erc20-nft-balance.html#view-smart-contract-details-on-layer-1).
 
 ## Binding the smart contract with the Reddio platform
 
@@ -58,7 +58,7 @@ Here are the steps to bind the smart contract with the Reddio platform:
     
 - Project Name: the project name of your project. You can change to any name you like.
 - Contract Address: the smart contract address you get through deployment. Each project has a unique contract address.
-- Contract Type: the type of your smart contract. For this tutorial, please select ERC721M.
+- Contract Type: the type of your smart contract. For this guide, please select ERC721M.
 - Base URI: the URL of the metadata. This field is displayed if you choose ERC721 or ERC721M.
 
 Click the “Edit the Project” button to save data.
