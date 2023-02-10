@@ -49,17 +49,16 @@ Here are the steps to bind the smart contract with the Reddio platform:
 - A Reddio account. Register your Reddio account through [https://dashboard.reddio.com/](https://dashboard.reddio.com/)
 - A project in the Reddio Dashboard. You can use Project on Reddio to contain several of your smart contracts.
     1. Log in the Reddio dashboard
-    2. Click the **Default Project** button and then click **Create Project**. Input a name for the project and click **Create the Project**
-    3. Click Edit Project, and the **Edit project** window pops up
+    2. Click the drop down button on the top left and then click **Create Project**. Input a name for the project and click **Create Project**
+    3. Select the new project you just created by clicking the drop down button on the top left
+    3. Go to **Contracts** page, and click **Add Contracts** button.
 <p align="center">
   <img src="/mintNFT2.png"/>
 </p>
     
-    
-- Project Name: the project name of your project. You can change to any name you like.
+- Contract Type: the type of your smart contract. For this tutorial, please select ERC721M.
 - Contract Address: the smart contract address you get through deployment. Each project has a unique contract address.
-- Contract Type: the type of your smart contract. For this guide, please select ERC721M.
-- Base URI: the URL of the metadata. This field is displayed if you choose ERC721 or ERC721M.
+- Base Uri: the URL of the metadata. This field is displayed if you choose ERC721 or ERC721M.
 
 Click the “Edit the Project” button to save data.
 
@@ -95,7 +94,7 @@ You can get the `stark_key` and  `stark_private_key` by any one of the followin
 
 ## Grab your API key
 
-Reddio needs to authorise your identity while minting so you need an API key to mint. To get your API key, simply go to [https://dashboard.reddio.com/](https://dashboard.reddio.com/). The API key is shown on the top right down below the navigation bar. You can click on the API key input form, and the API key will be copied to your clipboard automatically.
+Reddio needs to authorise your identity while minting so you need an API key to mint. To get your API key, simply go to [https://dashboard.reddio.com/](https://dashboard.reddio.com/) and go to **Overview** page. The API key is shown under the 'Overview' title. You can click on the copy button under **API KEY** to copy your API key to the clipboard.
 
 <p align="center">
   <img src="/mintNFT4.png"/>
@@ -103,7 +102,14 @@ Reddio needs to authorise your identity while minting so you need an API key to 
 
 ## **Mint ERC721M tokens on layer 2**
 
-There are two ways to mint your ERC721M tokens: SDK and Curl.
+There are three ways to mint your ERC721M tokens: Dashboard, SDK and Curl.
+
+For Dashboard, simply go to **Contracts** page of [https://dashboard.reddio.com/](https://dashboard.reddio.com/). Select the contract you want to
+mint NFTs for. Click the **Mint NFTs** button. A window will pop to ask which layer 2 address (StarkKey) you want to receive the NFTs and how many NFTs you want to mint. Input the relevant information and click **OK** button to mint your NFTs.
+
+<p align="center">
+  <img src="/mintNFT5.png"/>
+</p>
 
 For SDK, see Reddio [SDK](https://docs.reddio.com/guide/jssdk-reference/initiate-sdk.html)s to mint ERC721M tokens.
 
