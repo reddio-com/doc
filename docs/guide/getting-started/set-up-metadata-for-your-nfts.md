@@ -8,11 +8,7 @@ You need to first set up your BaseURI for your contract. For example, suppose yo
 You can only use URI that starts with “https://”,”http://”.
 :::
 
-After you have created your contract address on layer 1 with specfic BaseURI. You need to bind your contract address and BaseURI with your project. You can check [this tutorial](https://docs.reddio.com/guide/getting-started/mint-nfts-on-layer-2.html#binding-smart-contract-with-project) to see how to do it. If you don’t see an updated BaseURI after you click “edit the project”,  you can simply refresh the dashboard page and recheck again. If BaseURI is binded with your project, you will see things like this:
-
-<p align="center">
-  <img src="/baseuri.png" alt="baseuri"/>
-</p>
+After you have created your contract address on layer 1 with specfic BaseURI. You need to bind your contract address and BaseURI with your project. You can check [this tutorial](https://docs.reddio.com/guide/getting-started/mint-nfts-on-layer-2.html#binding-smart-contract-with-project) to see how to do it. 
 
 ## Set Up Metadata For Your NFTs
 
