@@ -46,29 +46,27 @@ You can check the smart contract detail on Etherscan by following this [guide](h
 
 Here are the steps to bind the smart contract with the Reddio platform:
 
-- A Reddio account. Register your Reddio account through [https://dashboard.reddio.com/](https://dashboard.reddio.com/)
-- A project in the Reddio Dashboard. You can use Project on Reddio to contain several of your smart contracts.
+- Register your Reddio account at [https://dashboard.reddio.com/](https://dashboard.reddio.com/)
+- Create a project in the Reddio Dashboard. You can use project to contain several of your smart contracts.
     1. Log in the Reddio dashboard
     2. Click the drop down button on the top left and then click **Create Project**. Input a name for the project and click **Create Project**
     3. Select the new project you just created by clicking the drop down button on the top left
-    3. Go to **Contracts** page, and click **Add Contracts** button.
+- Go to **Contracts** page, and click **Add Contracts** button.
 <p align="center">
   <img src="/mintNFT2.png"/>
 </p>
     
-- Contract Type: the type of your smart contract. For this tutorial, please select ERC721M.
-- Contract Address: the smart contract address you get through deployment. Each project has a unique contract address.
+- Contract Type: the type of your smart contract. For this guide, please select ERC721M.
+- Contract Address: the smart contract address you get via deployment.
 - Base Uri: the URL of the metadata. This field is displayed if you choose ERC721 or ERC721M.
 
-Click the “Edit the Project” button to save data.
-
-**Result:** you have binded your smart contract with a project on Reddio.
+By now, you have binded your smart contract with a project on Reddio.
 
 ## Connect wallet and get public key on layer 2
 
 To mint on layer 2, you need to create a wallet on layer 2. Like how a wallet works on layer 1, layer 2 wallet has its own public key and private key, also known as `stark_key` pair: `stark_key` and  `stark_private_key`. You will need the public key or `stark_key` to mint on layer 2.
 
-You can get the `stark_key` and  `stark_private_key` by any one of the following three methods. However, the first two methods are recommended because these two methods will generate a ‘stark_key’ pair based on your MetaMask wallet address. And you can check your NFTS later on Reddio Demos. However, the third method will generate a random ‘stark_key’ pair which is not based on your MetaMask wallet address. That means you will not be able to see your NFTs on Reddio Demo using the third method.
+You can get the `stark_key` and  `stark_private_key` by any one of the following three methods. However, the first two methods are recommended because these two methods will generate a ‘stark_key’ pair based on your MetaMask wallet address. And you can check your NFTs later on [Reddio Demo](https://demos.reddio.com/). However, the third method will generate a random ‘stark_key’ pair which is not based on your MetaMask wallet address, which means you will not be able to see your NFTs on [Reddio Demo](https://demos.reddio.com/) using the third method.
 
 - [Recommended] You can use the Javascript SDK with MetaMask to generate the wallet:
     
@@ -83,14 +81,14 @@ You can get the `stark_key` and  `stark_private_key` by any one of the followin
     };
     ```
     
-- [Recommended] You can go to the Reddio demo application to see your `stark_key` pairs.
+- [Recommended] You can go to the Reddio demo to retrieve your `stark_key` pairs.
     - 1. Go to [https://demos.reddio.com/](https://demos.reddio.com/) and login in with your MetaMask.
     - 2. Open the developer tools or console on your browser. You will see two lines on your console. The first line is `stark_key`. The second line is `stark_private_key`.
 <p align="center">
   <img src="/mintNFT3.png"/>
 </p>
 
-- You can simply go to [https://api.reddio.com/v1/wallets](https://api.reddio.com/v1/wallets). A random stark_key and stark_private_key will be provided for you. Details can be found [here](https://docs.reddio.com/guide/api-reference/utils.html#get-stark-wallets).
+- You can simply go to [https://api.reddio.com/v1/wallets](https://api.reddio.com/v1/wallets). A random `stark_key` and `stark_private_key` will be provided for you. Details can be found [here](https://docs.reddio.com/guide/api-reference/utils.html#get-stark-wallets).
 
 ## Grab your API key
 
@@ -102,7 +100,7 @@ Reddio needs to authorise your identity while minting so you need an API key to 
 
 ## **Mint ERC721M tokens on layer 2**
 
-There are three ways to mint your ERC721M tokens: Dashboard, SDK and Curl.
+There are three ways to mint your ERC721M tokens: Dashboard, SDK and API call.
 
 For Dashboard, simply go to **Contracts** page of [https://dashboard.reddio.com/](https://dashboard.reddio.com/). Select the contract you want to
 mint NFTs for. Click the **Mint NFTs** button. A window will pop to ask which layer 2 address (StarkKey) you want to receive the NFTs and how many NFTs you want to mint. Input the relevant information and click **OK** button to mint your NFTs.
@@ -111,9 +109,9 @@ mint NFTs for. Click the **Mint NFTs** button. A window will pop to ask which la
   <img src="/mintNFT5.png"/>
 </p>
 
-For SDK, see Reddio [SDK](https://docs.reddio.com/guide/jssdk-reference/initiate-sdk.html)s to mint ERC721M tokens.
+For SDK, please refer to Reddio [SDK](https://docs.reddio.com/guide/jssdk-reference/initiate-sdk.html)s to mint ERC721M tokens.
 
-For Curl, the commands to mint ERC721M tokens vary depending on your operating system:
+For API call, the commands to mint ERC721M tokens vary depending on your operating system:
 
 - On Mac/Linux, you can use following command to mint your ERC721M tokens:
 
@@ -135,8 +133,9 @@ For example, suppose your `contract_address` is `0x4240e8xxxxxxxxxxxxxxxxx1` and
 curl -v  https://api-dev.reddio.com/v1/mints -H 'content-type: application/json' -d '{ "contract_address":"0x4240e8xxxxxxxxxxxxxxxxx1", "stark_key":"0x761f170xxxxxxxxxxxxxxxxxxxxxxxxxxxfbd39accda", "amount":"10"}' -H 'x-api-key: rk-xxxxxx-4326-4b58-ae69-xxxxxxxx'
 ```
 
-**Result:** Congratulations! You have successfully minted NFTs on layer 2!
+
+Congratulations! You have successfully minted NFTs on layer 2!
 
 ## **Check your ERC721M balance and collection on layer 2.**
 
-You can now [check NFTs balance on layer 2](https://docs.reddio.com/guide/getting-started/check-your-eth-erc20-nft-balance.html#view-eth-erc20-balance-on-layer-2).
+You can now check NFTs balance on layer 2 via dashboard under Contracts page or via [API call](https://docs.reddio.com/guide/getting-started/check-your-eth-erc20-nft-balance.html#view-erc721-erc721m-balance-on-layer-2).
