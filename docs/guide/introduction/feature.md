@@ -1,10 +1,6 @@
-# Feature
+# Features
 
-## What are the benefits of Reddio?
-* Zero gas fee
-* Very easy to create an in-game marketplace
-* Simple integration with API’s and SDK’s
-* Access all your favourite L1 Dapps on Ethereum
+## What are the benefits of using Reddio services?
 
 ## Time to market
 
@@ -12,7 +8,7 @@ With Reddio’s APIs, your integration to Web3.0 can be done in minutes.
 
 ## Highly scalable, reliable and fast response time
 
-On layer 2 transactions, 10k TPS are supported. 99.9% APIs availability is guaranteed. Meanwhile your asset trading confirmation is on second level only.
+On layer 2 transactions, 10k TPS are supported. 99.9% APIs availability is guaranteed. Meanwhile your asset trading confirmation is on few second level only.
 
 ## Secure and asset safety
 
@@ -24,7 +20,7 @@ Reddio provides APIs for both layer 1 & layer 2 on all the functions, hence deve
 
 ## Cross platform SDKs
 
-We strive to make the integration easy for your applications, not only Javascript SDK is provided, Unity, iOS and Android SDKs are also provided too for future proof much better use experience.
+We strive to make the integration easy for your applications, not only Javascript SDK is provided, Unity, iOS and Android SDKs are also provided too for future proof user experience.
 
 ## **No protocol lock in**
 

@@ -1,44 +1,73 @@
 # Change Log
 
+## Febuaray 4, 2023
+1. Launch new dashboard https://dashboard.reddio.com/project
+2. IPFS upload service in production(alpha)
+3. Add volume/trade/unique member statistic API
+4. Add java sdk tutorial https://github.com/reddio-com/reddio-sdk/wiki
+
+## January 13, 2023
+1. Launch alpha scan website https://dev.scan.reddio.com/
+2. Add pagination for /v1/txns & /v1/balances & /v1/collections API
+3. Release Java SDK 0.0.21 central.sonatype.dev/artifact/com.reddio/reddio-java/0.0.21
+    - Support listen deposit event
+    - Support generate stark_key pair by eth private key
+    - Support IOC order
+4. Refine record(txn) status, you can see the status at docs.reddio.com/guide/api-reference/record.html 
+
 ## December 30, 2022
 1. Add /v1/txns API to get all transactions related to contract_address
 2. Add /v1/collections API to get all collections
 
-
 ## December 26, 2022
 
-1. Support IOC order (Now Reddio Support both GTC & IOC order)
-2. Support Utility Token for Reconcile
+1. Support IOC order (Now Reddio supports both GTC & IOC order)
+2. Support utility token for reconcile
 3. Support callback for orders
 4. Add sequence_ids field to withdraw status
 
-## May 20 - December 25, 2022
+## December 16, 2022
+1. Support IPFS upload v1
+2. Add balance v2 api
+3. Listen to onchain events for deposit
 
-1. Add JS-SDK
-2. Add unity SDK
-3. Add python SDK
-4. Add golang SDK
-5. Add Java SDK
-6. Support Mints ERC721 on Reddio L2
-7. Support Deposit & Withdraw ETH/ERC20/ERC721 on Reddio L2
-8. Support Transfer tokens on Reddio L2
-9. Add admin register contracts interface to L2
-10. Listen to onchain events for deposit
-11. Support Token owners of NFT collection
-12. Reddio launch on Mainnet
-13. Add balance V2 api
-14. Add balance V1 api
-15. Add records API
-16. Support batch mints
-17. Support set BaseURI for NFT collection
-18. Support IPFS upload V1
-19. Add orderbook V1(support GTC and NFT and cancel order)
-20. Add Reddio fee charge of order
-21. Add marketplace fee charge of order
-22. Support withdraw status
-23. Launch Demos V2 
-24. Launch website V2
-25. Launch Website V1
-26. Launch Demos V1
-27. Launch Dashboard V1
-28. Support Deploy ERC20/ERC721 on web
+## December 2, 2022
+1. Support Deploy ERC20/ERC721 on web
+2. Launch demos.reddio.com v2
+3. Launch www.reddio.com v2
+4. Add Unity SDK
+
+## November 18, 2022
+1. Add Golang SDK
+2. Add admin register contracts interface to layer 2
+3. Add JS SDK
+4. Add Python SDK
+
+## Novemeber 4, 2022
+1. Add Java SDK
+2. Support Mints ERC721 on Reddio layer 2
+3. Support Deposit & Withdraw ETH/ERC20/ERC721 on Reddio layer 2
+
+## October 21, 2022
+1. Support Transfer tokens on Reddio layer 2
+2. Support Token owners of NFT collection
+
+## September 30, 2022
+1. Reddio launch on Mainnet
+
+## September 2, 2022
+1. Add balance v1 api
+2. Add records API
+3. Support batch mints
+4. Support set BaseURI for NFT collection
+
+## August 19, 2022
+1. Add orderbook V1(support GTC and NFT and cancel order)
+2. Add Reddio fee charge of order
+3. Add marketplace fee charge of order
+4. Support withdraw status
+
+## July 22, 2022
+1. Launch www.reddio.com v1
+2. Launch demos.reddio.com V1
+3. Launch dashboard v1

@@ -4,13 +4,13 @@
 
 This tutorial will guide you through the process of using the Reddio API to deposit, transfer, and withdraw NFT between the Ethereum layer 1 and layer 2 blockchains using typescript.
 
-You can clone the [Tutorial repo](https://github.com/reddio-com/Tutorial-Examples/blob/master/ERC721-transfer-tutorial-example/src/pages/index.tsx). After you cloned the project in your device, you can use following prompts to install all the dependencies.
+You can get the [Transfer NFTs Between Layer 1 and Layer 2](https://github.com/reddio-com/Tutorial-Examples/blob/master/ERC721-transfer-tutorial-example/src/pages/index.tsx). After you cloned the project in your device, you can use following prompts to install all the dependencies.
 
 ```bash
 yarn install
 ```
 
-After install all the dependencies, use following prompts to start the project:
+After install all the dependencies, use  following prompts to start the project:
 
 ```bash
 yarn start
@@ -28,62 +28,57 @@ During your application implementation. There shall be a form asks for NFT contr
 
 ## Connect to wallet
 
-If you want to deposit, transfer, and withdraw tokens between the Ethereum layer 1 and layer 2 blockchains, you need to connect to your wallet first. We will use Metamask as an example to show you how to connect to the wallet and create Stark keypairs based on it. There’s one thing to note that one Metamask wallet address will generate the same Stark keypair.
+If you want to deposit, transfer, and withdraw tokens between the Ethereum layer 1 and layer 2 blockchains, you need to connect to your wallet first. We will use Metamask as an example to show you how to connect to the wallet and create Stark keypairs based on it. There’s one thing to note that one Metamask wallet address will generate the same Stark keypair. 
 
 ```tsx
 async function connectToWallet() {
-  if (typeof window !== "undefined") {
-    // First, get the web3 provider if window is not undefined
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    if (typeof window !== 'undefined') {
+      //First, get the web3 provider if window is not undefined
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
 
-    // Second, we need to ask the wallet to switch to specific ETH network
-    // We will use Goerli testnet to give example.Its hexValue is 5.
-    await provider.send("wallet_switchEthereumChain", [
-      { chainId: ethers.utils.hexValue(5) },
-    ]);
+      //Second, we need to ask the wallet to switch to specific ETH network
+      //We will use Goerli testnet to give example.Its hexValue is 5.
+      await provider.send("wallet_switchEthereumChain", [
+        { chainId: ethers.utils.hexValue(5) },
+      ]);
 
-    // Third, getting the account addresses from provider
-    await provider.send("eth_requestAccounts", []);
-    const signer = provider.getSigner();
-    const ethAddress = await signer.getAddress();
+      //Third, getting the account addresses from provider
+      await provider.send('eth_requestAccounts', []);
+      const signer = provider.getSigner();
+      const ethAddress = await signer.getAddress();
 
-    // Finally, we can create a new reddio instance (Goerli testnet)
-    // And assign global variable to it
-    const reddio = new Reddio({
-      provider,
-      env: "test",
-    });
-    setReddio(reddio);
+      //Finally, we can create a new reddio instance (Goerli testnet) 
+      //And assign global variable to it
+      const reddio = new Reddio({
+        provider,
+        env: 'test',
+      });
+      setReddio(reddio);
 
-    const generateKey = async () => {
-      try {
-        // Generate stark private key and public key
-        // Store them into array
-        const { privateKey, publicKey } =
-          await reddio.keypair.generateFromEthSignature();
+      const generateKey = async () => {
+        try {
+          //Generate stark private key and public key 
+          //Store them into array
+          const { privateKey, publicKey } = await reddio.keypair.generateFromEthSignature();
 
-        // We will set ethAddress/starkKey/privateStarkKey on our array
-        setEventValue({
-          ...eventValue,
-          ethAddress,
-          starkKey: publicKey,
-          privateKey,
-        });
-      } catch (error) {
-        console.error(error);
-      }
-    };
+          //We will set ethAddress/starkKey/privateKey on our array
+          setEventValue({ ...eventValue, ethAddress, starkKey: publicKey, privateKey })
+        } catch (error) {
+          console.error(error);
+        }
+      };
 
-    generateKey();
+      generateKey();
+    }
   }
-}
 ```
 
-After you start the project. You will see a “Connect wallet” button in the main page, after clicking on the button. MetaMask will show up and ask you to login.
+After you start the project. You will see a “Connect wallet” button in the main page, after clicking on the button. MetaMask will show up and ask you to login. 
 
 <p align="center">
   <img src="/transfer-eth-1.png" alt="transfer-eth-1"/>
 </p>
+
 
 After login into your wallet, your address will be shown on the “ETH Address”. And your stark key and stark private key will be shown on the forms. If you see your wallet’s address, that means your wallet is successfully connected to the application.
 
@@ -97,72 +92,53 @@ If you want to trade on layer 2, you need to have assets on layer 2. So you need
 Now, we will show you how to implement the deposit function in your application.
 
 ```tsx
-async function depositNFT() {
-  const { starkKey, collectionAddress, tokenId } = eventValue;
+  async function depositNFT() {
+    const { starkKey, contractAddress, tokenId } = eventValue;
 
-  if (reddio !== null) {
-    // Authorize the ERC721 contract address to approve the transaction
-    const approve = async () => {
-      await reddio.erc721.approve({
-        tokenAddress: collectionAddress,
+    if (reddio !== null) {
+      const transaction = await reddio.erc721.approve({
+        tokenAddress: contractAddress,
         tokenId,
       });
-    };
 
-    await approve();
+      await transaction?.wait()
 
-    // Getting NFT's assetID on layer 2
-    const { assetId, assetType } = await reddio.utils.getAssetTypeAndId({
-      type: "ERC721",
-      tokenAddress: collectionAddress,
-      tokenId,
-    });
-
-    // Deposit ERC721 into layer 2
-    await reddio.apis.depositERC721({
-      starkKey,
-      tokenAddress: collectionAddress,
-      tokenId,
-    });
+      //Deposit ERC721 into layer 2
+      await reddio.apis.depositERC721({
+        starkKey,
+        tokenAddress: contractAddress,
+        tokenId,
+      });
+    }
   }
-}
 ```
 
 After you write down the proper information on the forms and click on the deposit button, your MetaMask will ask you to confirm all the transactions. After that, you can [check your balance.](https://docs.reddio.com/guide/getting-started/check-your-eth-erc20-nft-balance.html)
 
 ## Transfer: from layer 2 to layer 2
 
-After deposit, you have your own NFTs on layer 2. Now you want to send the NFTs to others on layer 2.
+After deposit, you have your own NFTs on layer 2. Now you want to send the NFTs to others on layer 2. 
 
-Now, we will show you how to implement the transfer function in your application. Remember, NFT’s assetId on layer 2 has an one-on-one mapping relathionship with NFT on layer 1.
+Now, we will show you how to implement the transfer function in your application.
 
 ```tsx
-async function transferNFT() {
-  const { starkKey, collectionAddress, tokenId, privateKey, receiver } =
-    eventValue;
+  async function transferNFT() {
+    const { starkKey, contractAddress, tokenId, privateKey, receiver } = eventValue;
 
-  if (reddio) {
-    // Authorize the ERC721 contract address to approve the transaction
-    const approve = async () => {
-      await reddio!.erc721.approve({
-        tokenAddress: collectionAddress,
-        tokenId: tokenId,
+    if (reddio) {
+      //Transfer NFT on layer 2 to another StarkKey
+      const result = await reddio.apis.transfer({
+        starkKey,
+        privateKey,
+        contractAddress,
+        tokenId,
+        type: "ERC721",
+        receiver,
       });
-    };
 
-    // Transfer NFT on layer 2 to another StarkKey
-    const result = await reddio.apis.transfer({
-      starkKey,
-      privateKey,
-      contractAddress: collectionAddress,
-      tokenId,
-      type: "ERC721",
-      receiver,
-    });
-
-    console.log(result);
+      console.log(result);
+    }
   }
-}
 ```
 
 After you write down the proper information on the forms and click on the transfer button. You can check a response from your console likes the picture down below:
@@ -175,71 +151,31 @@ Transfering NFT tokens on layer 2 is quick. You can [check your balance](https:/
 
 ## Withdraw: from layer 2 to layer 1
 
-You already have a lot of NFTs on layer 2. You want these tokens back to your layer 1 wallet.
+You already have a lot of NFTs on layer 2. You want these tokens back to your layer 1 wallet. 
 
-Now, we will show you how to implement the withdraw function in your application. Typically, withdraw methods are composed by two steps: First, move assets to withdrawal areas or withdraw from layer 2. After waiting about 4 hour, you can withdraw assets on withdrawal areas to layer 1. This step is called withdraw from layer 1.
+Now, we will show you how to implement the withdraw function in your application. 
+
+Typically, withdraw methods are composed by two steps: First, move assets to withdrawal areas or withdraw from layer 2. 
+
+The first step at least takes about 4 hour. You can [check withdraw status here](https://docs.reddio.com/guide/api-reference/withdraw.html#withdrawal-status). 
 
 ```tsx
-async function withdrawNFTFromL2() {
-  const {
-    ethAddress,
-    starkKey,
-    collectionAddress,
-    tokenId,
-    privateKey,
-    receiver,
-  } = eventValue;
-  if (reddio) {
-    // Withdraw tokens from layer 2 (Move assets to withdraw area)
-    // This process usually takes about 4 hour
-    const resultOne = await reddio.apis.withdrawalFromL2({
-      starkKey,
-      privateKey,
-      receiver,
-      type: "ERC721",
-      contractAddress: collectionAddress,
-      tokenId: tokenId.toString(), // needs to be a string
-    });
-    console.log(resultOne);
+  async function withdrawNFTFromL2() {
+    const { starkKey, contractAddress, tokenId, privateKey, receiver } = eventValue;
+    if (reddio) {
+      //Withdraw tokens from layer 2 (Move assets to withdraw area)
+      //This process usually takes about 4 hour
+      const { data } = await reddio.apis.withdrawalFromL2({
+        starkKey,
+        privateKey,
+        receiver,
+        type: "ERC721",
+        contractAddress,
+        tokenId,
+      });
+      console.log(data)
+    }
   }
-}
-
-async function withdrawNFTFromL1() {
-  const {
-    ethAddress,
-    starkKey,
-    collectionAddress,
-    tokenId,
-    privateKey,
-    receiver,
-  } = eventValue;
-
-  if (reddio) {
-    // getting reddio's assetId and assetType for the NFT token
-    const { assetId, assetType } = await reddio.utils.getAssetTypeAndId({
-      type: "ERC721",
-      tokenAddress: collectionAddress,
-      tokenId: tokenId,
-    });
-
-    // Step 2: withdraw tokens from layer 1
-
-    const result = await reddio.apis.withdrawalFromL1({
-      ethAddress,
-      assetType,
-      tokenId,
-      type: "ERC721",
-    });
-
-    console.log(result);
-  }
-}
 ```
 
-After you write down the proper information on the forms and click on the withdraw button. MetaMask will show up and ask you to approve the withdraw action. You will see the activity on your MetaMask like the picture down below:
-
-<p align="center">
-  <img src="/transfer-eth-4.png" alt="transfer-eth-4"/>
-</p>
-
-You can [check your balance](https://docs.reddio.com/guide/getting-started/check-your-eth-erc20-nft-balance.html) afterward.
+The second step is to withdraw the assets from layer 1. You can refer to guide [here](https://docs.reddio.com/guide/jssdk-reference/withdraw.html#withdrawalfroml1)

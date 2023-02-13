@@ -104,22 +104,22 @@ function sidebarService() {
             collapsible: true,
             items: [
                 { text: 'Overview', link: '/guide/introduction/overview' },
-                { text: 'Feature', link: '/guide/introduction/feature'  },
+                { text: 'Features', link: '/guide/introduction/feature'  },
                 { text: 'Changelog', link: '/guide/introduction/changelog'}
             ]
         },
         {
-            text: 'Getting Started',
+            text: 'Getting started',
             collapsible: true,
             items: [
-                { text: 'Marketplace Demo', link: '/guide/getting-started/marketplace-demo' },
-                { text: 'Mint NFTs On Layer 2', link: '/guide/getting-started/mint-nfts-on-layer-2'  },
-                { text: 'Set Up Metadata For Your NFTs',link:'/guide/getting-started/set-up-metadata-for-your-nfts'},
-                { text: 'Place Orders On Layer 2', link: '/guide/getting-started/place-orders-on-layer-2' },
-                { text: 'Transfer NFTs Between Layer 1 and Layer 2', link: '/guide/getting-started/transfer-nfts-between-layer-1-and-layer-2'  },
-                { text: 'Transfer ETHs Between Layer 1 and Layer 2', link: '/guide/getting-started/transfer-eths-between-layer-1-and-layer-2' },
-                { text: 'Transfer ERC20s Between Layer 1 and Layer 2', link: '/guide/getting-started/transfer-erc20s-between-layer-1-and-layer-2' },
-                { text: 'Check Your ETHs/ERC20s/NFTs Balance', link: '/guide/getting-started/check-your-eth-erc20-nft-balance' },
+                { text: 'Mint NFTs on layer 2', link: '/guide/getting-started/mint-nfts-on-layer-2'  },
+                { text: 'Set up metadata for your NFTs',link:'/guide/getting-started/set-up-metadata-for-your-nfts'},
+                { text: 'Place orders on layer 2', link: '/guide/getting-started/place-orders-on-layer-2' },
+                { text: 'Transfer NFTs between layer 1 and layer 2', link: '/guide/getting-started/transfer-nfts-between-layer-1-and-layer-2'  },
+                { text: 'Transfer ETHs between layer 1 and layer 2', link: '/guide/getting-started/transfer-eths-between-layer-1-and-layer-2' },
+                { text: 'Transfer ERC20s between layer 1 and layer 2', link: '/guide/getting-started/transfer-erc20s-between-layer-1-and-layer-2' },
+                { text: 'Check your ETHs/ERC20s/NFTs balance', link: '/guide/getting-started/check-your-eth-erc20-nft-balance' },
+                { text: 'In-app marketplace demo', link: '/guide/getting-started/marketplace-demo' },
             ]
         },
         {
@@ -143,7 +143,7 @@ function sidebarService() {
             collapsed: true,
             collapsible: true,
             items: [
-                { text: 'API Reference', link: '/guide/api-reference/api-reference' },
+                { text: 'API reference', link: '/guide/api-reference/api-reference' },
                 { text: 'Utils', link: '/guide/api-reference/utils' },
                 { text: 'Project', link: '/guide/api-reference/project' },
                 { text: 'Withdraw', link: '/guide/api-reference/withdraw' },
@@ -166,9 +166,9 @@ function sidebarService() {
             collapsed: true,
             collapsible: true,
             items: [
-                { text: 'Layer 2 Introduction', link: '/guide/reference/layer-2-introduction' },
-                { text: 'How Does Layer 2 Works', link: '/guide/reference/how-does-layer-2-works' },
-                { text: 'How Does Reddio Works', link: '/guide/reference/how-does-reddio-works' },
+                { text: 'Layer 2 introduction', link: '/guide/reference/layer-2-introduction' },
+                { text: 'How does layer 2 works', link: '/guide/reference/how-does-layer-2-works' },
+                { text: 'How does Reddio works', link: '/guide/reference/how-does-reddio-works' },
                 { text: 'Terminology', link: '/guide/reference/terminology' },
                 { text: 'FAQ', link: '/guide/reference/faq' },
             ]
