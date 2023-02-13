@@ -37,8 +37,8 @@ export default {
     [
       "link",
       {
-        rel: "shortcut icon",
-        href: "/favicon.ico",
+        rel: "icon",
+        href: "/logo.svg",
       },
     ],
   ],
