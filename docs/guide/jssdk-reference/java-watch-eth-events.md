@@ -64,7 +64,7 @@ Here is a sample application that demonstrates how to watch events of depositing
     ```
 
     > The default behavior of `watchDeposit` is to:
-    > - Watch events starting from the 16 blocks ahead of the latest block
+    > - Start watching events from 16 blocks behind the latest block.
     > - Emit events after at least 16 block confirmations
     > 
     > To change the behavior, you can use the other overloads of `watchDeposit`, and change the parameters: `startBlockNumber` and `requiredBlockConfirmation`.
@@ -108,7 +108,7 @@ The `watchDeposit` method watches `LogDeposit` events and is a non-blocking meth
 
 There are 3 overloads for `watchDeposit`:
 
-- `Disposable watchDeposit(Consumer<Tuple2<Deposits.LogDepositEventResponse, EthBlock>> consumer);`: the default behavior. It watches events from the 16 blocks ahead of the latest block, and emits events with at least 16 block confirmations.
+- `Disposable watchDeposit(Consumer<Tuple2<Deposits.LogDepositEventResponse, EthBlock>> consumer);`: the default behavior. It watches events from the 16 blocks behind the latest block, and emits events with at least 16 block confirmations.
 - `Disposable watchDeposit(Consumer<Tuple2<Deposits.LogDepositEventResponse, EthBlock>> consumer, BigInteger startBlockNumber);`: You can customize the behavior by specifying `startBlockNumber)`.
 - `Disposable watchDeposit(Consumer<Tuple2<Deposits.LogDepositEventResponse, EthBlock>> consumer, BigInteger startBlockNumber, Long requiredBlockConfirmation);`: You can customize the behavior by specifying `requiredBlockConfirmation`.
 
@@ -128,7 +128,7 @@ The `watchNftDeposit` method watches the `LogNftDeposit` events and is a non-blo
 
 There are 3 overloads for `watchNftDeposit`:
 
-- `Disposable watchNftDeposit(Consumer<Tuple2<Deposits.LogNftDepositEventResponse, EthBlock>> consumer);`: This is the default behavior. It watches events from the 16 blocks ahead of the latest block and emits events with at least 16 block confirmations.
+- `Disposable watchNftDeposit(Consumer<Tuple2<Deposits.LogNftDepositEventResponse, EthBlock>> consumer);`: This is the default behavior. It watches events from the 16 blocks behind the latest block and emits events with at least 16 block confirmations.
 - `Disposable watchNftDeposit(Consumer<Tuple2<Deposits.LogNftDepositEventResponse, EthBlock>> consumer, BigInteger startBlockNumber);`:You can customize the behavior by specifying `startBlockNumber`.
 - `Disposable watchNftDeposit(Consumer<Tuple2<Deposits.LogNftDepositEventResponse, EthBlock>> consumer, BigInteger startBlockNumber, Long requiredBlockConfirmation);`: You can further customize the behavior by specifying `requiredBlockConfirmation`.
 
