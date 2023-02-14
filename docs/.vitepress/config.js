@@ -123,13 +123,20 @@ function sidebarService() {
             ]
         },
         {
+            text: 'Java SDK',
+            collapsed: true,
+            collapsible: true,
+            items: [
+                { text: 'Introduction to the Reddio Java SDK', link: '/guide/javasdk-reference/java-introduction' },
+                { text: 'Getting started with Reddio Java SDK', link: '/guide/javasdk-reference/java-getting-started-tutorial' },
+                { text: 'Watching transaction events using the Reddio Java SDK', link: '/guide/javasdk-reference/java-watch-eth-events' },
+            ]
+        },
+        {
             text: 'JS SDK',
             collapsed: true,
             collapsible: true,
             items: [
-                { text: 'Initiate SDK', link: '/guide/jssdk-reference/java-introduction' },
-                { text: 'Initiate SDK', link: '/guide/jssdk-reference/java-getting-started-tutorial' },
-                { text: 'Initiate SDK', link: '/guide/jssdk-reference/java-watch-eth-events' },
                 { text: 'Initiate SDK', link: '/guide/jssdk-reference/initiate-sdk' },
                 { text: 'Utils', link: '/guide/jssdk-reference/utils' },
                 { text: 'Deposit', link: '/guide/jssdk-reference/deposit' },
