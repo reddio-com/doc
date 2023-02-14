@@ -10,7 +10,7 @@ That means the order price needs to bigger than 0.001 token.
 Reddio supports two sidechain schemes to validium(the default option) and zkRollup for interaction between layer 2 and layer 1. The major difference between a validium and a zk-rollup is data availability: validium stores data off-chain, while ZkRollup stores data on-chain.
 The timeliness of the two schemes is roughly the same. 
 - The execution time for operations on layer 2 is around 300ms.
-- Submitting confirmation proof from layer 2 to layer 1 generally takes more than 8 hours.
+- Submitting confirmation proof from layer 2 to layer 1 generally takes4-8 hours on testnet and 8-16 hours on mainnet.
 For more information about zkRollup, see [how does layer 2 works](https://docs.reddio.com/guide/reference/how-does-layer-2-works.html).
 
 ## How long does it take to make a deposit on layer 2? How can to if the operation is successful?
@@ -18,26 +18,24 @@ The time required for a deposit on layer 2 can vary depending on the implementat
 To check if a deposit on layer 2 has been successfully processed, you can check the operation status by querying the [balance API](https://docs.reddio.com/guide/api-reference/balance.html) or [record API](https://docs.reddio.com/guide/api-reference/record.html).
 
 ## How long does it take for the proof of a layer 2 operation to be published on the blockchain?
-It typically takes 8-16 hours for the proof of every layer 2 operation to be recorded on the main blockchain (layer 1). This is because the proof must be carefully verified and processed by the nodes on the main blockchain to ensure the security and integrity of the data, and this process can take a significant amount of time, depending on the number of transactions and the complexity of the proof. However, users only need to be concerned with this time frame when initiating a withdraw on layer 1 because the status of layer 2 operations is returned in real-time.
+It typically takes 4-8 hours on testnet and 8-16 hours on mainnet for the proof of every layer 2 operation to be recorded on the main blockchain (layer 1). This is because the proof must be carefully verified and processed by the nodes on the main blockchain to ensure the security and integrity of the data, and this process can take a significant amount of time, depending on the number of transactions and the complexity of the proof. However, users only need to be concerned with this time frame when initiating a withdraw on layer 1 because the status of layer 2 operations is returned in real-time.
 
-## How does Reddio achieve recharge funds from layer1 to layer2?
-When the user recharges, the users’ assets are recharged to the starkex contract on layer 1.
-The contract address for starkex on ethreum mainnet is 0x8eb82154f314ec687957ce1e9c1a5dc3a3234df9.
-The contract address for starkex on goerli testnet is 0x8eb82154f314ec687957ce1e9c1a5dc3a3234df9.
-Reddio is monitoring the starkex contract on layer1. Waiting for recharge event coming in.
-When a recharge event occurs and is confirmed by 15 blocks. The corresponding starkkey assets will be recharged to layer2. Therefore, users can use their assets on layer2.
+## How does Reddio implement depositing assets from layer 1 to layer 2?
+When a user makes a deposit, the user's assets deposited into the StarkEx  contract on layer 1 at the following addresses:
+- Ethereum mainnet: `0x8eb82154f314ec687957ce1e9c1a5dc3a3234df9`.
+- Goerli testnet: `0xB62BcD40A24985f560b5a9745d478791d8F1945C`.
+Reddio constantly monitors this StarkEx contract and polls for deposit events. When a deposit event occurs and is confirmed after 15 blocks, the corresponding Stark key assets are deposited in layer 2 so that users can use their assets on layer2.
 
-## When can I received the funds on layer 2 after deposit/withdraw operations?
-Deposit will generally be completed 3 minutes after the deposit operation, so we recommend querying the funding status every 30 seconds
-Withdraw is generally completed within 8 hour after the withdraw operation, so we recommend querying the funding status every half an hour. We need to note that the once the withdraw is completed, that means the proof of withdraw on layer 2 is submitted to layer 1. It also means that the corresponding assets can be withdrawn on layer1 to the user's layer1 wallet.
+## If I want to check the results of the deposit/withdraw operations, how often should I poll the API for the best results?
+- The deposit operations usually complete within 3 minutes, so you can check the status of the assets every 30 seconds after initiating a deposit.
+- The withdraw operations usually complete within 8 hours, so you can check the status of the assets every 30 minutes after initiating a withdrawal. Note that when a withdrawal is completed, it means that the layer 2 proof of the withdrawal has been submitted to layer 1, which also means that the assets can now be withdrawn to the user's layer 1 wallet.
 
 ## Do Reddio support mint NFTs on layer 2?
 Yes, Reddio supports mint NFTs on layer 2.
 You can refer to [Mint NFTs on layer 2](https://docs.reddio.com/guide/getting-started/mint-nfts-on-layer-2.html) tutorial to learn how to mint NFTs.
 
 ## How to check contract details and transactions details on layer 1?
-You can query through third-party websites such as etherscan.
-You can know how to view these data through [tutorial](https://docs.reddio.com/guide/getting-started/check-your-eth-erc20-nft-balance.html).
+You can check through third-party websites like [Etherscan](https://etherscan.io/). See how to [check the smart contract and transaction details](https://docs.reddio.com/guide/getting-started/check-your-eth-erc20-nft-balance.html) for more information.
 
 ## When I use API to mint NFTs. What does response: minting is not supported for ERC721 mean?
 In Reddio’s system, we classified the ERC721 contract into two types.
@@ -46,13 +44,12 @@ ERC721M is a type of contract that can be used for minting on layer2. If you use
 Please refer to [Mint NFTs On Layer 2](https://docs.reddio.com/guide/getting-started/mint-nfts-on-layer-2.html) for more detail.
 
 ## What is the purpose of nonce in Reddio’s system?
-The nonce is mainly used to prevent replay attacks.  A transaction will automatically add the number of nonce for a specific stark_key by one just like what Ethereum does.
-You can consult with the introduction document about the [principle of nonce](https://help.myetherwallet.com/en/articles/5461509-what-is-a-nonce).
+A nonce is a one-time code selected in a random or pseudo-random manner that is used to securely transmit a main password, preventing replay attacks. Similar as in Ethereum, each transaction has a nonce on Reddio and the nonce value of stark_key increases by 1 after the transaction. For more information, see [What is a Nonce](https://help.myetherwallet.com/en/articles/5461509-what-is-a-nonce).
 
 ## Does SDK wallets generated functions always lead to the same key pairs?
-Not necessarily, it all depends on the generation algorithm you use.
-If you generate the stark_key pair by the same Ethereum private key, the results are always the same. Since they are generated by the same Ethereum private key with the same signature.
-However, If you generate the stark_key pair by a random function, such as the get_random_private_key function in the Unity SDK. It will use algorithm to ensure that the wallet will not be repeated just like how wallet key generation works on layer 1. Therfore, you will not get the same stark_key pairs in this way.
+Not necessarily, it depends on the generation algorithm you use:
+- If the stark_key pair is generated from an Ethereum private key, they are generated using the same signature and the same Ethereum private key generates the same stark_key pair.
+- If the stark_key pair is generated by a random function, such as the 'get_random_private_key' function in the Unity SDK, the generation principle is consistent with the wallet key generation principle on layer 1, and the algorithm ensures that the wallet will not be repeated when generated. Therefore, you will not get the same stark_key pairs.
 
 ## Why I get 0 when using getnonce function?
 If getnonce function returns 0, it means that this stark_key does not have any active transaction. When there is an active transaction related to the stark_key, the nonce will automatically increase. For more information about nonce, please refer to [this discussion](https://docs.reddio.com/guide/reference/faq.html#what-is-the-purpose-of-nonce-in-reddio%E2%80%99s-system).
@@ -73,16 +70,15 @@ The expirationTimeStamp parameter represents the timeout for deposit/transfer/wi
 Base URI is used for you to fill in the metadata of your NFT collection. The metadata will contain information such as pictures and attributes corresponding to the NFTs. See the [Set Up Metadata For Your NFTs](https://docs.reddio.com/guide/getting-started/set-up-metadata-for-your-nfts.html) documentation for more details.
 
 ## What is the principle of transferring assets between layer 2 and layer1?
-- Transferring assets between layer 2 and layer 1, also known as "cross-layer" transfer, involves moving assets from a side-chain or a rollup construction (layer 2) to the main blockchain (layer 1). The specifics of how cross-layer transfer works vary depending on the side-chain or rollup construction being used.
+Transferring assets between layer 2 and layer 1, also known as "cross-layer" transfer, involves moving assets from a side-chain or a rollup construction (layer 2) to the main blockchain (layer 1). The specifics of how cross-layer transfer works vary depending on the side-chain or rollup construction being used.
 
 Currently, Reddio's service is based on StarkEx. To explain the principle of asset transferring between layer 2 and layer 1, we can break it down into deposit and withdraw actions.
 - For deposit: When you deposit ERC20/ETH/ERC721 assets from layer 1 to a specific stark_key, Reddio will update the asset status of this stark_key on layer2 and synchronize the asset status to StarkEx. StarkEx will later verify the ownership of the asset later by comparing the asset status on layer 1 with the information synchronized by Reddio.
-- For withdraw:  Users needs to initiate a withdraw request on layer 2. When Reddio processes the request, it will update the asset status and synchronize the withdraw request to StarkEx. After StarkEx verifies it, the asset will be released after 8-16 hours. The hash of the asset status is uploaded to the chain and the withdrawal balance of the user on the chain is updated. After that, the user can claim their assets on layer 1.
-    
-For more detailed information, see [this document](https://docs.starkware.co/starkex/overview.html) for more details.
+- For withdraw:  Users needs to initiate a withdraw request on layer 2. When Reddio processes the request, it will update the asset status and synchronize the withdraw request to StarkEx. After StarkEx verifies it, the asset will be released after 4-8 hours in testnet, 8-16 hours in mainnet. The hash of the asset status is uploaded to the chain and the withdrawal balance of the user on the chain is updated. After that, the user can claim their assets on layer 1. 
+For more detailed information ,see https://docs.starkware.co/starkex/overview.html for more details.
 
 ## How does Reddio charge? 
-Currently, Reddio only charges after the user places an order and completes the transaction. The fee rate is 0.5% of the total price of the pending order. And  this fee is only charged to the seller (maker).
+Currently, Reddio only charges fees after a user places an order and the transaction is completed. The fee rate is 0.5% of the total price of the order and is only charged to the seller (maker).
 
 ## Can the royalty of NFT be customized in Reddio?
 It is not possible on our system currently.
@@ -106,7 +102,8 @@ One possible reason is that the seller and buyer of the pending order are the sa
 Reddio/Starkware does not have access to the the public and private keypair generated by the SDK. The key generation function provided by the SDK is a purely algorithm-based local key generation, and does not require an Internet connection to use. Therefore, it is not possible for Reddio/Starkware to know the private key associated with your public stark key.
 
 ## Why doesn't Metamask pop up on the contract deployment page/demo page?
-First, you need to make sure the "Connect Wallet" button is clicked. Second, you need to make sure your metamask plugin is not blocked. If your Metamask is blocked on Chrome, you can check the [chrome help documentation](https://support.google.com/chrome/a/answer/6177431?hl=en) to unlock the Metamask plugin.
+1. Make sure to click "Connect Wallet" button on Reddio Dashboard.
+2. Make sure the Metamask extension is not blocked on Chrome. If your Metamask extension is blocked, follow the Chrome help documentation https://support.google.com/chrome/a/answer/6177431?hl=en to unlock the Metamask extension.
 
 ## What does 'frozen_token_ids' mean in balance APIs?
 Frozen_token_ids represents the assets of the NFT collection have been frozen for some reason. If the asset is in pending order, the system will automatically freeze the asset to which the token_id belongs.
