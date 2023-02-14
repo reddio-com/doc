@@ -1,6 +1,6 @@
 # Getting started with Reddio Java SDK
 
-This tutorial introduces the Reddio Java SDK and includes demos of how to deposit and withdraw assets between ETH and Layer 2, transfer assets on Layer 2, and buy and sell NFTs on Layer 2 using the **Goerli Test Network**.
+This tutorial introduces the Reddio Java SDK and includes demos of how to deposit and withdraw assets between Ethernum network and Layer 2, transfer assets on Layer 2, and buy and sell NFTs on Layer 2 using the **Goerli Test Network**.
 It is assumed that you have a basic understanding of [Ethereum](https://ethereum.org/en/), [Oracle Java 8](https://www.oracle.com/au/java/technologies/javase/javase8u211-later-archive-downloads.html), the latest version of [Apache Maven](https://maven.apache.org/), and related technologies. 
 
 ## Prepare a test account and get some test assets
