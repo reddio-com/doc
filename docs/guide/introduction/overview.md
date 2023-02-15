@@ -2,14 +2,15 @@
 
 ## Introduction
 
-Reddio is a technology company that builds infrastructure for the blockchain, to help developers adopt blockchain technologies with the world's first easy-to-use layer 2 Agnostic APIs. 
+Reddio is a technology company that builds infrastrucutre for the blockchain. It provides developers with the world's first easy-to-use layer 2 Agnostic APIs to help them adopt blockchain technologies. For developers who want to deploy on Ethereum for its security but need scale (up to 10k TPS) and 0 gas fees, they can benefit from Reddio's services and enjoy Ethereum's security and stability. With Reddio, developers can:
 
-For developers who want to deploy on Ethereum for its security but need scale (up to 10k TPS) and 0 gas fees,you can  benefit from Reddio’s services and enjoy Ethereum’s security and stability. Any developer can use Reddio to:
+- Quickly build an in-app and in-game NFT marketplace
+- Scale their App and gaming assets trading without worrying about downtime or security
+- Mint NFTs with our Javascript/Java/Python/Unity SDKs with 0 gas fee
+- Build decentralized trading platforms with scalability up to 10k TPS and minimum trading fee
+- Store and transfer assets securely using zero-knowledge proofs 
 
-- Quickly build an in-app and in-game NFT marketplace on zkRollup
-- Scale your App and gaming assets trading without worry about downtime and security
-- Mint NFTs with Javascript SDK and Unity SDK with 0 gas fee
-- Build decentralised trading platform with scalability up to 10k TPS and minimum trading fee
+Beyond all the benefits mentioned above. As a decentralized solution, Reddio allows users to self-custody their assets, giving them full control over their assets and ensuring that no central authority can stop them from withdrawing their assets. The assets are stored in a smart contract on the Ethereum blockchain, making them secure and transparent. Even if Reddio and Starkware cut down all the servers, users' assets will not be affected.
 
 ## Components
 
