@@ -125,10 +125,6 @@ function sidebarService() {
           link: "/guide/getting-started/set-up-metadata-for-your-nfts",
         },
         {
-          text: "Place orders on layer 2",
-          link: "/guide/getting-started/place-orders-on-layer-2",
-        },
-        {
           text: "Transfer NFTs between layer 1 and layer 2",
           link: "/guide/getting-started/transfer-nfts-between-layer-1-and-layer-2",
         },
@@ -150,6 +146,16 @@ function sidebarService() {
         },
       ],
     },
+    {
+      text: 'Java SDK',
+      collapsed: true,
+      collapsible: true,
+      items: [
+       { text: 'Introduction to the Reddio Java SDK', link: '/guide/javasdk-reference/java-introduction' },
+       { text: 'Getting started with Reddio Java SDK', link: '/guide/javasdk-reference/java-getting-started-tutorial' },
+       { text: 'Watching transaction events using the Reddio Java SDK', link: '/guide/javasdk-reference/java-watch-eth-events' },
+     ],
+    },    
     {
       text: "JS SDK",
       collapsed: true,
