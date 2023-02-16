@@ -27,7 +27,7 @@ Get the latest version on Maven Central Repository (https://search.maven.org/art
 
     ```
 - For Gradle:
-    ```gradle
+    ```bash
     implementation 'com.reddio:reddio-api:VERSION'
     ```
 ### Example
