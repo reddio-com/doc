@@ -113,7 +113,7 @@ curl -v -H 'x-api-key: rk-xxxxxx-4326-4b58-ae69-xxxxxxxx' https://api-dev.reddio
 
 ## Remove uploaded files
 
-Remove uploaded files by CID.
+Remove uploaded files by CID, please note that this will not actually delete uploaded files from the IPFS network.
 
 ```jsx
 POST /v1/project/<project_uuid>/storage/remove
