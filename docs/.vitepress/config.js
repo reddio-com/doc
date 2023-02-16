@@ -147,17 +147,7 @@ function sidebarService() {
       ],
     },
     {
-      text: 'Java SDK',
-      collapsed: true,
-      collapsible: true,
-      items: [
-       { text: 'Introduction to the Reddio Java SDK', link: '/guide/javasdk-reference/java-introduction' },
-       { text: 'Getting started with Reddio Java SDK', link: '/guide/javasdk-reference/java-getting-started-tutorial' },
-       { text: 'Watching transaction events using the Reddio Java SDK', link: '/guide/javasdk-reference/java-watch-eth-events' },
-     ],
-    },    
-    {
-      text: "JS SDK",
+      text: "Javascript SDK",
       collapsed: true,
       collapsible: true,
       items: [
@@ -172,6 +162,16 @@ function sidebarService() {
         { text: "Order", link: "/guide/jssdk-reference/order" },
       ],
     },
+    {
+      text: 'Java SDK',
+      collapsed: true,
+      collapsible: true,
+      items: [
+       { text: 'Introduction to the Reddio Java SDK', link: '/guide/javasdk-reference/java-introduction' },
+       { text: 'Getting started with Reddio Java SDK', link: '/guide/javasdk-reference/java-getting-started-tutorial' },
+       { text: 'Watching transaction events using the Reddio Java SDK', link: '/guide/javasdk-reference/java-watch-eth-events' },
+     ],
+    },    
     {
       text: "API Reference",
       collapsed: true,
