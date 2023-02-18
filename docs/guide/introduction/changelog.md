@@ -1,5 +1,13 @@
 # Change Log
 
+## Febuaray 18, 2023
+1. Java SDK 0.0.45 version release
+    - Async request for transfer/withdrawal/order interface
+2. API support get record by signature endpoint /v1/record/by/signature
+3. API support /v1/order to direct retrieve order information
+4. Refine duplicate transaction logic for async requests from clients
+5. Fix some transaction may have multi records
+
 ## Febuaray 4, 2023
 1. Launch new dashboard https://dashboard.reddio.com/project
 2. IPFS upload service in production(alpha)
