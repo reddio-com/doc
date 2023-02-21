@@ -20,7 +20,7 @@ Reddio platform consists of SDKs, APIs and Dashboard
 
 ## [SDKs](/guide/jssdk-reference/initiate-sdk)
 
-Javascript, iOS, Android and Unity SDK is provided (private key generation and signature) for your front end cross platform integration,  we highly recommend you integrate from front end to generate private key and allow your users signing from your UI.
+Javascript, iOS, Android, Unity, Java And Python SDK is provided (private key generation and signature) for your front end cross platform integration,  we highly recommend you integrate from front end to generate private key and allow your users signing from your UI.
 
 
 ## [APIs](/guide/api-reference/api-reference)
