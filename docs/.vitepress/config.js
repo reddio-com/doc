@@ -121,6 +121,10 @@ function sidebarService() {
           link: "/guide/getting-started/mint-nfts-on-layer-2",
         },
         {
+          text: "Upload Files to IPFS",
+          link: "/guide/getting-started/upload-files-to-ipfs",
+        },
+        {
           text: "Set up metadata for your NFTs",
           link: "/guide/getting-started/set-up-metadata-for-your-nfts",
         },
