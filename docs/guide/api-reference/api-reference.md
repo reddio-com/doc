@@ -1,1 +1,1 @@
-### API reference have moves to [here](https://api-docs.reddio.com/?_gl=1*ypylb2*_ga*NzgzNDU3NTczLjE2NTA1MDYzMDY.*_ga_DZPN2FT3DF*MTY3NzQ4ODc2OC4yODQuMS4xNjc3NDkxMTY5LjAuMC4w)
+### API reference have moves [here](https://api-docs.reddio.com/?_gl=1*ypylb2*_ga*NzgzNDU3NTczLjE2NTA1MDYzMDY.*_ga_DZPN2FT3DF*MTY3NzQ4ODc2OC4yODQuMS4xNjc3NDkxMTY5LjAuMC4w) to achieve a better experience
