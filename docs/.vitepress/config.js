@@ -96,6 +96,7 @@ export default {
 function nav() {
   return [
     { text: "Dashboard", link: "https://dashboard.reddio.com/" },
+    { text: "API References", link: "https://api-docs.reddio.com/" },
     // { text: 'SDK', link: '/guide/jssdk-reference/initiate-sdk.html', activeMatch: '/guide/jssdk-reference/initiate-sdk.html' },
     // { text: 'APIs', link: '/guide/api-reference/API_Reference.html', activeMatch: '/guide/api-reference/API_Reference.html' },
   ];
