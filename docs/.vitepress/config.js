@@ -152,6 +152,14 @@ function sidebarService() {
       ],
     },
     {
+      text: "API Reference",
+      collapsed: true,
+      collapsible: true,
+      items: [
+        { text: "API reference", link: "/guide/api-reference/api-reference" },
+      ],
+    },
+    {
       text: "Javascript SDK",
       collapsed: true,
       collapsible: true,
@@ -177,14 +185,6 @@ function sidebarService() {
        { text: 'Watching transaction events using the Reddio Java SDK', link: '/guide/javasdk-reference/java-watch-eth-events' },
      ],
     },    
-    {
-      text: "API Reference",
-      collapsed: true,
-      collapsible: true,
-      items: [
-        { text: "API reference", link: "/guide/api-reference/api-reference" },
-      ],
-    },
     {
       text: "Reference",
       collapsed: true,
