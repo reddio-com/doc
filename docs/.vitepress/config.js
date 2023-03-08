@@ -215,6 +215,10 @@ function sidebarService() {
           text: "How does Reddio works",
           link: "/guide/reference/how-does-reddio-works",
         },
+        {
+          text: "Which blockchain network should I use",
+          link: "/guide/reference/which_blockchain_network_should_i_use"
+        },
         { text: "Terminology", link: "/guide/reference/terminology" },
         { text: "FAQ", link: "/guide/reference/faq" },
       ],
