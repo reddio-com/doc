@@ -121,6 +121,10 @@ function sidebarService() {
           link: "/guide/getting-started/mint-nfts-on-layer-2",
         },
         {
+          text: "Issue Tokens On Layer 2",
+          link: "/guide/getting-started/issue-tokens-on-layer2",
+        },
+        {
           text: "Upload Files to IPFS",
           link: "/guide/getting-started/upload-files-to-ipfs",
         },
