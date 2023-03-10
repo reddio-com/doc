@@ -121,8 +121,13 @@ function sidebarService() {
           link: "/guide/getting-started/mint-nfts-on-layer-2",
         },
         {
-          text: "Issue Tokens On Layer 2",
+          text: "Issue Tokens on layer 2",
           link: "/guide/getting-started/issue-tokens-on-layer2",
+        },
+        {
+          text: "Build In-app Marketplace on layer 2",
+          link: "/guide/getting-started/build-in-app-marketplace-on-layer-2",
+
         },
         {
           text: "Upload Files to IPFS",
