@@ -1,5 +1,15 @@
 # Change Log
 
+## March 10, 2023
+1. Java SDK [0.0.54](https://central.sonatype.com/artifact/com.reddio/reddio-api/0.0.54) release
+    - Unify reddio exception
+    - New method to synchronized method
+    - Add token Type on withdraw ERC721
+2. Add guides on [Dashboard](https://dashboard.reddio.com/project)
+3. New [API docs](https://api-docs.reddio.com/)
+4. Refine error code、exception and wording on all APIs
+
+
 ## Febuaray 18, 2023
 1. Java SDK 0.0.45 version release
     - Async request for transfer/withdrawal/order interface
