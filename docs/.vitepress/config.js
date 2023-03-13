@@ -121,22 +121,22 @@ function sidebarService() {
           text: "Mint NFTs on layer 2",
           link: "/guide/getting-started/mint-nfts-on-layer-2",
         },
-        {
-          text: "Issue Tokens on layer 2",
-          link: "/guide/getting-started/issue-tokens-on-layer2",
-        },
+
         {
           text: "Upload Files to IPFS",
           link: "/guide/getting-started/upload-files-to-ipfs",
         },
         {
-          text: "Build In-app Marketplace on layer 2",
-          link: "/guide/getting-started/build-in-app-marketplace-on-layer-2",
-
-        },
-        {
           text: "Set up metadata for your NFTs",
           link: "/guide/getting-started/set-up-metadata-for-your-nfts",
+        },
+        {
+          text: "Check your ETHs/ERC20s/NFTs balance",
+          link: "/guide/getting-started/check-your-eth-erc20-nft-balance",
+        },
+        {
+          text: "Issue Tokens on layer 2",
+          link: "/guide/getting-started/issue-tokens-on-layer2",
         },
         {
           text: "Transfer NFTs between layer 1 and layer 2",
@@ -150,13 +150,14 @@ function sidebarService() {
           text: "Transfer ERC20s between layer 1 and layer 2",
           link: "/guide/getting-started/transfer-erc20s-between-layer-1-and-layer-2",
         },
-        {
-          text: "Check your ETHs/ERC20s/NFTs balance",
-          link: "/guide/getting-started/check-your-eth-erc20-nft-balance",
-        },
+        
         {
           text: "In-app marketplace demo",
           link: "/guide/getting-started/marketplace-demo",
+        },
+        {
+          text: "Build In-app Marketplace on layer 2",
+          link: "/guide/getting-started/build-in-app-marketplace-on-layer-2",
         },
       ],
     },
