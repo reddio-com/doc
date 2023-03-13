@@ -126,13 +126,13 @@ function sidebarService() {
           link: "/guide/getting-started/issue-tokens-on-layer2",
         },
         {
+          text: "Upload Files to IPFS",
+          link: "/guide/getting-started/upload-files-to-ipfs",
+        },
+        {
           text: "Build In-app Marketplace on layer 2",
           link: "/guide/getting-started/build-in-app-marketplace-on-layer-2",
 
-        },
-        {
-          text: "Upload Files to IPFS",
-          link: "/guide/getting-started/upload-files-to-ipfs",
         },
         {
           text: "Set up metadata for your NFTs",
