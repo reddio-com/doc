@@ -25,7 +25,7 @@ After clicking the "Add Marketplace" button, you will see a form pop up:
 - **Marketplace Fee**: is the percentage charged by your marketplace on each sale made by your users. For example, if you set the marketplace fee to 10%, and a user sells an item for $100, you would deduct $10 (10% of $100) as a fee for facilitating the transaction. The remaining $90 would be credited to the seller's account.
 - **Marketplace Payee Address**: is the layer 2 address, or StarkKey, where the marketplace fee will be received when a transaction is made on your marketplace. More details about StarkKey can be found [here](https://docs.reddio.com/guide/reference/terminology.html#stark-key).
 
-There’s one thing to notice. The transfer of marketplace fee will be automatically executed since marketplace fees are secured and managed through smart contracts, which are self-executing programs that automatically execute the terms of the contract when certain conditions are met. When a transaction takes place on the marketplace, the smart contract automatically deducts the agreed-upon fee from the transaction and transfers it to the designated account. This process is transparent and secure, as all transactions are recorded on the blockchain and cannot be altered or manipulated.
+Once you have set up your marketplace name, fee, and payee address, your marketplace is ready to go. Any transactions made by your users will automatically have the marketplace fee deducted and credited to your specified payee address. You can then monitor the transactions and track the volume, trades, and users on Reddio's Dashboard.
 
 ## Use Reddio’s functionalities to do more
 
