@@ -55,7 +55,7 @@ By now, you have binded your smart contract with a project on Reddio.
 
 To deposit ERC20 tokens from layer 1 to layer 2, there are two methods available: dashboard tool and SDKs. 
 
-For dashboard tool, you need to access reddio’s [dashboard](https://dashboard.reddio.com/project). After that, you need to click "Deposit ERC20 To Layer 2” button on the down left of the dashboard:
+For dashboard tool, you need to access reddio’s [dashboard](https://dashboard.reddio.com/project). After that, you need to go to contracts page. You will see a "Deposit ERC20" button under the ERC20 contract of your choice.
 
 <p align="center">
   <img src="/depositERC20Button.png"/>
@@ -67,10 +67,10 @@ After clicking the button, a form will pop to ask for your input:
   <img src="/depositERC20Form.png"/>
 </p>
 
-- Contract Address: the smart contract address you get via deployment.
-- StarkKey: the address to receive ERC20 Tokens on layer 2. You can get it [here](https://docs.reddio.com/guide/getting-started/mint-nfts-on-layer-2.html#connect-wallet-and-get-public-key-on-layer-2).
-- Amount: the amount of tokens you want to deposit.
-- Network/Chain: the network you use. We recommend to develop your application on Goerli before do that on the mainnet.
+- **Contract Address**: the smart contract address you get via deployment.
+- **StarkKey**: the address to receive ERC20 Tokens on layer 2. You can get it [here](https://docs.reddio.com/guide/getting-started/mint-nfts-on-layer-2.html#connect-wallet-and-get-public-key-on-layer-2).
+- **Amount**: the amount of tokens you want to deposit.
+- **Network/Chain**: the network you use. We recommend to develop your application on Goerli before do that on the mainnet.
 
 After filling all the forms, you can click the “OK” button to deposit Tokens to layer 2. 
 
