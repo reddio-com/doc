@@ -226,6 +226,10 @@ function sidebarService() {
           link: "/guide/reference/how-does-reddio-works",
         },
         {
+          text: "How orderbook and marketplace work",
+          link: "/guide/reference/how_orderbook_and_marketplace_work",
+        },
+        {
           text: "Which blockchain network should I use",
           link: "/guide/reference/which_blockchain_network_should_i_use"
         },

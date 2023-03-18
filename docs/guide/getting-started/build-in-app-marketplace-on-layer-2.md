@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A marketplace on the blockchain is a decentralized online platform that utilizes blockchain technology to provide secure and transparent transactions between buyers and sellers. With Reddio's in-app marketplace, you can easily set up your marketplace fee and create buy/sell orders for your NFTs/tokens.  In this article, we will tell you how to build NFT marketplace on layer 2 with Reddio step by step:
+A marketplace on the blockchain is a decentralized online platform that utilizes blockchain technology to provide secure and transparent transactions between buyers and sellers. With Reddio's in-app marketplace ([click here](/guide/reference/how_orderbook_and_marketplace_work) to learn more about the mechanism), you can easily set up your marketplace fee and create buy/sell orders for your NFTs/tokens.  In this article, we will tell you how to build NFT marketplace on layer 2 with Reddio step by step:
 
 1. Create a marketplace
 2. Set up marketplace info

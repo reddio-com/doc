@@ -1,5 +1,11 @@
 # Change Log
 
+## March 17, 2023
+1. Refine [Dashboard](https://dashboard.reddio.com/project) Guide
+2. Opensource [ERC721](https://github.com/reddio-com/cairo/blob/main/token/ERC721/erc721.cairo) demo code on starknet environment
+3. Fix withdrawal status bug
+
+
 ## March 10, 2023
 1. Java SDK [0.0.54](https://central.sonatype.com/artifact/com.reddio/reddio-api/0.0.54) release
     - Unify reddio exception
