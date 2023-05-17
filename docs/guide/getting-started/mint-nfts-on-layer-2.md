@@ -4,63 +4,29 @@
 
 In this guide, let’s mint NFT on Layer 2.  This guide contains the following steps:
 
-1. Deploy an ERC721M smart contract on layer 1
-2. Bind the smart contract with Reddio
-3. Create and connect your Layer 2 wallet
-4. Grab your API key
-5. Mint ERC721M tokens on layer 2
+1. Install wallet and get your baseURI
+2. Deploy an ERC721 mintable smart contract on Dashboard
+2. Create and connect your Layer 2 wallet
+3. Grab your API key
+4. Mint ERC721M tokens on layer 2
 
-## Deploy an ERC721M smart contract on layer 1
-
-Prerequisites:
+## Install wallet and get your baseURI
 
 1. Install [MetaMask](https://metamask.io/) and create a [MetaMask](https://metamask.io/) wallet.
-2. On your Metamask wallet, choose the Goerli test network as we are using the test network for this guide:
-    
+
+2. Make sure you have enough GoerliETH on the Goerli Testnet because deploying an ERC721M smart contract needs some Goerli ETH as the gas fee. If you don't have enough gas fee, you can [click here](https://discord.gg/wTv3h38pZ3) for help.
+
+3. Get baseURI of your NFT metadata. See [How to Set Up Metadata For Your NFTs](https://docs.reddio.com/guide/getting-started/set-up-metadata-for-your-nfts.html).
+
+## Deploy an ERC721 mintable smart contract on Dashboard
+
+You can easily deploy an ERC721M smart contract on layer 1 by utilizing [Reddio's Dashboard](https://dashboard.reddio.com/). Once you have registered on the dashboard, navigate to the contracts page and click on the "Add Contracts" button. Ensure that you select ERC721 as the Contract Type and switch on the Mintable option. And then, you need to type in all the information about this contract then click "OK":
+
 <p align="center">
-  <img src="/meta-mask-testnet.png"/>
+  <img src="/new_deploy.png"/>
 </p>
 
-3. Make sure you have enough GoerliETH on the Goerli Testnet because deploying an ERC721M smart contract needs some Goerli ETH as the gas fee.
-
-4. The baseURI of your NFT metadata. See [How to Set Up Metadata For Your NFTs](https://docs.reddio.com/guide/getting-started/set-up-metadata-for-your-nfts.html).
-
-**Note:** You can get Goerli ETH on [Reddio Demo](https://demos.reddio.com/account) where you can request 0.1 Goerli ETH by clicking [Get test assets](https://demos.reddio.com/account).
-
-You can deploy an ERC721M smart contract on layer 1 using one of the following two ways:
-
-- Use Reddio's smart contract deployment tool at [https://deploy-contract.reddio.com/](https://deploy-contract.reddio.com/) to deploy a smart contract with a single click. 
-
- <video controls>
-  <source src="/deploy-erc721m.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video> 
-
-- Reuse the ERC721M contract located at [Contract Sample repo](https://github.com/reddio-com/contract_demo/blob/main/src/contracts/ERC721MintFor.sol) to deploy a smart contract using other tools such as [Hardhat](https://hardhat.org/) or [Remix](https://remix-project.org/). If you are using ERC721, please implement the [`mintFor`](https://github.com/reddio-com/contract_demo/blob/main/src/contracts/ERC721MintFor.sol) function in this repo.
-
-After the deployment, you will get the smart contract address. Please keep the smart contract address. 
-
-You can check the smart contract detail on Etherscan by following this [guide](https://docs.reddio.com/guide/getting-started/check-your-eth-erc20-nft-balance.html#view-smart-contract-details-on-layer-1).
-
-## Binding the smart contract with the Reddio platform
-
-Here are the steps to bind the smart contract with the Reddio platform:
-
-- Register your Reddio account at [https://dashboard.reddio.com/](https://dashboard.reddio.com/)
-- Create a project in the Reddio Dashboard. You can use project to contain several of your smart contracts.
-    1. Log in the Reddio dashboard
-    2. Click the drop down button on the top left and then click **Create Project**. Input a name for the project and click **Create Project**
-    3. Select the new project you just created by clicking the drop down button on the top left
-- Go to **Contracts** page, and click **Add Contracts** button.
-<p align="center">
-  <img src="/mintNFT2.png"/>
-</p>
-    
-- Contract Type: the type of your smart contract. For this guide, please select ERC721M.
-- Contract Address: the smart contract address you get via deployment.
-- Base Uri: the URL of the metadata. This field is displayed if you choose ERC721 or ERC721M. For example, suppose you want to show your #1 NFT’s metadata on [https://metadata.reddio.com/api/tokens/1](https://metadata.reddio.com/api/tokens/1) and your #8 NFT’s metadata on [https://metadata.reddio.com/api/tokens/8](https://metadata.reddio.com/api/tokens/8). You need to set up your Base Uri as [https://metadata.reddio.com/api/tokens/](https://metadata.reddio.com/api/tokens/).
-
-By now, you have binded your smart contract with a project on Reddio.
+Then, your wallet will pop up to prompt you to sign the transaction. Once you have successfully signed all the transactions, your deployment will be completed successfully.After that you will receive the smart contract address directly on the dashboard. To further explore the smart contract details on layer 1, you can refer to the comprehensive [guide](https://docs.reddio.com/guide/getting-started/check-your-eth-erc20-nft-balance.html#view-smart-contract-details-on-layer-1) provided by Reddio, which will guide you through the process of checking the smart contract details on Etherscan.
 
 ## Connect wallet and get public key on layer 2
 
@@ -84,6 +50,7 @@ You can get the `stark_key` and  `stark_private_key` by any one of the followin
 - [Recommended] You can go to the Reddio demo to retrieve your `stark_key` pairs.
     - 1. Go to [https://demos.reddio.com/](https://demos.reddio.com/) and login in with your MetaMask.
     - 2. Open the developer tools or console on your browser. You will see two lines on your console. The first line is `stark_key`. The second line is `stark_private_key`.
+    
 <p align="center">
   <img src="/mintNFT3.png"/>
 </p>
