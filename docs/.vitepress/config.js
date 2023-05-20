@@ -158,6 +158,10 @@ function sidebarService() {
           text: "Build In-app Marketplace on layer 2",
           link: "/guide/getting-started/build-in-app-marketplace-on-layer-2",
         },
+        {
+          text: "Import Contracts To Reddio",
+          link: "/guide/getting-started/import-contracts-to-reddio",
+        },
       ],
     },
     {
