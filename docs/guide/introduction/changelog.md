@@ -1,5 +1,15 @@
 # Change Log
 
+## May 27, 2023
+1. Optimize the return structure of Balances /v1 and /v2 interfaces
+2. Update the contracts page of the Dashboard
+3. Integrate contract importation tool into Dashboard
+
+## April 18, 2023
+1. Launch [Explore](https://www.reddio.com/explore) page with 9 brand new demos
+2. Integrate Web3Auth into all the demos
+3. Integrate contract deployment tool into Dashboard
+
 ## March 17, 2023
 1. Refine [Dashboard](https://dashboard.reddio.com/project) Guide
 2. Opensource [ERC721](https://github.com/reddio-com/cairo/blob/main/token/ERC721/erc721.cairo) demo code on starknet environment
