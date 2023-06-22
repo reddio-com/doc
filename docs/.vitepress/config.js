@@ -163,6 +163,10 @@ function sidebarService() {
           text: "Import Contracts To Reddio",
           link: "/guide/getting-started/import-contracts-to-reddio",
         },
+        {
+          text: "Withdraw NFTs To Opensea From Layer 2",
+          link: "/guide/getting-started/withdraw-nfts-to-opensea"
+        }
       ],
     },
     {
