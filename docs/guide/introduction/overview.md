@@ -33,13 +33,14 @@ Reddio platform consists of SDKs, APIs and Dashboard
 ![components](/components.png)
 
 ### [Dashboard](https://dashboard.reddio.com/login)
-On the dashboard, you can get access to API key and integrate from backend to Reddio’s APIs; We are providing the basic APIs usage now and enhancing the dashboard based on you feedback to show more statistics. Dashboards provide the following features
+On the dashboard, you can get access to API key and integrate from backend to Reddio’s APIs; We are providing the basic APIs usage now and enhancing the dashboard based on you feedback to show more statistics. 
+![dashboard quickstart](/dashboard-quickstart.png)
+Dashboards provide the following features
 1. Deploy contracts and register contracts to reddio on Layer1(ethernum)
 2. Mint NFTs on dashboard
 3. Deposit assets to Layer2
 4. IPFS Storages
 5. Statistics about your contracts
-![dashboard quickstart](/dashboard-quickstart.png)
 
 ### [SDKs](/guide/jssdk-reference/initiate-sdk)
 
