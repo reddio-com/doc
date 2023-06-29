@@ -137,6 +137,10 @@ function sidebarService() {
           text: "Transfer NFTs between layer 1 and layer 2",
           link: "/guide/getting-started/transfer-nfts-between-layer-1-and-layer-2",
         },
+        {
+          text: "Issue ERC20 Tokens on layer 2",
+          link: "/guide/getting-started/issue-tokens-on-layer2",
+        },
       ],
     },
     {
