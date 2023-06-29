@@ -20,9 +20,9 @@ In addition to fast transaction speeds, Reddio's Layer 2 solution also offers us
 
 ## What can we build Using Reddio’s API
 There are many applications that can build upon Reddio’s API. here are some examples
-SBT. By using Reddio's API, customers can mint NFTs, granting them ownership and provable authenticity over their digital assets
-Game NFTs. Reddio provides API & SDK for Mints/Transfer/Deposit/Withdrawal NFTs. By providing these essential functionalities, Reddio empowers developers and users to seamlessly manage and interact with NFTs using their platform
-NFT Marketplace. Reddio provides the buy and sell API & SDK to build in app marketplace. Reddio's API and SDK not only facilitate the creation and management of NFTs, but they also extend support for building in-app marketplaces. This means that developers have the ability to integrate Reddio's buy and sell functionalities directly within their applications or platforms.
+1. [SBT](https://academy.binance.com/en/articles/what-are-soulbound-tokens-sbt). By using Reddio's API, customers can mint NFTs, granting them ownership and provable authenticity over their digital assets
+2. Game NFTs. Reddio provides API & SDK for Mints/Transfer/Deposit/Withdrawal NFTs. By providing these essential functionalities, Reddio empowers developers and users to seamlessly manage and interact with NFTs using their platform
+3. NFT Marketplace. Reddio provides the buy and sell API & SDK to build in app marketplace. Reddio's API and SDK not only facilitate the creation and management of NFTs, but they also extend support for building in-app marketplaces. This means that developers have the ability to integrate Reddio's buy and sell functionalities directly within their applications or platforms.
 
 There are many other scenarios that you can explore, such as payment gateways and others
 
