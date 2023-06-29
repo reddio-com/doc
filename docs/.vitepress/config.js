@@ -91,13 +91,10 @@ export default {
       },
     },
 
-    search: {
-      provider: 'algolia',
-      options: {
-        appId: '6CHRL3MCD9',
-        apiKey: '3c694d2add3aef6cd4fcba30fbfa7bcd',
-        indexName: 'reddio'
-      }
+    algolia: {
+      appId: "6CHRL3MCD9",
+      apiKey: "3c694d2add3aef6cd4fcba30fbfa7bcd",
+      indexName: "reddio",
     },
   },
 };
@@ -167,8 +164,8 @@ function sidebarService() {
         },
         {
           text: "Withdraw NFTs To Opensea From Layer 2",
-          link: "/guide/getting-started/withdraw-nfts-to-opensea"
-        }
+          link: "/guide/getting-started/withdraw-nfts-to-opensea",
+        },
       ],
     },
     {
@@ -196,15 +193,24 @@ function sidebarService() {
       ],
     },
     {
-      text: 'Java SDK',
+      text: "Java SDK",
       collapsed: true,
       collapsible: true,
       items: [
-       { text: 'Introduction to the Reddio Java SDK', link: '/guide/javasdk-reference/java-introduction' },
-       { text: 'Getting started with Reddio Java SDK', link: '/guide/javasdk-reference/java-getting-started-tutorial' },
-       { text: 'Watching transaction events using the Reddio Java SDK', link: '/guide/javasdk-reference/java-watch-eth-events' },
-     ],
-    },    
+        {
+          text: "Introduction to the Reddio Java SDK",
+          link: "/guide/javasdk-reference/java-introduction",
+        },
+        {
+          text: "Getting started with Reddio Java SDK",
+          link: "/guide/javasdk-reference/java-getting-started-tutorial",
+        },
+        {
+          text: "Watching transaction events using the Reddio Java SDK",
+          link: "/guide/javasdk-reference/java-watch-eth-events",
+        },
+      ],
+    },
     {
       text: "Reference",
       collapsed: true,
@@ -228,7 +234,7 @@ function sidebarService() {
         },
         {
           text: "Which blockchain network should I use",
-          link: "/guide/reference/which_blockchain_network_should_i_use"
+          link: "/guide/reference/which_blockchain_network_should_i_use",
         },
         { text: "Terminology", link: "/guide/reference/terminology" },
         { text: "FAQ", link: "/guide/reference/faq" },
