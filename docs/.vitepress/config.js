@@ -122,6 +122,10 @@ function sidebarService() {
           link: "/guide/getting-started/import-contracts-to-reddio",
         },
         {
+          text: "Upload Files to IPFS",
+          link: "/guide/getting-started/upload-files-to-ipfs",
+        },
+        {
           text: "Set up metadata for your NFTs",
           link: "/guide/getting-started/set-up-metadata-for-your-nfts",
         },
