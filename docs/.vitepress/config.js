@@ -59,11 +59,11 @@ export default {
       );
       dynamicRoutes = dynamicRoutes.concat(
         files.map(
-          (file) => `/guide/${file.split(".md")[0]}`
+          (file) => `/guide/${dirPath}/${file.split(".md")[0]}`
         )
       );
     });
-    console.log(dynamicRoutes);
+    console.log(dynamicRoutes)
     sitemap({
       hostname: "https://docs.reddio.com",
       outDir: "/docs/.vitepress/dist",
