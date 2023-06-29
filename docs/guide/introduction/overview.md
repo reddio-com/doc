@@ -1,16 +1,22 @@
 # Overview
 
-## Introduction
+## What is Reddio?
 
-Reddio is a technology company that builds infrastrucutre for the blockchain. It provides developers with the world's first easy-to-use layer 2 Agnostic APIs to help them adopt blockchain technologies. For developers who want to deploy on Ethereum for its security but need scale (up to 10k TPS) and 0 gas fees, they can benefit from Reddio's services and enjoy Ethereum's security and stability. With Reddio, developers can:
+The problem of developing applications and games on the Ethereum network:
+    1. Scalability: Ethereum can only process a limited number of transactions per second, which can lead to network congestion during periods of high activity. This scalability issue can significantly impact the performance of apps and games, particularly those that require frequent transactions.
+    2. High Transaction Fees (Gas Fees): Every transaction on Ethereum requires a fee, referred to as a "gas fee," to incentivize miners to include the transaction in the blockchain. These fees can become prohibitively high when the network is busy, which can significantly impact the user experience of apps and games that require regular transactions.
+    3. Complexity of Smart Contract Development: Writing and deploying smart contracts, the backbone of Ethereum apps and games, requires a good understanding of the Solidity programming language and the unique aspects of blockchain technology. Errors in smart contracts can be very costly, as they can't be changed once deployed.
+    4. Interoperability: Creating applications or games that can interact with other smart contracts or blockchains can be challenging, limiting the possibility of integrating with the wider blockchain ecosystem.
+    5. Data Storage: Blockchain isn't designed for storing large amounts of data. Developers must find alternative ways to store data off-chain, which can introduce additional complexity and potential points of failure.
 
-- Quickly build an in-app and in-game NFT marketplace
-- Scale their App and gaming assets trading without worrying about downtime or security
-- Mint NFTs with our Javascript/Java/Python/Unity SDKs with 0 gas fee
-- Build decentralized trading platforms with scalability up to 10k TPS and minimum trading fee
-- Store and transfer assets securely using zero-knowledge proofs 
+Reddio, a layer 2 solution on Ethereum for apps/games, aims to tackle certain issues related to scalability and transaction fees in order to enhance the Ethereum network for application and game development.
 
-Beyond all the benefits mentioned above. As a decentralized solution, Reddio allows users to self-custody their assets, giving them full control over their assets and ensuring that no central authority can stop them from withdrawing their assets. The assets are stored in a smart contract on the Ethereum blockchain, making them secure and transparent. Even if Reddio and Starkware cut down all the servers, users' assets will not be affected.
+1. Reddio provides APIs and SDKs to make it easy build on Layer2. Reddio provides Application Programming Interfaces (APIs) and Software Development Kits (SDKs) to simplify the development process for Layer 2 solutions. This means that developers can easily integrate Reddio into their existing applications and games, or build new ones from scratch, without the significant additional overheads of developing their own Layer 2 solutions from the ground up.The APIs and SDKs offered by Reddio make it easier for developers to interact with Layer 2 solutions on the Ethereum network, enabling them to customize and optimize their applications or games in accordance with the specific requirements of their use cases.
+2. Build decentralized trading platforms with scalability up to 10k TPS and minimum trading fee. Reddio's Layer 2 solution enables the creation of decentralized trading platforms with impressive scalability and low trading fees. With its advanced zk-stark technology, Reddio can support transaction speeds of up to 10,000 transactions per second (TPS), far exceeding the capacity of the Ethereum network itself. This means that traders can engage in high-frequency trading without having to worry about network congestion or excessive transaction fees.
+
+In addition to fast transaction speeds, Reddio's Layer 2 solution also offers users significantly lower trading fees compared to traditional centralized exchanges. This is possible due to the elimination of intermediary fees that are typically incurred when using traditional exchanges.
+
+
 
 ## Components
 
