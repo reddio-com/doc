@@ -114,14 +114,13 @@ function sidebarService() {
       ],
     },
     {
-      text: "Getting started",
+      text: "Basic Guide",
       collapsible: true,
       items: [
         {
-          text: "Mint NFTs on layer 2",
-          link: "/guide/getting-started/mint-nfts-on-layer-2",
+          text: "Import Contracts To Reddio",
+          link: "/guide/getting-started/import-contracts-to-reddio",
         },
-
         {
           text: "Upload Files to IPFS",
           link: "/guide/getting-started/upload-files-to-ipfs",
@@ -131,37 +130,31 @@ function sidebarService() {
           link: "/guide/getting-started/set-up-metadata-for-your-nfts",
         },
         {
-          text: "Check your ETHs/ERC20s/NFTs balance",
-          link: "/guide/getting-started/check-your-eth-erc20-nft-balance",
+          text: "Mint NFTs on layer 2",
+          link: "/guide/getting-started/mint-nfts-on-layer-2",
         },
         {
-          text: "Issue Tokens on layer 2",
-          link: "/guide/getting-started/issue-tokens-on-layer2",
+          text: "Check your ETHs/ERC20s/NFTs balance",
+          link: "/guide/getting-started/check-your-eth-erc20-nft-balance",
         },
         {
           text: "Transfer NFTs between layer 1 and layer 2",
           link: "/guide/getting-started/transfer-nfts-between-layer-1-and-layer-2",
         },
         {
-          text: "Transfer ETHs between layer 1 and layer 2",
-          link: "/guide/getting-started/transfer-eths-between-layer-1-and-layer-2",
+          text: "Issue ERC20 Tokens on layer 2",
+          link: "/guide/getting-started/issue-tokens-on-layer2",
         },
-        {
-          text: "Transfer ERC20s between layer 1 and layer 2",
-          link: "/guide/getting-started/transfer-erc20s-between-layer-1-and-layer-2",
-        },
-        
-        {
-          text: "In-app marketplace demo",
-          link: "/guide/getting-started/marketplace-demo",
-        },
+      ],
+    },
+    {
+      text: "Advanced Guide",
+      collapsible: true,
+      collapsed: true,
+      items: [
         {
           text: "Build In-app Marketplace on layer 2",
           link: "/guide/getting-started/build-in-app-marketplace-on-layer-2",
-        },
-        {
-          text: "Import Contracts To Reddio",
-          link: "/guide/getting-started/import-contracts-to-reddio",
         },
         {
           text: "Withdraw NFTs To Opensea From Layer 2",
