@@ -30,13 +30,6 @@ export default {
     [
       "link",
       {
-        rel: "canonical",
-        href: "https://docs.reddio.com/",
-      },
-    ],
-    [
-      "link",
-      {
         rel: "icon",
         href: "/logo.svg",
       },
@@ -53,6 +46,24 @@ export default {
         )
       );
     });
+    const files = fs.readdirSync(path.resolve(__dirname, "../guide"), {
+      withFileTypes: true,
+    });
+    const directoriesInDirectory = files
+      .filter((item) => item.isDirectory())
+      .map((item) => item.name);
+
+    directoriesInDirectory.forEach((dirPath) => {
+      const files = fs.readdirSync(
+        path.resolve(__dirname, "../guide/" + dirPath)
+      );
+      dynamicRoutes = dynamicRoutes.concat(
+        files.map(
+          (file) => `/guide/${file.split(".md")[0]}`
+        )
+      );
+    });
+    console.log(dynamicRoutes);
     sitemap({
       hostname: "https://docs.reddio.com",
       outDir: "/docs/.vitepress/dist",
