@@ -18,26 +18,37 @@ In addition to fast transaction speeds, Reddio's Layer 2 solution also offers us
 
 
 
-## Components
+## What can we build Using Reddio’s API
+There are many applications that can build upon Reddio’s API. here are some examples
+SBT. By using Reddio's API, customers can mint NFTs, granting them ownership and provable authenticity over their digital assets
+Game NFTs. Reddio provides API & SDK for Mints/Transfer/Deposit/Withdrawal NFTs. By providing these essential functionalities, Reddio empowers developers and users to seamlessly manage and interact with NFTs using their platform
+NFT Marketplace. Reddio provides the buy and sell API & SDK to build in app marketplace. Reddio's API and SDK not only facilitate the creation and management of NFTs, but they also extend support for building in-app marketplaces. This means that developers have the ability to integrate Reddio's buy and sell functionalities directly within their applications or platforms.
+
+There are many other scenarios that you can explore, such as payment gateways and others
+
+## Components & Features
 
 Reddio platform consists of SDKs, APIs and Dashboard
 
 ![components](/components.png)
 
-## [SDKs](/guide/jssdk-reference/initiate-sdk)
+### [Dashboard](https://dashboard.reddio.com/login)
+On the dashboard, you can get access to API key and integrate from backend to Reddio’s APIs; We are providing the basic APIs usage now and enhancing the dashboard based on you feedback to show more statistics. Dashboards provide the following features
+1. Deploy contracts and register contracts to reddio on Layer1(ethernum)
+2. Mint NFTs on dashboard
+3. Deposit assets to Layer2
+4. IPFS Storages
+5. Statistics about your contracts
+![dashboard quickstart](/dashboard-quickstart.png)
+
+### [SDKs](/guide/jssdk-reference/initiate-sdk)
 
 Javascript, iOS, Android, Unity, Java And Python SDK is provided for your front end cross platform integration,  we highly recommend you integrate from front end to generate private key and allow your users signing from your UI.
 
 
-## [APIs](/guide/api-reference/api-reference)
+### [APIs](/guide/api-reference/api-reference)
 
 Backend APIs are also provided, if you are using iOS, Android and Unity SDK, you will need to do the backend integration.
-
-## [Dashboard](https://dashboard.reddio.com/login)
-
-On the dashboard, you can get access to API key and integrate from backend to Reddio’s APIs; We are providing the basic APIs usage now and enhancing the dashboard based on you feedback to show more statistics.
-
-![dashboard quickstart](/dashboard-quickstart.png)
 
 
 
