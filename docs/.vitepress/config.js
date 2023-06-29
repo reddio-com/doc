@@ -145,10 +145,6 @@ function sidebarService() {
       collapsed: true,
       items: [
         {
-          text: "In-app marketplace demo",
-          link: "/guide/getting-started/marketplace-demo",
-        },
-        {
           text: "Build In-app Marketplace on layer 2",
           link: "/guide/getting-started/build-in-app-marketplace-on-layer-2",
         },
