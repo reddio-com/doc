@@ -90,6 +90,15 @@ export default {
         md.use(headerPlugin);
       },
     },
+
+    search: {
+      provider: 'algolia',
+      options: {
+        appId: '6CHRL3MCD9',
+        apiKey: '3c694d2add3aef6cd4fcba30fbfa7bcd',
+        indexName: 'reddio'
+      }
+    },
   },
 };
 
