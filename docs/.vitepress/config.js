@@ -2,8 +2,9 @@ import { headerPlugin } from "./headerMdPlugin";
 import fs from "fs";
 import path from "path";
 import { generateSitemap as sitemap } from "sitemap-ts";
+import { defineConfig } from "vitepress";
 
-export default {
+export default defineConfig({
   lang: "en-US",
   title: "Reddio",
   description: "Reddio Developer Documentations",
@@ -38,14 +39,6 @@ export default {
 
   buildEnd: () => {
     let dynamicRoutes = [];
-    ["../api", "../sdk", "../service"].forEach((dirPath) => {
-      const files = fs.readdirSync(path.resolve(__dirname, dirPath));
-      dynamicRoutes = dynamicRoutes.concat(
-        files.map(
-          (file) => `/${dirPath.split("../")[1]}/${file.split(".md")[0]}`
-        )
-      );
-    });
     const files = fs.readdirSync(path.resolve(__dirname, "../guide"), {
       withFileTypes: true,
     });
@@ -58,12 +51,9 @@ export default {
         path.resolve(__dirname, "../guide/" + dirPath)
       );
       dynamicRoutes = dynamicRoutes.concat(
-        files.map(
-          (file) => `/guide/${dirPath}/${file.split(".md")[0]}`
-        )
+        files.map((file) => `/guide/${dirPath}/${file.split(".md")[0]}`)
       );
     });
-    console.log(dynamicRoutes)
     sitemap({
       hostname: "https://docs.reddio.com",
       outDir: "/docs/.vitepress/dist",
@@ -79,15 +69,6 @@ export default {
       "/guide": sidebarService(),
     },
 
-    // editLink: {
-    //     pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
-    //     text: 'Edit this page on GitHub'
-    // },
-
-    // socialLinks: [
-    //     { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    // ],
-
     footer: {
       license: {
         text: "MIT License",
@@ -96,26 +77,21 @@ export default {
       copyright: `Copyright © 2022-${new Date().getFullYear()} Reddio`,
     },
 
-    markdown: {
-      config(md) {
-        md.use(headerPlugin);
+    search: {
+      provider: "algolia",
+      options: {
+        appId: "6CHRL3MCD9",
+        apiKey: "3c694d2add3aef6cd4fcba30fbfa7bcd",
+        indexName: "reddio",
       },
     },
-
-    algolia: {
-      appId: "6CHRL3MCD9",
-      apiKey: "3c694d2add3aef6cd4fcba30fbfa7bcd",
-      indexName: "reddio",
-    },
   },
-};
+});
 
 function nav() {
   return [
     { text: "Dashboard", link: "https://dashboard.reddio.com/" },
     { text: "API References", link: "https://api-docs.reddio.com/" },
-    // { text: 'SDK', link: '/guide/jssdk-reference/initiate-sdk.html', activeMatch: '/guide/jssdk-reference/initiate-sdk.html' },
-    // { text: 'APIs', link: '/guide/api-reference/API_Reference.html', activeMatch: '/guide/api-reference/API_Reference.html' },
   ];
 }
 
