@@ -1,4 +1,3 @@
-import { headerPlugin } from "./headerMdPlugin";
 import fs from "fs";
 import path from "path";
 import { generateSitemap as sitemap } from "sitemap-ts";
@@ -51,8 +50,16 @@ export default defineConfig({
         path.resolve(__dirname, "../guide/" + dirPath)
       );
       dynamicRoutes = dynamicRoutes.concat(
-        files.map((file) => `/guide/${dirPath}/${file.split(".md")[0]}`)
-      );
+        files.map((file) => {
+          if (
+            dirPath === "api-reference" &&
+            file.split(".md")[0] !== "api-reference"
+          ) {
+            return "";
+          }
+          return `/guide/${dirPath}/${file.split(".md")[0]}`;
+        })
+      ).filter((item) => item !== "");
     });
     sitemap({
       hostname: "https://docs.reddio.com",
