@@ -7,4 +7,5 @@
 3. [ERC721M](https://github.com/reddio-com/contract_sample/blob/main/src/contracts/ERC721MintFor.sol). You can deploy ERC721 Mintable contract on reddio's dashboard, then you can [Mint NFTs on layer2](https://docs.reddio.com/guide/getting-started/mint-nfts-on-layer-2.html)
 4. ERC721MC You can deploy ERC721 Mintable and recommend contract on reddio's dashboard, then you can [Mint NFTs on layer2](https://docs.reddio.com/guide/getting-started/mint-nfts-on-layer-2.html) and set your tokenURI when mint NFTs, We recommend you to using the contract
 
-## Process of minting NFTs on reddio
+## What is NFT metadata
+NFT metadata refers to additional information associated with a non-fungible token (NFT). It includes details such as the title, description, image or video files, creators, and other attributes that provide context and value to the NFT. Metadata plays a crucial role in defining the uniqueness and characteristics of an NFT. It allows creators to add rich media, provenance information, and additional content to enhance the overall experience and understanding of the NFT. Metadata can be stored on-chain or in off-chain decentralized storage, ensuring that the information remains linked to the corresponding NFT and can be accessed by anyone interacting with it.
