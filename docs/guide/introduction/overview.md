@@ -1,6 +1,6 @@
 # Overview
 
-## What are the problems with current EThereum network?
+## What are the problems with current Ethereum network?
 
 The problem of developing applications and games on the Ethereum network:
 1. Scalability: Ethereum can only process a limited number of transactions per second, which can lead to network congestion during periods of high activity. This scalability issue can significantly impact the performance of apps and games, particularly those that require frequent transactions.
@@ -9,8 +9,7 @@ The problem of developing applications and games on the Ethereum network:
 4. Interoperability: Creating applications or games that can interact with other smart contracts or blockchains can be challenging, limiting the possibility of integrating with the wider blockchain ecosystem.
 5. Data Storage: Blockchain isn't designed for storing large amounts of data. Developers must find alternative ways to store data off-chain, which can introduce additional complexity and potential points of failure.
 
-## Why Reddio is the solution to these Ethereum network
-
+## Why Reddio is the solution to these Ethereum network problems?
 Reddio, a layer 2 solution on Ethereum for apps/games, aims to tackle certain issues related to scalability and transaction fees in order to enhance the Ethereum network for application and game development.
 
 1. Reddio provides APIs and SDKs to make it easy build on Layer2. Reddio provides Application Programming Interfaces (APIs) and Software Development Kits (SDKs) to simplify the development process for Layer 2 solutions. This means that developers can easily integrate Reddio into their existing applications and games, or build new ones from scratch, without the significant additional overheads of developing their own Layer 2 solutions from the ground up.The APIs and SDKs offered by Reddio make it easier for developers to interact with Layer 2 solutions on the Ethereum network, enabling them to customize and optimize their applications or games in accordance with the specific requirements of their use cases.
