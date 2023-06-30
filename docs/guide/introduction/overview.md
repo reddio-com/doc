@@ -1,6 +1,6 @@
 # Overview
 
-## What is Reddio?
+## What are the problems with current EThereum network?
 
 The problem of developing applications and games on the Ethereum network:
 1. Scalability: Ethereum can only process a limited number of transactions per second, which can lead to network congestion during periods of high activity. This scalability issue can significantly impact the performance of apps and games, particularly those that require frequent transactions.
@@ -8,6 +8,8 @@ The problem of developing applications and games on the Ethereum network:
 3. Complexity of Smart Contract Development: Writing and deploying smart contracts, the backbone of Ethereum apps and games, requires a good understanding of the Solidity programming language and the unique aspects of blockchain technology. Errors in smart contracts can be very costly, as they can't be changed once deployed.
 4. Interoperability: Creating applications or games that can interact with other smart contracts or blockchains can be challenging, limiting the possibility of integrating with the wider blockchain ecosystem.
 5. Data Storage: Blockchain isn't designed for storing large amounts of data. Developers must find alternative ways to store data off-chain, which can introduce additional complexity and potential points of failure.
+
+## Why Reddio is the solution to these Ethereum network
 
 Reddio, a layer 2 solution on Ethereum for apps/games, aims to tackle certain issues related to scalability and transaction fees in order to enhance the Ethereum network for application and game development.
 
