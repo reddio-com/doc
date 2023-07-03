@@ -15,8 +15,8 @@ Welcome to this comprehensive guide on withdrawing your NFTs to layer 1, enablin
 You can effortlessly deploy an ERC721M smart contract on layer 1 using [Reddio's Dashboard](https://dashboard.reddio.com/). To get started, follow these simple steps:
 
 1. Sign up on the Reddio Dashboard and log in to your account.
-2. Go to the contracts page and locate the "Add Contracts" button.
-3. Click on "Add Contracts" and choose ERC721 (Mintable and Recommended) from the options provided.
+2. Go to the contracts page and locate the "Deploy/Import Contracts" button.
+3. Click on "Deploy Contracts" and choose ERC721 (Mintable and Recommended) from the options provided.
 
 To ensure you have full control over the metadata hosting, disable the "Host Metadata on Reddio" switch. In this tutorial, we will be hosting the metadata ourselves. 
 
