@@ -6,7 +6,7 @@
   "license": "MIT",
   "devDependencies": {
     "sitemap-ts": "^0.2.7",
-    "vitepress": "^1.0.0-alpha.13",
+    "vitepress": "1.0.0-beta.3",
     "vue": "^3.2.37"
   },
   "scripts": {
