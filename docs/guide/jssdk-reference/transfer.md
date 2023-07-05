@@ -54,6 +54,12 @@ tokenId of token.
 
 The period to expire for the transfer, unit is seconds.
 
+---
+
+**tokenUrl** <strong style='color:#8792a2'>string</strong>
+
+Token url of ERC721. If your contract type is ERM721MC, this parameter must be passed.
+
 ### Example
 
 ```tsx
