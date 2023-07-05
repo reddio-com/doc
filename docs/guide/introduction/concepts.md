@@ -9,6 +9,14 @@ The ERC-20 introduces a standard for Fungible Tokens, in other words, they have 
 ## What is layer2?
 [Layer 2](https://academy.binance.com/en/glossary/layer-2) is a secondary framework built on top of a blockchain network (Layer 1). It improves scalability and performance by processing transactions off-chain or on sidechains, reducing fees and increasing transaction throughput. It enhances blockchain usability and enables faster, cheaper transactions without sacrificing security.
 
+With layer 2, there are quite a few benefits,
+
+- Lower gas fees:By combining multiple off-chain transactions into a single layer 1 transaction, transaction fees are massively reduced
+
+- Mainnet security:Layer 2 blockchains settle their transactions on Mainnet, allowing users to benefit from the security of the layer 1 network.
+
+- Expand use cases:With higher transactions per second, lower fees, and new technology, projects will expand into new applications with improved user experience.
+
 ## Type of contracts that reddio provides
 1. [ERC20](https://github.com/reddio-com/contract_sample/blob/main/src/contracts/ERC20General.sol). You can create ERC20 tokens on reddio's dashboard, then you can [issue the tokens on layer2](https://docs.reddio.com/guide/getting-started/issue-tokens-on-layer2.html)
 2. [ERC721](https://github.com/reddio-com/contract_sample/blob/main/src/contracts/ERC721General.sol). You can deploy ERC721 contract on reddio's dashboard , then you can [deposit & withdraw NFTs between layer1 and layer1](https://docs.reddio.com/guide/getting-started/transfer-nfts-between-layer-1-and-layer-2.html)
