@@ -20,7 +20,7 @@ Generating a signature requires.
 
 ---
 
-<strong style='color:red'>*</strong>**type** <strong style='color:#8792a2'>'ETH' | 'ERC20' | 'ERC721' | 'ERC721M'</strong>
+<strong style='color:red'>*</strong>**type** <strong style='color:#8792a2'>'ETH' | 'ERC20' | 'ERC721' | 'ERC721M' | 'ERC721MC'</strong>
 
 The token type.
 

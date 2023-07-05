@@ -12,25 +12,25 @@ Withdrawal to another Ethereum address for ERC-20/ETH and ERC-721.
 
 ---
 
-<strong style='color:red'>*</strong>**starkKey** <strong style='color:#8792a2'>string</strong>
+<strong style='color:red'>\*</strong>**starkKey** <strong style='color:#8792a2'>string</strong>
 
 A unique key that identifies the user in the off-chain state.
 
 ---
 
-<strong style='color:red'>*</strong>**privateKey** <strong style='color:#8792a2'>string</strong>
+<strong style='color:red'>\*</strong>**privateKey** <strong style='color:#8792a2'>string</strong>
 
 Generating a signature requires.
 
 ---
 
-<strong style='color:red'>*</strong>**type** <strong style='color:#8792a2'>'ETH' | 'ERC20' | 'ERC721' | 'ERC721M'</strong>
+<strong style='color:red'>\*</strong>**type** <strong style='color:#8792a2'>'ETH' | 'ERC20' | 'ERC721' | 'ERC721M' | 'ERC721MC'</strong>
 
 The token type.
 
 ---
 
-<strong style='color:red'>*</strong>**receiver** <strong style='color:#8792a2'>string</strong>
+<strong style='color:red'>\*</strong>**receiver** <strong style='color:#8792a2'>string</strong>
 
 The wallet address of the receiver.
 
@@ -58,29 +58,35 @@ tokenId of token.
 
 The period to expire for the transfer, unit is seconds.
 
+---
+
+**tokenUrl** <strong style='color:#8792a2'>string</strong>
+
+Token url of ERC721. If your contract type is ERM721MC, this parameter must be passed.
+
 ### Example
 
 ```tsx
 const { data: res } = await reddio.apis.withdrawalFromL2({
-  starkKey: '0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda',
-  privateKey: '',
-  contractAddress: '0x941661bd1134dc7cc3d107bf006b8631f6e65ad5',
+  starkKey: "0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda",
+  privateKey: "",
+  contractAddress: "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
   tokenId: 1,
-  type: 'ERC721',
-  receiver: '0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda',
+  type: "ERC721",
+  receiver: "0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda",
   expirationTimestamp: 4194303,
 });
-``` 
+```
 
 ### Example return
 
 ```json
 {
-	"status": "OK",
-	"error": "",
-	"data": {
-		"sequence_id": 13
-	}
+  "status": "OK",
+  "error": "",
+  "data": {
+    "sequence_id": 13
+  }
 }
 ```
 
@@ -94,19 +100,19 @@ You can only call the `withdrawalFromL1` funcation for the asset of withdrawal a
 
 ---
 
-<strong style='color:red'>*</strong>**starkKey** <strong style='color:#8792a2'>string</strong>
+<strong style='color:red'>\*</strong>**starkKey** <strong style='color:#8792a2'>string</strong>
 
 A unique key that identifies the user in the off-chain state.
 
 ---
 
-<strong style='color:red'>*</strong>**assetType** <strong style='color:#8792a2'>string</strong>
+<strong style='color:red'>\*</strong>**assetType** <strong style='color:#8792a2'>string</strong>
 
 The asset type.
 
 ---
 
-<strong style='color:red'>*</strong>**type** <strong style='color:#8792a2'>'ETH' | 'ERC20' | 'ERC721' | 'ERC721M'</strong>
+<strong style='color:red'>\*</strong>**type** <strong style='color:#8792a2'>'ETH' | 'ERC20' | 'ERC721' | 'ERC721M' | 'ERC721MC'</strong>
 
 The token type.
 
@@ -116,13 +122,19 @@ The token type.
 
 tokenId of token.
 
+---
+
+**tokenUrl** <strong style='color:#8792a2'>string</strong>
+
+Token url of ERC721. If your contract type is ERM721MC, this parameter must be passed.
+
 ### Example
 
 ```tsx
 await reddio.apis.withdrawalFromL1({
-  starkKey: '0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda',
-  assetType: '0x2d6e7b6a8e809f94ed4bef245e06437c18e033044a5787e15eda57be47929f',
-  type: 'ETH',
+  starkKey: "0x761f1709a72a7e1d9a503faf2a1067686f315acdc825a804e1281fbd39accda",
+  assetType: "0x2d6e7b6a8e809f94ed4bef245e06437c18e033044a5787e15eda57be47929f",
+  type: "ETH",
 });
 ```
 
@@ -138,13 +150,13 @@ Check if your asset is ready to withdraw to L1.
 
 ---
 
-<strong style='color:red'>*</strong>**stage** <strong style='color:#8792a2'>string</strong>
+<strong style='color:red'>\*</strong>**stage** <strong style='color:#8792a2'>string</strong>
 
 Withdraw stage, currently we only support `withdrawarea`.
 
 ---
 
-<strong style='color:red'>*</strong>**ethaddress** <strong style='color:#8792a2'>string</strong>
+<strong style='color:red'>\*</strong>**ethaddress** <strong style='color:#8792a2'>string</strong>
 
 ETH address.
 
@@ -152,8 +164,8 @@ ETH address.
 
 ```ts
 const { data } = reddio.apis.withdrawalStatus({
-  ethaddress: '0x067ceABFb722CA0034f39b88EE4004dAbc8ef33b',
-  stage: 'withdrawarea',
+  ethaddress: "0xC664B68aFceD392656Ed8c4adaEFa8E8ffBF65DC",
+  stage: "withdrawarea",
 });
 ```
 
@@ -164,36 +176,30 @@ const { data } = reddio.apis.withdrawalStatus({
   "status": "OK",
   "data": [
     {
-      "contract_address": "eth",
-      "asset_id": "0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
-      "token_id": "",
-      "type": "ETH",
-      "asset_type": "0x352f9ffd821a525051de2d71126113505a7b0a73d98dbc0ac0ff343cfbdef5e",
-      "display_value": "0.011",
-      "symbol": "ETH",
-      "amount": 11000
+      "contract_address": "0x0b26f9dBbEeF0636e90a98651a693Ceb1769d16B",
+      "asset_id": "0x400558804d40a71b6b8e41bbacbb05c37c36d749b5dcdf6590421c4c9c66d89",
+      "token_id": "1",
+      "type": "ERC721M",
+      "asset_type": "0x5836f15aead555b938a0d56b156fed17836162412ccc77a2e675bcb66336e6",
+      "display_value": "",
+      "symbol": "11",
+      "amount": 1,
+      "token_uri": null,
+      "sequence_ids": [null]
     },
     {
-      "contract_address": "0x57f3560b6793dcc2cb274c39e8b8eba1dd18a086",
-      "asset_id": "0x348d9f01e42582dee55ba5db85b0ab036671786ca9e140642d7b7a010abb159",
-      "token_id": "",
-      "type": "ERC20",
-      "asset_type": "0x348d9f01e42582dee55ba5db85b0ab036671786ca9e140642d7b7a010abb159",
-      "display_value": "100",
-      "symbol": "RDD20",
-      "amount": 100000000
+      "contract_address": "0x0b26f9dBbEeF0636e90a98651a693Ceb1769d16B",
+      "asset_id": "0x400c8cfab3df79d45d2dfdd979fd9e1ba5bd40cbf0c8d4a85b2a2f0ea6540dd",
+      "token_id": "2",
+      "type": "ERC721M",
+      "asset_type": "0x5836f15aead555b938a0d56b156fed17836162412ccc77a2e675bcb66336e6",
+      "display_value": "",
+      "symbol": "11",
+      "amount": 1,
+      "token_uri": null,
+      "sequence_ids": [null]
     },
-    {
-      "contract_address": "0x941661bd1134dc7cc3d107bf006b8631f6e65ad5",
-      "asset_id": "0x36943f9a5f1e83ff2ed74e9d2c94088c3648c1cff7184f1b565a1890f2b640f",
-      "token_id": "255",
-      "type": "ERC721",
-      "asset_type": "0x2b405eba724b638f4cf82ccadcd2741a120d2dbc69cb89a5fc315a9c443d592",
-      "display_value": "1",
-      "symbol": "REDDIO721",
-      "amount": 1
-    }
   ],
-  "error": ""
+  "error": null
 }
 ```
