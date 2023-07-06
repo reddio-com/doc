@@ -1,8 +1,10 @@
-### ERC721/NFT
+# Concepts
+
+## ERC721/NFT
 
 ERC-721 is a free, open standard that describes how to build non-fungible or unique tokens on the Ethereum blockchain. While most tokens are fungible (every token is the same as every other token), ERC-721 tokens are all unique.
 
-### ERC20
+## ERC20
 
 The ERC-20 introduces a standard for Fungible Tokens, in other words, they have a property that makes each token be exactly the same (in type and value) as another token. For example, an ERC-20 token acts just like the ETH, meaning that 1 Token is and will always be equal to all the other Tokens.
 
