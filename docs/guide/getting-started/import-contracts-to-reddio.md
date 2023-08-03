@@ -6,7 +6,7 @@ In this guide, we will explore how to import contracts to Reddio, enabling them 
 
 1. Checking contracts' detail
 2. Importing contracts to Reddio
-3. Use Reddio’s functionalities to do more
+3. Use Reddio's functionalities to do more
 
 ## Checking contracts' detail
 
