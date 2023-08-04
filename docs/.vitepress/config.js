@@ -163,7 +163,15 @@ function sidebarService() {
         {
           text: "Withdraw NFTs To Opensea From Layer 2 With Self-Hosted Metadata Server",
           link: "/guide/getting-started/withdraw-nfts-to-opensea-with-self-hosted-metadata",
-        }
+        },
+        {
+          text: "Withdraw NFTs To Layer 1 With Python",
+          link: "/guide/getting-started/withdraw-nfts-to-layer-1-with-python",
+        },
+        {
+          text: "Publish Your ERC721 Project To Mainnet",
+          link: "/guide/getting-started/publish-your-erc721-project-to-mainnet.md",
+        },
         
       ],
     },
