@@ -165,8 +165,8 @@ function sidebarService() {
           link: "/guide/getting-started/withdraw-nfts-to-opensea-with-self-hosted-metadata",
         },
         {
-          text: "Withdraw NFTs To Layer 1 With Python",
-          link: "/guide/getting-started/withdraw-nfts-to-layer-1-with-python",
+          text: "Withdraw NFTs To Layer 1 With Javascript SDK",
+          link: "/guide/getting-started/withdraw-nfts-to-layer-1-with-jssdk.md",
         },
         {
           text: "Publish Your ERC721 Project To Mainnet",
