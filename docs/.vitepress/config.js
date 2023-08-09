@@ -161,6 +161,10 @@ function sidebarService() {
           link: "/guide/getting-started/build-in-app-marketplace-on-layer-2",
         },
         {
+          text: "Mint NFTs With API Calls On Layer 2",
+          link: "/guide/getting-started/mint-nfts-with-api-calls-on-layer-2",
+        },
+        {
           text: "Withdraw NFTs To Opensea From Layer 2 With Self-Hosted Metadata Server",
           link: "/guide/getting-started/withdraw-nfts-to-opensea-with-self-hosted-metadata",
         },

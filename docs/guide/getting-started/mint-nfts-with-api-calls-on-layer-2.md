@@ -6,9 +6,8 @@ Dive into the process of minting NFTs on Layer 2 using API calls with our step-b
 
 1. Deploy an ERC721 mintable smart contract on Dashboard
 2. Mint new NFTs on Layer 2
-3. Associate metadata with the correct token ID
-4. Uploading image files linked to the appropriate token ID
-5. Verifying metadata within the contract
+3. Upload metadata and image file
+4. Verifying metadata
 
 ## Deploy an ERC721 mintable smart contract on Dashboard
 
@@ -28,11 +27,7 @@ After your deployment process is finished, you will see your new contract name u
 
 To further explore the smart contract details on layer 1, you can refer to the comprehensive [guide](https://docs.reddio.com/guide/getting-started/check-your-eth-erc20-nft-balance.html#view-smart-contract-details-on-layer-1) provided by Reddio, which will guide you through the process of checking the smart contract details on Etherscan.
 
-Fine-tuning for clarity, organization, and readability:
-
----
-
-## How to Mint NFTs on Layer 2
+## Mint new NFTs on Layer 2
 
 If you're looking to mint new NFTs on Layer 2, this guide will walk you through each step of the process. Before you get started, ensure you have the following details handy:
 
@@ -67,7 +62,18 @@ Replace the placeholders with the appropriate details:
 - `amount`: Specify the quantity of tokens you wish to mint (up to a maximum of 100).
 
 ### 4. Transmit the Request
-Utilize an API testing tool or an HTTP client of your choice (like Postman or cURL). Direct a POST request to the above-mentioned URL with the headers and body you've prepared.
+Utilize an API testing tool or an HTTP client of your choice (like Postman or cURL). Direct a POST request to the above-mentioned URL with the headers and body you have prepared. To help you understand better, here's how you might send the request using cURL:
+
+```bash
+curl --location --request POST 'https://api-dev.reddio.com/v1/mints?contract_address=0x97EE3E6C6b98abDB29a5dd3d1936997b4dA76097&stark_key=0x1baf1b9991271727e8ebabf242cb5c707ae72f356481908a344109c08f11c3&amount=1' \
+    --header 'content-type: application/json' \
+    --header 'X-API-Key: rk-85cfdc4d-683b-4bfa-xxxx-cbfa2c1a6334' \
+    --data-raw '{
+        "contract_address":"0x97EE3E6C6b98abDB29a5dd3d1936997b4dA76097",
+        "stark_key":"0x1baf1b9991271727e8ebabf242cb5c707ae72f356481908a344109c08f11c3",
+        "amount":"10"
+    }'
+```
 
 ### 5. Await the Response
 Once you've sent off your request, you'll receive a server response. A typical successful response will resemble:
@@ -107,6 +113,7 @@ Creating metadata for a specific token ID can help provide more details about th
 - **Name**: A name for your token.
 - **Description**: A brief description or overview of your token.
 - **Media**: An image to represent this token.
+- **Additional Key-Value**: Metadata other than name,description, media. [Check here](/guide/getting-started/set-up-metadata-for-your-nfts) to learn more.
 
 ### Steps:
 
@@ -122,7 +129,8 @@ Creating metadata for a specific token ID can help provide more details about th
    - `token_id`: Your Token ID
    - `name`: The name you have chosen for your token.
    - `description`: Your token's brief description.
-   - `media`: The media associated with your token.
+   - `media`: The image associated with your token.
+   - `additional_kv`: Other key value that will store on metadata.json.
 
 3. **Send the Request**
 
@@ -130,29 +138,61 @@ Creating metadata for a specific token ID can help provide more details about th
 
    Note: Ensure that you set the content type to `multipart/form-data` if required by your API testing tool.
 
-4. **Receive the Response**
-
-   Once you've submitted the request, you'll receive a response from the server. This will typically indicate whether the metadata was created successfully or if there were any errors.
-
-### Example Using cURL:
-
-To help you understand better, here's how you might send the request using cURL:
+   To help you understand better, here's how you might send the request using cURL:
 
 ```bash
-curl -X POST \
-     -H "Content-Type: multipart/form-data" \
-     -F "token_id=YOUR_TOKEN_ID" \
-     -F "name=YOUR_NAME" \
-     -F "description=YOUR_DESCRIPTION" \
-     -F "media=YOUR_MEDIA_LINK" \
-     https://api-dev.reddio.com/v1/project/contract/YOUR_CONTRACT_UUID/metadata
+curl --location --request POST 'https://api-dev.reddio.com/v1/project/contract/{Your contract UUID}}/metadata' \
+    --header 'X-API-Key: rk-85cfdc4d-683b-4bfa-xxxx-cbfa2c1a6334' \
+    --form 'token_id="17"' \
+    --form 'name="NFT Name"' \
+    --form 'description="NFT Description"' \
+    --form 'media=@"/C:/image.png"' \
+    --form 'additional_kv="{\"power\":162,\"health\":100}"'
 ```
 
-Replace placeholders (`YOUR_TOKEN_ID`, `YOUR_NAME`, `YOUR_DESCRIPTION`, `YOUR_MEDIA_LINK`, and `YOUR_CONTRACT_UUID`) with your actual data.
+
+
+4. **Receive the Response**
+
+   Once you've submitted the request, you'll receive a response from the server. A successful response will look like this:
+
+```json
+{
+    "status": "OK",
+    "data": {
+        "message": "Metadata uploaded."
+    },
+    "error": null
+}
+```
 
 That's it! You've now set up metadata for a specific token ID using the API.
 
+## Verifying metadata
+
+Once you've uploaded metadata and its corresponding image for a specific token ID, it's essential to verify that the process was successful. This guide will walk you through how to verify the metadata using Reddio's Dashboard:
+
+1. **Access the Dashboard**:
+   - Begin by navigating to [Reddio's Dashboard](https://dashboard.reddio.com/).
+
+2. **Locate the Relevant Contract**:
+   - Once you're on the dashboard, head over to the contracts page.
+   - Browse through the list of contracts until you find the one to which you recently uploaded metadata and an image.
+
+3. **Inspect the Metadata**:
+   - Click on the contract you identified in the previous step.
+   - Navigate to the "metadata" tab. Here, you'll be able to see the metadata details.
+
+<p align="center">
+  <img src="/new_deploy_result.png" alt="Screenshot showcasing metadata results"/>
+</p>
+
+4. **Verification**:
+   - If you can see the image associated with the metadata you uploaded, congratulations! It means your metadata was successfully uploaded to the platform.
+
+Remember to periodically check Reddio's Dashboard for updates or any changes to the metadata verification process.
+
 ## Next steps
 
-- [Check your ERC721M balance and collection on layer 2](https://docs.reddio.com/guide/getting-started/check-your-eth-erc20-nft-balance.html#view-erc721-erc721m-balance-on-layer-2)
-- [Upload files to IPFS](/guide/getting-started/upload-files-to-ipfs)
+- [Withdraw NFTs To Opensea From Layer 2](/guide/getting-started/withdraw-nfts-to-opensea)
+- [Publish Your ERC721 Project To Mainnet](/guide/getting-started/publish-your-erc721-project-to-mainnet)
