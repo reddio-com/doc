@@ -162,7 +162,7 @@ function sidebarService() {
         },
         {
           text: "Mint NFTs With API Calls On Layer 2",
-          link: "/guide/getting-started/mint-nfts-with-api-calls-on-layer-2",
+          link: "/guide/getting-started/mint-nfts-with-api-calls-on-layer-2.md",
         },
         {
           text: "Withdraw NFTs To Opensea From Layer 2 With Self-Hosted Metadata Server",
@@ -176,6 +176,10 @@ function sidebarService() {
           text: "Publish Your ERC721 Project To Mainnet",
           link: "/guide/getting-started/publish-your-erc721-project-to-mainnet.md",
         },
+        {
+          text: "Integrate Payment Service for Web2 Projects with Reddio",
+          link: "/guide/getting-started/integrate-payment-service-for-web2-projects-with-reddio.md",
+        }
         
       ],
     },
