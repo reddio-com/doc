@@ -31,6 +31,7 @@ Apart from these operations, your system might also need to log various actions 
   <img src="/cartcheckout.png"/>
 </p>
 
+
 The process is divided into 6 steps:
 1. User initiates a payment to the merchant.
 2. Upon receiving the payment info, the merchant verifies the user's funds with the payment service and sends the payment details.
@@ -94,7 +95,12 @@ public void generateNewWalletAddressAndKeys() {
 }
 ```
 
-2. **User Deposits:** Since users start with zero funds but need funds to make payments, provide an interface for them to deposit funds. Here's a simple deposit function using Javascript:
+2. **User Deposits:** Since users start with zero funds but need funds to make payments, we provide an interface for them to deposit funds [click here](https://usdc-demo-sepia.vercel.app/). Here's a simple deposit function using Javascript:
+
+<p align="center">
+  <img src="/integrate_deposit.png"/>
+</p>
+
 ```javascript
 const depositUSDC = async (amount: number) => {
     const tx = await reddio.erc20.approve({
@@ -109,6 +115,9 @@ const depositUSDC = async (amount: number) => {
     });
 }
 ```
+
+
+
 3. **User Payments to Merchant:** Since we assume hosted wallets, the backend will facilitate the payment to the merchant's address. Below is the Java code for transfers:
 ```java
 public void transfer() {
