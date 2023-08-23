@@ -177,6 +177,10 @@ function sidebarService() {
           link: "/guide/getting-started/publish-your-erc721-project-to-mainnet.md",
         },
         {
+          text: "Publish Your ERC20 Project To Mainnet",
+          link: "/guide/getting-started/publish-your-erc20-project-to-mainnet.md",
+        },
+        {
           text: "Integrate Payment Service for Web2 Projects with Reddio",
           link: "/guide/getting-started/integrate-payment-service-for-web2-projects-with-reddio.md",
         }
