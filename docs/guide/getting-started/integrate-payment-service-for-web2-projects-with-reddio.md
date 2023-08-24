@@ -177,6 +177,6 @@ const withdrawToWallet = async (item: any) => {
 }
 ```
 
-That wraps up the integration process. With these steps and some additional configurations, your payment service will be ready. For the full frontend code, refer to the provided link. Try the frontend demo [here](https://demos.reddio.com/).
+That wraps up the integration process. With these steps and some additional configurations, your payment service will be ready. For the full frontend code, refer to the provided link. Try the frontend demo [here](https://usdc-demo-sepia.vercel.app/).
 
 Thank you for considering Reddio for your payment service foundation!
