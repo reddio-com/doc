@@ -236,10 +236,6 @@ function sidebarService() {
       collapsible: true,
       items: [
         {
-          text: "Layer 2 introduction",
-          link: "/guide/reference/layer-2-introduction",
-        },
-        {
           text: "How does layer 2 works",
           link: "/guide/reference/how-does-layer-2-works",
         },
@@ -255,7 +251,6 @@ function sidebarService() {
           text: "Which blockchain network should I use",
           link: "/guide/reference/which_blockchain_network_should_i_use",
         },
-        { text: "Terminology", link: "/guide/reference/terminology" },
         { text: "FAQ", link: "/guide/reference/faq" },
       ],
     },

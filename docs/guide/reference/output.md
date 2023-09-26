@@ -1,5 +1,3 @@
-# Frequently Asked Questions
-
 ## Layer 2 
 
 ### Is Reddio an independent chain?

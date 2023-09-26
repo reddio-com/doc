@@ -26,7 +26,7 @@ The amount you wish to buy/sell.
 
 ---
 
-<strong style='color:red'>*</strong>**tokenType** <strong style='color:#8792a2'>'ETH' | 'ERC20' | 'ERC721' | 'ERC721M'</strong>
+<strong style='color:red'>*</strong>**tokenType** <strong style='color:#8792a2'>'ETH' | 'ERC20' | 'ERC721' | 'ERC721M' | 'ERC721MC'</strong>
 
 The token type for transaction.
 
