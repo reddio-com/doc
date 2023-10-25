@@ -111,6 +111,7 @@ function sidebarService() {
         { text: "Overview", link: "/guide/introduction/overview" },
         { text: "Features", link: "/guide/introduction/feature" },
         { text: "Concepts", link: "/guide/introduction/concepts" },
+        { text: "Changelog", link: "/guide/introduction/changelog"},
       ],
     },
     {
