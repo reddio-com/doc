@@ -99,6 +99,7 @@ function nav() {
   return [
     { text: "Dashboard", link: "https://dashboard.reddio.com/" },
     { text: "API References", link: "https://api-docs.reddio.com/" },
+    { text: "Changelog", link: "/guide/introduction/changelog" },
   ];
 }
 
