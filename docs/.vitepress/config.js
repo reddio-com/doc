@@ -232,6 +232,18 @@ function sidebarService() {
       ],
     },
     {
+      text: "Dedicated Nodes",
+      collapsed: true,
+      collapsible: true,
+      items: [
+        {
+          text: "StarkNet Node",
+          link: "/guide/node/starknet",
+        },
+      ],
+
+    },
+    {
       text: "Reference",
       collapsed: true,
       collapsible: true,
