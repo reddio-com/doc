@@ -2,7 +2,7 @@
 
 ## Introduction
 
-StarkNet is a decentralized Validity-Rollup, commonly referred to as a "ZK-Rollup". It functions as an L2 network on top of Ethereum, allowing any dApp to seamlessly scale its computations while retaining Ethereum’s inherent composability and security.
+StarkNet is a decentralized Validity-Rollup, commonly referred to as a "ZK-Rollup". It functions as an L2 network on top of Ethereum, allowing any dApp to seamlessly scale its computations while retaining Ethereum's inherent composability and security.
 
 For a limited time, Reddio offers a high-speed connection to the StarkNet Node free of charge with lowest delay. Discover why Reddio claims the fastest connection by [reading more here](https://blog.reddio.com/reddios-starknet-beta-node-launch-access-the-future-today/). 
 
