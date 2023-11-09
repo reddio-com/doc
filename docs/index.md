@@ -2,8 +2,7 @@
 layout: home
 
 hero:
-    name: Reddio
-    text: The Layer 2 and APIs for Developers
+    name: The Layer 2 and APIs by Developers for Developers
     tagline: Easy-to-use, massive scalability and 0 gas fee. Integrate Layer 2 into your application and beyond.
     actions:
         - theme: brand

@@ -2,7 +2,7 @@
 
 ## Seek Available NFTs To Place Orders
 
-After you finished the mintintg process described in “[Mint NFTs On Layer 2](https://docs.reddio.com/guide/getting-started/mint-nfts-on-layer-2.html)”, you will see ERC721M balance under your wallet. However, you can only place orders on the NFTs that are not “frozen”.For example, if you use [balance v2 API](https://docs.reddio.com/guide/api-reference/balance.html#get-balances-v2) to check the balance with your own stark_key, you will use the following URL and see the json response like this:
+After you finish the minting process described in “[Mint NFTs On Layer 2](https://docs.reddio.com/guide/getting-started/mint-nfts-on-layer-2.html)”, you will see ERC721M balance under your wallet. However, you can only place orders on the NFTs that are not “frozen”.For example, if you use [balance v2 API](https://docs.reddio.com/guide/api-reference/balance.html#get-balances-v2) to check the balance with your own stark_key, you will use the following URL and see the json response like this:
 
 ```shell
 https://api-dev.reddio.com/v2/balances?stark_key=0x1baf1b9991271727e8ebabf242cb5c707ae72f356481908a344109c08f11c3
@@ -45,7 +45,7 @@ In this case, we can use token with token ID “1” to place our orders.
 
 ## Place A Sell Order
 
-We recommend you to use our [SDKs](https://docs.reddio.com/guide/jssdk-reference/initiate-sdk.html) to place sell orders due to encryption calculation reason. In this tutorial, we will [Python SDK](https://github.com/reddio-com/red-py-sdk) to demonstrate for you. After you have installed the Python SDK, you can import the module and initiate the objects in your IDEs like this:
+We recommend you to use our [SDKs](https://docs.reddio.com/guide/SDKs/jssdk-reference/initiate-sdk.html) to place sell orders due to encryption calculation reason. In this tutorial, we will [Python SDK](https://github.com/reddio-com/red-py-sdk) to demonstrate for you. After you have installed the Python SDK, you can import the module and initiate the objects in your IDEs like this:
 
 ```python
 from redpysdk import Reddio
