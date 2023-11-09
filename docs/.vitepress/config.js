@@ -71,7 +71,7 @@ export default defineConfig({
 
   themeConfig: {
     nav: nav(),
-
+    logo: '/logo.svg',
     sidebar: {
       "/guide": sidebarService(),
     },
@@ -92,6 +92,10 @@ export default defineConfig({
         indexName: "reddio",
       },
     },
+
+    outline: {
+      label: "TABLE OF CONTENTS",
+    }
   },
 });
 
@@ -197,19 +201,32 @@ function sidebarService() {
       ],
     },
     {
-      text: "Javascript SDK",
-      collapsed: true,
+      text: "SDKs",
+      collapsed: false,
       collapsible: true,
       items: [
-        { text: "Initiate SDK", link: "/guide/jssdk-reference/initiate-sdk" },
-        { text: "Utils", link: "/guide/jssdk-reference/utils" },
-        { text: "Deposit", link: "/guide/jssdk-reference/deposit" },
-        { text: "Withdraw", link: "/guide/jssdk-reference/withdraw" },
-        { text: "Transfer", link: "/guide/jssdk-reference/transfer" },
-        { text: "Balance", link: "/guide/jssdk-reference/balance" },
-        { text: "Record", link: "/guide/jssdk-reference/record" },
-        { text: "Contract", link: "/guide/jssdk-reference/contract" },
-        { text: "Order", link: "/guide/jssdk-reference/order" },
+        {
+          text: "Javascript SDK",
+          collapsed: true,
+          collapsible: true,
+          items: [
+            { text: "Initiate SDK", link: "/guide/SDKs/jssdk-reference/initiate-sdk" },
+            { text: "Utils", link: "/guide/SDKs/jssdk-reference/utils" },
+            { text: "Deposit", link: "/guide/SDKs/jssdk-reference/deposit" },
+            { text: "Withdraw", link: "/guide/SDKs/jssdk-reference/withdraw" },
+            { text: "Transfer", link: "/guide/SDKs/jssdk-reference/transfer" },
+            { text: "Balance", link: "/guide/SDKs/jssdk-reference/balance" },
+            { text: "Record", link: "/guide/SDKs/jssdk-reference/record" },
+            { text: "Contract", link: "/guide/SDKs/jssdk-reference/contract" },
+            { text: "Order", link: "/guide/SDKs/jssdk-reference/order" },
+          ],
+        },
+        // {
+        //   text: "Unity SDK",
+        //   collapsed: true,
+        //   collapsible: true,
+        // },
+        
       ],
     },
     {

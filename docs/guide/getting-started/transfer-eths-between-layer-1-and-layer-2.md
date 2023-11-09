@@ -158,4 +158,4 @@ The first step takes at least 4 hour. You can [check withdraw status here](https
     }
   }
 ```
-The second step is to withdraw the assets from layer 1. You can refer to guide [here](https://docs.reddio.com/guide/jssdk-reference/withdraw.html#withdrawalfroml1)
+The second step is to withdraw the assets from layer 1. You can refer to guide [here](https://docs.reddio.com/guide/SDKs/jssdk-reference/withdraw.html#withdrawalfroml1)

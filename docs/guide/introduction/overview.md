@@ -43,7 +43,7 @@ Dashboards provide the following features:
 4. IPFS Storages
 5. Statistics about your contracts
 
-### [SDKs](/guide/jssdk-reference/initiate-sdk)
+### [SDKs](/guide/SDKs/jssdk-reference/initiate-sdk)
 
 Javascript, iOS, Android, Unity, Java And Python SDK is provided for your front end cross platform integration,  we highly recommend you integrate from front end to generate private key and allow your users signing from your UI.
 

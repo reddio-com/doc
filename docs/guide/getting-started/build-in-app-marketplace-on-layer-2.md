@@ -35,5 +35,5 @@ Reddio's marketplace provides functionalities to place buy and sell orders on bo
 
 - [Deposit NFTs to layer 2](https://docs.reddio.com/guide/getting-started/transfer-nfts-between-layer-1-and-layer-2.html#deposit-from-layer-1-to-layer-2)
 - [Place buy/sell orders through API](https://api-docs.reddio.com/?_gl=1*6lzw46*_ga*NjE1Mjk3ODMxLjE2NzU5OTgyMjM.*_ga_DZPN2FT3DF*MTY3ODM3NzA5Ny4xNC4xLjE2NzgzNzg4NDEuMC4wLjA.#1683e711-6dbe-4d6d-8690-2bec98d5792c)
-- [Place buy/sell orders through javascript SDK](https://docs.reddio.com/guide/jssdk-reference/order.html)
+- [Place buy/sell orders through javascript SDK](https://docs.reddio.com/guide/SDKs/jssdk-reference/order.html)
 - [Withdraw NFTs to layer 1](https://docs.reddio.com/guide/getting-started/transfer-nfts-between-layer-1-and-layer-2.html#withdraw-from-layer-2-to-layer-1)
