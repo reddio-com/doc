@@ -110,7 +110,7 @@ function nav() {
 function sidebarService() {
   return [
     {
-      text: "Introduction",
+      text: "GETTING STARTED",
       collapsible: true,
       items: [
         { text: "Overview", link: "/guide/introduction/overview" },
@@ -119,7 +119,7 @@ function sidebarService() {
       ],
     },
     {
-      text: "Basic Guide",
+      text: "STARKEX",
       collapsible: true,
       items: [
         {
@@ -192,14 +192,14 @@ function sidebarService() {
         
       ],
     },
-    {
-      text: "API Reference",
-      collapsed: true,
-      collapsible: true,
-      items: [
-        { text: "API reference", link: "/guide/api-reference/api-reference" },
-      ],
-    },
+    // {
+    //   text: "API Reference",
+    //   collapsed: true,
+    //   collapsible: true,
+    //   items: [
+    //     { text: "API reference", link: "/guide/api-reference/api-reference" },
+    //   ],
+    // },
     {
       text: "SDKs",
       collapsed: false,
@@ -230,23 +230,42 @@ function sidebarService() {
       ],
     },
     {
-      text: "Java SDK",
+      text: "HELPER LIBRARIES",
       collapsed: true,
       collapsible: true,
       items: [
         {
-          text: "Introduction to the Reddio Java SDK",
-          link: "/guide/javasdk-reference/java-introduction",
-        },
-        {
-          text: "Getting started with Reddio Java SDK",
-          link: "/guide/javasdk-reference/java-getting-started-tutorial",
-        },
-        {
-          text: "Watching transaction events using the Reddio Java SDK",
-          link: "/guide/javasdk-reference/java-watch-eth-events",
+          text: "Java Helper Library",
+          collapsed: true,
+          collapsible: true,
+          items: [
+            {
+              text: "Introduction",
+              link: "/guide/javasdk-reference/java-introduction",
+            },
+            {
+              text: "Getting started",
+              link: "/guide/javasdk-reference/java-getting-started-tutorial",
+            },
+            {
+              text: "Watching transaction events",
+              link: "/guide/javasdk-reference/java-watch-eth-events",
+            },
+          ],
         },
       ],
+    },
+    {
+      text: "Dedicated Nodes",
+      collapsed: true,
+      collapsible: true,
+      items: [
+        {
+          text: "StarkNet Node",
+          link: "/guide/node/starknet",
+        },
+      ],
+
     },
     {
       text: "Reference",
