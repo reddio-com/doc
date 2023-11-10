@@ -115,7 +115,7 @@ function sidebarService() {
       items: [
         { text: "Overview", link: "/guide/introduction/overview" },
         { text: "Features", link: "/guide/introduction/feature" },
-        { text: "Concepts", link: "/guide/introduction/concepts" },
+        { text: "Concepts", link: "/guide/introduction/concepts" }
       ],
     },
     {

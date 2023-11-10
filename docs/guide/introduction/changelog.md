@@ -1,5 +1,30 @@
 # Change Log
 
+## October 18, 2023
+1. User Profile Feature Updated: Implemented the user profile functionality. 
+2. Red-service Table Merge: Merged order_record_models and transfer_record_models tables in the Red-service. This restructuring prepares the system for an eventual transition to the Sepolia network.
+3. Starknet Node Deployment & Synchronization: Deployed Starknet nodes in both Germany and the USA. 
+4. API Documentation Update: Enhanced the API documentation, specifically revising examples related to Withdrawals, and adding new interface details and explanations.
+
+## September 30, 2023
+1. User & Mint Data Interface: Introduced an interface to return user count and Mint data, and also added functionality to retrieve user operation data within a specified timeframe.
+2. NFTStake Cairo Template Launched: Developed the NFTStake Cairo template and improved the /v1/records interface to list all transactions without requiring any parameters. 
+3. Transaction Activity Interface Updated: Launched the /v1/tx_activity interface that displays all Tx Count information from the past 14 days, providing insights into recent transaction activities.
+
+## August 16, 2023
+1. Metadata Interface Development: Developed and launched new interfaces related to Metadata, enhancing the platform's data handling capabilities.
+2. Contract Updates: Updated both the 1155 and 721 contracts, ensuring they are in line with the latest standards and requirements.
+3. Reddio Cairo Project Structure Transition: Transitioned the reddio cairo project structure to scarb, streamlining the compilation process.
+
+## July 19, 2023
+1. Red-service Mainnet Update: Updated the mainnet version of red-service to the latest version
+2. Token Register Launch: Successfully launched and tested Token register, enhancing the platform's capabilities.
+
+## June 26, 2023
+1. Balance V3 Update: Enhanced the display of the token_uri and incorporated the field in the interface for improved usability.
+2. Red-adapter Adjustment: Modified the Red-adapter to read the TokenRegistered event with a gap of 3 blocks, ensuring timely and accurate event capture.
+3. Red-service Snapshot Management: Implemented robust backup and cleanup procedures, safeguarding data and optimizing storage.
+
 ## May 27, 2023
 1. Optimize the return structure of Balances /v1 and /v2 interfaces
 2. Update the contracts page of the Dashboard
