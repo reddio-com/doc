@@ -110,7 +110,7 @@ function nav() {
 function sidebarService() {
   return [
     {
-      text: "Introduction",
+      text: "GETTING STARTED",
       collapsible: true,
       items: [
         { text: "Overview", link: "/guide/introduction/overview" },
@@ -119,90 +119,110 @@ function sidebarService() {
       ],
     },
     {
-      text: "Basic Guide",
+      text: "STARKEX",
       collapsible: true,
       items: [
         {
-          text: "Import Contracts To Reddio",
-          link: "/guide/getting-started/import-contracts-to-reddio",
-        },
-        {
-          text: "Upload Files to IPFS",
-          link: "/guide/getting-started/upload-files-to-ipfs",
-        },
-        {
-          text: "Set up metadata for your NFTs",
-          link: "/guide/getting-started/set-up-metadata-for-your-nfts",
-        },
-        {
-          text: "Mint NFTs on layer 2",
-          link: "/guide/getting-started/mint-nfts-on-layer-2",
-        },
-        {
-          text: "Check your ETHs/ERC20s/NFTs balance",
-          link: "/guide/getting-started/check-your-eth-erc20-nft-balance",
-        },
-        {
-          text: "Transfer NFTs between layer 1 and layer 2",
-          link: "/guide/getting-started/transfer-nfts-between-layer-1-and-layer-2",
-        },
-        {
-          text: "Issue ERC20 Tokens on layer 2",
-          link: "/guide/getting-started/issue-tokens-on-layer2",
-        },
-        {
-          text: "Withdraw NFTs To Opensea From Layer 2",
-          link: "/guide/getting-started/withdraw-nfts-to-opensea",
-        }
+          text: "NFTs",
+            collapsed: true,
+            collapsible: true,
+            items: [
+              {
+                text: "Create metadata",
+                link: "/guide/getting-started/set-up-metadata-for-your-nfts",
+              },
+              {
+                text: "Mint NFTs from dashboard",
+                link: "/guide/getting-started/mint-nfts-on-layer-2",
+              },
+              {
+                text: "Mint NFTs with APIs",
+                link: "/guide/getting-started/mint-nfts-with-api-calls-on-layer-2.md",
+              },
+              {
+                text: "Check NFTs balance",
+                link: "/guide/getting-started/check-your-eth-erc20-nft-balance.html#view-erc721-erc721m-balance-on-layer-2",
+              },
+              {
+                text: "Layer 1 and Layer 2 bridge",
+                link: "/guide/getting-started/transfer-nfts-between-layer-1-and-layer-2",
+              },
+              {
+                text: "Withdraw to Layer 1 with Javascript SDK",
+                link: "/guide/getting-started/withdraw-nfts-to-layer-1-with-jssdk.md",
+              },
+              {
+                text: "Launch on mainnet",
+                link: "/guide/getting-started/publish-your-erc721-project-to-mainnet.md",
+              },
+            ]
+          },
+          {
+            text: "Fungible Tokens",
+              collapsed: true,
+              collapsible: true,
+              items: [
+                {
+                  text: "Issue ERC20 on Layer 2",
+                  link: "/guide/getting-started/issue-tokens-on-layer2",
+                },
+                {
+                  text: "Check ERC20 balance",
+                  link: "/guide/getting-started/check-your-eth-erc20-nft-balance.html#view-eth-erc20-balance-on-layer-2",
+                },
+                {
+                  text: "Launch on mainnet",
+                  link: "/guide/getting-started/publish-your-erc20-project-to-mainnet.md",
+                },
+                {
+                  text: "Integrate USDC payment to your App",
+                  link: "/guide/getting-started/integrate-payment-service-for-web2-projects-with-reddio.md",
+                },
+              ]
+          },
+          {
+            text: "NFT Marketplace",
+              collapsed: true,
+              collapsible: true,
+              items: [
+                {
+                  text: "Build In-app Marketplace",
+                  link: "/guide/getting-started/build-in-app-marketplace-on-layer-2",
+                },
+                {
+                  text: "Withdraw to Opensea",
+                  link: "/guide/getting-started/withdraw-nfts-to-opensea",
+                },
+                {
+                  text: "Withdraw to Opensea with self-hosted metadata",
+                  link: "/guide/getting-started/withdraw-nfts-to-opensea-with-self-hosted-metadata",
+                },
+              ]
+          },
+          {
+          text: "Smart Contract Operations",
+            collapsed: true,
+            collapsible: true,
+            items: [
+              {
+                text: "Import contracts",
+                link: "/guide/getting-started/import-contracts-to-reddio",
+              },
+            ]
+          },
+       
       ],
     },
+    // {
+    //   text: "API Reference",
+    //   collapsed: true,
+    //   collapsible: true,
+    //   items: [
+    //     { text: "API reference", link: "/guide/api-reference/api-reference" },
+    //   ],
+    // },
     {
-      text: "Advanced Guide",
-      collapsible: true,
-      collapsed: true,
-      items: [
-        {
-          text: "Build In-app Marketplace on layer 2",
-          link: "/guide/getting-started/build-in-app-marketplace-on-layer-2",
-        },
-        {
-          text: "Mint NFTs With API Calls On Layer 2",
-          link: "/guide/getting-started/mint-nfts-with-api-calls-on-layer-2.md",
-        },
-        {
-          text: "Withdraw NFTs To Opensea From Layer 2 With Self-Hosted Metadata Server",
-          link: "/guide/getting-started/withdraw-nfts-to-opensea-with-self-hosted-metadata",
-        },
-        {
-          text: "Withdraw NFTs To Layer 1 With Javascript SDK",
-          link: "/guide/getting-started/withdraw-nfts-to-layer-1-with-jssdk.md",
-        },
-        {
-          text: "Publish Your ERC721 Project To Mainnet",
-          link: "/guide/getting-started/publish-your-erc721-project-to-mainnet.md",
-        },
-        {
-          text: "Publish Your ERC20 Project To Mainnet",
-          link: "/guide/getting-started/publish-your-erc20-project-to-mainnet.md",
-        },
-        {
-          text: "Integrate Payment Service for Web2 Projects with Reddio",
-          link: "/guide/getting-started/integrate-payment-service-for-web2-projects-with-reddio.md",
-        }
-        
-      ],
-    },
-    {
-      text: "API Reference",
-      collapsed: true,
-      collapsible: true,
-      items: [
-        { text: "API reference", link: "/guide/api-reference/api-reference" },
-      ],
-    },
-    {
-      text: "SDKs",
-      collapsed: false,
+      text: "SDKS",
       collapsible: true,
       items: [
         {
@@ -230,58 +250,66 @@ function sidebarService() {
       ],
     },
     {
-      text: "Java SDK",
-      collapsed: true,
+      text: "HELPER LIBRARIES",
       collapsible: true,
       items: [
         {
-          text: "Introduction to the Reddio Java SDK",
-          link: "/guide/javasdk-reference/java-introduction",
-        },
-        {
-          text: "Getting started with Reddio Java SDK",
-          link: "/guide/javasdk-reference/java-getting-started-tutorial",
-        },
-        {
-          text: "Watching transaction events using the Reddio Java SDK",
-          link: "/guide/javasdk-reference/java-watch-eth-events",
+          text: "Java Helper Library",
+          collapsed: true,
+          collapsible: true,
+          items: [
+            {
+              text: "Introduction",
+              link: "/guide/javasdk-reference/java-introduction",
+            },
+            {
+              text: "Getting started",
+              link: "/guide/javasdk-reference/java-getting-started-tutorial",
+            },
+            {
+              text: "Watching transaction events",
+              link: "/guide/javasdk-reference/java-watch-eth-events",
+            },
+          ],
         },
       ],
     },
     {
-      text: "Dedicated Nodes",
-      collapsed: true,
+      text: "INFRASTRUCTURE",
       collapsible: true,
       items: [
         {
-          text: "StarkNet Node",
+          text: "StarkNet node",
           link: "/guide/node/starknet",
+        },
+        {
+          text: "Storage to IPFS",
+          link: "/guide/getting-started/upload-files-to-ipfs",
         },
       ],
 
     },
     {
-      text: "Reference",
-      collapsed: true,
+      text: "REFERENCE",
       collapsible: true,
       items: [
         {
-          text: "How does layer 2 works",
+          text: "How does Layer 2 work",
           link: "/guide/reference/how-does-layer-2-works",
         },
         {
-          text: "How does Reddio works",
+          text: "How does Reddio work",
           link: "/guide/reference/how-does-reddio-works",
         },
         {
-          text: "How orderbook and marketplace work",
+          text: "How does marketplace work",
           link: "/guide/reference/how_orderbook_and_marketplace_work",
         },
         {
-          text: "Which blockchain network should I use",
+          text: "Which blockchain to use",
           link: "/guide/reference/which_blockchain_network_should_i_use",
         },
-        { text: "FAQ", link: "/guide/reference/faq" },
+        { text: "FAQs", link: "/guide/reference/faq" },
       ],
     },
   ];
