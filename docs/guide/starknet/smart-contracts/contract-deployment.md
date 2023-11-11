@@ -25,7 +25,7 @@ Before you start,  Starknet development tools need to be installed:
         <li>Scarb: Cairo’s package manager that compiles code to Sierra, a mid-level language between Cairo and CASM.</li>
 </ul>
 
-## Install Starkli
+### Install Starkli
 
 If you're on Linux/macOS/WSL/Android, you can install stakrliup by running the following command:
 
@@ -43,7 +43,7 @@ Running the commands installs starkli for you, and upgrades it to the latest rel
 
 starkliup detects your device's platform and automatically downloads the right prebuilt binary. It also sets up shell completions. You might need to restart your shell session for the completions to start working.
 
-## Install Scarb
+### Install Scarb
 
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://docs.swmansion.com/scarb/install.sh | sh
@@ -57,7 +57,7 @@ Restart the terminal and check if Scarb is installed correctly:
 scarb --version
 ```
 
-## Compile & Build
+### Compile & Build
 
 ```bash
 scarb build
