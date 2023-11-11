@@ -213,6 +213,37 @@ function sidebarService() {
        
       ],
     },
+    {
+      text: "STARKNET",
+      collapsible: true,
+      items: [
+        // {
+        //   text: "zkVM Layer 2",
+        //   collapsed: true,
+        //   collapsible: true,
+        //   items: [
+        //     { text: "Initiate SDK", link: "/guide/SDKs/jssdk-reference/initiate-sdk" },
+        //     { text: "Utils", link: "/guide/SDKs/jssdk-reference/utils" },
+        //     { text: "Deposit", link: "/guide/SDKs/jssdk-reference/deposit" },
+        //   ],
+        // },
+        {
+          text: "Smart Contracts",
+          collapsed: true,
+          collapsible: true,
+          items: [
+            { text: "Overview", link: "/guide/starknet/smart-contracts/overview" },
+            { text: "Contract Depolyment", link: "/guide/starknet/smart-contracts/contract-deployment" },
+          ],
+        },
+        // {
+        //   text: "Unity SDK",
+        //   collapsed: true,
+        //   collapsible: true,
+        // },
+        
+      ],
+    },
     // {
     //   text: "API Reference",
     //   collapsed: true,
@@ -290,7 +321,7 @@ function sidebarService() {
 
     },
     {
-      text: "REFERENCE",
+      text: "REFERENCES",
       collapsible: true,
       items: [
         {
