@@ -41,7 +41,7 @@ After clicking the button, a form will pop to ask for your input:
 
 After filling all the forms, you can click the “OK” button to deposit Tokens to layer 2. 
 
-For SDKs, you can check it [here](https://docs.reddio.com/guide/jssdk-reference/deposit.html#depositerc20).
+For SDKs, you can check it [here](https://docs.reddio.com/guide/SDKs/jssdk-reference/deposit.html#depositerc20).
 
 Once you finished the deposit operation, you can check your ERC20 balance by following this [guide](https://docs.reddio.com/guide/getting-started/check-your-eth-erc20-nft-balance.html).
 
