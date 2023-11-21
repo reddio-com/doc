@@ -314,6 +314,10 @@ function sidebarService() {
           link: "/guide/node/starknet",
         },
         {
+          text: "Ethereum node",
+          link: "/guide/node/ethereum",
+        },
+        {
           text: "Storage to IPFS",
           link: "/guide/getting-started/upload-files-to-ipfs",
         },

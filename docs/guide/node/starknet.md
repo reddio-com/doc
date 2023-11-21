@@ -6,15 +6,26 @@ StarkNet is a decentralized Validity-Rollup, commonly referred to as a "ZK-Rollu
 
 For a limited time, Reddio offers a high-speed connection to the StarkNet Node free of charge with lowest delay. Discover why Reddio claims the fastest connection by [reading more here](https://blog.reddio.com/reddios-starknet-beta-node-launch-access-the-future-today/). 
 
-You can establish a connection via the following endpoint:
+## Grab your Reddio account
 
-```bash
-https://starknet-mainnet.reddio.com
-```
+To gain entry to Reddio's Node, the first step is to create your very own Reddio account. It's a straightforward process—just visit our [dashboard](https://dashboard.reddio.com/)  to sign up.
+
+As an added bonus, for a limited time, you can enjoy unrestricted access to Reddio's Node entirely free of charge. And if you register your account before January 31, 2024, we have a special gift in store for you.
+
 
 ## Connecting to Reddio's Dedicated Starknet Node
 
-Integrating with Reddio's Starknet node is simple. Use the endpoint given above within your applications or during your development processes. Here’s a Python example to guide you:
+Integrating with Reddio's Starknet node is simple. Go to [dashboard](https://dashboard.reddio.com/)'s Nodes page. You will see the endpoint with your api-key that you can access. Select the endpoint you want to access (for example, StarkNet mainnet):
+
+```bash
+https://starknet-mainnet.reddio.com/rk-85cfdc4d-683b-4bfa-a16e-xxxxxxxxxxxx
+```
+
+Use the endpoint given on dashboard within your applications or during your development processes:
+
+![node_endpoint](/node_endpoint.png)
+
+Here’s a Python example to guide you:
 
 To begin, install `starknet_py` using pip:
 
@@ -27,7 +38,7 @@ Once installed, retrieve the latest block with this code:
 ```python
 from starknet_py.net.full_node_client import FullNodeClient
 
-client = FullNodeClient(node_url="https://starknet-mainnet.reddio.com")
+client = FullNodeClient(node_url="https://starknet-mainnet.reddio.com/rk-85cfdc4d-683b-4bfa-a16e-xxxxxxxxxxxx")
 block = client.get_block_sync("latest")
 print(block.block_number)
 ```
