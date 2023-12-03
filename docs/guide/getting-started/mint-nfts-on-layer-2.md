@@ -12,7 +12,7 @@ In this guide, let’s mint NFT on Layer 2.  This guide contains the following 
 
 1. Install [MetaMask](https://metamask.io/) and create a [MetaMask](https://metamask.io/) wallet.
 
-2. Make sure you have enough GoerliETH on the Goerli Testnet because deploying an ERC721M smart contract needs some Goerli ETH as the gas fee. If you don't have enough gas fee, you can [click here](https://discord.gg/wTv3h38pZ3) for help.
+2. Make sure you have enough ETH on the Sepolia Testnet because deploying an ERC721M smart contract needs some Sepolia ETH as the gas fee. If you don't have enough gas fee, you can [click here](https://discord.gg/wTv3h38pZ3) for help.
 
 ## Deploy an ERC721 mintable smart contract on Dashboard
 

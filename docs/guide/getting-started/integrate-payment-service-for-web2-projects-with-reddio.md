@@ -42,10 +42,18 @@ The process is divided into 6 steps:
 
 Now, based on the above scenario, let's implement the payment service step-by-step, focusing on code related to Reddio interactions.
 
+### Warning: Deprecation of Goerli Testnet
+
+**Important Notice:** The Goerli testnet has been deprecated, and Reddio has successfully migrated to the Sepolia testnet. As a user, it's essential to be aware of this change and take appropriate action.
+
+Starting immediately, the Goerli testnet is no longer supported by Reddio. Any interactions or transactions on the Goerli testnet are at your own risk. We strongly recommend that you transition your activities to the Sepolia testnet to ensure uninterrupted access to Reddio's features.
+
+Please exercise caution and update your settings and configurations to work with the Sepolia testnet. 
+
 ## Prerequisites
 
 - Basic knowledge of Java and Javascript. This guide uses Java for backend development and Javascript for frontend.
-- The demo operates on the Ethereum testnet (goerli). Ensure you have a metamask wallet with goerli ETH and USDC tokens. USDC's contract code on goerli is `0x07865c6E87B9F70255377e024ace6630C1Eaa37F`. Reddio also allows traditional Web2 login methods, supporting web3auth and the particle network. You can incorporate these in your projects.
+- The demo operates on the Ethereum goerli testnet (deprecated). Ensure you have a metamask wallet with goerli ETH and USDC tokens. USDC's contract code on goerli is `0x07865c6E87B9F70255377e024ace6630C1Eaa37F`. Reddio also allows traditional Web2 login methods, supporting web3auth and the particle network. You can incorporate these in your projects.
 
 ### Java Library Integration
 1. Create a new project (you can use IntelliJ IDEA).

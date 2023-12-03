@@ -20,7 +20,7 @@ Now we will go over important components of our project.
 
 ## Testing parameters
 
-During your application implementation. There shall be a form asks for ERC20 contract address. For testing purpose only, we will use the RDD20 as an example. RDD20 is the ERC20s we use in [Reddio’s demo](https://demos.reddio.com/). The RDD20’s contract address on Goerli testnet is:
+During your application implementation. There shall be a form asks for ERC20 contract address. For testing purpose only, we will use the RDD20 as an example. RDD20 is the ERC20s we use in [Reddio’s demo](https://demos.reddio.com/). The RDD20’s contract address on Sepolia testnet is:
 
 ```bash
 0x57F3560B6793DcC2cb274c39E8b8EBa1dd18A086
@@ -37,9 +37,9 @@ If you want to deposit, transfer, and withdraw tokens between the Ethereum layer
       const provider = new ethers.providers.Web3Provider(window.ethereum);
 
       //Second, we need to ask the wallet to switch to specific ETH network
-      //We will use Goerli testnet to give example.Its hexValue is 5.
+      //We will use Sepolia testnet to give example.Its hexValue is 11155111.
       await provider.send("wallet_switchEthereumChain", [
-        { chainId: ethers.utils.hexValue(5) },
+        { chainId: ethers.utils.hexValue(11155111) },
       ]);
 
       //Third, getting the account addresses from provider
@@ -47,7 +47,7 @@ If you want to deposit, transfer, and withdraw tokens between the Ethereum layer
       const signer = provider.getSigner();
       const ethAddress = await signer.getAddress();
 
-      //Finally, we can create a new reddio instance (Goerli testnet) 
+      //Finally, we can create a new reddio instance (Sepolia testnet) 
       //And assign global variable to it
       const reddio = new Reddio({
         provider,

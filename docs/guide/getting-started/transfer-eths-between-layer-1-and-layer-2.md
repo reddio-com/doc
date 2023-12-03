@@ -29,9 +29,9 @@ If you want to deposit, transfer, and withdraw tokens between the Ethereum layer
       const provider = new ethers.providers.Web3Provider(window.ethereum);
 
       //Second, we need to ask the wallet to switch to specific ETH network
-      //We will use Goerli testnet to give example.Its hexValue is 5.
+      //We will use Sepolia testnet to give example.Its hexValue is 11155111.
       await provider.send("wallet_switchEthereumChain", [
-        { chainId: ethers.utils.hexValue(5) },
+        { chainId: ethers.utils.hexValue(11155111) },
       ]);
 
       //Third, getting the account addresses from provider
@@ -39,7 +39,7 @@ If you want to deposit, transfer, and withdraw tokens between the Ethereum layer
       const signer = provider.getSigner();
       const ethAddress = await signer.getAddress();
 
-      //Finally, we can create a new reddio instance (Goerli testnet) 
+      //Finally, we can create a new reddio instance (Sepolia testnet) 
       //And assign global variable to it
       const reddio = new Reddio({
         provider,
@@ -75,7 +75,7 @@ After login into your wallet, your address will be shown on the “ETH Address�
 
 ## Deposit: from layer 1 to layer 2
 
-If you want to trade on layer 2, you need to have assets on layer 2. So you need to deposit your assets from layer 1 to layer 2 at first. We will use Goerli ETH as example. You can get your own Goerli ETH by going to the [faucet page](https://goerlifaucet.com/) and click on “Send Me ETH” to get some Goerli ETH.
+If you want to trade on layer 2, you need to have assets on layer 2. So you need to deposit your assets from layer 1 to layer 2 at first. We will use Sepolia ETH as example. You can get your own Sepolia ETH by going to the [faucet page](https://sepoliafaucet.com/) and click on “Send Me ETH” to get some Sepolia ETH.
 
 Now, we will show you how to implement the deposit function in your application. The only things you need to care about is your starkKey and the amount of ETH you want to deposit:
 
@@ -102,7 +102,7 @@ After you write down the proper information on the forms and click on the deposi
 
 ## Transfer: from layer 2 to layer 2
 
-After deposit, you have your own Goerli ETH on layer 2. Now you want to send the Goerli ETH to others on layer 2. 
+After deposit, you have your own Sepolia ETH on layer 2. Now you want to send the Sepolia ETH to others on layer 2. 
 
 Now, we will show you how to implement the transfer function in your application.
 
