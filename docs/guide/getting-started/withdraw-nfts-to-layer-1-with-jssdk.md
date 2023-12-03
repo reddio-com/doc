@@ -53,7 +53,7 @@ During your application implementation. There shall be a form asks for NFT contr
   <img src="/ContractAddress.png"/>
 </p>
 
-For testing purpose only, we will use the REDDIO721 as an example. REDDIO721 is the NFTs we use in [Reddio’s demo](https://demos.reddio.com/). The REDDIO721’s contract address on Goerli testnet is:
+For testing purpose only, we will use the REDDIO721 as an example. REDDIO721 is the NFTs we use in [Reddio’s demo](https://demos.reddio.com/). The REDDIO721’s contract address on Sepolia testnet is:
 
 ```bash
 0x941661bd1134dc7cc3d107bf006b8631f6e65ad5
@@ -70,9 +70,9 @@ async function connectToWallet() {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
 
       //Second, we need to ask the wallet to switch to specific ETH network
-      //We will use Goerli testnet to give example.Its hexValue is 5.
+      //We will use Sepolia testnet to give example.Its hexValue is 11155111.
       await provider.send("wallet_switchEthereumChain", [
-        { chainId: ethers.utils.hexValue(5) },
+        { chainId: ethers.utils.hexValue(11155111) },
       ]);
 
       //Third, getting the account addresses from provider
@@ -80,7 +80,7 @@ async function connectToWallet() {
       const signer = provider.getSigner();
       const ethAddress = await signer.getAddress();
 
-      //Finally, we can create a new reddio instance (Goerli testnet) 
+      //Finally, we can create a new reddio instance (Sepolia testnet) 
       //And assign global variable to it
       const reddio = new Reddio({
         provider,

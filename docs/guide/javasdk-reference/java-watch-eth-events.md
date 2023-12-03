@@ -1,5 +1,15 @@
 # Watching transaction events using the Reddio Java SDK
 
+### Warning: Deprecation of Goerli Testnet
+
+**Important Notice:** The Goerli testnet has been deprecated, and Reddio has successfully migrated to the Sepolia testnet. As a user, it's essential to be aware of this change and take appropriate action.
+
+Starting immediately, the Goerli testnet is no longer supported by Reddio. Any interactions or transactions on the Goerli testnet are at your own risk. We strongly recommend that you transition your activities to the Sepolia testnet to ensure uninterrupted access to Reddio's features.
+
+Please exercise caution and update your settings and configurations to work with the Sepolia testnet. 
+
+### Watching transaction events using the Reddio Java SDK
+
 Transactions, such as depositing and withdrawing assets between Ethereum and layer 2, emit events upon completion. These events serve as an indicator that the transaction has been executed successfully. You can watch these events using the Reddio Java SDK.
 
 Here is a sample application that demonstrates how to watch events of depositing NFTs from Ethereum to Layer 2:

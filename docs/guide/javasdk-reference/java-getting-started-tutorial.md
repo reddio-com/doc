@@ -3,6 +3,14 @@
 This tutorial introduces the Reddio Java SDK and includes demos of how to deposit and withdraw assets between Ethernum network and Layer 2, transfer assets on Layer 2, and buy and sell NFTs on Layer 2 using the **Goerli Test Network**.
 It is assumed that you have a basic understanding of [Ethereum](https://ethereum.org/en/), [Oracle Java 8](https://www.oracle.com/au/java/technologies/javase/javase8u211-later-archive-downloads.html), the latest version of [Apache Maven](https://maven.apache.org/), and related technologies. 
 
+### Warning: Deprecation of Goerli Testnet
+
+**Important Notice:** The Goerli testnet has been deprecated, and Reddio has successfully migrated to the Sepolia testnet. As a user, it's essential to be aware of this change and take appropriate action.
+
+Starting immediately, the Goerli testnet is no longer supported by Reddio. Any interactions or transactions on the Goerli testnet are at your own risk. We strongly recommend that you transition your activities to the Sepolia testnet to ensure uninterrupted access to Reddio's features.
+
+Please exercise caution and update your settings and configurations to work with the Sepolia testnet. 
+
 ## Prepare a test account and get some test assets
 
 ### Step 1: Get a MetaMask account and select the test network

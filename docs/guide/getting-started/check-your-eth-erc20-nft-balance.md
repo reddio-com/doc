@@ -4,13 +4,15 @@
 
 After you have your smart contract address, you can view your contract detail through **[etherscan.io](http://etherscan.io/)**.
 
-If you are deploying to Görli Network, you can view your contract at`https://goerli.etherscan.io/address/{your_smart_contract_address}` .
+If you are deploying to Sepolia Network, you can view your contract at `https://sepolia.etherscan.io/address/{your_smart_contract_address}`
+
+If you are deploying to Görli Network(deprecated), you can view your contract at `https://goerli.etherscan.io/address/{your_smart_contract_address}` .
 
 If you are deploying to mainnet, you can view your contract at `https://etherscan.io/address/{your_smart_contract_address}`.
 
-For example, if your smart contract address is `0x4240e8xxxxxxxxxxxxxxxxx1` and you are using goerli network.
+For example, if your smart contract address is `0x4240e8xxxxxxxxxxxxxxxxx1` and you are using sepolia network.
 
-A valid URL would be `https://goerli.etherscan.io/address/0x4240e8xxxxxxxxxxxxxxxxx1`.
+A valid URL would be `https://sepolia.etherscan.io/address/0x4240e8xxxxxxxxxxxxxxxxx1`.
 
 ## View ****ETH/ERC20 balance on layer 2****
 
