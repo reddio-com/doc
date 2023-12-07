@@ -15,15 +15,29 @@ As an added bonus, for a limited time, you can enjoy unrestricted access to Redd
 
 ## Connecting to Reddio's Dedicated Ethereum Node
 
-Integrating with Reddio's Ethereum node is simple. Go to [dashboard](https://dashboard.reddio.com/)'s Nodes page. You will see the endpoint with your api-key that you can access. Select the endpoint you want to access (for example, Ethereum mainnet):
+Integrating with Reddio's Ethereum node is simple. Go to [dashboard](https://dashboard.reddio.com/)'s Nodes page. You will see the endpoint with your api-key that you can access. 
+
+Use the endpoint given on dashboard within your applications or during your development processes:
+
+![node_endpoint_eth](/node_endpoint_eth.png)
+
+### Grab Sepolia Testnet Endpoint
+
+You can access to Sepolia testnet before you can access to Ethereum mainnet. The endpoint for Sepolia testnet looks like this:
+
+```bash
+https://eth-sepolia.reddio.com/rk-85cfdc4d-683b-4bfa-a16e-xxxxxxxxxxxx
+```
+
+### Grab Ethereum Mainnet Endpoint
+
+The endpoint for Ethereum mainnet looks like this:
 
 ```bash
 https://eth-mainnet.reddio.com/rk-85cfdc4d-683b-4bfa-a16e-xxxxxxxxxxxx
 ```
- 
-Use the endpoint given on dashboard within your applications or during your development processes: 
 
-![node_endpoint_eth](/node_endpoint_eth.png)
+### Connect to the Node
 
 Here’s a Python example to guide you:
 

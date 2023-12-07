@@ -12,20 +12,33 @@ To gain entry to Reddio's Node, the first step is to create your very own Reddio
 
 As an added bonus, for a limited time, you can enjoy unrestricted access to Reddio's Node entirely free of charge. And if you register your account before January 31, 2024, we have a special gift in store for you.
 
-
 ## Connecting to Reddio's Dedicated Starknet Node
 
-Integrating with Reddio's Starknet node is simple. Go to [dashboard](https://dashboard.reddio.com/)'s Nodes page. You will see the endpoint with your api-key that you can access. Select the endpoint you want to access (for example, StarkNet mainnet):
-
-```bash
-https://starknet-mainnet.reddio.com/rk-85cfdc4d-683b-4bfa-a16e-xxxxxxxxxxxx
-```
+Integrating with Reddio's Starknet node is simple. Go to [dashboard](https://dashboard.reddio.com/)'s Nodes page. You will see the endpoint with your api-key that you can access. 
 
 Use the endpoint given on dashboard within your applications or during your development processes:
 
 ![node_endpoint](/node_endpoint.png)
 
-Here’s a Python example to guide you:
+### Grab Goerli Testnet Endpoint
+
+You can access to Goerli testnet before you can access to Starknet mainnet. The endpoint for Goerli testnet looks like this:
+
+```bash
+https://starknet-goerli.reddio.com/rk-85cfdc4d-683b-4bfa-a16e-xxxxxxxxxxxx
+```
+
+### Grab Starknet Mainnet Endpoint
+
+The endpoint for Starknet mainnet looks like this:
+
+```bash
+https://starknet-mainnet.reddio.com/rk-85cfdc4d-683b-4bfa-a16e-xxxxxxxxxxxx
+```
+
+### Connect to the Node
+
+Here's a Python example to guide you:
 
 To begin, install `starknet_py` using pip:
 
