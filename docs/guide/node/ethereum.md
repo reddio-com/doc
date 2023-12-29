@@ -12,7 +12,6 @@ To gain entry to Reddio's Node, the first step is to create your very own Reddio
 
 As an added bonus, for a limited time, you can enjoy unrestricted access to Reddio's Node entirely free of charge. And if you register your account before January 31, 2024, we have a special gift in store for you.
 
-
 ## Connecting to Reddio's Dedicated Ethereum Node
 
 Integrating with Reddio's Ethereum node is simple. Go to [dashboard](https://dashboard.reddio.com/)'s Nodes page. You will see the endpoint with your api-key that you can access. 

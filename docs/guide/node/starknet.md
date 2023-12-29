@@ -36,6 +36,21 @@ The endpoint for Starknet mainnet looks like this:
 https://starknet-mainnet.reddio.com/rk-85cfdc4d-683b-4bfa-a16e-xxxxxxxxxxxx
 ```
 
+### Grab Starknet Sepolia Endpoint
+
+The endpoint for Starknet mainnet looks like this:
+
+```bash
+https://starknet-sepolia.reddio.com/rk-85cfdc4d-683b-4bfa-a16e-xxxxxxxxxxxx
+```
+
+> Note that all above endpoint is for starknet version 0.5, if you want to use version 0.6 or 0.4, you can add `/rpc/v0_6` or `/rpc/v0_4` to the endpoint, for example:
+
+
+* https://starknet-goerli.reddio.com/rpc/v0_6/rk-85cfdc4d-683b-4bfa-a16e-xxxxxxxxxxxx
+* https://starknet-sepolia.reddio.com/rpc/v0_4/rk-85cfdc4d-683b-4bfa-a16e-xxxxxxxxxxxx
+
+
 ### Connect to the Node
 
 Here's a Python example to guide you:
