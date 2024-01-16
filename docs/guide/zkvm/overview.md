@@ -1,9 +1,8 @@
 # Overview
 
-The Reddios zkVM Layer 2 provides a versatile solution for apps and games, aiming to facilitate scalable solutions. Reddio's zkVM is currently in its testing phase, and can be utilized for trial purposes.
+The Reddios zkVM Layer 2 is a generic layer 2 for any App to integrate, with low cost and massive scalability, powered by Starknet Stack, secured by Ethereum. 
 
-At its present development stage, Reddio's zkVM offers compatibility with StarkNet's APIs. All contracts deployed on StarkNet can be seamlessly implemented on Reddio's zkVM.
-
+Reddio's zkVM is currently in its testing phase, and can be utilized for trial purposes. For now, Reddio's zkVM offers compatibility with StarkNet's APIs. All contracts deployed on StarkNet can be seamlessly implemented on Reddio's zkVM.
 
 Reddio's zkVM presents a collection of pivotal features:
 - Facilitates the deployment of smart contracts tailored to your specific logic.
