@@ -119,7 +119,7 @@ function sidebarService() {
       ],
     },
     {
-      text: "STARKEX",
+      text: "REDDIOEX",
       collapsible: true,
       items: [
         {
@@ -232,6 +232,7 @@ function sidebarService() {
           items: [
             { text: "Overview", link: "/guide/starknet/smart-contracts/overview" },
             { text: "Contract Depolyment", link: "/guide/starknet/smart-contracts/contract-deployment" },
+            { text: "Web Sample App", link: "/guide/starknet/smart-contracts/token-sample-app" },
           ],
         },
         // {
