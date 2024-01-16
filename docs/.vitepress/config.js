@@ -178,6 +178,10 @@ function sidebarService() {
                   text: "Integrate USDC payment to your App",
                   link: "/guide/getting-started/integrate-payment-service-for-web2-projects-with-reddio.md",
                 },
+                {
+                  text: "Trading ERC20 Tokens",
+                  link: "/guide/getting-started/docs/guide/getting-started/trading-erc20-on-reddioEx.md",
+                },
               ]
           },
           {
