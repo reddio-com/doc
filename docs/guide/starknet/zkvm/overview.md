@@ -20,8 +20,6 @@ ChainID: 0x534e5f474f45524c49
 ## Create An Abstract Account Wallet
 At present, we offer an SDK that can be used to create an Argent abstract contract account. Here are the steps for creating an Argent contract account:
 
-Here are the refined steps for creating an Argent contract account:
-
 1. Generate a private key and a unique salt.
 2. Employ the private key, salt, Argent class hash(0x1a736d6ed154502257f02b1ccdf4d9d1089f80811cd6acad48e6b6a9d1f2003), and additional constructor arguments to generate a contract address.
 3. Fund the contract address with some ETH. You can obtain some ETH for free by joining Reddio's [Discord](https://discord.com/invite/SjNAJ4qkK3) community.
