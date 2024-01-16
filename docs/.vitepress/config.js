@@ -214,17 +214,24 @@ function sidebarService() {
       ],
     },
     {
-      text: "STARKNET",
+      text: "Reddio zkVM Layer 2",
       collapsible: true,
       items: [
         {
-          text: "zkVM Layer 2",
-          collapsed: true,
-          collapsible: true,
-          items: [
-            { text: "Overview", link: "/guide/starknet/zkvm/overview" },
-          ],
+          text: "Overview", link: "/guide/zkvm/overview"
         },
+        // {
+        //   text: "Unity SDK",
+        //   collapsed: true,
+        //   collapsible: true,
+        // },
+        
+      ],
+    },
+    {
+      text: "STARKNET",
+      collapsible: true,
+      items: [
         {
           text: "Smart Contracts",
           collapsed: true,
@@ -243,6 +250,7 @@ function sidebarService() {
         
       ],
     },
+    
     // {
     //   text: "API Reference",
     //   collapsed: true,
