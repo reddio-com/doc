@@ -40,3 +40,6 @@ Consider the following key points:
 2. Similarly, when declaring or deploying a contract, add the `--rpc https://starknet-madara.reddio.com` command.
 
 If followed correctly, your contract should be successfully deployed.
+
+## Others
+After you can deploy contracts, create accounts, and transfer ETH, you also can invoke all the functions just like starknet mainnet, just need to replace the rpc
