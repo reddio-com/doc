@@ -217,16 +217,14 @@ function sidebarService() {
       text: "STARKNET",
       collapsible: true,
       items: [
-        // {
-        //   text: "zkVM Layer 2",
-        //   collapsed: true,
-        //   collapsible: true,
-        //   items: [
-        //     { text: "Initiate SDK", link: "/guide/SDKs/jssdk-reference/initiate-sdk" },
-        //     { text: "Utils", link: "/guide/SDKs/jssdk-reference/utils" },
-        //     { text: "Deposit", link: "/guide/SDKs/jssdk-reference/deposit" },
-        //   ],
-        // },
+        {
+          text: "zkVM Layer 2",
+          collapsed: true,
+          collapsible: true,
+          items: [
+            { text: "Overview", link: "/guide/starknet/zkvm/overview" },
+          ],
+        },
         {
           text: "Smart Contracts",
           collapsed: true,
