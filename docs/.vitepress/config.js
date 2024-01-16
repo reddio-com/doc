@@ -180,7 +180,7 @@ function sidebarService() {
                 },
                 {
                   text: "Trading ERC20 Tokens",
-                  link: "/guide/getting-started/getting-started/trading-erc20-on-reddioEx.md",
+                  link: "/guide/getting-started/trading-erc20-on-reddioEx.md",
                 },
               ]
           },
