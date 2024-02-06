@@ -16,7 +16,7 @@ A valid URL would be `https://sepolia.etherscan.io/address/0x4240e8xxxxxxxxxxxx
 
 ## View ****ETH/ERC20 balance on layer 2****
 
-You can query the ETH/ERC20 balance with Reddio’s API through `https://api-dev.reddio.com/v1/balances?stark_key={your_starkkey}`.
+You can query the ETH/ERC20 balance with RedSonic’s API through `https://api-dev.reddio.com/v1/balances?stark_key={your_starkkey}`.
 
 Carefully replace {your_starkkey} with your own stark_key. Suppose your stark_key is `0x761f170xxxxxxxxxxxxxxxxxxxxxxxxxxxfbd39accda`.
 
@@ -65,11 +65,11 @@ You will see your ETH/ERC20 balance with type “ETH” and “ERC20“, a sampl
 }
 ```
 
-You can also check your ETH/ERC20 balance through Reddio’s demo. Just go to **[https://demos.reddio.com/](https://demos.reddio.com/)** and login in with your own wallet. You will see your ETH/ERC20 right there.
+You can also check your ETH/ERC20 balance through RedSonic’s demo. Just go to **[https://demos.reddio.com/](https://demos.reddio.com/)** and login in with your own wallet. You will see your ETH/ERC20 right there.
 
 ## View ****ERC721/ERC721M balance on layer 2****
 
-You can query the ERC721/ERC721M ********balance with Reddio’s API through `https://api-dev.reddio.com/v1/balances?stark_key={your_starkkey}` as well.
+You can query the ERC721/ERC721M ********balance with RedSonic’s API through `https://api-dev.reddio.com/v1/balances?stark_key={your_starkkey}` as well.
 
 Carefully replace {your_starkkey} with your own stark_key. Suppose your stark_key is `0x761f170xxxxxxxxxxxxxxxxxxxxxxxxxxxfbd39accda`.
 
@@ -120,11 +120,11 @@ You will see your ERC721/ERC721M balance with type “ERC721” and “ERC721M�
 
 If you want to see your ERC721/ERC721M aggreagated under the same contract_address. You can try [balance API v2](https://docs.reddio.com/guide/api-reference/balance.html#get-balances-v2).
 
-Finally, you can check your NFTs through Reddio’s demo. Just go to **[https://demos.reddio.com/](https://demos.reddio.com/)** and login in with your own wallet. You will see your NFTs right there.
+Finally, you can check your NFTs through RedSonic’s demo. Just go to **[https://demos.reddio.com/](https://demos.reddio.com/)** and login in with your own wallet. You will see your NFTs right there.
 
 ## View ****ERC721/ERC721M collection on layer 2****
 
-If you want to view ERC721/ERC721M collections’ detail which contains all the information about a single collection. You can Reddio’s NFT API through `https://api-dev.reddio.com/v1/nfts/{smart_contract_address}`.
+If you want to view ERC721/ERC721M collections’ detail which contains all the information about a single collection. You can RedSonic’s NFT API through `https://api-dev.reddio.com/v1/nfts/{smart_contract_address}`.
 
 Carefully replace {smart_contract_address} parameters with your own smart contract address or collection contract address. Suppose your contract address is `0x4240e8xxxxxxxxxxxxxxxxx1`.
 

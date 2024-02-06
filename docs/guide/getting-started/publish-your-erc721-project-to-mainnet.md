@@ -30,7 +30,7 @@ For a general 10k pfp (picture-for-profile) project, based on the current lowest
 
 The minimum cost borne by the project side and users is $50,050 (this cost can grow exponentially during a bull market).
 
-Now, you and your users do not have to pay such high transaction fees. Instead, you can rebate them to the users, and you only need to pay the initial deployment fee ($50), reducing the overall cost by 1000 times. Reddio provides you with a zero gas fee solution.
+Now, you and your users do not have to pay such high transaction fees. Instead, you can rebate them to the users, and you only need to pay the initial deployment fee ($50), reducing the overall cost by 1000 times. RedSonic provides you with a zero gas fee solution.
 
 The following documents will demonstrate step by step how to deploy your ERC721 project to the Ethereum mainnet.
 
@@ -44,7 +44,7 @@ The following documents will demonstrate step by step how to deploy your ERC721 
 
 ### Deploy an ERC721 mintable smart contract on Dashboard
 
-You can easily deploy an ERC721M smart contract on layer 1 by utilizing [Reddio's Dashboard](https://dashboard.reddio.com/). Once you have registered on the dashboard, navigate to the contracts page and click on the "Deploy/Import Contract" button. Select ERC721 (Mintable and Recommended). And then, you need to type in all the information about this contract then click "OK". Remember, you need to select "Ethereum Mainnet" as network:
+You can easily deploy an ERC721M smart contract on layer 1 by utilizing [RedSonic's Dashboard](https://dashboard.reddio.com/). Once you have registered on the dashboard, navigate to the contracts page and click on the "Deploy/Import Contract" button. Select ERC721 (Mintable and Recommended). And then, you need to type in all the information about this contract then click "OK". Remember, you need to select "Ethereum Mainnet" as network:
 
 <p align="center">
   <img src="/deploy_mainnet.png"/>
@@ -58,7 +58,7 @@ After your deployment process is finished, you will see your new contract name u
   <img src="/deploy_mainnet_NFT.png"/>
 </p>
 
-To further explore the smart contract details on layer 1, you can refer to the comprehensive [guide](https://docs.reddio.com/guide/getting-started/check-your-eth-erc20-nft-balance.html#view-smart-contract-details-on-layer-1) provided by Reddio, which will guide you through the process of checking the smart contract details on Etherscan.
+To further explore the smart contract details on layer 1, you can refer to the comprehensive [guide](https://docs.reddio.com/guide/getting-started/check-your-eth-erc20-nft-balance.html#view-smart-contract-details-on-layer-1) provided by RedSonic, which will guide you through the process of checking the smart contract details on Etherscan.
 
 ### Mint ERC721M tokens on layer 2
 
@@ -86,7 +86,7 @@ After the wait, you will see your NFT under "Metadata" tab. That means You have 
 
 Now, the contract has been issued, but issuing a contract is just the first step in the entire process. Next, there are some tips that can assist you in reducing costs for both you and your users, increasing user numbers, and providing some operational assistance. Operational efficiency can be enhanced in the following ways:
 
-- **Airdrop** is an excellent operational tool in web3. You can conduct an airdrop on your website. Since all NFT-related transactions on the Reddio platform are free, you can use multi-dimensional approaches to airdrop to users. For example, users can submit their addresses for a direct airdrop, claim them themselves, or even you can target certain special groups (e.g., users holding a specific type of NFT).
+- **Airdrop** is an excellent operational tool in web3. You can conduct an airdrop on your website. Since all NFT-related transactions on the RedSonic platform are free, you can use multi-dimensional approaches to airdrop to users. For example, users can submit their addresses for a direct airdrop, claim them themselves, or even you can target certain special groups (e.g., users holding a specific type of NFT).
 - **User Free Mint.** At this point, you can set some of the minting fees. After users pay the minting fee, they can mint the corresponding NFT. The "free" aspect is reflected in a zero transaction fee.
 - **Promote** on websites like Twitter, Discord, Telegram, Airdrop (such as https://questn.com/). Since you have already launched on the mainnet and are part of a promising project, many people will likely come to observe.
 - **Engage KOLs** for promotion or giveaways, joint operations, etc.

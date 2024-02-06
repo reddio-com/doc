@@ -4,16 +4,16 @@
 
 Welcome to this comprehensive guide on setting up metadata for your contracts. It's important to note that different contract types may require different approaches to managing metadata. This guide covers the following setting up metadata scenarios:
 
-1. Reddio-hosted metadata with ERC721 mintable
+1. RedSonic-hosted metadata with ERC721 mintable
 2. Self-hosted metadata with ERC721 mintable and ERC721 traditional
 3. Independent TokenURI ERC721's metadata
 
 Now let's dive into each scenario and learn how to effectively manage metadata for your contracts.
 
 
-## Reddio-hosted metadata with ERC721 mintable
+## RedSonic-hosted metadata with ERC721 mintable
 
-If you choose to host metadata on reddio, then you don't need to worry much about setting up the metadata. All your metadata will be store under BaseURI(see picture below): 
+If you choose to host metadata on RedSonic, then you don't need to worry much about setting up the metadata. All your metadata will be store under BaseURI(see picture below): 
 
 <p align="center">
   <img src="/metadata-1.png"/>
@@ -25,7 +25,7 @@ To access and view your metadata for specific token, all you need to do is click
   <img src="/metadata-2.png"/>
 </p>
 
-By following these steps, you can easily manage and access your metadata hosted on Reddio without any hassle.
+By following these steps, you can easily manage and access your metadata hosted on RedSonic without any hassle.
 
 ## Self-hosted metadata with ERC721 mintable and ERC721 traditional
 
