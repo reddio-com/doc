@@ -213,6 +213,44 @@ function sidebarService() {
           ],
         },
         {
+          text: "Javascript SDK",
+          collapsed: true,
+          collapsible: true,
+          items: [
+            {
+              text: "Initiate SDK",
+              link: "/guide/SDKs/jssdk-reference/initiate-sdk",
+            },
+            { text: "Utils", link: "/guide/SDKs/jssdk-reference/utils" },
+            { text: "Deposit", link: "/guide/SDKs/jssdk-reference/deposit" },
+            { text: "Withdraw", link: "/guide/SDKs/jssdk-reference/withdraw" },
+            { text: "Transfer", link: "/guide/SDKs/jssdk-reference/transfer" },
+            { text: "Balance", link: "/guide/SDKs/jssdk-reference/balance" },
+            { text: "Record", link: "/guide/SDKs/jssdk-reference/record" },
+            { text: "Contract", link: "/guide/SDKs/jssdk-reference/contract" },
+            { text: "Order", link: "/guide/SDKs/jssdk-reference/order" },
+          ],
+        },
+        {
+          text: "Java Helper Library",
+          collapsed: true,
+          collapsible: true,
+          items: [
+            {
+              text: "Introduction",
+              link: "/guide/javasdk-reference/java-introduction",
+            },
+            {
+              text: "Getting started",
+              link: "/guide/javasdk-reference/java-getting-started-tutorial",
+            },
+            {
+              text: "Watching transaction events",
+              link: "/guide/javasdk-reference/java-watch-eth-events",
+            },
+          ],
+        },
+        {
           text: "REFERENCES",
           collapsed: true,
           collapsible: true,
@@ -292,61 +330,7 @@ function sidebarService() {
     //     { text: "API reference", link: "/guide/api-reference/api-reference" },
     //   ],
     // },
-    {
-      text: "SDKS",
-      collapsible: true,
-      items: [
-        {
-          text: "Javascript SDK",
-          collapsed: true,
-          collapsible: true,
-          items: [
-            {
-              text: "Initiate SDK",
-              link: "/guide/SDKs/jssdk-reference/initiate-sdk",
-            },
-            { text: "Utils", link: "/guide/SDKs/jssdk-reference/utils" },
-            { text: "Deposit", link: "/guide/SDKs/jssdk-reference/deposit" },
-            { text: "Withdraw", link: "/guide/SDKs/jssdk-reference/withdraw" },
-            { text: "Transfer", link: "/guide/SDKs/jssdk-reference/transfer" },
-            { text: "Balance", link: "/guide/SDKs/jssdk-reference/balance" },
-            { text: "Record", link: "/guide/SDKs/jssdk-reference/record" },
-            { text: "Contract", link: "/guide/SDKs/jssdk-reference/contract" },
-            { text: "Order", link: "/guide/SDKs/jssdk-reference/order" },
-          ],
-        },
-        // {
-        //   text: "Unity SDK",
-        //   collapsed: true,
-        //   collapsible: true,
-        // },
-      ],
-    },
-    {
-      text: "HELPER LIBRARIES",
-      collapsible: true,
-      items: [
-        {
-          text: "Java Helper Library",
-          collapsed: true,
-          collapsible: true,
-          items: [
-            {
-              text: "Introduction",
-              link: "/guide/javasdk-reference/java-introduction",
-            },
-            {
-              text: "Getting started",
-              link: "/guide/javasdk-reference/java-getting-started-tutorial",
-            },
-            {
-              text: "Watching transaction events",
-              link: "/guide/javasdk-reference/java-watch-eth-events",
-            },
-          ],
-        },
-      ],
-    },
+
     {
       text: "INFRASTRUCTURE",
       collapsible: true,
