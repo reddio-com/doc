@@ -277,7 +277,7 @@ function sidebarService() {
       ],
     },
     {
-      text: "Reddio zkVM Layer 2",
+      text: "REDDIO ZKVM LAYER 2",
       collapsible: true,
       items: [
         {
