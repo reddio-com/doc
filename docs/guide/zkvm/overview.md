@@ -1,6 +1,6 @@
 # Overview
 
-The Reddios zkVM Layer 2 provides a versatile solution for apps and games, aiming to facilitate scalable solutions. Reddio's zkVM is currently in its testing phase, and can be utilized for trial purposes.
+The Reddios zkVM Layer 2 provides a versatile solution for apps and games, aiming to facilitate scalable solutions.it is an opensource project by Reddio which name is [itachi](https://github.com/reddio-com/itachi). Reddio's zkVM is currently in its testing phase, and can be utilized for trial purposes.
 
 At its present development stage, Reddio's zkVM offers compatibility with StarkNet's APIs. All contracts deployed on StarkNet can be seamlessly implemented on Reddio's zkVM.
 
@@ -14,7 +14,7 @@ Reddio's zkVM presents a collection of pivotal features:
 
 ## General Information
 
-Endpoint: https://starknet-madara.reddio.com 
+Endpoint: https://itachi-dev.reddio.com/
 
 ChainID: 0x534e5f474f45524c49
 
@@ -29,22 +29,15 @@ At present, we offer an SDK that can be used to create an Argent abstract contra
 4. Once the contract address is funded with ETH, proceed to deploy the abstract account.
 Upon successfully obtaining your private key and abstract account, you can begin utilizing it.
 
-Here is the relevant [code snippet](https://github.com/reddio-com/starknet-appchain-utils/blob/main/create_account.py#L17) for your reference.
+Here is the relevant [code snippet](https://github.com/reddio-com/itachi-testing/blob/master/python/functions.py#L168) for your reference.
 
 ## Transfer ETH
 
-When you need to transfer ETH to another address, you can refer to this guide for assistance. If you're running out of ETH, you can make a request to [Reddio](https://discord.com/invite/SjNAJ4qkK3), and we can provide you with enough testnet tokens. Here is the [code snippet](https://github.com/reddio-com/starknet-appchain-utils/blob/main/transfer_eth.py#L21) to transfer ETH.
+When you need to transfer ETH to another address, you can refer to this guide for assistance. If you're running out of ETH, you can make a request to [Reddio](https://discord.com/invite/SjNAJ4qkK3), and we can provide you with enough testnet tokens. Here is the [code snippet](https://github.com/reddio-com/itachi-testing/blob/master/python/functions.py#L81) to transfer ETH.
 
 ## Deploy smart contracts
 
-To deploy your contract, you can use StarkNet's native developer tools, available at [Starkli GitHub page](https://github.com/xJonathanLEI/starkli). Note that Starkli currently supports Reddio's zkVM too. This guide assumes you already have an Argent account on Reddio's zkVM. To set up Starkli, refer to this [StarkNet documentation](https://docs.starknet.io/documentation/quick_start/set_up_an_account/). 
-
-Take note on the following key points:
-
-1. When configuring your Starkli account, always include the `--rpc https://starknet-madara.reddio.com` command in the fetch command.
-2. Similarly, when declaring or deploying a contract, add the `--rpc https://starknet-madara.reddio.com` command.
-
-If followed correctly, your contract should be deployed successfully.
+To deploy your contract, you can use reference the python sdk [code snippet](https://github.com/reddio-com/itachi-testing/blob/master/python/functions.py#L231)
 
 ## Others
 
