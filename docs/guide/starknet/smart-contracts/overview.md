@@ -8,7 +8,7 @@ Starknet smart contracts are written by the Reddio team, and cover the most comm
         <li>Fully owned by the contract deployer (you)</li>
 </ul>
 
-Here are the smart contracts provied so far on the [Github repo](https://github.com/reddio-com/cairo).
+Here are the smart contracts provided so far on the [Github repo](https://github.com/reddio-com/cairo).
 
 | Name     | Description |
 |----------|-------------|
