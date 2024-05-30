@@ -22,13 +22,13 @@ Then, your wallet will pop up to prompt you to sign the transaction. Once you ha
 
 To deposit ERC20 tokens from layer 1 to layer 2, there are two methods available: dashboard tool and SDKs. 
 
-For dashboard tool, you need to access RedSonic’s [dashboard](https://dashboard.reddio.com/project). After that, you need to go to contracts page. You will see a "Deposit ERC20" button under the ERC20 contract of your choice.
+For the dashboard tool, you need to access RedSonic’s [dashboard](https://dashboard.reddio.com/project). After that, you need to go to the contracts page. You will see a "Deposit ERC20" button under the ERC20 contract of your choice.
 
 <p align="center">
   <img src="/depositERC20Button.png"/>
 </p>
 
-After clicking the button, a form will pop to ask for your input:
+After clicking the button, a form will pop up to ask for your input:
 
 <p align="center">
   <img src="/depositERC20Form.png"/>
@@ -37,7 +37,7 @@ After clicking the button, a form will pop to ask for your input:
 - **Contract Address**: the smart contract address you get via deployment.
 - **StarkKey**: the address to receive ERC20 Tokens on layer 2. You can get it [here](https://docs.reddio.com/guide/getting-started/mint-nfts-on-layer-2.html#connect-wallet-and-get-public-key-on-layer-2).
 - **Amount**: the amount of tokens you want to deposit.
-- **Network/Chain**: the network you use. We recommend to develop your application on Goerli before do that on the mainnet.
+- **Network/Chain**: the network you use. We recommend developing your application on Sepolia before doing that on the mainnet.
 
 After filling all the forms, you can click the “OK” button to deposit Tokens to layer 2. 
 
