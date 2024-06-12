@@ -4,31 +4,31 @@
 
 ## Time to market
 
-With RedSonic’s APIs, your integration to Web3.0 can be done in minutes.
+With RedSonic’s APIs, your integration to Web3 can be done in minutes.
 
 ## Highly scalable, reliable and fast response time
 
-On layer 2 transactions, 10k TPS are supported. 99.9% APIs availability is guaranteed. Meanwhile your asset trading confirmation is on few second level only.
+On Layer 2 transactions, 10k TPS are supported. 99.9% APIs availability is guaranteed. Meanwhile, your asset trading confirmation only takes a few seconds.
 
 ## Secure and asset safety
 
-RedSonic leverage layer 2 to achieve scale while preserving the security of layer 1 Ethereum by producing STARK proofs off-chain and verifying those proofs on-chain. Meanwhile, all asset can be stored on layer 1, users can interact with their assets at anytime, and transfer your assets to layer 2 and layer 1 with few lines of code. 
+RedSonic leverages Layer 2 to achieve scale while preserving the security of Layer 1 Ethereum by producing STARK proofs off-chain and verifying those proofs on-chain. Meanwhile, all asset can be stored on Layer 1, users can interact with their assets at anytime, and transfer your assets to Layer 2 and Layer 1 with few lines of code. 
 
 ## No smart contract experience needed
 
-RedSonic provides APIs for both layer 1 & layer 2 on all the functions, hence developers don’t need experience on smart contract, RedSonic generates and operate the smart contract on your behalf with easy-to-understand APIs.
+RedSonic provides APIs for both Layer 1 & Layer 2 for all the functions. Hence, developers don’t need experience with smart contracts, RedSonic generates and operates the smart contract on your behalf with easy-to-understand APIs.
 
 ## Cross platform SDKs
 
-We strive to make the integration easy for your applications, not only Javascript SDK is provided, Unity, iOS and Android SDKs are also provided too for future proof user experience.
+We strive to make the integration easy for your applications and offers various SDKs to future-proof user experience. The SDKs we provide are Javascript SDK, Unity SDK, iOS SDK, and an Android SDK.
 
 ## **No protocol lock in**
 
-RedSonic is partnering with all the major layer 2 providers, like Starkware, zkSync, Scroll, etc., to switch from one provider to another, is just a simple change of a parameter
+RedSonic partners with all the major layer 2 providers, like Starkware, zkSync, Scroll, etc. Switching from one provider to another is just a simple change in a parameter.
 
 ## Zero gas fee(custom gas fee supported)
 
-With the partnership like Starkware, we can offer zero gas fee on layer 2 for our StarkEx integration.
+With partnerships like Starkware, we can offer zero gas fee on layer 2 for our StarkEx integration.
 
 ## Self service and instant support
 
