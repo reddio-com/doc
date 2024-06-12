@@ -33,8 +33,8 @@ RedSonic platform consists of SDKs, APIs and Dashboard
 
 ![components](/components.png)
 
-### [Dashboard](https://dashboard.redsonic.com/login)
-On the dashboard, you can get access to API key and integrate from backend to RedSonic’s APIs; We are providing the basic APIs usage now and enhancing the dashboard based on you feedback to show more statistics. 
+### [Dashboard](https://api-docs.reddio.com/)
+On the dashboard, you can get access to API key and integrate from backend to RedSonic’s APIs; We are providing the basic APIs usage now and enhancing the dashboard based on your feedback to show more statistics. 
 ![dashboard quickstart](/dashboard-quickstart.png)
 Dashboards provide the following features:
 1. Deploy contracts and register contracts to redsonic on Layer1(ethernum)
