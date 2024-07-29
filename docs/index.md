@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-    name: The Unrivaled Parallel zkEVM by Developers for Developers
+    name: The Unrivaled Parallel zkEVM
     tagline: High performance parallel Ethereum-compatible Layer 2, leveraging zero-knowledge technology to achieve unrivaled computation scale with Ethereum-level security.
     actions:
         - theme: brand
