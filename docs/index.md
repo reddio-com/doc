@@ -2,8 +2,8 @@
 layout: home
 
 hero:
-    name: The Layer 2 and APIs by Developers for Developers
-    tagline: Easy-to-use, massive scalability and 0 gas fee. Integrate Layer 2 into your application and beyond.
+    name: The Unrivaled Parallel zkEVM by Developers for Developers
+    tagline: High performance parallel Ethereum-compatible Layer 2, leveraging zero-knowledge technology to achieve unrivaled computation scale with Ethereum-level security.
     actions:
         - theme: brand
           text: Get Started
