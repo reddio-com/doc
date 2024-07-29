@@ -1,8 +1,8 @@
-# Integrate Payment Service for Web2 Projects with Reddio
+# Integrate Payment Service for Web2 Projects with RedSonic
 
 ## Introduction
 
-In the digital age of Web2 projects, seamless transactions using stablecoins like USDC are paramount. This guide details constructing a USDC Payment Service using Reddio's facilities. We'll delve into:
+In the digital age of Web2 projects, seamless transactions using stablecoins like USDC are paramount. This guide details constructing a USDC Payment Service using RedSonic's facilities. We'll delve into:
 
 1. Depositing USDC into user accounts for immediate utility.
 2. Understanding the core operations: Deposit, Transfer, and Withdraw.
@@ -23,7 +23,7 @@ The Payment Service mainly consists of the following three operations:
 - **Transfer:** Used during transactions or payments, e.g., when a user makes a purchase and transfers money to a merchant.
 - **Withdraw:** Both users and merchants can withdraw their digital assets anytime.
 
-Apart from these operations, your system might also need to log various actions and forward the aforementioned operations to Reddio for on-chain data processing and synchronization.
+Apart from these operations, your system might also need to log various actions and forward the aforementioned operations to RedSonic for on-chain data processing and synchronization.
 
 ## Example Scenario: Cart Checkout 
 
@@ -35,25 +35,25 @@ Apart from these operations, your system might also need to log various actions 
 The process is divided into 6 steps:
 1. User initiates a payment to the merchant.
 2. Upon receiving the payment info, the merchant verifies the user's funds with the payment service and sends the payment details.
-3. The Payment service processes the info and transfers user funds to the merchant via Reddio's API.
+3. The Payment service processes the info and transfers user funds to the merchant via RedSonic's API.
 4. After confirming the successful transfer, the Payment service sends a receipt to the merchant.
 5. The merchant delivers the product to the user upon receipt.
-6. Reddio records the transaction on-chain after a certain period (8-16 hours). Note: The user, merchant, and payment service don't need to monitor this.
+6. RedSonic records the transaction on-chain after a certain period (8-16 hours). Note: The user, merchant, and payment service don't need to monitor this.
 
-Now, based on the above scenario, let's implement the payment service step-by-step, focusing on code related to Reddio interactions.
+Now, based on the above scenario, let's implement the payment service step-by-step, focusing on code related to RedSonic interactions.
 
 ### Warning: Deprecation of Goerli Testnet
 
-**Important Notice:** The Goerli testnet has been deprecated, and Reddio has successfully migrated to the Sepolia testnet. As a user, it's essential to be aware of this change and take appropriate action.
+**Important Notice:** The Goerli testnet has been deprecated, and RedSonic has successfully migrated to the Sepolia testnet. As a user, it's essential to be aware of this change and take appropriate action.
 
-Starting immediately, the Goerli testnet is no longer supported by Reddio. Any interactions or transactions on the Goerli testnet are at your own risk. We strongly recommend that you transition your activities to the Sepolia testnet to ensure uninterrupted access to Reddio's features.
+Starting immediately, the Goerli testnet is no longer supported by RedSonic. Any interactions or transactions on the Goerli testnet are at your own risk. We strongly recommend that you transition your activities to the Sepolia testnet to ensure uninterrupted access to RedSonic's features.
 
 Please exercise caution and update your settings and configurations to work with the Sepolia testnet. 
 
 ## Prerequisites
 
 - Basic knowledge of Java and Javascript. This guide uses Java for backend development and Javascript for frontend.
-- The demo operates on the Ethereum goerli testnet (deprecated). Ensure you have a metamask wallet with goerli ETH and USDC tokens. USDC's contract code on goerli is `0x07865c6E87B9F70255377e024ace6630C1Eaa37F`. Reddio also allows traditional Web2 login methods, supporting web3auth and the particle network. You can incorporate these in your projects.
+- The demo operates on the Ethereum goerli testnet (deprecated). Ensure you have a metamask wallet with goerli ETH and USDC tokens. USDC's contract code on goerli is `0x07865c6E87B9F70255377e024ace6630C1Eaa37F`. RedSonic also allows traditional Web2 login methods, supporting web3auth and the particle network. You can incorporate these in your projects.
 
 ### Java Library Integration
 1. Create a new project (you can use IntelliJ IDEA).
@@ -187,4 +187,4 @@ const withdrawToWallet = async (item: any) => {
 
 That wraps up the integration process. With these steps and some additional configurations, your payment service will be ready. For the full frontend code, refer to the provided link. Try the frontend demo [here](https://usdc-demo-sepia.vercel.app/).
 
-Thank you for considering Reddio for your payment service foundation!
+Thank you for considering RedSonic for your payment service foundation!

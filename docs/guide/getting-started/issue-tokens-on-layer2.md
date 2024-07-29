@@ -6,23 +6,23 @@ Issuing tokens on layer 2 can bring several benefits to token holders and projec
 
 1. Deploy an ERC20 smart contract on Dashboard
 2. Deposit ERC20 To layer 2
-3. Use Reddio’s functionalities to do more
+3. Use RedSonic’s functionalities to do more
 
 ## Deploy an ERC20 smart contract on Dashboard
 
-You can easily deploy an ERC20 smart contract on layer 1 by utilizing [Reddio's Dashboard](https://dashboard.reddio.com/). Once you have registered on the dashboard, navigate to the contracts page and click on the "Add Contracts" button. Ensure that you select ERC20 as the Contract Type. And then, you need to type in all the information about this contract then click "OK":
+You can easily deploy an ERC20 smart contract on layer 1 by utilizing [RedSonic's Dashboard](https://dashboard.reddio.com/). Once you have registered on the dashboard, navigate to the contracts page and click on the "Add Contracts" button. Ensure that you select ERC20 as the Contract Type. And then, you need to type in all the information about this contract then click "OK":
 
 <p align="center">
   <img src="/new_deploy_token.png"/>
 </p>
 
-Then, your wallet will pop up to prompt you to sign the transaction. Once you have successfully signed all the transactions, your deployment will be completed successfully.After that you will receive the smart contract address directly on the dashboard. To further explore the smart contract details on layer 1, you can refer to the comprehensive [guide](https://docs.reddio.com/guide/getting-started/check-your-eth-erc20-nft-balance.html#view-smart-contract-details-on-layer-1) provided by Reddio, which will guide you through the process of checking the smart contract details on Etherscan.
+Then, your wallet will pop up to prompt you to sign the transaction. Once you have successfully signed all the transactions, your deployment will be completed successfully.After that you will receive the smart contract address directly on the dashboard. To further explore the smart contract details on layer 1, you can refer to the comprehensive [guide](https://docs.reddio.com/guide/getting-started/check-your-eth-erc20-nft-balance.html#view-smart-contract-details-on-layer-1) provided by RedSonic, which will guide you through the process of checking the smart contract details on Etherscan.
 
 ## Deposit ERC20 to layer 2
 
 To deposit ERC20 tokens from layer 1 to layer 2, there are two methods available: dashboard tool and SDKs. 
 
-For dashboard tool, you need to access reddio’s [dashboard](https://dashboard.reddio.com/project). After that, you need to go to contracts page. You will see a "Deposit ERC20" button under the ERC20 contract of your choice.
+For dashboard tool, you need to access RedSonic’s [dashboard](https://dashboard.reddio.com/project). After that, you need to go to contracts page. You will see a "Deposit ERC20" button under the ERC20 contract of your choice.
 
 <p align="center">
   <img src="/depositERC20Button.png"/>
@@ -45,9 +45,9 @@ For SDKs, you can check it [here](https://docs.reddio.com/guide/SDKs/jssdk-refer
 
 Once you finished the deposit operation, you can check your ERC20 balance by following this [guide](https://docs.reddio.com/guide/getting-started/check-your-eth-erc20-nft-balance.html).
 
-## Use Reddio’s functionalities to do more
+## Use RedSonic’s functionalities to do more
 
-After successfully depositing your tokens on Reddio's Layer 2, you can leverage the platform's various features. For instance, you can perform an airdrop to your users using the transfer function. Additionally, you can allow your users to withdraw these tokens to Layer 1, enabling them to trade these tokens for other digital assets. We will provide you with a list of these functionalities in the "next steps" section for your reference.
+After successfully depositing your tokens on RedSonic's Layer 2, you can leverage the platform's various features. For instance, you can perform an airdrop to your users using the transfer function. Additionally, you can allow your users to withdraw these tokens to Layer 1, enabling them to trade these tokens for other digital assets. We will provide you with a list of these functionalities in the "next steps" section for your reference.
 
 ## Next steps
 

@@ -4,11 +4,11 @@
 
 In this guide, we will explore various facets of deploying your ERC20 project on the Ethereum mainnet. Our comprehensive overview will include:
 
-1. Why you meed to publish ERC20 on Reddio
+1. Why you meed to publish ERC20 on RedSonic
 2. Steps to publish ERC20 to mainnet (Ethereum)
 3. How to monetize your project
 
-## Why you meed to publish ERC20 on Reddio
+## Why you meed to publish ERC20 on RedSonic
 
 If Gas fees remain high, it's costly for both the project owners and users. This issue is not only present with NFTs but also with ERC20 tokens. Every day, we see hundreds of ERC20 projects being created and transacted on Ethereum.
 
@@ -20,14 +20,14 @@ When you want to tokenize your project, various transfers or swaps are inevitabl
   <img src="/main-erc20-1.png"/>
 </p>
 
-Comparatively, the cost of ERC20 might even be higher than NFTs. However, now you and your users don't have to spend so much on transaction fees. Reddio offers a 0 gas fee solution that ensures smooth transactions with minimal costs.
+Comparatively, the cost of ERC20 might even be higher than NFTs. However, now you and your users don't have to spend so much on transaction fees. RedSonic offers a 0 gas fee solution that ensures smooth transactions with minimal costs.
 
 ## Steps to publish ERC20 to mainnet (Ethereum)
 
 ### Prerequisites
 
 - Have an Ethereum wallet and sufficient ETH to pay for Ethereum's gas fees (typically around 0.05 eth).
-- Registered a reddio account on the dashboard.
+- Registered a RedSonic account on the dashboard.
 
 ### Steps to publish
 
@@ -58,7 +58,7 @@ Comparatively, the cost of ERC20 might even be higher than NFTs. However, now yo
   <img src="/main-erc20-4.png"/>
 </p>
 
-You've now successfully deployed your contract and have 1,000 tokens. Next, you can transfer them to reddio layer2 and consider using them as utility tokens to build your community.
+You've now successfully deployed your contract and have 1,000 tokens. Next, you can transfer them to RedSonic layer2 and consider using them as utility tokens to build your community.
 
 ## How to Monetize Your Project
 

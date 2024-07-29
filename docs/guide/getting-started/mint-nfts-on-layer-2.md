@@ -16,7 +16,7 @@ In this guide, let’s mint NFT on Layer 2.  This guide contains the following 
 
 ## Deploy an ERC721 mintable smart contract on Dashboard
 
-You can easily deploy an ERC721M smart contract on layer 1 by utilizing [Reddio's Dashboard](https://dashboard.reddio.com/). Once you have registered on the dashboard, navigate to the contracts page and click on the "Add Contracts" button. Select ERC721 (Mintable and Recommended). And then, you need to type in all the information about this contract then click "OK":
+You can easily deploy an ERC721M smart contract on layer 1 by utilizing [RedSonic's Dashboard](https://dashboard.reddio.com/). Once you have registered on the dashboard, navigate to the contracts page and click on the "Add Contracts" button. Select ERC721 (Mintable and Recommended). And then, you need to type in all the information about this contract then click "OK":
 
 <p align="center">
   <img src="/new_deploy.png"/>
@@ -30,7 +30,7 @@ After your deployment process is finished, you will see your new contract name u
   <img src="/new_deploy_NFT.png"/>
 </p>
 
-To further explore the smart contract details on layer 1, you can refer to the comprehensive [guide](https://docs.reddio.com/guide/getting-started/check-your-eth-erc20-nft-balance.html#view-smart-contract-details-on-layer-1) provided by Reddio, which will guide you through the process of checking the smart contract details on Etherscan.
+To further explore the smart contract details on layer 1, you can refer to the comprehensive [guide](https://docs.reddio.com/guide/getting-started/check-your-eth-erc20-nft-balance.html#view-smart-contract-details-on-layer-1) provided by RedSonic, which will guide you through the process of checking the smart contract details on Etherscan.
 
 ## Mint ERC721M tokens on layer 2
 

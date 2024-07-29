@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to our comprehensive guide on withdrawing Non-Fungible Tokens (NFTs) to layer 1 using Reddio's Javascript SDK. We will take you through the entire withdrawal process, from start to final API call construction. Let's get started by following steps down below:
+Welcome to our comprehensive guide on withdrawing Non-Fungible Tokens (NFTs) to layer 1 using RedSonic's Javascript SDK. We will take you through the entire withdrawal process, from start to final API call construction. Let's get started by following steps down below:
 
 1. Learn withdrawal process
 2. Prepration
@@ -12,7 +12,7 @@ This tutorial will guide you through the process of using the Javascript SDK to 
 
 ## Learn withdrawal process
 
-The withdrawal process in Reddio is a sophisticated procedure to move assets from Layer 2 to Layer 1 (Ethereum). It is a crucial step for users who want to gain control over their assets on the main blockchain. Below, you'll find a concise outline of the process, followed by an emphasis on the parts that developers should concentrate on:
+The withdrawal process in RedSonic is a sophisticated procedure to move assets from Layer 2 to Layer 1 (Ethereum). It is a crucial step for users who want to gain control over their assets on the main blockchain. Below, you'll find a concise outline of the process, followed by an emphasis on the parts that developers should concentrate on:
 
 1. Initiation
 The user initiates the withdrawal process, expressing their intent to transfer funds from Layer 2 to an Ethereum address in Layer 1.
@@ -53,7 +53,7 @@ During your application implementation. There shall be a form asks for NFT contr
   <img src="/ContractAddress.png"/>
 </p>
 
-For testing purpose only, we will use the REDDIO721 as an example. REDDIO721 is the NFTs we use in [Reddio’s demo](https://demos.reddio.com/). The REDDIO721’s contract address on Sepolia testnet is:
+For testing purpose only, we will use the REDDIO721 as an example. REDDIO721 is the NFTs we use in [RedSonic’s demo](https://demos.reddio.com/). The REDDIO721’s contract address on Sepolia testnet is:
 
 ```bash
 0x941661bd1134dc7cc3d107bf006b8631f6e65ad5

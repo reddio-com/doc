@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This tutorial will guide you through the process of using the Reddio API to deposit, transfer, and withdraw NFT between the Ethereum layer 1 and layer 2 blockchains using typescript.
+This tutorial will guide you through the process of using the RedSonic API to deposit, transfer, and withdraw NFT between the Ethereum layer 1 and layer 2 blockchains using typescript.
 
 You can get the [Transfer NFTs Between Layer 1 and Layer 2](https://github.com/reddio-com/Tutorial-Examples/blob/master/ERC721-transfer-tutorial-example/src/pages/index.tsx). After you cloned the project in your device, you can use following prompts to install all the dependencies.
 
@@ -20,7 +20,7 @@ Now we will go over important components of our project.
 
 ## Testing parameters
 
-During your application implementation. There shall be a form asks for NFT contract address. For testing purpose only, we will use the REDDIO721 as an example. REDDIO721 is the NFTs we use in [Reddio’s demo](https://demos.reddio.com/). The REDDIO721’s contract address on Sepolia testnet is:
+During your application implementation. There shall be a form asks for NFT contract address. For testing purpose only, we will use the REDDIO721 as an example. REDDIO721 is the NFTs we use in [RedSonic’s demo](https://demos.reddio.com/). The REDDIO721’s contract address on Sepolia testnet is:
 
 ```bash
 0x941661bd1134dc7cc3d107bf006b8631f6e65ad5

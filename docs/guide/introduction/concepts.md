@@ -20,11 +20,11 @@ With layer 2, there are quite a few benefits,
 
 - Expand use cases:With higher transactions per second, lower fees, and new technology, projects will expand into new applications with improved user experience.
 
-## Type of contracts that reddio provides
-1. [ERC20](https://github.com/reddio-com/contract_sample/blob/main/src/contracts/ERC20General.sol). You can create ERC20 tokens on reddio's dashboard, then you can [issue the tokens on layer2](https://docs.reddio.com/guide/getting-started/issue-tokens-on-layer2.html)
-2. [ERC721](https://github.com/reddio-com/contract_sample/blob/main/src/contracts/ERC721General.sol). You can deploy ERC721 contract on reddio's dashboard , then you can [deposit & withdraw NFTs between layer 1 and layer 2](https://docs.reddio.com/guide/getting-started/transfer-nfts-between-layer-1-and-layer-2.html)
-3. [ERC721M](https://github.com/reddio-com/contract_sample/blob/main/src/contracts/ERC721MintFor.sol). You can deploy ERC721 Mintable contract on reddio's dashboard, then you can [Mint NFTs on layer2](https://docs.reddio.com/guide/getting-started/mint-nfts-on-layer-2.html)
-4. [ERC721MC](https://sepolia.etherscan.io/address/0xb05a5851ee69b58abf3a293c241570868cc4199e#code). You can deploy ERC721 Mintable and recommend contract on reddio's dashboard, then you can [Mint NFTs on layer2](https://docs.reddio.com/guide/getting-started/mint-nfts-on-layer-2.html) and set your tokenURI when mint NFTs, We recommend you to using the contract to mints NFTs on layer2
+## Type of contracts that RedSonic provides
+1. [ERC20](https://github.com/reddio-com/contract_sample/blob/main/src/contracts/ERC20General.sol). You can create ERC20 tokens on RedSonic's dashboard, then you can [issue the tokens on layer2](https://docs.reddio.com/guide/getting-started/issue-tokens-on-layer2.html)
+2. [ERC721](https://github.com/reddio-com/contract_sample/blob/main/src/contracts/ERC721General.sol). You can deploy ERC721 contract on RedSonic's dashboard , then you can [deposit & withdraw NFTs between layer 1 and layer 2](https://docs.reddio.com/guide/getting-started/transfer-nfts-between-layer-1-and-layer-2.html)
+3. [ERC721M](https://github.com/reddio-com/contract_sample/blob/main/src/contracts/ERC721MintFor.sol). You can deploy ERC721 Mintable contract on RedSonic's dashboard, then you can [Mint NFTs on layer2](https://docs.reddio.com/guide/getting-started/mint-nfts-on-layer-2.html)
+4. [ERC721MC](https://sepolia.etherscan.io/address/0xb05a5851ee69b58abf3a293c241570868cc4199e#code). You can deploy ERC721 Mintable and recommend contract on RedSonic's dashboard, then you can [Mint NFTs on layer2](https://docs.reddio.com/guide/getting-started/mint-nfts-on-layer-2.html) and set your tokenURI when mint NFTs, We recommend you to using the contract to mints NFTs on layer2
 
 ## What is NFT metadata?
 NFT metadata refers to additional information associated with a non-fungible token (NFT). It includes details such as the title, description, image or video files, creators, and other attributes that provide context and value to the NFT. Metadata plays a crucial role in defining the uniqueness and characteristics of an NFT. It allows creators to add rich media, provenance information, and additional content to enhance the overall experience and understanding of the NFT. Metadata can be stored on-chain or in off-chain decentralized storage, ensuring that the information remains linked to the corresponding NFT and can be accessed by anyone interacting with it.
@@ -43,7 +43,7 @@ StarkEx can also support tokens on other EVM-compatible blockchains.
 
 StarkEx is a mature platform that has been deployed on Ethereum Mainnet since June 2020. Before its Mainnet deployment, over 50M StarkEx transactions were settled on both public and private Ethereum testnets.
 
-## What is StarkKey on reddio's API?
-For our integration with StarkEx, users are identified within Reddio by their Stark Key which is a public key defined over a **[Stark-friendly elliptic curve(STARK Curve)](https://docs.starkware.co/starkex/stark-curve.html)** that is different from the standard Ethereum elliptic curve.
+## What is StarkKey on RedSonic's API?
+For our integration with StarkEx, users are identified within RedSonic by their Stark Key which is a public key defined over a **[Stark-friendly elliptic curve(STARK Curve)](https://docs.starkware.co/starkex/stark-curve.html)** that is different from the standard Ethereum elliptic curve.
 
-In order to associate your users with Ethereum account addresses, a user must first request to sign the linkage of an Ethereum key to a Stark Key and then register the Stark Key on your smart contract registered via Reddio platform before any other user operation can take place.
+In order to associate your users with Ethereum account addresses, a user must first request to sign the linkage of an Ethereum key to a Stark Key and then register the Stark Key on your smart contract registered via RedSonic platform before any other user operation can take place.

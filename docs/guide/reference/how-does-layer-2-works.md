@@ -36,4 +36,4 @@ The requirement to choose only one data availability mode per application does n
 
 Volition offers a solution that lets each user choose which data availability mode they prefer, and pay accordingly. Rollup users pay more in order to cover the gas costs for publishing the data on-chain, while Validium users pay less. At every point in time, each user can change their mind and change the data availability mode.
 
-Volition is implemented on Reddio as two separate state trees, one for each data availability mode. The application locates each account in the corresponding state tree according to the user’s choice of data availability mode. It is possible to change the data availability mode for a specific account simply by transferring the funds to a new account on the other tree.
+Volition is implemented on RedSonic as two separate state trees, one for each data availability mode. The application locates each account in the corresponding state tree according to the user’s choice of data availability mode. It is possible to change the data availability mode for a specific account simply by transferring the funds to a new account on the other tree.

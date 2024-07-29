@@ -12,13 +12,13 @@ Welcome to this comprehensive guide on withdrawing your NFTs to layer 1, enablin
 
 ## Deploy an ERC721 mintable contract
 
-You can effortlessly deploy an ERC721M smart contract on layer 1 using [Reddio's Dashboard](https://dashboard.reddio.com/). To get started, follow these simple steps:
+You can effortlessly deploy an ERC721M smart contract on layer 1 using [RedSonic's Dashboard](https://dashboard.reddio.com/). To get started, follow these simple steps:
 
-1. Sign up on the Reddio Dashboard and log in to your account.
+1. Sign up on the RedSonic Dashboard and log in to your account.
 2. Go to the contracts page and locate the "Deploy/Import Contracts" button.
 3. Click on "Deploy Contracts" and choose ERC721 (Mintable and Recommended) from the options provided.
 
-To ensure you have full control over the metadata hosting, disable the "Host Metadata on Reddio" switch. In this tutorial, we will be hosting the metadata ourselves. 
+To ensure you have full control over the metadata hosting, disable the "Host Metadata on RedSonic" switch. In this tutorial, we will be hosting the metadata ourselves. 
 
 Next, you will need to provide the URI for storing the metadata. Make sure the URI is accessible via the internet, allowing others to access your metadata from the servers.
 We will fill in http://123.206.xxx.xxx/tokens/, since we will use this for returning metadata.
@@ -37,7 +37,7 @@ After your deployment process is finished, you will see your new contract name u
   <img src="/new_deploy_NFT.png"/>
 </p>
 
-To further explore the smart contract details on layer 1, you can refer to the comprehensive [guide](https://docs.reddio.com/guide/getting-started/check-your-eth-erc20-nft-balance.html#view-smart-contract-details-on-layer-1) provided by Reddio, which will guide you through the process of checking the smart contract details on Etherscan.
+To further explore the smart contract details on layer 1, you can refer to the comprehensive [guide](https://docs.reddio.com/guide/getting-started/check-your-eth-erc20-nft-balance.html#view-smart-contract-details-on-layer-1) provided by RedSonic, which will guide you through the process of checking the smart contract details on Etherscan.
 
 
 ## Mint some NFTs
@@ -124,7 +124,7 @@ if __name__ == '__main__':
 
 ## Check your NFTs 
 
-Now, you have successfully set up the metadata server. You can see if your NFTs have the right images through [Reddio's demo](https://demos.reddio.com/). After connecting your wallet with the demo page and go to the account page. You will see a list of tokens and NFTs on layer 2:
+Now, you have successfully set up the metadata server. You can see if your NFTs have the right images through [RedSonic's demo](https://demos.reddio.com/). After connecting your wallet with the demo page and go to the account page. You will see a list of tokens and NFTs on layer 2:
 
 <p align="center">
   <img src="/opensea-6.png"/>
@@ -138,7 +138,7 @@ Simply select the NFTs symbol you just created, you will see the following image
 
 ## Withdraw NFTs to layer 1
 
-Now, you can withdraw your NFTs to layer 1 by clicking the "Withdraw" button on [Reddio's demo](https://demos.reddio.com/):
+Now, you can withdraw your NFTs to layer 1 by clicking the "Withdraw" button on [RedSonic's demo](https://demos.reddio.com/):
 
 <p align="center">
   <img src="/opensea-8.png"/>
