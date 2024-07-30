@@ -12,10 +12,12 @@ hero:
           text: View on GitHub
           link: https://github.com/reddio-com
 features:
-  - title: Layer 2 & APIs
-    details: Unlike other Layer 2, we aim to provide you the most easy-to-use APIs to integrate, to dnable developers embed Token or NFT(Non-fungible token) into your web, desktop and mobile applications with massive scalability (up to 10k TPS) and zero gas fee for off-chain.
-  - title: Work with What You Know
-    details: No need to learn smart contract, tools, or waste time digging through endless docs. Reddio respects your skills and programmable languages you are familiar with.
-  - title: Great docs
-    details: You’ll find all the info. and guidance you need to do more with Reddio in our developer friendly docs.
+  - title: Multi-thread Parallel Execution
+    details: Enables all transactions within the same block to be executed in parallel optimistically across multiple threads, leveraging the multi-core servers to achieve high throughput and low transaction fees.
+  - title: GPU Acceleration Optimization
+    details: Using NVIDIA’s CUDA parallel computing engine, the EVM instruction set has been optimized to accelerate its execution on GPU machines, resulting in performance that is magnitudes higher than the original multithreaded parallel execution.
+  - title: Highly Secure by ZK and Ethereum
+    details: The first L2 that can achieve parallel acceleration for zkEVM, ensuring high performance of our L2 while  providing the most reliable validity proofs on Ethereum
+  - title: EVM Compatibility
+    details: Bytecode level compatibility enables smooth transition to Layer 2 with all of your solidity smart contract code.
 ---
