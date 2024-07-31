@@ -358,7 +358,7 @@ function sidebarService() {
 function sidebarZkevm() {
   return [
     {
-      text: "REDDIO zkEVM LAYER 2",
+      text: "INTRODUCTION TO REDDIO",
       collapsible: true,
       items: [
         {
@@ -373,7 +373,7 @@ function sidebarZkevm() {
       ],
     },
     {
-      text: "Modular Sequencer SDK",
+      text: "MODULAR SEQUENCER SDK",
       collapsible: true,
       items: [
         {

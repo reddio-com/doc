@@ -1,6 +1,6 @@
 # Overview
 
-The Reddios zkVM Layer 2 provides a versatile solution for apps and games, aiming to facilitate scalable solutions.it is an opensource project by Reddio which name is [itachi](https://github.com/reddio-com/itachi). Reddio's zkVM is currently in its testing phase, and can be utilized for trial purposes.
+Reddio is a high performance parallel Ethereum-compatible Layer 2, leveraging zero-knowledge technology to achieve unrivaled computation scale with Ethereum-level security.
 
 At its present development stage, Reddio's zkVM offers compatibility with StarkNet's APIs. All contracts deployed on StarkNet can be seamlessly implemented on Reddio's zkVM.
 
