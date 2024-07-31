@@ -11,7 +11,7 @@ export default defineConfig({
   lastUpdated: true,
 
   head: [
-    ["meta", { name: "keywords", content: "reddio,reddio doc,starkex" }],
+    ["meta", { name: "keywords", content: "reddio,reddio doc,parallel zkevm" }],
     [
       "script",
       {
@@ -75,7 +75,8 @@ export default defineConfig({
     nav: nav(),
     logo: "/logo.svg",
     sidebar: {
-      "/guide": sidebarService(),
+      "/guide/": sidebarService(),
+      "/zkevm/": sidebarZkevm(),
     },
 
     footer: {
@@ -103,6 +104,8 @@ export default defineConfig({
 
 function nav() {
   return [
+    { text: "zkEVM", link: "/zkevm/overview", activeMatch: '/zkevm/'},
+    { text: "Platform", link: "/guide/introduction/overview", activeMatch: '/guide/'},
     { text: "Dashboard", link: "https://dashboard.reddio.com/" },
     { text: "API References", link: "https://api-docs.reddio.com/" },
     { text: "Changelog", link: "/guide/introduction/changelog" },
@@ -347,6 +350,41 @@ function sidebarService() {
           text: "Storage to IPFS",
           link: "/guide/getting-started/upload-files-to-ipfs",
         },
+      ],
+    },
+  ];
+}
+
+function sidebarZkevm() {
+  return [
+    {
+      text: "REDDIO zkEVM LAYER 2",
+      collapsible: true,
+      items: [
+        {
+          text: "Overview",
+          link: "/zkevm/overview",
+        },
+        // {
+        //   text: "Unity SDK",
+        //   collapsed: true,
+        //   collapsible: true,
+        // },
+      ],
+    },
+    {
+      text: "Modular Sequencer SDK",
+      collapsible: true,
+      items: [
+        {
+          text: "Overview",
+          link: "/zkevm/sequencer/overview",
+        },
+        // {
+        //   text: "Unity SDK",
+        //   collapsed: true,
+        //   collapsible: true,
+        // },
       ],
     },
   ];
