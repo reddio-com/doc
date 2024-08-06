@@ -365,6 +365,18 @@ function sidebarZkevm() {
           text: "Overview",
           link: "/zkevm/overview",
         },
+        {
+          text: "Parallel Execution",
+          link: "/zkevm/parallel",
+        },
+        {
+          text: "GPU Acceleration",
+          link: "/zkevm/gpuacceleration",
+        },
+        {
+          text: "Modular Sequencer",
+          link: "/zkevm/sequencer",
+        },
         // {
         //   text: "Unity SDK",
         //   collapsed: true,
@@ -379,6 +391,22 @@ function sidebarZkevm() {
         {
           text: "Overview",
           link: "/zkevm/sequencer/overview",
+        },
+        {
+          text: "Composition of Sequencers",
+          link: "/zkevm/sequencer/composition",
+        },
+        {
+          text: "Building the Sequencers",
+          link: "/zkevm/sequencer/implement",
+        },
+        {
+          text: "Components of Yu Framework",
+          link: "/zkevm/sequencer/yucomponents",
+        },
+        {
+          text: "Configure Your Blockchain",
+          link: "/zkevm/sequencer/configurechain",
         },
         // {
         //   text: "Unity SDK",

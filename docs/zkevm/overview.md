@@ -4,14 +4,17 @@ Reddio is a high performance parallel Ethereum-compatible Layer 2, leveraging ze
 
 Reddio compatibility with Ethereum's APIs. All smart contracts deployed on Ethereum can be seamlessly implemented on Reddio. The blockchain is currently in its testing phase, and can be utilized for trial purposes.
 
-Reddio presents a collection of pivotal features:
-- Facilitates the deployment of smart contracts tailored to your specific logic.
-- Enables integration with prebuilt smart contract templates.
-- Offers much lower cost for users.
-- Provides options for scaling via your own Appchain on Layer 2 or Layer 3.
-- Retains security via the Ethereum network.
+Reddio presents a collection of pivotal enhancements, to achieve high performance compared to current EVM L2s or zkEVM L2s:
 
+- [Parallel Execution](/zkevm/parallel)
+- [GPU Acceleration](/zkevm/gpuacceleration)
+- [Modular Seqencer](/zkevm/sequencer)
 
-## Create An Abstract Account Wallet
+Reddio is designed to enhance current blockchain capabilities while maintaining full compatibility for both developers and end-users. Our solution supports complete EVM bytecode compatibility and the Ethereum RPC API, enabling effortless integration with a wide range of Ethereum tools and research innovations. This ensures that:
+
+- Applications: Any dApp built for Ethereum
+- Developer tools: Hardhat, Apeworx, Foundry, etc.
+- Wallets: MetaMask, etc.
+- Analytics and indexing services: Etherscan, Dune, etc.
 
 
