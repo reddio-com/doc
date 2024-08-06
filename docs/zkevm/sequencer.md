@@ -34,4 +34,4 @@ Developed on the modular [Yu framework](https://github.com/yu-org/yu) and writte
 
     The Modular Sequencer ensures low-latency and reduced gas fees for cross-dApp interactions, enabling transactions such as a DeFi dApp triggering an action in a full-chain game, exemplifying seamless interoperability on the The Modular Sequencer.
 
-To help developer scale their dApp whenever they need to launch their own Appchain on L2/L3, we open source it and you can refer to the [The Modular Sequencer SDK] (/zkevm/sequencer/overview) on how to get started.
+To help developer scale their dApp whenever they need to launch their own Appchain on L2/L3, we open source it and you can refer to the [The Modular Sequencer SDK](/zkevm/sequencer/overview) on how to get started.
