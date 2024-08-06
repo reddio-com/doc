@@ -1,4 +1,4 @@
-# Composition of Sequencers
+# The Sequencer Composition
 ## Introduction
 The sequencer plays a crucial role in Layer 2 (L2), particularly within the ZK Rollup architecture. The core function of a sequencer is to be responsible for ordering transactions, executing them, delegating proof generation to a prover, and then sending the proof and data back to Layer 1 (L1).
 

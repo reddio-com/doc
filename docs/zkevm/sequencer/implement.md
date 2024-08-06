@@ -1,4 +1,4 @@
-# Building the Sequencers
+# Building the Sequencer
 
 Now, let's take a look at the process and components of building a sequencer with the Yu framework.
 

@@ -393,11 +393,11 @@ function sidebarZkevm() {
           link: "/zkevm/sequencer/overview",
         },
         {
-          text: "Composition of Sequencers",
+          text: "The Sequencer Composition",
           link: "/zkevm/sequencer/composition",
         },
         {
-          text: "Building the Sequencers",
+          text: "Building the Sequencer",
           link: "/zkevm/sequencer/implement",
         },
         {
