@@ -21,3 +21,13 @@ features:
   - title: EVM Compatibility
     details: Bytecode level compatibility enables smooth transition to Layer 2 with all of your solidity smart contract code.
 ---
+<style>
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg,#fb9386 0%,#e63537 70.82%,#526cfd 100%);
+}
+.action:first-child > a {
+  background: linear-gradient(92.55deg, #FA9487 0.84%, #E63537 55.46%, #E53539 55.47%, #8858B4 100%) !important;
+  border: none;
+}
+</style>
