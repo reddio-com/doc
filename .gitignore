@@ -11,4 +11,3 @@ dist
 config.local.js
 basement_dist
 cache
-deps

@@ -1,6 +1,6 @@
 ## How to edit the docs
 
-Visit root directory，add in `md` files and edit them based on Markdown format. You can also refer to [Vitepress Documentation](https://vitepress.vuejs.org/guide/markdown.html) to learn more.
+Visit `docs/service` directory，add in `md` files and edit them based on Markdown format. You can also refer to [Vitepress Documentation](https://vitepress.vuejs.org/guide/markdown.html) to learn more.
 
 ## How to preview the docs
 
@@ -10,11 +10,11 @@ Visit root directory，add in `md` files and edit them based on Markdown format.
 
 ## Add in images
 
-Save images to `/public` folder, and accesss them via `![](/xxx.png)` in the Markdown files.
+Save images to `docs/public` folder, and accesss them via `![](/xxx.png)` in the Markdown files.
 
 ## How to configure
 
-Visit `.vitepress` directory and look for `config.mts` file, find `sidebarService` functions.
+Visit `docs/.vitepress` directory and look for `config.js` file, find `sidebarService` functions.
 
 ```js
 [
