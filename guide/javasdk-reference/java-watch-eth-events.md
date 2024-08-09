@@ -79,7 +79,7 @@ Here is a sample application that demonstrates how to watch events of depositing
     > 
     > To change the behavior, you can use the other overloads of `watchDeposit`, and change the parameters: `startBlockNumber` and `requiredBlockConfirmation`.
 
-4. Run the application and [deposit some assets](./java-getting-started-tutorial.md#deposit-assets-to-layer-2) on [Reddio Demo Marketplace](https://demos.reddio.com/). As the transaction completes, you can see an output like the following on the console:
+4. Run the application and [deposit some assets](java-getting-started-tutorial.md#deposit-assets-to-layer-2) on [Reddio Demo Marketplace](https://demos.reddio.com/). As the transaction completes, you can see an output like the following on the console:
 
     ```json
     {
