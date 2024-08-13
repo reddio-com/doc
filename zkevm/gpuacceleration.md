@@ -1,4 +1,4 @@
-# GPU Accleration
+# GPU Acceleration
 
 As blockchain technology evolves, optimizing the execution of smart contracts has become crucial for scalability and performance. By partnering with[National University of Singapore](https://nus.edu.sg/), Reddio leverages the [CuEVM](https://github.com/sbip-sg/CuEVM) project as a core contributor to enhance the performance of Ethereum-compatible Layer 2 solutions by translating Ethereum Virtual Machine (EVM) opcodes into CUDA, the parallel computing platform and application programming interface (API) model created by NVIDIA. 
 
