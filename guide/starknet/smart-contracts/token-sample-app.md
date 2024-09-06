@@ -16,7 +16,7 @@ The example will walk through creating an ERC20 token named **reddiotoken** and 
 
 ## Deploy a ERC20 smart contract on Starknet
 
-Follow this [guide](./contract-deployment.md) to deploy the smart contract, if you do it correctly, you should be able to get a ERC20 smart contract deployed on Starknet testnet with name 'reddio token', get 1,000,000 tokens minted and also the smart contract address correspondingly. These are quite important for our next integrations. For your convenice, we already integrate the Starknet project to the [repo](https://github.com/reddio-com/starknet-token-bootstrap), you can compile and deploy directly.
+Follow this [guide](contract-deployment.md) to deploy the smart contract, if you do it correctly, you should be able to get a ERC20 smart contract deployed on Starknet testnet with name 'reddio token', get 1,000,000 tokens minted and also the smart contract address correspondingly. These are quite important for our next integrations. For your convenice, we already integrate the Starknet project to the [repo](https://github.com/reddio-com/starknet-token-bootstrap), you can compile and deploy directly.
 
 ## Introduction to Starknet.js and Starknet React
 
