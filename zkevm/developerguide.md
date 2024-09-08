@@ -1,5 +1,5 @@
 # User Guide for Reddio Sepolia Devnet
-## Devnet configuration
+## Devnet Configuration
 | RPC  URL      |  [reddio-dev.reddio.com](https://reddio-dev.reddio.com/) |
 | ------------- | ------------- |
 | Chain ID      | 50341                 |
