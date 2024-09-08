@@ -8,7 +8,7 @@
 ## Recommended Developer Tools
 - [Hardhat](https://hardhat.org/)
 - [EtherJS](https://ethers.org/)
-- [Remix](https://remix.run/)
+- [Remix](https://remix.ethereum.org/)
 ## ETH Compatible Details
 Reddio is compatible with go-ethereum [v1.14.0](https://github.com/ethereum/go-ethereum/releases/tag/v1.14.0)
 
