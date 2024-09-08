@@ -74,7 +74,7 @@ function nav() {
     { text: 'zkEVM', link: '/zkevm/overview', activeMatch: '/zkevm/' },
     {
       text: 'Platform',
-      link: '/guide/introduction/overview',
+      link: '/guide/zkvm/overview',
       activeMatch: '/guide/',
     },
     { text: 'Dashboard', link: 'https://dashboard.reddio.com/' },
@@ -85,6 +85,7 @@ function nav() {
 
 function sidebarService() {
   return [
+      /*
     {
       text: 'REDSONIC',
       collapsible: true,
@@ -250,6 +251,8 @@ function sidebarService() {
         },
       ],
     },
+
+       */
     {
       text: 'REDDIO ZKVM LAYER 2',
       collapsible: true,
