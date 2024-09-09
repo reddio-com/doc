@@ -15,8 +15,7 @@ The `Add To Wallet` links may not be compatible with every wallet. If you are 
 | Currency Symbol |   ETH                |
 | Explorer URL | [reddio-devnet.l2scan.co](https://reddio-devnet.l2scan.co/) |
 ## Apply Your Test Tokens
-If you want to interact with our Devnet, you need to receive Devnet ETH on Reddio Devnet from faucets: 
-- TBD
+If you want to interact with our Devnet, you need to receive Devnet ETH on Reddio Devnet from faucets, for now, please contact us at [Discord](https://discord.gg/reddio)
 ## Transfer Tokens
 After the above operations, you can select your tokens, transfer them within your wallet, and retrive them at https://reddio-devnet.l2scan.co/
 ## Contact Us
