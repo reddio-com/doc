@@ -359,6 +359,20 @@ function sidebarZkevm() {
       ],
     },
     {
+      text: 'REDDIO SEPOLIA DEVNET',
+      collapsible: true,
+      items: [
+        {
+          text: 'User Guide',
+          link: '/zkevm/userguide',
+        },
+        {
+          text: 'Developer Guide',
+          link: '/zkevm/developerguide',
+        },
+      ],
+    },
+    {
       text: 'MODULAR SEQUENCER SDK',
       collapsible: true,
       items: [
