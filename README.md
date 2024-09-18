@@ -6,11 +6,11 @@ Visit root directory，add in `md` files and edit them based on Markdown format.
 
 - Install [node](https://nodejs.org/en/)
 - Go to the root directory, `npm install` to install all the dependency
-- Run `npm run docs:dev` under root directory to start the service
+- Run `npm run docs:dev` in the root directory to start the service
 
 ## Add in images
 
-Save images to `/public` folder, and accesss them via `![](/xxx.png)` in the Markdown files.
+Save images to `/public` folder, and access them via `![](/xxx.png)` in the Markdown files.
 
 ## How to configure
 
