@@ -1,0 +1,9 @@
+# Overview
+
+Reddio's Modular Sequencer SDK introduces a revolutionary, fully decentralized sequencer framework tailored for Layer 2 (L2)/L3 Appchains, with integration of CairoVM, EVM and Parallel EVM. The Modular Sequencer SDK is built on the [Yu framework](https://github.com/yu-org/yu), which was developed by the Reddio team in Golang. Golang is known for its modularity and customisation capabilities and so the Yu framework is more developer-friendly than Substrate and/or Cosmos SDK. The SDK simplifies the transaction process for users, ensuring legality and preparing transactions for consensus and execution, including checks for signature validity and preventing replay attacks.
+
+Central to the Modular Sequencer SDK's functionality is its consensus mechanism, periodically generating L2/L3 blocks and executing them via the VMs to ensure seamless synchronisation with state. This process underscores the Modular Sequencer SDK's efficiency in handling transactions, storing block data, and interfacing with Layer 1 through proof generation and Data Availability (DA) data construction.
+
+Looking ahead, the release of the Modular Sequencer SDK's source code will empower developers to expand its capabilities, potentially integrating EVM/ZK modules for a ZK Layer 2/Layer 3 solution or BitVM/ZK modules for a BTC Layer 2 solution. Additionally, the Modular Sequencer SDK powers Reddio's own parallel EVM Layer 2 offers high-performance capabilities, allowing for seamless deployment of EVM compatible smart contracts to Reddio's parallel EVM Layer 2 without modifications.
+
+Now, let's dive deep into how the Modular Sequencer SDK did that.
