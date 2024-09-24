@@ -403,5 +403,19 @@ function sidebarZkevm() {
         // },
       ],
     },
+    {
+      text: 'POINTS AND STAKING',
+      collapsible: true,
+      items: [
+        {
+          text: 'Overview',
+          link: '/zkevm/points',
+        },
+        {
+          text: 'Staking',
+          link: '/zkevm/staking',
+        },
+      ],
+    },
   ]
 }
