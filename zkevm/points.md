@@ -44,9 +44,9 @@ The [Reddio Points System](https://points.reddio.com/) is designed to reward use
 
     Each task comes with a specified number of points. For example:
 
-	•	**Follow @reddio_com on Twitter** = 10 points
-	•	**Join Reddio’s Discord server** = 10 points
-	•	**Post about Reddio on Twitter** = 10 points
+	- **Follow @reddio_com on Twitter** = 10 points
+	- **Join Reddio’s Discord server** = 10 points
+	- **Post about Reddio on Twitter** = 10 points
 
     Daily check-ins and ongoing participation in the community can also earn additional points.
 
